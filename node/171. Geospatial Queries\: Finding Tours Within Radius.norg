@@ -1,0 +1,75 @@
+@document.meta
+title: 171. Geospatial Queries\: Finding Tours Within Radius
+description: 
+authors: mattc
+categories: [
+  Geospatial Query
+  Geospatial Operator
+]
+created: 2023-11-19T21:55:15+0800
+updated: 2023-11-20T02:07:15+0800
+version: 1.1.1
+@end
+
+* Fundamental works of tours-within
+
+  In this lecture, we are going to create a route that allows users to search for tours within a fixed range around a specific location.
+
+** Route
+
+   .image pic/171/1.png
+
+** Controller
+
+   First, we destructure all the necessary values from the request and perform a midterm test to check if the values are correct.
+
+   .image pic/171/2.png
+
+   .image pic/171/3.png
+
+
+* Geospatial type and their strong operators
+
+** Geospatial fields and operator document
+
+   When defining startLocation and locations earlier, we used geoJSON to define their type as Geospatial. This allows me to use the find function with special native mongo operators to perform spatial filtering.
+
+   .image pic/171/4.png
+
+** $centerSphere
+
+   Above, we choose $centerSphere to represent the distance between two points on the surface of the Earth, so we need to use a special unit called Radius. It is a value obtained by dividing the distance by the radius of the Earth. We need to convert the distance accordingly.
+
+   .image pic/171/5.png
+
+** Index and '2dsphere'
+
+   geo operators still need to be paired with an index for special settings to take effect.
+
+   .image pic/171/6.png
+
+   Although locations is also a Geospatial type, currently only startLocation requires the use of a geo operator. Therefore, only startLocation is indexed here.
+
+
+* Postman/Compass to test
+
+  On the schema page of Compass, you can directly analyze the data, which is very powerful. We analyzed the startLocation on it and then used Postman to test and verify if the results are correct.
+
+  .image pic/171/7.png
+
+  .image pic/171/8.png
+
+
+* There are still other create geo operators
+
+  The fields of Geospatial type can use many powerful geo operators. It is recommended that everyone take some time to look at the official documentation.
+
+  .image pic/171/9.png
+
+
+
+
+
+
+
+
