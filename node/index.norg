@@ -1,3 +1,17 @@
-* (x) Modelling Data and Advanced Mongoose
-** (x) {:171. Geospatial Queries\: Finding Tours Within Radius:} (30/>180)
+* (x) Modelling Data and Advanced Mongoose (57/313)
+** (x) [171. Geospatial Queries\: Finding Tours Within Radius (30/>180)]{:171. Geospatial Queries\: Finding Tours Within Radius:} 
+** (x) [172. Geospatial Aggregation\: Calculating Distances (16/89)]{:172. Geospatial Aggregation\: Calculating Distances:} 
+** (x) [173. Creating API Documentation Using Postman (11/44)]{:173. Creating API Documentation Using Postman:} 
+* (x) Server-Side Rendering with Pug Templates (30/13)
+** (x) [175. Recap: Server-Side vs Client-Side Rendering (5/13)]{:175. Recap\: Server-Side vs Client-Side Rendering:} 
+** (x) [176. Setting up Pug in Express (10/69)]{:176. Setting up Pug in Express:} 
+** (x) [177. First Steps with Pug (15/94)]{:177. First Steps with Pug:} 
+** ( ) [178. Creating Our Base Template (15/ )]{:178. Creating Our Base Template:}
+** ( ) [179. Including Files into Pug Templates (5/ )]{:179. Including Files into Pug Templates:}
+** ( ) [180. Extending Our Base Template with Blocks (10/ )]{:180. Extending Our Base Template with Blocks:}
+** ( ) [181. Setting up the Project Structure (6/ )]{:181. Setting up the Project Structure:}
+** ( ) [182. Building the Tour Overview - Part 1 (12/ )]{:182. Building the Tour Overview - Part 1:}
+** ( ) [183. Building the Tour Overview - Part 2 (16/ )]{:183. Building the Tour Overview - Part 2:}
+** ( ) [184. Building the Tour Page - Part 1 (12/ )]{:184. Building the Tour Page - Part 1:}
+** ( ) [185. Building the Tour Page - Part 2 (26/ )]{:185. Building the Tour Page - Part 2:}
 

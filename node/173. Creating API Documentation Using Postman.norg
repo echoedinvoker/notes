@@ -1,0 +1,52 @@
+@document.meta
+title: 173. Creating API Documentation Using Postman
+description: 
+authors: mattc
+categories: 
+created: 2023-11-20T15:09:13+0800
+updated: 2023-11-20T16:17:38+0800
+version: 1.1.1
+@end
+
+> In this lecture, we will use Postman to generate API documentation. When I need to allow colleagues or even clients to use the API, API documentation is essential.
+
+* Fill all descriptions
+
+  The simplest way to improve our API documentation is to fill in all the parts that can be described on Postman. From folders, the API itself, to the query string, there are places where descriptions can be filled in.
+
+
+  .image pic/173/1.png
+
+  .image pic/173/2.png
+
+  .image pic/173/3.png
+
+
+* Do NOT put any sensitive data in the API
+
+  Be careful not to write sensitive data into the API, otherwise it will be included in the documentation.
+
+  .image pic/173/4.png
+
+  .image pic/173/5.png
+
+  .image pic/173/6.png
+
+
+* Publish or Export to Documentation
+
+  After confirming that all changes have been properly saved, they can be transformed into a document.
+
+  .image pic/173/7.png
+
+  In the lecturer's video, there is an option to publish documents directly on the internet as web pages, but here I can only export them as JSON files. I'm not sure if it is a feature for advanced users.
+
+  .image pic/173/8.png
+
+
+
+
+
+
+
+

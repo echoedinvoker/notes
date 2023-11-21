@@ -1,0 +1,62 @@
+@document.meta
+title: 177. First Steps with Pug
+description: 
+authors: mattc
+categories: 
+created: 2023-11-20T20:46:59+0800
+updated: 2023-11-20T22:45:12+0800
+version: 1.1.1
+@end
+
+> In this lecture, we need to write some content in Pug and use it to render an HTML with a regular structure.
+
+
+* PUG using indentation to define element structure
+
+  Below, we use pug to write the basic structure of HTML without content.
+
+  .image pic/177/1.png
+
+  It can be seen that pug uses indentation to represent the relationship between elements (similar to Python). The first word of each line is the element and does not require an open/close tag. The remaining part is the content.
+
+
+* Content 
+
+  Let's add some practical content to it.
+
+  .image pic/177/2.png
+
+
+* Attributes in PUG template
+
+  Next, we need to use the link tag to insert CSS and favicon. This requires the use of attributes. In Pug, we write attributes after the element using ().
+
+  .image pic/177/3.png
+
+  The part above the href asset will send its own request. If there is no matching route, it will then look at the part set by static (this part belongs to review).
+
+  .image pic/177/4.png
+
+
+* Pass data into PUG template
+
+  So far, the data we have rendered is hardcoded. Below is an introduction on how to dynamically provide data from external sources to Pug and render them.
+
+  .image pic/177/5.png
+
+  .image pic/177/6.png
+
+
+* Buffed & Unbuffed code
+
+  It can be found that after element=, although code can be written, only simple sentences can be written. However, sometimes it is necessary to write some code that does not need to be rendered as HTML content.
+
+  .image pic/177/7.png
+
+
+* Another way to create code space
+
+  Finally, pug also provides another way to insert code that is similar to JavaScript's template string, allowing us to easily insert code into existing content.
+
+  .image pic/177/8.png
+

@@ -1,0 +1,51 @@
+@document.meta
+title: Setting up Pug in Express
+description: 
+authors: mattc
+categories: 
+created: 2023-11-20T16:51:51+0800
+updated: 2023-11-20T20:09:08+0800
+version: 1.1.1
+@end
+
+> In this lecture, we will install and set up a template engine. There are many types of template engines, and we will choose the currently most popular one, PUG, as our template engine. In the future, we will use it to construct HTML (including CSS and JavaScript) on the backend.
+
+* Install/Setup
+
+  .image pic/176/1.png
+
+  Note that above, we are using a string to let Express know what template engine we want to use.
+
+
+* Set where to store templates
+
+  Next, we need to create a folder specifically for storing template files, and also set up Express to know which folder we are using for this purpose.
+
+  .image pic/176/2.png
+  > 'view' should be 'views' after app.set.
+
+
+  When we use the variable __dirname to represent a path, we often wonder if it includes a /. In fact, we can simply use the core module 'path' to solve this problem. It will help us automatically determine and correct the paired path.
+
+  .image pic/176/4.png
+  > 'view' should be 'views' after app.set.
+
+
+* Create a template with .pug
+
+  Next, we will use pug to create a simple template.
+
+  .image pic/176/3.png
+
+  As mentioned above, pug has many syntactic sugars that can help us save time in writing HTML.
+
+
+* Render HTML based on pug file content
+
+  Then we use a route to let Express render HTML based on the content of the pug file and respond to the client.
+
+  .image pic/176/5.png
+
+  .image pic/176/6.png
+
+

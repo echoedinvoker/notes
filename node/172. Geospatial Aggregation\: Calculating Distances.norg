@@ -1,0 +1,67 @@
+@document.meta
+title: 172. Geospatial Aggregation\: Calculating Distances
+description: 
+authors: mattc
+categories: [
+  $geoNear
+  Geospatial Aggregation
+]
+created: 2023-11-20T11:31:06+0800
+updated: 2023-11-20T11:31:58+0800
+version: 1.1.1
+@end
+
+* Route
+
+In this lecture, we are going to calculate the distance from a certain point to all tours.
+
+.image pic/172/1.png
+
+
+* Controller
+
+The next controller to be done is very similar to the previous lecture, so we can directly copy some codes from it.
+
+.image pic/172/2.png
+
+
+* Geospatial Aggregation
+
+  Because it is a calculation, using a pipeline is the simplest method. It is also known as Spatial Aggregation because it involves geospatial data, and it has fixed rules for its structure.
+
+  .image pic/172/3.png
+
+The document states that $geoNear must be the first stage in the pipeline, otherwise it will result in an error.
+
+  .image pic/172/4.png
+
+* Postman Test 
+
+We use Postman to test and see what kind of data we will get.
+
+  .image pic/172/5.png
+
+Even though we have placed $geoNear in the first position of the array, an error still occurred. This may be caused by the pre-aggregate hook. In such cases, it is necessary to consider this possibility.
+
+.image pic/172/6.png
+
+The reason is caused by the pre-aggregate hook above. In order to exclude hidden tours from the aggregation calculation, a condition was added before this hook. We can make it not work when there is $geoNear, but for simplicity, we directly commented it out here.
+
+* Postman Test again
+
+  .image pic/172/7.png
+
+We will do another test using Postman above. We can see that the result of $geoNear is the original tours data with the addition of a distance field to obtain the calculation result of the distance. The reason for the large numbers is because the default unit is meters.
+
+* Distance Multiplier
+
+We can simply use the attribute "distanceMultiplier" within $geoNear to solve the problem of distance units.
+
+  .image pic/172/8.png
+
+
+
+
+
+
+

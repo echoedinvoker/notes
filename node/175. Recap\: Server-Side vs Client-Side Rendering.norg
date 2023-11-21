@@ -1,0 +1,19 @@
+@document.meta
+title: 175. Recap\: Server-Side vs Client-Side Rendering
+description: 
+authors: mattc
+categories: 
+created: 2023-11-20T16:33:23+0800
+updated: 2023-11-20T16:48:27+0800
+version: 1.1.1
+@end
+
+In the previous section, we learned about making the backend server provide a RESTful API so that the frontend can be a general website or a mobile app on different platforms. However, in this section, we will directly generate HTML (including Javascript and CSS) on the backend and send it to the frontend.
+
+.image pic/174/1.png
+
+We can still provide APIs to the frontend for other tasks.
+
+
+
+
