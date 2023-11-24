@@ -2,9 +2,14 @@
 title: 177. First Steps with Pug
 description: 
 authors: mattc
-categories: 
+categories: [
+  Pug
+  template
+  HTML
+  View
+]
 created: 2023-11-20T20:46:59+0800
-updated: 2023-11-20T22:45:12+0800
+updated: 2023-11-22T16:52:19+0800
 version: 1.1.1
 @end
 

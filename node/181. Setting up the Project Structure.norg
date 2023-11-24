@@ -1,0 +1,51 @@
+@document.meta
+title: 181. Setting up the Project Structure
+description: 
+authors: mattc
+categories: 
+created: 2023-11-22T20:18:32+0800
+updated: 2023-11-22T21:01:22+0800
+version: 1.1.1
+@end
+
+> In this lecture, we are going to refactor the view as a resource, using the route and controller approach.
+
+
+* Create sub-app for views
+
+  .image pic/181/1.png
+
+  The view router we built is like a sub-app. We moved the codes we previously made into it, and then included this sub-app into the app.
+
+
+* Move callbacks to controller
+
+  Then move the callback function in the routes to the controller.
+
+  .image pic/181/2.png
+
+  Let's make sure that all work as before on the browser.
+
+  .image pic/181/3.png
+
+
+* Modify a bit by different requirement
+
+  Here we modify the logic of the route based on the requirement. '/' should render overview.pug instead of parent.
+
+  .image pic/181/4.png
+
+
+* Concern about routes blocking
+
+  According to past experience, the route check path is from top to bottom and not particularly smart. Placing '/' in front of other API routes has caused concerns about falling into the API routes.
+
+  .image pic/181/5.png
+
+  Actually test the API routes with a browser to see if they still work.
+
+  .image pic/181/6.png
+
+  There is still a function, it seems that Express is smart enough 😄
+
+

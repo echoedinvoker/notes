@@ -1,0 +1,45 @@
+@document.meta
+title: 183. Building the Tour Overview - Part 2
+description: 
+authors: mattc
+categories: 
+created: 2023-11-23T15:56:16+0800
+updated: 2023-11-23T17:22:41+0800
+version: 1.1.1
+@end
+
+
+* Insert data into template
+
+  In the previous lecture, we have already passed the data tours into overview.pug. Next, we can simply use the dot notation to retrieve the value of its properties, such as tour.name. We can insert it into the template using the techniques we have learned before.
+
+
+  .image pic/183/1.png
+
+
+* Add content between elements
+
+  We found that there is no distance between two adjacent inline elements.
+
+  .image pic/183/2.png
+
+  We can use the | symbol to add content outside of the element.
+
+  .image pic/183/3.png
+
+  Above | Behind, there is actually an added space to create spacing between the contents of inline elements as follows.
+
+  .image pic/183/4.png
+
+
+* Datetime presenting issue
+
+  We use tour.startDates[0] above to obtain the date and time, but often we do not want to display all the details on the page as follows.
+  .image pic/183/5.png
+
+  We simply use the API provided by the browser to simplify it.
+
+  .image pic/183/6.png
+
+  .image pic/183/7.png
+

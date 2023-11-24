@@ -1,0 +1,28 @@
+@document.meta
+title: 178. Creating Our Base Template
+description: 
+authors: mattc
+categories: [
+  Pug
+  Template
+  HTML
+  View
+]
+created: 2023-11-22T15:26:21+0800
+updated: 2023-11-22T16:53:44+0800
+version: 1.1.1
+@end
+
+> We are going to convert the HTML content provided by the course into Pug in order to render a complete webpage.
+
+* New skills to convert HTML to PUG
+
+  Here are some techniques that we did not use in our previous lecture.
+
+  .image pic/178/1.png
+
+  .image pic/178/2.png
+
+* Result in browser
+
+  .image pic/178/3.png

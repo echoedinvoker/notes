@@ -1,0 +1,32 @@
+@document.meta
+title: 179. Including Files into Pug Templates
+description: 
+authors: mattc
+categories: [
+  Refactor
+  Pug
+  View
+  Templates
+]
+created: 2023-11-22T18:15:52+0800
+updated: 2023-11-22T18:39:27+0800
+version: 1.1.1
+@end
+
+> We are going to refactor the content of the pug file by moving some code to other files, so that the original pug file remains clean and the website structure can be easily seen at a glance.
+
+* Create files for refactor codes
+
+  .image pic/179/1.png
+
+  Conventionally, pug files that are only included will have an underscore prefixed to their names.
+
+* Refactor codes to files
+
+  .image pic/179/2.png
+
+* Refsult
+
+  .image pic/179/3.png
+
+

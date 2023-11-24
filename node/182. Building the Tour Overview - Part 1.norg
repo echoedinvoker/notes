@@ -1,0 +1,48 @@
+@document.meta
+title: 182. Building the Tour Overview - Part 1
+description: 
+authors: mattc
+categories: 
+created: 2023-11-23T14:22:45+0800
+updated: 2023-11-23T15:25:24+0800
+version: 1.1.1
+@end
+
+
+* What we want to do this lecture?
+
+  .image pic/182/1.png
+
+  Continuing from the previous lecture, in this lecture, we will actually retrieve tour data from the MongoDB collection in the controller. Then, we will use it to construct a complete template before responding to the client.
+
+* Controller work is simple
+
+  The controller's work in the view is relatively simple compared to other resources. After retrieving data from the database, you just need to use the approach from the previous lectures to pass it to the template. How to render should be written in the template.
+
+  .image pic/182/2.png
+
+* Building template of contents part
+
+** analyzing
+
+   After obtaining the data, the template determines how to render it. We need to distinguish which parts require dynamic presentation of the data and which parts do not need to be iterated.
+
+   .image pic/182/3.png
+
+** scripting
+
+   After analyzing, it is simply copy and paste. The only part that we are using for the first time is the iteration. Additionally, it should be noted that we cannot directly include the code written in _base.pug from overview.pug because a pug file can only use extends once, unless the route is directed to _base.pug. However, here we try to keep the course as simple as possible, so we directly copy and paste the code from _base.pug to overview.pug.
+
+   .image pic/182/4.png
+
+* Check result on the browser
+
+  Finally, although we haven't actually written the data into the template to make it dynamically displayed, due to the iteration, the number of tour cards on the webpage should match the number of data entries.
+
+  .image pic/182/5.png
+
+  We will truly insert data into the template in the next lecture to make our webpage dynamically present different information.
+
+
+
+

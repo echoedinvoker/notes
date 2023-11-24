@@ -6,12 +6,73 @@
 ** (x) [175. Recap: Server-Side vs Client-Side Rendering (5/13)]{:175. Recap\: Server-Side vs Client-Side Rendering:} 
 ** (x) [176. Setting up Pug in Express (10/69)]{:176. Setting up Pug in Express:} 
 ** (x) [177. First Steps with Pug (15/94)]{:177. First Steps with Pug:} 
-** ( ) [178. Creating Our Base Template (15/ )]{:178. Creating Our Base Template:}
-** ( ) [179. Including Files into Pug Templates (5/ )]{:179. Including Files into Pug Templates:}
-** ( ) [180. Extending Our Base Template with Blocks (10/ )]{:180. Extending Our Base Template with Blocks:}
-** ( ) [181. Setting up the Project Structure (6/ )]{:181. Setting up the Project Structure:}
-** ( ) [182. Building the Tour Overview - Part 1 (12/ )]{:182. Building the Tour Overview - Part 1:}
-** ( ) [183. Building the Tour Overview - Part 2 (16/ )]{:183. Building the Tour Overview - Part 2:}
-** ( ) [184. Building the Tour Page - Part 1 (12/ )]{:184. Building the Tour Page - Part 1:}
-** ( ) [185. Building the Tour Page - Part 2 (26/ )]{:185. Building the Tour Page - Part 2:}
+** (x) [178. Creating Our Base Template (15/85)]{:178. Creating Our Base Template:}
+** (x) [179. Including Files into Pug Templates (5/25)]{:179. Including Files into Pug Templates:}
+** (x) [180. Extending Our Base Template with Blocks (10/68)]{:180. Extending Our Base Template with Blocks:}
+** (x) [181. Setting up the Project Structure (6/43)]{:181. Setting up the Project Structure:}
+** (x) [182. Building the Tour Overview - Part 1 (12/63)]{:182. Building the Tour Overview - Part 1:}
+** (x) [183. Building the Tour Overview - Part 2 (16/100)]{:183. Building the Tour Overview - Part 2:}
+** (x) [184. Building the Tour Page - Part 1 (12/110)]{:184. Building the Tour Page - Part 1:}
+** (x) [185. Building the Tour Page - Part 2 (26/93)]{:185. Building the Tour Page - Part 2:}
+** ( ) [186. Including a Map with Mapbox - Part 1 (12/)]{:186. Including a Map with Mapbox - Part 1:}
+** ( ) [187. Including a Map with Mapbox - Part 2 (28/)]{:187. Including a Map with Mapbox - Part 2:}
+** ( ) [188. Building the Login Screen (7/)]{::}
+** ( ) [189. Logging in Users with Our API - Part 1 (21/)]{:189. Logging in Users with Our API - Part 1:}
+** ( ) [190. Logging in Users with Our API - Part 2 (19/)]{:190. Logging in Users with Our API - Part 2 (19/):}
+** ( ) [191. Logging in Users with Our API - Part 3 (28/)]{:191. Logging in Users with Our API - Part 3 (28/):}
 
+
+* Index
+** $geonear
+   - {:$/172. Geospatial Aggregation\: Calculating Distances:}[172. Geospatial Aggregation\: Calculating Distances]
+** Client-side
+   - {:$/175. Recap\: Server-Side vs Client-Side Rendering:}[175. Recap\: Server-side Vs Client-side Rendering]
+** Express
+   - {:$/176. Setting up Pug in Express:}[Setting Up Pug In Express]
+** Extending
+   - {:$/180. Extending Our Base Template with Blocks:}[180. Extending Our Base Template With Blocks]
+** Geospatial Aggregation
+   - {:$/172. Geospatial Aggregation\: Calculating Distances:}[172. Geospatial Aggregation\: Calculating Distances]
+** Geospatial Operator
+   - {:$/171. Geospatial Queries\: Finding Tours Within Radius:}[171. Geospatial Queries\: Finding Tours Within Radius]
+** Geospatial Query
+   - {:$/171. Geospatial Queries\: Finding Tours Within Radius:}[171. Geospatial Queries\: Finding Tours Within Radius]
+** Html
+   - {:$/177. First Steps with Pug:}[177. First Steps With Pug]
+   - {:$/178. Creating Our Base Template:}[178. Creating Our Base Template]
+** Including
+   - {:$/180. Extending Our Base Template with Blocks:}[180. Extending Our Base Template With Blocks]
+** Pug
+   - {:$/176. Setting up Pug in Express:}[Setting Up Pug In Express]
+   - {:$/177. First Steps with Pug:}[177. First Steps With Pug]
+   - {:$/178. Creating Our Base Template:}[178. Creating Our Base Template]
+   - {:$/179. Including Files into Pug Templates:}[179. Including Files Into Pug Templates]
+   - {:$/180. Extending Our Base Template with Blocks:}[180. Extending Our Base Template With Blocks]
+** Refactor
+   - {:$/179. Including Files into Pug Templates:}[179. Including Files Into Pug Templates]
+** Rendering
+   - {:$/175. Recap\: Server-Side vs Client-Side Rendering:}[175. Recap\: Server-side Vs Client-side Rendering]
+** Route
+   - {:$/176. Setting up Pug in Express:}[Setting Up Pug In Express]
+** Servier-side
+   - {:$/175. Recap\: Server-Side vs Client-Side Rendering:}[175. Recap\: Server-side Vs Client-side Rendering]
+** Template
+   - {:$/176. Setting up Pug in Express:}[Setting Up Pug In Express]
+   - {:$/177. First Steps with Pug:}[177. First Steps With Pug]
+   - {:$/178. Creating Our Base Template:}[178. Creating Our Base Template]
+   - {:$/180. Extending Our Base Template with Blocks:}[180. Extending Our Base Template With Blocks]
+** Templates
+   - {:$/179. Including Files into Pug Templates:}[179. Including Files Into Pug Templates]
+** Uncategorised
+   - {:$/173. Creating API Documentation Using Postman:}[173. Creating Api Documentation Using Postman]
+   - {:$/181. Setting up the Project Structure:}[181. Setting Up The Project Structure]
+   - {:$/182. Building the Tour Overview - Part 1:}[182. Building The Tour Overview - Part 1]
+   - {:$/183. Building the Tour Overview - Part 2:}[183. Building The Tour Overview - Part 2]
+   - {:$/index:}[(x) Modelling Data And Advanced Mongoose (57/313)]
+** View
+   - {:$/175. Recap\: Server-Side vs Client-Side Rendering:}[175. Recap\: Server-side Vs Client-side Rendering]
+   - {:$/176. Setting up Pug in Express:}[Setting Up Pug In Express]
+   - {:$/177. First Steps with Pug:}[177. First Steps With Pug]
+   - {:$/178. Creating Our Base Template:}[178. Creating Our Base Template]
+   - {:$/179. Including Files into Pug Templates:}[179. Including Files Into Pug Templates]
+   - {:$/180. Extending Our Base Template with Blocks:}[180. Extending Our Base Template With Blocks]

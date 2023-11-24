@@ -1,0 +1,59 @@
+@document.meta
+title: 185. Building the Tour Page - Part 2
+description: 
+authors: mattc
+categories: 
+created: 2023-11-24T19:36:11+0800
+updated: 2023-11-24T20:41:27+0800
+version: 1.1.1
+@end
+
+> In this lecture, we will complete the remaining part of tour.pug.
+
+
+* Guides
+
+Because the number of guildes is unknown, the best approach here is to use a pug's loop to implement as follows:
+
+.image pic/185/1.png
+
+Because using tour.role directly may have a bit different with the actual requirements to be presented to the user, we have added a condition. The if statement we wrote in the unbuffed code scope can be used in conjunction with the element code in Pug as above.
+
+
+* Description
+
+.image pic/185/2.png
+
+In the tour.description, there is a long article with /n used for paragraph breaks. Usually in HTML, two p elements are used to present different paragraphs. We can use /n to separate the strings of different paragraphs into an array and then use a loop to render the p elements.
+
+
+* Dynamical class
+
+Sometimes we may encounter situations where we need to dynamically control a class. This can be achieved using the following approach:
+
+.image pic/185/3.png
+
+
+* Reviews
+
+Next, we are going to do the reviews part. We are going to challenge ourselves to present the rating part using stars.
+
+.image pic/185/4.png
+
+Above, you can see that we have any number of reviews, so we should use a pug loop. For the rating part, we want to present it in the form of star graphics. This may make our code too long, so we can consider writing the mixin in another file and then including it here.
+
+.image pic/185/5.png
+
+.image pic/185/6.png
+
+Above, we can see that most of it has already been completed, especially the part with star symbols, which can render the results correctly according to the rating value. However, the user avatar part cannot be displayed correctly. This is because reviews.user is not using populating. I will review the relevant lecture and fix this part when I have time.
+
+
+* CTA
+
+The remaining part is about CTA, which is not too difficult or involves new knowledge in this section.
+
+.image pic/185/7.png
+
+
+

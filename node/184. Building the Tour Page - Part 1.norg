@@ -1,0 +1,58 @@
+@document.meta
+title: 184. Building the Tour Page - Part 1
+description: 
+authors: mattc
+categories: [
+  Template
+  View
+  Populating
+  Mixin
+]
+created: 2023-11-24T16:07:40+0800
+updated: 2023-11-24T18:45:23+0800
+version: 1.1.1
+@end
+
+> We need to create a tour details page for this lecture. The challenge is to create the route and obtain the data. The template part will be completed together with the lecturer.
+
+* Create Route & Try to fetch tour details by slug
+
+  .image pic/184/1.png
+
+  We add the parameter 'slug' to the route and use it to filter and search for the details of a certain tour, then pass it to the template 'tour' (tour.pug).
+
+* Test & some issues
+
+  .image pic/184/2.png
+
+  We found that although the guides property has been populated, the reviews property does not. This is because reviews is using child reference, so the query object needs to use .populate() in order to be correctly populated. Another issue is that the path for fetching CSS is incorrectly parsed due to the use of parameters in our URL (resulting in an extra "tour/").
+
+* Populating reviews
+
+  We have learned in the previous lecture how to populate a child reference property. It must be used in conjunction with the virtual field.
+
+  .image pic/184/3.png
+
+  .image pic/184/4.png
+
+* Fix css path issue
+
+  Because parameters are used in the URL, adding '/' causes relative paths in Pug to be parsed incorrectly. Therefore, we have resolved this issue by using absolute paths.
+
+  .image pic/184/5.png
+
+  .image pic/184/6.png
+
+* Check the answer
+
+  .image pic/184/7.png
+
+Because we only obtained one piece of data for the tour, it is best to use findOne. If we use find, there will be an additional layer of meaningless [ ].
+
+* Using Mixin for repeated codes
+  
+  As for the tour.pug , course directly provides file that use mixins to solve the issue of code repetition. Mixins are similar to functions, but their syntax is slightly different.
+
+  .image pic/184/8.png
+
+  .image pic/184/9.png

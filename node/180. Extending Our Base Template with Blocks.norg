@@ -1,0 +1,56 @@
+@document.meta
+title: 180. Extending Our Base Template with Blocks
+description: 
+authors: mattc
+categories: [
+  Extending
+  Including
+  Pug
+  Template
+  View
+]
+created: 2023-11-22T18:52:08+0800
+updated: 2023-11-22T19:59:04+0800
+version: 1.1.1
+@end
+
+> In this lecture, we are going to implement the most powerful concept in Pug, "extend".
+
+* Including parent from child by *extend*
+
+** Route to child
+
+   We use the base.pug template completed in the previous lecture as the parent template, and then create other templates to load special data needed for different pages. We then inject them into the parent template to avoid duplicating code.
+
+   .image pic/180/1.png
+
+** Using extend to include parent
+
+   Next, we will write the content of child templates so that they can include the content of the parent template.
+
+   .image pic/180/2.png
+
+** Check the results
+
+   Let's check results on the browser.
+
+   .image pic/180/3.png
+
+   .image pic/180/4.png
+
+   .image pic/180/5.png
+
+* parameters
+
+** Pass data to included codes(from parent)
+   Finally, because the parent's codes are included in the child, even though the route points to the child, the parameters can also be rendered on top of the parent's codes.
+
+   .image pic/180/6.png
+
+** Check the results
+   Check the results
+
+   .image pic/180/7.png
+
+   .image pic/180/8.png
+
