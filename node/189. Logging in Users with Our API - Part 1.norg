@@ -1,0 +1,132 @@
+@document.meta
+title: 189. Logging in Users with Our API - Part 1
+description: 
+authors: mattc
+categories: [
+  CORS
+  CPS
+  Network
+  Cookie
+  Authentication
+  Login
+]
+created: 2023-11-25T16:26:59+0800
+updated: 2023-11-25T20:01:54+0800
+version: 1.1.1
+@end
+
+> We need to make the login page able to log in users in this lecture.
+
+
+
+* Get inputs data of the form
+
+  The first step is to try to obtain the content of the inputs from the login form.
+
+  .image pic/189/1.png
+
+  Because this is all front-end processing work, like mapbox, it is necessary to write JavaScript in public\/js\/ and then insert it into HTML.
+
+  .image pic/189/2.png
+
+  .image pic/189/3.png
+
+  Above, we have successfully collected data from client inputs. We will then use this data to send a request to the backend route '/login' that we have previously prepared.
+
+
+* Review route '/login' and make sure we haven't used cookie to auth yet
+
+  .image pic/189/4.png
+
+  Above, let's review the route '/login' that we did before. We can see that the token is not only passed to the client using the request body but also using a cookie. However, in the previous requests, the token was sent to the backend using the header, and then the backend used the protect middleware below to verify it.
+
+  .image pic/189/5.png
+
+  It can be found that the protect middleware does not check if there is a token in the cookie. So actually, besides the backend using cookies to send the token, other parts do not use cookies yet.
+
+
+* Axios install 
+
+  Next, we will use the axios package to send a '/login' request from the client without using headers to carry the token. Since the browser automatically sends cookies, we just need to complete the backend check for cookies.
+
+  The reason for using axios is because it will determine whether the response is successful or failed based on status codes. If it fails, it will automatically generate an Error and throw it for us.
+
+  .image pic/189/6.png
+
+  .image pic/189/7.png
+
+  For this lecture, we will temporarily use the CDN method to install Axios, and later we will switch to npm install.
+
+  Then you can use Axios to send a request to the '/login' route.
+
+
+* CSP issue & solution
+
+  .image pic/189/8.png
+
+  We have initially written the part that uses axios to send a request to the '/login' route, but encountered the same CSP error as before. There are many solutions in the course Q&A, and I used the following method to resolve it.
+
+  .image pic/189/10.png
+
+  .image pic/189/11.png
+
+  Currently, I still don't fully understand the principle behind it, but at least I have managed to solve the CSP issues from the mailbox to the login page.
+
+
+* CORS issue & solution
+
+  .image pic/189/12.png
+
+  So after CSP, we encountered CORS issues. We found a solution in the Q&A as follows:
+
+  .image pic/189/13.png
+
+  .image pic/189/14.png
+
+  After solving the CORS issue, I can finally successfully send a request to the backend route '/login' and receive a successful response.
+
+  .image pic/189/15.png
+
+
+* Catch the reponse error (generate by Axios)
+
+  Because Axios generates an error when the response result is failed, we can simply use try-catch to catch it.
+
+  .image pic/189/16.png
+
+  Using error.response.data for the erorr part can obtain the exact same result as previously tested in Postman. This information was learned from the Axios documentation.
+
+
+* Parse cookie from request to make it into request-response cycle
+
+  Afterwards, although the browser received the cookie, the backend did not validate the cookie, and even did not pass it into the request-response cycle. It must be parsed like request data to be interpreted.
+
+  .image pic/189/17.png
+
+  .image pic/189/18.png
+
+  .image pic/189/19.png
+
+
+* Add cookie logic to middleware 'protect'
+
+  Above, we added a middleware in Express to parse cookies and confirmed that we can parse the jwt cookies when the client sends a request. Next, we should add a check for the presence of the jwt in the cookie in the dedicated authentication middleware 'protect'.
+
+  .image pic/189/20.png
+
+
+* Add 'protect' to tour details page & test
+
+  Then we use the middleware 'protect' in the view route '/tour/:slug', and test what results we will get when clicking on the tour details page with or without the jwt cookie in the browser.
+
+  .image pic/189/21.png
+
+** with jwt cookie
+
+   .image pic/189/22.png
+
+** without jwt cookie
+
+   .image pic/189/23.png
+
+   .image pic/189/24.png

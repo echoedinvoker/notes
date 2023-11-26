@@ -1,0 +1,65 @@
+@document.meta
+title: 193. Rendering Error Page
+description: 
+authors: mattc
+categories: [
+  Rendering
+  Error
+  Global error hanlder
+]
+created: 2023-11-26T18:34:57+0800
+updated: 2023-11-26T18:43:20+0800
+version: 1.1.1
+@end
+
+
+* Why we got lots of strings on page when error happened?
+
+  Because we did not write the use of the .render() method in the global error handler for the response, when rendering a page, if there is an error, we will get the same result as Postman.
+
+  .image pic/193/1.png
+
+  But it is obvious that showing these things to the client-side users is meaningless. We must render beautiful pages for the users.
+
+
+* \(Plus) Fix programmatic error issue
+
+  The error above is a programmatic error, but in reality, we know that it is just the parameter not finding the tour. Before writing .render() to the global error handler, we must first address this issue.
+
+  .image pic/193/2.png
+
+  The error has been transformed into operational above, and then we begin to observe the content of the global error handler.
+
+
+* Add .render() to dev part of global error handler
+
+  .image pic/193/3.png
+
+  Let's first observe the dev mode section. As shown above, only .json() is used for the response. Therefore, the page will only receive results similar to Postman. So, we need to selectively choose .json() or .render() as a response to the client-side based on the request URL and conditions.
+
+  .image pic/193/4.png
+
+  As above, we have also created a dedicated pug file to render the error page.
+
+
+* Add .render() to prod part of global error handler
+
+** observe codes of prod mode
+   Next, let's observe the prod mode. Prod mode is more complicated because it needs to differentiate whether an error is operational or not. If it is a programmatic error, it absolutely cannot respond to the client-side. This applies even when using .render().
+
+   .image pic/193/5.png
+
+** \(Plus) fix bug about copying error object
+   First, we will fix the bugs that were left behind previously. Because AppError inherits from Error, if we use "error = { ...err }", most of the properties of Error cannot be copied. The main issue is that err.message is lost in this process. So, I have made the necessary corrections below.
+
+   .image pic/193/6.png
+
+** add .render() into
+   Next, start adding the content of sendErrorProd to the .render() part.
+
+   .image pic/193/7.png
+
+   As mentioned above, in order to determine the programmatic error, whether it is an API request or a page request, the error message itself should not be disclosed to the client-side.
+
+** Test
+   .image pic/193/8.png

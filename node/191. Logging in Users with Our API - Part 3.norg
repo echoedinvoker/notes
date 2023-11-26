@@ -1,0 +1,94 @@
+@document.meta
+title: 191. Logging in Users with Our API - Part 3
+description: 
+authors: mattc
+categories: [
+  Alert
+  Parcel
+  bundling
+  Notification
+]
+created: 2023-11-26T10:52:09+0800
+updated: 2023-11-26T14:12:24+0800
+version: 1.1.1
+@end
+
+
+* How to get best performance in client browser
+
+  .image pic/191/1.png
+
+  Using script elements to load individual js files like this is actually inefficient. We hope to only load one js file, and it should be packaged using a bundling tool like webpack. This way, it can run with the highest efficiency in the user's browser.
+
+
+* Parcel
+
+** Install
+
+   Compared to webpack, there is now a simpler tool called Parcel with minimal configuration that we can use for bundling JavaScript codes.
+
+   .image pic/191/2.png
+
+   .image pic/191/3.png
+
+   The course is using version @1, but due to conflicts with other package versions, the current version @2 is being used.
+
+** Setup & Package.json script
+
+   Because we are using parcel@2, the setup content below will be different from the course video. The main way to set it up is to follow the [Q&A]{https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/learn/lecture/15065664#questions/15264550} method.
+
+   .image pic/191/5.png
+
+
+* Entry point of Front-end JavaScript, index.js
+
+  > The logic inside index.js is to write the part that retrieves data from elements within index.js itself, and then delegate the data to other modules (other js files) for processing of specific work.
+
+** Create index.js and migrate 1st js codes from login.js
+
+   .image pic/191/6.png
+
+** Using npm install/import package
+
+   .image pic/191/7.png
+
+** Using 3rd-package to support old browser
+
+   .image pic/191/8.png
+
+** Test if page work as before
+
+   .image pic/191/9.png
+
+   Above, we have built the foundation of index.js and included the codes from login.js. Next, we will continue to include the JavaScript codes related to mapbox.
+
+
+* Keep working on mapbox codes...
+
+  .image pic/191/12.png
+
+  We still use the CDN method to install mapbox-gl instead of using npm, because the lecture says there will be some issues.
+
+
+* Create Alerts for logging
+
+  We should have some prompts for successful or failed login attempts. Instead of using native JavaScript alerts because they are ugly and can block the main thread, we generate DOM elements using our own JavaScript codes to accomplish this.
+
+** alerts.js
+
+   .image pic/191/13.png
+
+   .image pic/191/14.png
+
+   We hope that after the alert appears, it will automatically disappear after five seconds, and before it appears, the existing alert on the screen should be deleted to keep the screen clean.
+
+   .image pic/191/15.png
+
+** Using it in login.js
+
+   .image pic/191/16.png
+
+   .image pic/191/17.png
+
+   .image pic/191/18.png
+

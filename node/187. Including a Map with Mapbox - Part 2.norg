@@ -1,0 +1,93 @@
+@document.meta
+title: 187. Including a Map with Mapbox - Part 2
+description: 
+authors: mattc
+categories: 
+created: 2023-11-25T11:21:04+0800
+updated: 2023-11-25T13:42:36+0800
+version: 1.1.1
+@end
+
+
+* Why not use Google map?
+
+  Actually, Google Map also provides a service to draw maps on webpages, but it requires a credit card. Therefore, we chose another powerful option, Mapbox, to help us accomplish this task.
+
+  .image pic/187/1.png
+
+  However, it was found that Mapbox now requires providing a credit card for registration.
+
+
+* Insert Mapbox's SDK
+
+  The first step is to insert Mapbox's SDK into HTML, so that our javascript script can use Mapbox's features through it.
+
+  The SDK needs to be inserted in the head to ensure that it is executed before our script. However, it is only necessary to use the mapbox SDK in the \/tour\/:slug route. Therefore, in tour.pug, we use the 'block append' keyword to include the head section and append the child codes after it.
+
+  .image pic/187/4.png
+
+
+* Create Map object
+
+  After importing the SDK, we can use the objects it provides in our own script. Clicking on 'next' on the page will take us to a page with templates, where we can simply copy and paste to see if we can draw a map.
+
+  .image pic/187/3.png
+
+  It seems that there is a problem with loading the SDK. Both the course QA and the Mapbox official website have solutions for this issue. Below, we will use the official method to solve this problem.
+
+  .image pic/187/5.png
+
+
+* Customize map style
+
+  Above, we successfully solved the problem and successfully rendered the map on the page. However, the default map style does not match the style of our website. We can customize our preferred map style on the Mapbox website and obtain a URL starting with "mapbox://" for us to import the script.
+
+  .image pic/187/6.png
+
+  .image pic/187/7.png
+
+  .image pic/187/8.png
+
+  .image pic/187/9.png
+
+  .image pic/187/10.png
+
+  .image pic/187/11.png
+
+
+* Options of Map constructor
+
+  We have successfully changed the style of the map, but there are still many aspects of the map itself that can be configured, such as zoom, interactivity, and the location of the center point, etc. We can directly refer to the official Mapbox documentation to learn how to use these features.
+
+  .image pic/187/12.png
+
+  .image pic/187/13.png
+
+
+* Add Marks and Popups into map
+
+  Next, we need to draw marks and popups on the map based on the data tour's locations information.
+
+  .image pic/187/14.png
+
+  .image pic/187/15.png
+
+  It is important to note that mapbox is very similar to mongo. In script, the coordinate system usually has longitude (lng) before latitude (lat).
+
+
+* Map Bounding
+
+  Then, according to the coordinates of each location in tour.locations, the map should be able to determine on its own during rendering where the center should be and what zoom level should be used to include all the coordinate points.
+
+  .image pic/187/16.png
+
+  You can see that the edges still have marks being cut off. This is because HTML has done some styling processing. However, map.fitBounds() provides options for us to handle these additional issues.
+
+  .image pic/187/17.png
+
+
+* Fix UX issue about scrolling
+
+  Finally, we use the options of the Map constructor to solve a UX problem. When users scroll the page using the mouse wheel, if the cursor enters the map area, it will zoom the map, which is very unnatural. We can simply use the 'scrollZoom' option to solve it.
+
+  .image pic/187/18.png

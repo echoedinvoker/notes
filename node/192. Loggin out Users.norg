@@ -1,0 +1,55 @@
+@document.meta
+title: 192. Loggin out Users
+description: 
+authors: mattc
+categories: [
+  Cookie
+  Logout
+]
+created: 2023-11-26T14:33:12+0800
+updated: 2023-11-26T16:08:59+0800
+version: 1.1.1
+@end
+
+
+
+* What we gonna do this lecture?
+
+In this lecture, we are going to implement the functionality of the log out button in _header.pug.
+
+.image pic/192/1.png
+
+
+* Why can't we just remove token in the browser?
+
+However, because the cookie sent from the server to the client uses the HttpOnly option, it means that it cannot be accessed or deleted by any method. Therefore, we cannot use a script to delete it and achieve the logout result.
+
+.image pic/192/2.png
+
+
+* Create a simple route 'logout' to overwrite cookie jwt on server-side
+
+The solution is to create a simple route on the server side to send a cookie with the same key name 'jwt' to overwrite the client's original cookie, and then set a very short expire time.
+
+.image pic/192/3.png
+
+.image pic/192/4.png
+
+* Implement logout button functionality of client side
+
+After the server-side route 'logout' is completed, the client-side also needs to register the functionality of making a request to the logout button's 'click' event.
+
+.image pic/192/5.png
+
+
+* Fix error from invalid jwt
+
+After completing the server side and client side, testing was conducted and the following error occurred.
+
+.image pic/192/6.png
+
+This error, as explained in the above figure, is thrown by jwt.verify(). However, isLogged() should not generate any errors, so we wrap it with try-catch and the catch block is still next(), ensuring that it will always move to the next middleware without getting stuck.
+
+.image pic/192/7.png
+
+As mentioned above, we also delete catchAsync because isLogged() should not generate any errors to be caught by it.

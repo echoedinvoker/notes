@@ -2,7 +2,7 @@
 ** (x) [171. Geospatial Queries\: Finding Tours Within Radius (30/>180)]{:171. Geospatial Queries\: Finding Tours Within Radius:} 
 ** (x) [172. Geospatial Aggregation\: Calculating Distances (16/89)]{:172. Geospatial Aggregation\: Calculating Distances:} 
 ** (x) [173. Creating API Documentation Using Postman (11/44)]{:173. Creating API Documentation Using Postman:} 
-* (x) Server-Side Rendering with Pug Templates (30/13)
+* (-) Server-Side Rendering with Pug Templates (30/13)
 ** (x) [175. Recap: Server-Side vs Client-Side Rendering (5/13)]{:175. Recap\: Server-Side vs Client-Side Rendering:} 
 ** (x) [176. Setting up Pug in Express (10/69)]{:176. Setting up Pug in Express:} 
 ** (x) [177. First Steps with Pug (15/94)]{:177. First Steps with Pug:} 
@@ -14,12 +14,19 @@
 ** (x) [183. Building the Tour Overview - Part 2 (16/100)]{:183. Building the Tour Overview - Part 2:}
 ** (x) [184. Building the Tour Page - Part 1 (12/110)]{:184. Building the Tour Page - Part 1:}
 ** (x) [185. Building the Tour Page - Part 2 (26/93)]{:185. Building the Tour Page - Part 2:}
-** ( ) [186. Including a Map with Mapbox - Part 1 (12/)]{:186. Including a Map with Mapbox - Part 1:}
-** ( ) [187. Including a Map with Mapbox - Part 2 (28/)]{:187. Including a Map with Mapbox - Part 2:}
-** ( ) [188. Building the Login Screen (7/)]{::}
-** ( ) [189. Logging in Users with Our API - Part 1 (21/)]{:189. Logging in Users with Our API - Part 1:}
-** ( ) [190. Logging in Users with Our API - Part 2 (19/)]{:190. Logging in Users with Our API - Part 2 (19/):}
-** ( ) [191. Logging in Users with Our API - Part 3 (28/)]{:191. Logging in Users with Our API - Part 3 (28/):}
+** (x) [186. Including a Map with Mapbox - Part 1 (12/56)]{:186. Including a Map with Mapbox - Part 1:}
+** (x) [187. Including a Map with Mapbox - Part 2 (28/142)]{:187. Including a Map with Mapbox - Part 2:}
+** (x) [188. Building the Login Screen (7/47)]{:188. Building the Login Screen:}
+** (x) [189. Logging in Users with Our API - Part 1 (21/200)]{:189. Logging in Users with Our API - Part 1:}
+** (x) [190. Logging in Users with Our API - Part 2 (19/56)]{:190. Logging in Users with Our API - Part 2:}
+** (x) [191. Logging in Users with Our API - Part 3 (28/190)]{:191. Logging in Users with Our API - Part 3:}
+** (x) [192. Loggin out Users (14/96)]{:192. Loggin out Users:}
+** (x) [193. Rendering Error Page (22/126)]{:193. Rendering Error Page:}
+** ( ) [194. Building the User Account Page (16/)]{:194. Building the User Account Page:}
+** ( ) [195. Updating User Data (17/)]{:195. Updating User Data:}
+** ( ) [196. Updating User Data with Our API (13/)]{:196. Updating User Data with Our API:}
+** ( ) [197. Updating User Password with Our API (15/)]{:197. Updating User Password with Our API:}
+   
 
 
 * Index

@@ -1,0 +1,37 @@
+@document.meta
+title: 186. Including a Map with Mapbox - Part 1
+description: 
+authors: mattc
+categories: [
+  Map
+  Mapbox
+  Frontend
+  JavaScript
+]
+created: 2023-11-25T10:28:19+0800
+updated: 2023-11-25T10:28:44+0800
+version: 1.1.1
+@end
+
+* Render map with locations
+
+  .image pic/186/1.png
+
+  Next, we are going to present the tour.locations data on the map in the above block.
+
+
+* Using frontend library to render map
+
+  In order to display a map on the webpage, we need to use a package called Mapbox. However, it runs in the frontend JavaScript, so we need to insert some JavaScript codes into the HTML that we render using Pug.
+
+  .image pic/186/2.png
+
+
+* Frontend JavaScript access data from PUG (HTML)
+
+  Because the tour already exists in HTML, there is no need to use an API for fetching. We can allow data to be accessed by JavaScript through the 'data-' attribute of HTML elements.
+
+  .image pic/186/3.png
+
+  Special attention should be paid to the conversion of type. The attribute can only accept strings, but the data we store and retrieve is an object. Therefore, we need to use JSON to transmit the data.
+

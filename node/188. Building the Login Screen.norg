@@ -1,0 +1,44 @@
+@document.meta
+title: 188. Building the Login Screen
+description: 
+authors: mattc
+categories: [
+  Login
+  Template
+  View
+]
+created: 2023-11-25T15:41:34+0800
+updated: 2023-11-25T16:19:37+0800
+version: 1.1.1
+@end
+
+
+> Challenge yourself to create a login page. The HTML codes and CSS for the login are provided. We need to complete the route, controller, and pug.
+
+* Route and controller
+
+  .image pic/188/1.png
+
+  .image pic/188/2.png
+
+
+* Building PUG
+
+  Copy pastes codes from course provided template and don't forget to include base.pug on the login page.
+
+  .image pic/188/3.png
+
+  .image pic/188/4.png
+
+  .image pic/188/5.png
+
+  Currently, there are no functionalities yet. We will introduce the identity authentication mechanism that we have prepared earlier into this page in the following lectures.
+
+
+* CSS validation
+
+  The instructor simply uses CSS to validate the input content. If interested, you can refer to the CSS content yourself. Here, we won't explain much because it's not a CSS course.
+
+  .image pic/188/6.png
+
+  .image pic/188/7.png

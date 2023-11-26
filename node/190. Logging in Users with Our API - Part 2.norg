@@ -1,0 +1,39 @@
+@document.meta
+title: 190. Logging in Users with Our API - Part 2
+description: 
+authors: mattc
+categories: [
+  Logging
+  middleware
+  PUG Condition
+]
+created: 2023-11-26T09:38:34+0800
+updated: 2023-11-26T10:34:59+0800
+version: 1.1.1
+@end
+
+
+* What we gonna do in this lecture?
+
+.image pic/190/1.png
+
+In this lecture, we will determine whether a user is logged in when loading the page. If they are, the user information and logout button will be displayed in the upper right corner, as shown in the image above. If not, it will be as shown in the image.
+
+
+* Building middleware 
+
+The logic of checking whether the user is logged in is very similar to the concept of the 'protect' controller that we previously used to protect API routes. Therefore, we can directly reference it and make modifications.
+
+.image pic/190/2.png
+
+As mentioned above, the code for isLogged() is much simpler than protect() because it is only used to check if the user is logged in. 
+We use res.locals to pass the user variable into the pug template. res.locals allows us to easily send data from nodejs codes to the pug template.
+
+
+* Insert middleware & rendering elements conditionally in PUG
+
+The remaining task is to insert the middleware isLogged() before the rendering page routes and after _header.pug, to draw two different scenarios of elements based on the existence of user data.
+
+.image pic/190/3.png
+
+.image pic/190/4.png
