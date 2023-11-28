@@ -1,0 +1,6 @@
+- (x) *BASIC*
+-- (x) [Bug #14974: 【平台管理】更新publicKey功能不完整 + 刪除 簽名型別 選項 - 銅科戰情室系統]{http://redmine.mirle.com.tw/issues/14974}
+--- (x) [fix: remove radio]{http://gitlab.mirle.com.tw/300/3s3/mirle-auth-center-frontend/-/commit/f5b1758bc3e77dda6cb8972c88873e1a780a23f6}
+--- (x) [feat: update public key and i18n]{http://gitlab.mirle.com.tw/300/3s3/mirle-auth-center-frontend/-/commit/e7ead725e23184e92ebe78ebea6ead87f2276864}
+-- (x) [Bug #14961: 【平台管理-功能管理】複製選單/建立語系時，出現的選項應同畫面左上角的選單 - 銅科戰情室系統]{http://redmine.mirle.com.tw/issues/14961}
+--- (x) [Fix: copy lang i18n]{http://gitlab.mirle.com.tw/300/3s3/mirle-auth-center-frontend/-/commit/cd8d620ad977b97ce029b9932d0faf50c91589b}

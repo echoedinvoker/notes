@@ -1,0 +1,51 @@
+@document.meta
+title: 9. The Course Project Setup
+description: 
+authors: mattc
+categories: [
+  lite-server
+  npm
+]
+created: 2023-11-27T22:25:12+0800
+updated: 2023-11-27T22:25:35+0800
+version: 1.1.1
+@end
+
+* Create a simplest project manually
+
+** index.html
+   Use the snippet to quickly create an index.html.
+
+   .image pic/6/2.png
+
+** app.ts
+   Note that HTML can only use the script tag to insert JS files.
+
+   .image pic/6/3.png
+
+** compile ts to js
+   So if we mainly use Typescript to write scripts, we must use the command "tsc" to compile it into Javascript before being able to insert it into HTML.
+
+   .image pic/6/4.png
+
+   .image pic/6/5.png
+
+
+* Using NPM to help
+
+** npm init
+   Some of the processes above can be completed with the help of npm packages, so we need to use npm init to initialize this project before loading the packages.
+
+   .image pic/6/6.png
+
+** lite-server
+   We use the lite-server package, which by default uses index.html to generate a server at http://localhost:3000.
+
+   .image pic/6/7.png
+
+** automatically restart server
+   When index.html and the scripts it loads are modified, the server will automatically restart. However, the ts files are not included in the previous two, so tsc compilation still needs to be used. But when the js file is overwritten by new content, it will trigger a server restart.
+
+   .image pic/6/8.png
+
+   .image pic/6/9.png

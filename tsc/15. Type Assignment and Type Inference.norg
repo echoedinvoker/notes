@@ -1,0 +1,38 @@
+@document.meta
+title: 15. Type Assignment and Type Inference
+description: 
+authors: mattc
+categories: 
+created: 2023-11-28T10:42:23+0800
+updated: 2023-11-28T10:42:32+0800
+version: 1.1.1
+@end
+
+
+* Why we don't set type on assignment sentence
+
+  Using colons to define types is a feature of TypeScript. We will not see them in JavaScript after compilation.
+
+  .image pic/14/1.png
+
+  Since there are many benefits to defining types, why not use the colon to define types in every declaration of variables (or constants)?
+
+
+* Type inference
+
+  Because TypeScript automatically infers the type of a variable (or constant) based on the given initial value, using a colon to define the type in this situation is considered bad practice.
+
+** const and let
+   When a variable is given an initial value, TypeScript will automatically determine the type of this variable (or constant).
+
+   .image pic/14/2.png
+
+   Above, it can be observed that using const and let to define variables will yield different results. In the case of const, besides TypeScript defining its type, it will also remember its value.
+
+** defining value without init value
+   When defining a variable without assigning an initial value, it is reasonable to use a colon to define the type.
+
+   .image pic/14/4.png
+
+   So whether or not it is necessary to explicitly use a colon to define the type and whether or not it is a parameter is irrelevant, but rather it should be considered whether or not it is reasonable.
+

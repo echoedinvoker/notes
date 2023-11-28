@@ -1,0 +1,51 @@
+@document.meta
+title: 19. Working with Tuples
+description: 
+authors: mattc
+categories: [
+  Tuple
+  Type inference
+  Type
+  Explicitly
+]
+created: 2023-11-28T13:42:56+0800
+updated: 2023-11-28T13:43:43+0800
+version: 1.1.1
+@end
+
+
+* Type tuple, which is only for Typescript
+
+  Tuple is a type that exists in other languages but does not exist in JavaScript. Through the compiler, this type has been added to TypeScript.
+
+  .image pic/18/1.png
+
+
+* Case that array need fixed number of items and fixed type item
+
+  Usually, when given an initial array value, an Array type will be inferred.
+
+  .image pic/18/2.png
+
+  The above will infer a union type array because the type of items in the given array is not fixed.
+
+  .image pic/18/3.png
+
+  But in this case, we only need two items in the array and the first item is always a number and the second item is a string.
+
+
+
+* Type inference cannot get tuple type, we should explicitly set it
+
+  This is very suitable for using tuple type, but general type inference cannot obtain tuple type. We must explicitly set it. In this case, it is NOT considered bad practice.
+
+  .image pic/18/4.png
+
+  After we specify the property role as a tuple type, when we assign values of different types to the item, a warning will be issued as mentioned above.
+
+
+* Tuple & .push()
+
+  The number of items in a tuple type is also explicitly defined and cannot be changed, but it is important to note that .push() cannot be warned against in TypeScript. Be especially careful about this.
+
+  .image pic/18/5.png

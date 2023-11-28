@@ -1,0 +1,45 @@
+@document.meta
+title: 16. Object Types
+description: 
+authors: mattc
+categories: [
+  object
+  Type
+]
+created: 2023-11-28T11:28:36+0800
+updated: 2023-11-28T11:29:04+0800
+version: 1.1.1
+@end
+
+* type 'object'
+
+  Typescript also has an object type, but it is a concrete object, meaning that even the internal properties need to be defined.
+
+  .image pic/16/1.png
+
+
+* Type object is concrete
+
+  The object "person" above has been given an initial value for the object, so TypeScript's type inference comes into play and automatically determines its type.
+
+  .image pic/16/2.png
+
+  We can directly use type 'object' to define the type of a variable (or constant), but it is equivalent to defining it as an empty object.
+
+  If you want to clearly define the object type, its internal properties must also be defined. Otherwise, using any property in this object will generate a Typescript warning.
+
+  .image pic/16/3.png
+
+
+* Type object !== object
+
+  The type object does not actually create an object, it only exists in Typescript and will be removed when compiled to JavaScript. Additionally, its syntax is different from a regular object.
+
+  .image pic/16/5.png
+
+
+* Which is best practice in this case?
+
+  Actually, in this case where an initial value is given, using type inference instead of explicitly defining the type is considered best practice.
+
+  .image pic/16/4.png

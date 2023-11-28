@@ -1,0 +1,31 @@
+@document.meta
+title: 14. Working with Numbers, Strings and Booleans
+description: 
+authors: mattc
+categories: [
+  Primitive type
+  boolean
+  string
+]
+created: 2023-11-28T08:51:13+0800
+updated: 2023-11-28T08:51:57+0800
+version: 1.1.1
+@end
+
+> In this lecture, we are going to practice using other primitive types that are shared with JavaScript in TypeScript.
+
+* boolean
+
+.image pic/13/1.png
+
+* string
+
+.image pic/13/2.png
+
+We encountered a logic error, and even TypeScript's types did not issue any warnings for this situation.
+
+.image pic/13/3.png
+
+* All primitive types common with JavaScript are lowcase
+
+In TypeScript, there are some types that start with uppercase letters, such as String and Number. These types are different from the native types in JavaScript, so it is important to pay special attention to this.

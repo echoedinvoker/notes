@@ -1,0 +1,57 @@
+@document.meta
+title: 20. Working with Enums
+description: 
+authors: mattc
+categories: [
+  ENUM
+  Type
+]
+created: 2023-11-28T14:35:09+0800
+updated: 2023-11-28T14:35:25+0800
+version: 1.1.1
+@end
+
+* How to restrict values of a variable in native JavaScript
+
+  > If the person's role has only three categories.
+
+** number value
+   If we use the numbers 0, 1, and 2 to represent the three roles as follows
+
+   .image pic/20/1.png
+
+   It is easy to forget the meaning represented by the values.
+
+** string value
+   If changed to use a string as the value, it would be as follows.
+
+   .image pic/20/2.png
+
+   There is a high probability of making mistakes in strings, such as dash, underscore, and space, as well as confusion between singular and plural.
+
+** global constant
+   It is common practice to manage global constant.
+
+   .image pic/20/3.png
+
+
+* Typescript ENUM type
+
+** automatically set values
+   However, in Typescript, enum type is directly provided to simplify this process for us.
+
+   .image pic/20/4.png
+
+   enum is a custom type, so the role starts with a capital letter. Above, we write the variable names, and the enum will automatically assign values starting from 0 to these variables.
+
+** start from other number
+   Of course, we don't want to start assigning values from 0. Instead, we can write it as follows, and the subsequent variables will be automatically incremented with values.
+
+   .image pic/20/5.png
+
+** assign string value
+   We can even assign strings to variables in the enum, but in this case, each variable has to be manually given a value.
+
+   .image pic/20/6.png
+
+   From the above characteristics, it seems that enum is somewhat similar to map in native JavaScript.

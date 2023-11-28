@@ -1,0 +1,37 @@
+@document.meta
+title: 18. Arrays Types
+description: 
+authors: mattc
+categories: [
+  Type inferrence
+  Array
+]
+created: 2023-11-28T12:01:42+0800
+updated: 2023-11-28T12:02:16+0800
+version: 1.1.1
+@end
+
+* Array type of specific type
+
+  Adding \[\] after a type indicates that it is an Array type.
+
+  .image pic/17/1.png
+
+  Usually, we hope that the items in the Array are of a single type as mentioned above.
+
+* Mixed Array type
+
+  If there are items of different types in the Array, it will be defined as a Mixed Array type. This means that we can freely assign items of different types to this Array.
+
+  .image pic/17/2.png
+
+  But this will revert back to the original Javascript without taking advantage of the benefits of Typescript, so we should try to use any\[\] as little as possible.
+
+
+* Smart type inferrence
+
+  .image pic/17/3.png
+
+  Typescript is smart enough to accurately determine the type of the item when we loop through an array.
+
+  And as long as the type of the variable (or constant) is known, you can directly use the prototype method of that type. When using a prototype method of the wrong type, a warning will also be issued. This is very helpful for development.

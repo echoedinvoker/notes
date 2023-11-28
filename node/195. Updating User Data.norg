@@ -1,0 +1,76 @@
+@document.meta
+title: 195. Updating User Data
+description: 
+authors: mattc
+categories: [
+  Form
+  urlencoded
+  Updating
+  PUG template
+]
+created: 2023-11-27T18:58:33+0800
+updated: 2023-11-27T18:59:52+0800
+version: 1.1.1
+@end
+
+* Two approaches to update by form
+
+  In this lecture, we need to update the data of the username and email in the upper half table of the account page. Instead of sending a request from the frontend to our previously created API for updating, we will use a more traditional method in this lecture - updating using an HTML form.
+
+
+* Pros/Cons of native HTTP Form approach
+
+  The method of HTML form does not require request or the use of JavaScript, but the backend needs to create an additional route and controller for it, and the page must be reloaded. The lecturer said that he prefer using request, but in certain situations, such as when your app does not have an API, you can only update data using HTML form.
+
+
+* How to update account by native HTTP Form approach
+
+  The key to using HTML form to transmit data lies in writing the attributes of the form and input elements. The form should use the attribute 'action' to specify the endpoint and 'method' to specify the method. As for the input part, only the values with the attribute 'name' will be sent in the request body.
+
+  .image pic/195/1.png
+
+
+* The issue that arises from sharing index.js on each page.
+
+  We use a browser for testing.
+
+  .image pic/195/2.png
+
+  The test result shows an error message that should only appear during login. The reason may be that index.js is executed on every page, whether it is the login or account page. Therefore, it is possible that when on the account page, the codes that should have been used to capture the login form were used to capture the account update form instead.
+
+  .image pic/195/3.png
+
+
+* Form transfer data by urlencoded format_
+
+  .image pic/195/4.png
+
+  Although the above problem has been resolved, the backend still cannot see the data sent by the HTTP Form. This is because the HTTP Form uses the urlencoded data format, which Express must parse in order to enter the request-response cycle.
+
+  .image pic/195/5.png
+
+  "extends" is an option that, when enabled, allows for the transmission of more complex data. Although we don't use it here, it can still be enabled. 
+  Similar to Express.json(), here we should also limit the size of the transmitted data to avoid attacks.
+
+  .image pic/195/6.png
+
+  After parsing, the data can be successfully transmitted to the backend.
+
+* Complete the controller
+
+  After receiving the data in the backend, it needs to be used to update the content of the user in the database, and the new user data should be inserted into the PUG template to render the updated page.
+
+  .image pic/195/7.png
+
+  .image pic/195/8.png
+
+
+* HTML Form approach is hard to handle error
+
+  .image pic/195/9.png
+
+  .image pic/195/10.png
+
+  The error message above is difficult for the client to understand, but the HTTP Form method used in this lecture makes it difficult to handle this problem. Therefore, we will not handle it. In the next lecture, we will update the user account using the request method instead.
+
+

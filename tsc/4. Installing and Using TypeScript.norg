@@ -1,0 +1,82 @@
+@document.meta
+title: 4. Installing and Using TypeScript
+description: 
+authors: mattc
+categories: [
+  Logic Error
+  Installing
+  IDE Warnings
+  Type setting
+  Exclamation
+  Typecasting
+]
+created: 2023-11-27T20:40:36+0800
+updated: 2023-11-27T20:43:55+0800
+version: 1.1.1
+@end
+
+* Common JavaScript bugs
+
+  Below are common logic errors in JavaScript. Because they are logical errors, they cannot be seen in the console, making them difficult to resolve.
+
+  .image pic/4/1.png
+
+  .image pic/4/2.png
+
+  Of course, we can use JavaScript's native methods to check types.
+
+  .image pic/4/3.png
+
+  .image pic/4/4.png
+
+  But it is contradictory to write more codes to prevent the occurrence of known bugs.
+
+* Installing Typescript globally
+
+  .image pic/4/5.png
+
+  .image pic/4/6.png
+
+
+* Typescript warnings
+
+  We create a ts file and then directly copy the content of the js file into it. Many errors can be seen.
+
+  .image pic/4/7.png
+
+  These factors can all prone to bugs in JavaScript.
+
+
+** Make sure it won't return null by ! (Exclamation)
+
+   This error is possibly caused by a typo in our id. If it is typed incorrectly, we will get a null value. We need to inform TypeScript that we have confirmed it is impossible to get null.
+
+   .image pic/4/8.png
+
+** Make sure it is input element (Typecasting)
+
+   The error in this part is because not every element has a value property. We need to let TypeScript know that we have confirmed that we will definitely get an input element.
+
+   .image pic/4/9.png
+
+   This syntax is also known as Typecasting.
+
+* Set types to args of function
+
+  This is another important feature of Typescript, which allows setting types for function parameters.
+
+  .image pic/4/10.png
+
+  After we set the parameters and types correctly, TypeScript immediately found the location where the error occurred.
+
+  .image pic/4/11.png
+
+  So after all the warnings are eliminated, it can be inserted into HTML.
+
+* HTML only can insert JavaScript, not TypeScript
+
+  So we must first convert TypeScript using its compiler to JavaScript before we can insert it into HTML.
+
+  .image pic/4/12.png
+
+  .image pic/4/13.png

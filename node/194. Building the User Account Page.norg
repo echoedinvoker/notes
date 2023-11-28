@@ -1,0 +1,61 @@
+@document.meta
+title: 194. Building the User Account Page
+description: 
+authors: mattc
+categories: [
+  Account
+  Pug template
+  Mixin
+  Unbuffed code
+]
+created: 2023-11-27T15:13:04+0800
+updated: 2023-11-27T16:00:37+0800
+version: 1.1.1
+@end
+
+
+* Account pug template
+
+** Copy paste
+   In this lecture, we are going to complete the account page. Here, we present the personal information of the logged-in user. The course provides codes, and we will extend it as well.
+
+   .image pic/194/1.png
+
+
+** Refactor by mixin
+   In the provided codes of the course, we can see many repeated parts. We can use mixin functions to refactor and simplify the code.
+
+   .image pic/194/2.png
+
+** Dynamic content
+   Next, bring in the part that should dynamically present the user's personal information.
+
+   .image pic/194/3.png
+
+
+* Route and Controller
+
+  Finally, we need to complete the route and controller parts to connect to the pug template above. Since users who are not logged in should not be able to see this page, we must use the middleware 'protect' in front of it.
+
+  .image pic/194/4.png
+
+  Because there are many duplicate parts in the code of middleware 'protect' and 'isLogged', the route is intentionally placed above 'isLogged'. However, in order to do this, we must also use res.locals in 'protect' to pass user data into the pug template.
+
+
+* Test on the browser
+
+  Test and see the results.
+
+  .image pic/194/5.png
+
+  There are some areas that need to be corrected.
+
+  1. The left side admin section should only be displayed when the logged-in user is an admin.
+
+  .image pic/194/6.png
+
+The conditions here are more complex, so we use the method of writing native JavaScript conditions using unbuffed codes.
+
+  2. There is a bug in displaying user photos.
+
+  .image pic/194/7.png

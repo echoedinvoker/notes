@@ -1,0 +1,45 @@
+@document.meta
+title: 17. Nested Objects and Types
+description: 
+authors: mattc
+categories: [
+  Type
+  Array
+  Nested
+]
+created: 2023-11-28T11:32:03+0800
+updated: 2023-11-28T11:32:33+0800
+version: 1.1.1
+@end
+
+Of course object types can also be created for nested objects.
+
+Let's say you have this JavaScript object:
+
+@tsc
+const product = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!'
+  }
+}
+@end
+
+This would be the type of such an object:
+
+@object
+{
+  id: string;
+  price: number;
+  tags: string[];
+  details: {
+    title: string;
+    description: string;
+  }
+}
+@end
+
+So you have an object type in an object type so to say.
