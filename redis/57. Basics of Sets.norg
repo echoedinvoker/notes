@@ -1,0 +1,37 @@
+@document.meta
+title: 57. Basics of Sets
+description: 
+authors: mattc
+categories: [
+  Set
+]
+created: 2023-12-04T00:27:18+0800
+updated: 2023-12-04T10:50:56+0800
+version: 1.1.1
+@end
+
+* Set type
+
+  .image pic/57/1.png
+
+
+* Set commands
+
+** Overview
+   .image pic/57/2.png
+
+** SADD
+   .image pic/57/3.png
+
+   Note: Only one value can be added to the Set at a time.
+
+** SMEMBERS
+   .image pic/57/4.png
+
+
+* rBook Practice
+
+  .image pic/57/5.png
+
+  The value of "return" represents how many values are added to the key. SADD can add multiple values at once.
+

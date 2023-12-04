@@ -1,0 +1,38 @@
+@document.meta
+title: 27. Redis Design Methodology
+description: 
+authors: mattc
+categories: [
+  Design Methodology
+  Design Considerations
+]
+created: 2023-12-02T12:16:06+0800
+updated: 2023-12-02T12:16:44+0800
+version: 1.1.1
+@end
+
+* Redis design methodology
+
+  Before we actually write codes, we must first understand the Redis design methodology, which may be more important than writing the codes.
+
+  In the SQL Database Design methodology, we first design the tables, the schema of the tables, and the relationships between the tables. Then, in the app, we write query-related codes to access the data in the database tables. However, the Redis design methodology is exactly the opposite.
+
+  .image pic/27/1.png
+
+  We will not use complex data structures in Redis, so the Redis design methodology must start by considering the queries.
+
+
+
+* Design considerations
+
+  The following is the thought process for a query. Typically, every time a new cache is designed, this process needs to be followed.
+
+  .image pic/27/2.png
+
+  We know that Redis stores data in memory, so it is important to consider whether the data stored in it will be particularly large.
+
+  .image pic/27/3.png
+
+  From the above figure, it can be seen that it is obvious to choose a static page for caching.
+
+  .image pic/27/4.png

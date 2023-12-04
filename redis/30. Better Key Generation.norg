@@ -1,0 +1,30 @@
+@document.meta
+title: 30. Better Key Generation
+description: 
+authors: mattc
+categories: [
+  Typo mistakes
+  Utility function
+  Key
+]
+created: 2023-12-02T13:27:42+0800
+updated: 2023-12-02T13:39:51+0800
+version: 1.1.1
+@end
+
+* Little issue of previous codes
+
+  .image pic/30/1.png
+
+  Previously, in our codes, we had to manually input the key string, which easily resulted in typo mistakes.
+
+
+* Create little function to generate key strings
+
+  We can create a function to generate key strings to solve the above problem.
+
+  .image pic/30/2.png
+
+  The function is very simple, but it allows us to avoid the chance of making typo mistakes.
+
+

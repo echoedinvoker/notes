@@ -1,0 +1,23 @@
+@document.meta
+title: 24. Type Aliases Custom Types
+description: 
+authors: mattc
+categories: [
+  Type Aliases
+]
+created: 2023-11-28T17:05:40+0800
+updated: 2023-11-28T17:06:06+0800
+version: 1.1.1
+@end
+
+* Some types are combersome...
+
+  .image pic/24/1.png
+
+  As mentioned above, some types are very lengthy and even need to be repeated. In such cases, we can use the technique of using alias types.
+
+* Type Aliases by 'type'
+
+  .image pic/24/2.png
+
+  We can use the "type" keyword to define a custom type (type alias) as above.

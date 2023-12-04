@@ -1,0 +1,52 @@
+@document.meta
+title: 63. Scanning a Set
+description: 
+authors: mattc
+categories: [
+  SET
+  SCARD
+  SREM
+  SSCAN
+]
+created: 2023-12-04T14:47:58+0800
+updated: 2023-12-04T14:48:30+0800
+version: 1.1.1
+@end
+
+* Last 3 SET commands
+
+  .image pic/63/1.png
+
+
+* SCARD
+
+  Return count of values of a certain key.
+
+  .image pic/63/2.png
+
+  .image pic/63/3.png
+
+
+* SREM
+
+  Remove value from a certain key.
+
+  .image pic/63/4.png
+
+  .image pic/63/5.png
+
+
+* SSCAN
+
+  When we use SMEMBERS, it returns all values in the key. However, sometimes the number of values is too large, so we use SSCAN to only return a portion of the values instead of all of them.
+
+** what is cursor id?
+   .image pic/63/6.png
+
+   .image pic/63/7.png
+
+   The cursor id is used to indicate the current position of the printing in which value, 0 is the position of the first value, and each return of SSCAN will include the cursor id needed for the next SSCAN.
+
+** rBook practice
+   .image pic/63/8.png
+

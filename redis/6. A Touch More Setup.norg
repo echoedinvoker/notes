@@ -1,0 +1,40 @@
+@document.meta
+title: 6. A Touch More Setup
+description: 
+authors: mattc
+categories: [
+  rBook
+  Command
+  Connection
+]
+created: 2023-12-01T16:49:27+0800
+updated: 2023-12-01T16:49:55+0800
+version: 1.1.1
+@end
+
+* There are couple way to send command to redis
+
+  The instructor has created a web page for sending Redis commands to facilitate our learning of Redis. Initially, using redis-cli may feel a bit challenging for beginners.
+
+  .image pic/6/1.png
+
+
+* rBook.cloud environment introduction
+
+  .image pic/6/2.png
+
+  .image pic/6/3.png
+
+
+* Connection setup
+
+  .image pic/6/4.png
+
+  .image pic/6/5.png
+
+  .image pic/6/6.png
+
+
+* Send our first command
+
+  .image pic/6/7.png

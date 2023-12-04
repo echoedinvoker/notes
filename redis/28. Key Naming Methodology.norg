@@ -1,0 +1,59 @@
+@document.meta
+title: 28. Key Naming Methodology
+description: 
+authors: mattc
+categories: [
+  Key Naming
+]
+created: 2023-12-02T12:42:52+0800
+updated: 2023-12-02T12:43:19+0800
+version: 1.1.1
+@end
+
+> The naming of keys in Redis must comply with the following rules in order to be considered valid.
+
+* Unique
+
+  .image pic/28/2.png
+
+  .image pic/28/1.png
+
+  The keys stored in the above pages are all 'page', so they will just keep getting overwritten.
+
+  We must change the key to be unique in order to save all pages in Redis.
+
+  .image pic/28/3.png
+
+
+* Let other engineer understand
+
+Although the naming method of the keys above avoids data being overwritten, it does not allow other engineers to easily understand what data this key is storing.
+
+  .image pic/28/4.png
+
+** very common convention
+   .image pic/28/5.png
+
+   Following everyone's convention can help others quickly understand your key.
+
+** replace \: with \# for search feature
+   We use # to replace \: in front of unique identifier.
+
+   .image pic/28/6.png
+
+   This is not a common practice, but in the future, it will be very convenient for us to use the search feature of Redis.
+
+
+* Create valid keys
+
+  .image pic/28/7.png
+
+  Because each page itself will be linked to its own unique route, the route itself is a very good unique identifier.
+
+  .image pic/28/8.png
+
+  The following are the final keys which following all the naming rules.
+
+  .image pic/28/9.png
+
+  Other engineers can also guarantee that they can know at a glance what data these keys store.

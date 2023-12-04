@@ -1,0 +1,33 @@
+@document.meta
+title: 53. Fetching a Single Item
+description: 
+authors: mattc
+categories: [
+  Item
+  HGETALL
+  Deserialize
+]
+created: 2023-12-03T22:26:42+0800
+updated: 2023-12-03T22:27:14+0800
+version: 1.1.1
+@end
+
+* HGETALL single item & handling empty object return
+
+  .image pic/54/1.png
+
+
+* Deserialize
+
+  Next, let's move on to the deserialization part. There are many values in the item that need to be converted into different types. The lecturer has already helped us set up the Deserialize.ts file and provided a function framework. 
+
+  .image pic/54/2.png
+
+  The types defined by lecturer imply that the values obtained directly from Redis will be all strings, and the function return also clearly defines the type so that we know what types they should be converted into.
+
+
+* Test on the browser
+
+  Next, we create a new item on the browser, and it should directly jump to the page displaying that item details.
+
+  .image pic/54/3.png

@@ -1,0 +1,24 @@
+@document.meta
+title: 40. Issues with HGETALL
+description: 
+authors: mattc
+categories: [
+  HGETALL
+]
+created: 2023-12-02T15:53:31+0800
+updated: 2023-12-02T15:53:56+0800
+version: 1.1.1
+@end
+
+* Wierd of Client.hGetAll
+
+  .image pic/38/1.png
+
+  Because if the key of Redis HGETALL does not exist, it will return {}.
+
+
+* Whe should use special condition for it
+
+  So we need to check if the object is empty instead of a falsy value, which is different from other db clients.
+
+  .image pic/38/2.png

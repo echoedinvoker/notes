@@ -1,0 +1,60 @@
+@document.meta
+title: 16. Dealing with Numbers
+description: 
+authors: mattc
+categories: [
+  Number
+]
+created: 2023-12-02T09:58:36+0800
+updated: 2023-12-02T09:58:59+0800
+version: 1.1.1
+@end
+
+* Commands for number
+
+  Next, let's discuss number type. Half of the commands for number type come from strings, but the other half are specifically for number type usage.
+
+  .image pic/16/1.png
+
+  Therefore, if we use commands intended for number type on strings, it will result in an error.
+
+
+* Number is stored as string actually
+
+  In Redis, numbers are actually stored as strings.
+
+  .image pic/16/2.png
+
+  So when we use GET to obtain values, we actually get a string. This point needs to be especially careful.
+
+  .image pic/16/3.png
+
+
+* INCR & DECR
+
+  Although the number is stored as a string, as long as it can be parsed into a numerical value, it can be updated by these commands specifically designed for numbers.
+
+  .image pic/16/4.png
+
+  .image pic/16/5.png
+
+  However, it is important to note that the values obtained from GET are still of string type.
+
+
+* INCRBY & DECRBY
+
+  The same as INCR DECR, but with the option to choose the increment or decrement value.
+
+  .image pic/16/6.png
+
+  .image pic/16/7.png
+
+
+* INCRBYFLOAT
+
+  What needs to be specially noted is that there is no DECRBY.
+
+  .image pic/16/8.png
+
+  .image pic/16/9.png
+

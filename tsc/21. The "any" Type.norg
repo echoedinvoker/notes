@@ -1,0 +1,36 @@
+@document.meta
+title: 21. The "any" Type
+description: 
+authors: mattc
+categories: [
+  any
+  Type
+]
+created: 2023-11-28T14:54:26+0800
+updated: 2023-11-28T14:54:56+0800
+version: 1.1.1
+@end
+
+* any
+
+  When we use the "any" type, it means that Typescript will not perform any checks on this variable.
+
+  .image pic/21/1.png
+
+  Even if an array or object is given, Typescript will not have any warnings.
+
+
+* any\[\]
+
+  If it is of type any\[\], it means it is an array type, but Typescript will not individually check the type of each item within it.
+
+  .image pic/21/2.png
+
+
+* When to use or not to use any type?
+
+  We should try our best to let Typescript check the type of variables (or constants), whether it is through type inference or explicitly setting the type. Only the following two situations may use the any type:
+
+  1. I really have no idea what kind of value I will get.
+
+  2. There are some codes that need to check the type at runtime.

@@ -1,0 +1,56 @@
+@document.meta
+title: 17. Again... Why do These Commands Exist?
+description: 
+authors: mattc
+categories: [
+  Concurrency
+  Number
+  Command
+  INCR
+  Synchronous
+]
+created: 2023-12-02T10:26:10+0800
+updated: 2023-12-02T10:26:55+0800
+version: 1.1.1
+@end
+
+
+* Is GET & SET can replace INCR or other similar commands?
+
+  We learned in the previous lecture about commands for handling numbers, such as INCR. If you think carefully, you will realize that they can actually be replaced by a combination of GET and SET.
+
+  .image pic/17/2.png
+
+  So why does Redis specifically provide these commands to us? Is it just to simplify the process?
+
+  .image pic/17/1.png
+
+
+* Concurrency issues
+
+  Assuming in a large website, such as Reddit, there is a post that has just been published and gained extremely high popularity. At this moment, there will be a bunch of users upvoting it.
+
+  .image pic/17/3.png
+
+  In this situation, the situation shown in the figure is very likely to occur. This is a concurrent problem. We will analyze its process in detail as follows.
+
+  .image pic/17/4.png
+
+  We can see that although there are two upvote requests, due to concurrency, the result is only one upvote.
+
+
+* How to solve concurrenty issues
+
+** Three solutions
+   We have three methods to solve the above concurrency issues.
+
+   .image pic/17/5.png
+
+   The first two methods are more complicated and we will discuss them later. In this example, we only need to use the last method, INCR, to easily solve this problem.
+
+** Why INCR can solve it
+   The following explains why INCR can solve this problem.
+
+   .image pic/17/6.png
+
+   From the above figure, it can be seen that INCR processes each command one by one internally in Redis using a synchronous method, thus eliminating concurrency.

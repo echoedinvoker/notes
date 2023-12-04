@@ -1,0 +1,77 @@
+* (-) Section 1: Get Started Here!
+** (x) [4. Why Use Redis? (4/23)]{:4. Why Use Redis?:}
+** (x) [5. Initial Setup (3/10)]{:5. Initial Setup:}
+** (x) [6. A Touch More Setup (5/18)]{:6. A Touch More Setup:}
+** (x) [7. Running RBook Locally (1/5)]{:7. Running RBook Locally:}
+** (x) [8. Basic Commands (4/14)]{:8. Basic Commands:}
+** (x) [9. Documentation on Commands (6/20)]{:9. Documentation on Commands:}
+** (x) [10. Variations of SET (5/16)]{:10. Variations of SET:}
+** (x) [11. Use Case of Expiration Options (7/28)]{:11. Use Case of Expiration Options:}
+** (x) [12. Setting Multiple Keys (5/18)]{:12. Setting Multiple Keys:}
+** (x) [13. GET and MGET (1/7)]{:13. GET and MGET:}
+** (x) [14. String Ranges (4/13)]{:14. String Ranges:}
+** (x) [15. Are These Commands Even Useful? (10/26)]{:15. Are These Commands Even Useful?:}
+** (x) [16. Dealing with Numbers (5/24)]{:16. Dealing with Numbers:}
+** (x) [17. Again... Why do These Commands Exist? (9/22)]{:17. Again... Why do These Commands Exist?:}
+** (x) [24. Don't Skip This Video (8/15)]{:24. Don't Skip This Video:}
+** (x) [25. Redis Client Libraries (10/28)]{:25. Redis Client Libraries:}
+** (x) [26. First Implementation Task (4/13)]{:26. First Implementation Task:}
+** (x) [27. Redis Design Methodology (9/23)]{:27. Redis Design Methodology:}
+** (x) [28. Key Naming Methodology (6/21)]{:28. Key Naming Methodology:}
+** (x) [29. Adding Page Caching (7/20)]{:29. Adding Page Caching:}
+** (x) [30. Better Key Generation (5/13)]{:30. Better Key Generation:}
+** (x) [33. Hashes in Redis (2/12)]{:33. Hashes in Redis:}
+** (x) [34. Storing and Retrieving Hashes (5/14)]{:34. Storing and Retrieving Hashes:}
+** (x) [35. Deleting Hash Data (3/11)]{:35. Deleting Hash Data:}
+** (x) [37. Numbers in Hashes (5/17)]{:36. Numbers in Hashes:}
+** (x) [38. Slightly Unpredictable HSET and HGETALL (4/18)]{:38. Slightly Unpredictable HSET and HGETALL:}
+** (x) [39. Issues with HSET (7/22)]{:39. Issues with HSET:}
+** (x) [40. Issues with HGETALL (6/14)]{:40. Issues with HGETALL:}
+** (x) [41. App Overview (9/36)]{:41. App Overview:}
+** (x) [42. Reducing the Design to Queries (7/25)]{:42. Reducing the Design to Queries:}
+** (x) [43. What Data Type for Each Resource (6/17)]{:43. What Data Type for Each Resource:}
+** (x) [44. Create User Implementation (10/36)]{:44. Create User Implementation:}
+** (x) [45. Serialization and Deserialization (11/29)]{:45. Serialization and Deserialization:}
+** (x) [46. Adding Serialize (1/9)]{:46. Adding Serialize:}
+** (x) [47. Fetching a User (4/14)]{:47. Fetching a User:}
+** (x) [48. Implementing Sessions (7/25)]{:48. Implementing Sessions:}
+** (x) [49. Fetching a Saved Session (7/25)]{:49. Fetching a Saved Session:}
+** (x) [50. Creating Sessions (3/16)]{:50. Creating Sessions:}
+** (x) [51. Serializing Date Times (4/14)]{:51. Serializing Date Times:}
+** (x) [52. Storing Items (7/45)]{:52. Storing Items:}
+** (x) [53. Fetching a Single Item (8/26)]{:53. Fetching a Single Item:}
+** (x) [54. Batching Commands with Pipelines (4/17)]{:54. Batching Commands with Pipelines:}
+** (x) [55. Running Multiple Commands at the Same Time (6/29)]{:55. Running Multiple Commands at the Same Time:}
+** (x) [56. Executing a Pipeline (4/21)]{:56. Executing a Pipeline:}
+** (x) [57. Basics of Sets (4/15)]{:57. Basics of Sets:}
+** (x) [58. Union of Sets (4/15)]{:58. Union of Sets:}
+** (x) [59. Intersection of Sets (1/4)]{:59. Intersection of Sets:}
+** (x) [60. Difference of Sets (2/9)]{:60. Difference of Sets:}
+** (x) [61. Store Variations (2/12)]{:61. Store Variations:}
+** (x) [62. Checking for an Element in a Set (2/10)]{:62. Checking for an Element in a Set:}
+** (x) [63. Scanning a Set (5/25)]{:63. Scanning a Set:}
+** (x) [65. Most Common Use Cases of Sets (6/15)]{:65. Most Common Use Cases of Sets:}
+** (x) [66. Requiring Unique User Names (6/40)]{:66. Requiring Unique User Names:}
+** (x) [67. Adding a Like System (5/28)]{:67. Adding a Like System:}
+** (x) [68. How to Count the Number of Likes? (6/27)]{:68. How to Count the Number of Likes?:}
+** ( ) [69. Updating Like Quantities (5/)]{:69. Updating Like Quantities:}
+** ( ) [70. Showing Liked Items (3/)]{:70. Showing Liked Items:}
+** ( ) [71. Showing Common Liked Items (2/)]{:71. Showing Common Liked Items:}
+** ( ) [72. Sorted Sets (3/)]{:72. Sorted Sets:}
+** ( ) [73. Adding and Removing Members (4/)]{:73. Adding and Removing Members:}
+** ( ) [74. Finding a Range of Scores (5/)]{:74. Finding a Range of Scores:}
+** ( ) [75. Removing the Highest and Lowest Members (2/)]{:75. Removing the Highest and Lowest Members:}
+** ( ) [76. Updating Scores (2/)]{:76. Updating Scores:}
+** ( ) [77. Querying a Sorted Set (9/)]{:77. Querying a Sorted Set:}
+** ( ) [79. Sorted Set Use Cases (9/)]{:79. Sorted Set Use Cases:}
+** ( ) [80. Reminder on the Auth Flow (5/)]{:80. Reminder on the Auth Flow:}
+** ( ) [81. Storing Usernames (4/)]{:81. Storing Usernames:}
+** ( ) [82. Kind of Storing Strings in Sorted Sets (3/)]{:82. Kind of Storing Strings in Sorted Sets:}
+** ( ) [83. Converting User IDs (6/)]{:83. Converting User IDs:}
+** ( ) [84. Plan for Showing Most Viewed Items (5/)]{:84. Plan for Showing Most Viewed Items:}
+** ( ) [85. Initializing Views on Item Creation (5/)]{:85. Initializing Views on Item Creation:}
+** ( ) [86. Incrementing View Counters (4/)]{:86. Incrementing View Counters:}
+** ( ) [87. Items by Ending Soonest (7/)]{:87. Items by Ending Soonest:}
+** ( ) [88. Querying for Ending Soonest (11/)]{:88. Querying for Ending Soonest:}
+** ( ) []{::}
+

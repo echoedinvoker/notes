@@ -1,0 +1,82 @@
+@document.meta
+title: 41. App Overview
+description: 
+authors: mattc
+categories: [
+  Walkthrough
+  Rule
+  Concept map
+]
+created: 2023-12-02T20:27:05+0800
+updated: 2023-12-02T20:27:43+0800
+version: 1.1.1
+@end
+
+
+> In the previous section, we have set up a project called 'rbay' and written the content for cached pages, but we have not yet provided an overview of what the entire website is about.
+
+
+* Steps of this section
+
+This section will follow the process shown in the diagram to thoroughly understand the content of this website. Only after having a clear understanding and design ideas, will we truly begin writing code.
+
+.image pic/39/1.png
+
+
+* Basic Auction Rule
+
+In this lecture, we will proceed with the first part of the diagram. First, we will walk through each webpage of the website. Before that, it is important to understand the basic design logic of the website as follows.
+
+.image pic/39/2.png
+
+
+* Website pages overview
+
+  After understanding the basic design logic, we start to walkthrough each page.
+
+** Landing page
+
+    .image pic/39/3.png
+
+What needs special attention on this page is how the 'most views' at the bottom are calculated. Each logged-in user can only provide one view for the same product to avoid artificially inflating the view count.
+
+** Signin
+
+    .image pic/39/4.png
+
+** Signup
+
+    .image pic/39/5.png
+
+** Item Create
+
+    .image pic/39/6.png
+
+    .image pic/39/7.png
+
+** Item Show
+
+    .image pic/39/8.png
+
+    .image pic/39/9.png
+
+** Seller Profile
+
+   After logging in, users can also view the profile of other users.
+
+    .image pic/39/10.png
+
+** Dashboard
+
+    .image pic/39/11.png
+
+
+* What should we pay attention to when observing page design?
+
+  When we are observing the concept map on the above page, we must assume that this is a large-scale website with thousands of sellers and buyers, and millions of products in auction.
+
+For instance, even though the first page that appears has millions of products, once a regular user logs in, the carousel will not continue rotating. They will only be able to view a maximum of 15 products.
+
+The last Dashboard is the same. Users may upload hundreds of products, but only ten can be displayed on one page. This means we need to implement pagination.
+
+We need to think about how Redis can optimize these things.

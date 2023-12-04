@@ -1,0 +1,38 @@
+@document.meta
+title: 35. Compiling the Entire Project and Multiple FIles
+description: 
+authors: mattc
+categories: [
+  tsc
+  Compiling
+]
+created: 2023-11-28T23:08:48+0800
+updated: 2023-11-28T23:09:16+0800
+version: 1.1.1
+@end
+
+* Compiling ts file one by one is not reality...
+
+  If we have more ts files in the project as follows
+
+  .image pic/35/1.png
+
+
+* Initializing project by TypeScript
+
+  Executing the tsc command one by one for compilation is troublesome, so we must use tsc to initialize the entire project.
+
+  .image pic/35/2.png
+
+  After initialization is completed, a TypeScript configuration file called tsconfig.json will be generated.
+
+  Next, we directly execute tsc without specifying any ts files, and it will compile all ts files in the project into js files.
+
+  .image pic/35/3.png
+
+
+* TypeScript project with watch mode
+
+  If used in conjunction with watch mode, it can monitor the changes of all ts files in real time and compile them immediately upon any change.
+
+  .image pic/35/4.png

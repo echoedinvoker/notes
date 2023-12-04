@@ -1,0 +1,38 @@
+@document.meta
+title: 54. Batching Commands with Pipelines
+description: 
+authors: mattc
+categories: [
+  Pipeline
+]
+created: 2023-12-03T22:49:46+0800
+updated: 2023-12-03T22:50:23+0800
+version: 1.1.1
+@end
+
+* Before implementing getItems
+
+  .image pic/53/1.png
+
+  This part will lead us to understand Redis's new concepts.
+
+
+* ALL commands we learn are for query single entity
+
+  .image pic/53/2.png
+
+  So actually we don't have any commands that can handle multiple keys at once, all commands can only handle a single key at a time.
+
+
+* Two options to solve it
+
+** Bad
+   .image pic/53/3.png
+
+   We could learn from some videos or tutorials about the practice mentioned above, using a loop with async/await to query Redis in each iteration. This approach is very inefficient.
+
+** Good
+   .image pic/53/4.png
+
+   Actually, we can collect commands and send them to Redis at once as shown in the above diagram. This technique is also known as pipelining.
+

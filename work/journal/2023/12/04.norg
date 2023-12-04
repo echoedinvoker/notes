@@ -1,0 +1,9 @@
+- (x) Building FastAPI Redis sandbox
+-- (x) Make sure how project backend connection with Redis in dev mode
+-- (x) install Redis stack locally
+-- (x) make sure FastAPI can connection to local Redis
+-- (x) Create a route for Redis sandbox
+-- (x) Test some query commands in sandbox
+- (x) Test out TTL logic in sandbox
+- ( ) Understand all existed redis use case in backend project
+- ( ) Implementing into existed redis def

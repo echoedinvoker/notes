@@ -1,0 +1,22 @@
+@document.meta
+title: 37. Setting a Compilation Target
+description: 
+authors: mattc
+categories: [
+  Compilation
+  Javascript version
+]
+created: 2023-11-29T20:46:18+0800
+updated: 2023-11-29T20:46:51+0800
+version: 1.1.1
+@end
+
+* target
+
+  The properties in compilerOptions are used to define how to compile, most of which we will not use.
+
+  .image pic/37/1.png
+
+  'target' represents which version of Javascript codes the Typescript codes will be compiled into. The earlier versions can be used by older browsers, but the compiled code will also be larger (because older codes are used to implement new features).
+
+  Sometimes, there may be certain features in our app that can only function properly after a certain version of JavaScript. This point needs to be taken extra caution.

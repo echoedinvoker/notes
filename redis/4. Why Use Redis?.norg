@@ -1,0 +1,51 @@
+@document.meta
+title: 4. Why Use Redis?
+description: 
+authors: mattc
+categories: [
+  Introduction
+]
+created: 2023-12-01T16:19:37+0800
+updated: 2023-12-01T16:19:55+0800
+version: 1.1.1
+@end
+
+* Reason to use Redis
+
+  We use Redis because it has very fast access speed.
+
+
+* Redis store all data in memory
+
+  Unlike traditional databases, Redis stores all data in memory, so it is very fast.
+
+  .image pic/4/1.png
+
+  .image pic/4/2.png
+
+  But this also has obvious disadvantages, which is when the data that needs to be stored is larger than the memory, our subsequent courses will explain how to handle this problem one by one.
+
+
+* Redis only use classic and performance-renowned data structures
+
+  The second point is that Redis uses classic data structures such as linked-lists, sorted-sets... It only selects a few classic and performance-renowned data structures to use.
+
+  .image pic/4/3.png
+
+
+* There is no multiply layer in Redis
+
+  Traditional databases have added many layers to enhance the features of the database in order to make it easier for users to use. However, Redis focuses on improving access speed, so it does not have layers.
+
+  .image pic/4/4.png
+
+
+* Conclusion
+
+  From the above, we can roughly understand the reason why Redis is fast.
+
+  .image pic/4/5.png
+
+  But these reasons come with some costs, and because it is very different from traditional databases, our learning process is also different from learning traditional data.
+
+

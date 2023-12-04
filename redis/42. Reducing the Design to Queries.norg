@@ -1,0 +1,69 @@
+@document.meta
+title: 42. Reducing the Design to Queries
+description: 
+authors: mattc
+categories: [
+  Query
+  Design Methodology
+]
+created: 2023-12-02T20:57:59+0800
+updated: 2023-12-02T20:58:39+0800
+version: 1.1.1
+@end
+
+* Design Methodology
+
+  We review the Design Methodology we have learned before.
+
+  .image pic/42/1.png
+
+
+* IF is SQL
+
+  Let's start by thinking about how to design our table using traditional SQL design methods.
+
+  .image pic/42/2.png
+
+  The designed result is as above. We start designing by determining which data to put in the table. How to query is a matter for the future.
+
+
+* Back to Redis desgin
+
+  However, the design of Redis is completely opposite. We need to first understand what queries each page needs to perform in order for that page to function, and then think about what those queries are.
+
+** Start from query
+   .image pic/42/3.png
+
+   In the design of Redis, we do not consider the possible changes in the way queries may be made in the coming years. We only focus on the current issues because the purpose of Redis's design is to be fast.
+
+*** Landing page
+    .image pic/42/4.png
+
+*** Signin
+    .image pic/42/5.png
+
+*** Signup
+    .image pic/42/6.png
+
+*** Create Item
+    .image pic/42/7.png
+
+*** Item Show
+    .image pic/42/8.png
+
+*** User Profile
+    .image pic/42/9.png
+
+** List all queries together
+   We gather the observed queries mentioned above as follows.
+
+   .image pic/42/11.png
+
+** Groupby Read and Write
+   .image pic/42/12.png
+
+** 'Things' in our app 
+   Only after completing the 'queries', we start to care about what 'things' in our app.
+
+   .image pic/42/13.png
+

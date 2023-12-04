@@ -1,0 +1,50 @@
+@document.meta
+title: 36. Numbers in Hashes
+description: 
+authors: mattc
+categories: [
+  Hash
+]
+created: 2023-12-02T14:39:09+0800
+updated: 2023-12-02T14:39:28+0800
+version: 1.1.1
+@end
+
+* HINCRBY & HINCRBYFLOAT
+
+  .image pic/35/1.png
+
+** HINCRBY
+   .image pic/35/2.png
+
+** HINCRBYFLOAT
+   .image pic/35/3.png
+
+** Add new key when not exist
+   .image pic/35/4.png
+
+** using minus for DESCR function
+   .image pic/35/5.png
+
+** must using on number key
+   .image pic/35/7.png
+
+
+* HSTRLEN
+
+  .image pic/35/6.png
+
+  .image pic/35/8.png
+
+  What would happen if we used it on numbers?
+
+  .image pic/35/9.png
+
+
+* HKEYS & HVALS
+
+** HKEYS
+   .image pic/35/10.png
+
+** HVALS
+   .image pic/35/11.png

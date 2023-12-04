@@ -1,0 +1,27 @@
+@document.meta
+title: 61. Store Variations
+description: 
+authors: mattc
+categories: [
+  SET
+  STORE
+]
+created: 2023-12-04T11:22:55+0800
+updated: 2023-12-04T11:23:22+0800
+version: 1.1.1
+@end
+
+* STORE vairants
+
+  The three basic SET operation commands explained in the previous lectures, SUNION, SINTER, and SDIFF, all have variants with the suffix "STORE" added at the end.
+
+  .image pic/61/1.png
+
+  The purpose of this variant is to provide the functionality of storing the result in a new key in order to save performance.
+
+
+* rBook practice
+
+  .image pic/61/2.png
+
+  SUNION, SINTER, and SDIFF are commands that require Redis server resources, especially when dealing with large amounts of data. In such cases, it is not feasible to query with these commands every time we need the results of these calculations. Therefore, it is necessary to use the STORE command to generate a new key and store the results.

@@ -1,0 +1,50 @@
+@document.meta
+title: 55. Running Multiple Commands at the Same Time
+description: 
+authors: mattc
+categories: [
+  Pipelining
+  Sandbox
+]
+created: 2023-12-03T23:29:49+0800
+updated: 2023-12-03T23:30:20+0800
+version: 1.1.1
+@end
+
+* Prepare in sandbox
+
+  This lecture will use sandbox to practice pipelining and query multiple keys at once.
+
+  .image pic/55/1.png
+
+
+* node-redis pipelining is different from other package/language...
+
+  Unfortunately, the method we use for pipelining in node-redis is different from other packages or languages.
+
+** compare
+   .image pic/55/2.png
+
+   In other packages or languages, the Redis client usually obtains a Pipelining object first, and then uses it to collect commands before sending them all at once.
+
+   However, node-redis simply achieves the same effect by using the native JavaScript Promise.all.
+
+** other package/language
+   .image pic/55/3.png
+
+** node-redis
+   .image pic/55/4.png
+
+
+* Practice in sandbox
+
+** Promis.all
+   .image pic/55/5.png
+
+   We can simplify the code using a loop or .map(), without needing to input commands one by one.
+
+** Concise codes by .map()
+   .image pic/55/6.png
+
+
+

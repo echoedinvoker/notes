@@ -1,0 +1,30 @@
+@document.meta
+title: 24. Don't Skip This Video
+description: 
+authors: mattc
+categories: [
+  Setup
+]
+created: 2023-12-02T10:59:21+0800
+updated: 2023-12-02T11:00:04+0800
+version: 1.1.1
+@end
+
+* What we gonna do?
+
+  .image pic/18/1.png
+
+  The lecturer has already completed the front-end work, so we can focus on using a Typescript library for the back-end to operate Redis commands.
+
+* Steps
+
+  So we must first install the front-end of the lecture onto our computer. The following is the complete process.
+
+  .image pic/18/2.png
+
+
+* Result
+
+  .image pic/18/3.png
+
+  Currently, there are no functions on the website. We will implement the functions in the upcoming lecture.

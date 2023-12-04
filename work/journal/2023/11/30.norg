@@ -1,0 +1,13 @@
+- (-) Task #14831 前端介面開發
+-- (x) 後端 Pydantic request types rebuild 以符合前端頁面需求
+-- (x) 修正 APIFeatures 中 date 邏輯以精確到 datetime
+-- ( ) 前端頁面剛load進時,可以確保抓到七天內資料
+--- ( ) bind DatePicker value to store 'dateRange'
+--- ( ) use 'dateRange' as params to query at start
+-- ( ) bind 右上三個條件到store states讓hook中的 query 會響應這些值自動refetch
+--- ( ) computed params for query
+--- ( ) let queryFn can eat above params to query
+--- ( ) onSuccess, onError snack, queryClient refresh
+
+
+

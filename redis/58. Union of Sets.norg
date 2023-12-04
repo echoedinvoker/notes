@@ -1,0 +1,37 @@
+@document.meta
+title: 58. Union of Sets
+description: 
+authors: mattc
+categories: [
+  SET
+  SUNION
+]
+created: 2023-12-04T10:49:26+0800
+updated: 2023-12-04T11:44:59+0800
+version: 1.1.1
+@end
+
+* SET command - SUNION
+
+  In short, SUNION can merge values from different sets (without duplicate values) and obtain the result (without generating a new key).
+
+  .image pic/58/1.png
+
+  .image pic/58/2.png
+
+
+* Chart explanation
+
+  .image pic/58/3.png
+
+  .image pic/58/4.png
+
+  The above image may cause misunderstanding that the values in the original SET will be changed, but in fact, they will not be changed.
+
+We can find that in order to achieve the effect of union, the Redis server must traverse all values in all keys, causing this command to consume more resources.
+
+
+* Practice in rBook
+
+  .image pic/58/5.png
+

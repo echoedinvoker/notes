@@ -1,0 +1,41 @@
+@document.meta
+title: 40. Working with Source Maps
+description: 
+authors: mattc
+categories: [
+  sourceMap
+  compileOptions
+  Debug
+]
+created: 2023-11-29T22:48:50+0800
+updated: 2023-11-29T22:49:21+0800
+version: 1.1.1
+@end
+
+* Property 'sourceMap'
+
+  The property 'sourceMap' can help us debug.
+
+  .image pic/40/1.png
+
+
+* Why we need it?
+
+  Generally, in the browser's devTool, we can only see the source codes of JavaScript as follows.
+
+  .image pic/40/2.png
+
+  If the codes are more complex or need to be compiled into older versions of JavaScript, it will be very difficult to understand the JavaScript codes in the browser.
+
+  At this time, we can enable the source map.
+
+  .image pic/40/3.png
+
+
+* .map file
+
+  When 'tsc' is executed with sourceMap enabled, it will generate additional files with the .map extension. These files serve as a bridge between the browser and the TypeScript file, allowing the browser's devTool to also display the .ts file.
+
+  .image pic/40/4.png
+
+  As mentioned above, we can even directly add breakpoints in the codes of .ts for debugging, which is very important for development.

@@ -1,0 +1,62 @@
+@document.meta
+title: 41. rootDir and outDir
+description: 
+authors: mattc
+categories: [
+  Confituration
+  compileOptions
+]
+created: 2023-11-29T23:38:23+0800
+updated: 2023-11-29T23:38:53+0800
+version: 1.1.1
+@end
+
+* out Dir & root Dir
+
+  As our project becomes larger, we usually do not want to put all files in the root.
+
+  .image pic/41/1.png
+
+  Usually, we would like to place the original .ts source code in the src folder, while the compiled js files are collected in the dist folder.
+
+  .image pic/41/2.png
+
+  這種情況下我們可以使用 out Dir 確保輸出的 .js 會自動在 dist 資料夾產生
+
+  .image pic/41/3.png
+
+  但如果根目錄有 .ts 檔案或者根目錄有其他資料夾內有 .ts 檔案, Typescript 會把根目錄當成 'root Dir' 將src資料夾一併複製到 dist 資料夾中, 但這明顯不是我們希望了, 所以有 'root Dir' 給我們設定
+
+  .image pic/41/4.png
+
+  The 'root Dir' setting will exclude folders that are not defined from being compiled.
+
+  .image pic/41/5.png
+
+
+* removeComments
+
+  Remove comments from the output .js file.
+
+  .image pic/41/6.png
+
+  Suggested to enable it, as our department needs to review the .js code, which can help us reduce the size of the app.
+
+
+* No emit
+
+  After compilation, no .js file is generated.
+
+  .image pic/41/7.png
+
+  This sounds strange, but sometimes in large projects, we actually only want to use the compiler for type checking and do not want to generate JS code.
+
+
+
+* DownlevelIteration
+
+  In some older browsers, if the results of some codes with multiple nested loops appear strange on the browser, you can try opening the following property.
+
+  .image pic/41/8.png
+
+  After enabling this property, TypeScript will compile in a more precise manner, but do not keep it enabled all the time because it will output more code than usual.

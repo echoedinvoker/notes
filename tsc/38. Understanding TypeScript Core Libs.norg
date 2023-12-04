@@ -1,0 +1,46 @@
+@document.meta
+title: 38. Understanding TypeScript Core Libs
+description: 
+authors: mattc
+categories: [
+  lib
+  compilerOptions
+]
+created: 2023-11-29T21:22:48+0800
+updated: 2023-11-29T21:23:01+0800
+version: 1.1.1
+@end
+
+* Have you ever wondered...
+
+  Have you ever wondered why Typescript recognizes objects and methods that we haven't defined types for?
+
+  .image pic/38/1.png
+
+
+* 'lib' property of compilerOptions
+
+  This is because the property 'lib' in compilerOptions allows Typescript to understand in advance what features (objects, methods, functions, etc.) this project has.
+
+  .image pic/38/2.png
+
+
+* If you un-comment 'lib', you should do ALL jobs
+
+  'lib' is usually commented out. TypeScript defaults to including the 'target' feature and DOM APIs inside it. However, if we uncomment 'lib', we have to define it completely on our own.
+
+  .image pic/38/3.png
+
+
+* Back to default setting
+
+  The definition of the figure below is actually identical to the definition of default.
+
+  .image pic/38/4.png
+
+
+* Why we should know it?
+
+  Defining these is actually very important. For example, the DOM API should not exist in a Node.JS project. When writing desktop applications using the Electron framework, the features used are also quite different from what we do when working on webpages or backend.
+
+  Although Typescript and some development tools like Vite help us define the content of 'lib' based on project types, we also need the ability to check it ourselves to ensure its correctness.

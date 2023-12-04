@@ -1,0 +1,37 @@
+@document.meta
+title: 23. Literal Types
+description: 
+authors: mattc
+categories: [
+  Literal type
+  Primitive type
+  ENUM type
+]
+created: 2023-11-28T16:42:38+0800
+updated: 2023-11-28T16:43:08+0800
+version: 1.1.1
+@end
+
+* Literal type
+
+  .image pic/23/1.png
+
+  When I declare a constant and assign it an initial value, I can see that Typescript directly defines its type using a fixed value of a primitive type. We call it Literal type.
+
+
+* Solve a problem where a variable has the same type, but only has a few possible values.
+
+  We rewrite the logic of the function combine to make it suitable for using Literal type cases.
+
+** refactor our combine logic
+   .image pic/23/2.png
+
+** solved by enum type
+   .image pic/23/3.png
+
+   Using an enum type is a solution for this situation, but there are only two values 'as-text' and 'as-number'. Defining an enum type for it can be a bit complicated, but there are actually simpler solutions available.
+
+** solved by Literal with Union
+   .image pic/23/4.png
+
+   We can directly define the variable resultType using fixed values of primitive type combined with Union type, so that it is restricted to only use these two values. This method is much simpler than the previous one.

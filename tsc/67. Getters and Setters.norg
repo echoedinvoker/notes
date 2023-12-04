@@ -1,0 +1,40 @@
+@document.meta
+title: 67. Getters and Setters
+description: 
+authors: mattc
+categories: [
+  Getter
+  Setter
+]
+created: 2023-12-02T23:40:13+0800
+updated: 2023-12-02T23:40:44+0800
+version: 1.1.1
+@end
+
+* New field, but...
+
+  .image pic/67/1.png
+
+  As mentioned above, we have added a new field. However, we do not want users to directly access it. Instead, we want users to be able to obtain its value and update it in a similar way to a property. This may sound contradictory, but it can be achieved using the following method.
+
+
+* Getter
+
+  Getter is a variable that is essentially a property, but every time it is accessed, it calls a function.
+
+  .image pic/67/2.png
+
+  Usually, getters are named closely related to the original field name.
+
+  We can use only Getter to allow users to retrieve the value of an internal property of an instance in a similar way to a property and prevent users from assigning a new value to the internal property.
+
+  You can also add some logic to the Getter function.
+
+
+* Setter
+
+  Another concept similar to Getter is Setter, basically it is a property but when the user assigns a value to it, it will call a function.
+
+  .image pic/67/3.png
+
+  If there is a corresponding internal property with a getter, the naming convention is usually the same as the getter. This allows the user to have a similar experience to using a regular property.

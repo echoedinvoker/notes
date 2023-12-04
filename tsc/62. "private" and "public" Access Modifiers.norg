@@ -1,0 +1,33 @@
+@document.meta
+title: 62. "private" and "public" Access Modifiers
+description: 
+authors: mattc
+categories: [
+  Private & Public
+]
+created: 2023-11-30T23:17:27+0800
+updated: 2023-11-30T23:18:12+0800
+version: 1.1.1
+@end
+
+* Common bad practice: accessable properties from outside
+
+  We continue to add logic about employees to the Department class.
+
+  .image pic/62/1.png
+
+  Although we have defined a method to add new employees, in general, native JS (except of very modern JS) cannot prevent users from directly accessing and manipulating instance properties as follows.
+
+  .image pic/62/2.png
+
+  But this is not a good practice because if the same process can be achieved through multiple means, it will be difficult to add something to this process in the future, such as adding validation.
+
+
+* "private" & "public"
+
+  TypeScript provides the "private" and "public" keywords, which allow users to restrict access to the internal properties or methods of an instance. ("public" is default, we usually don't write it)
+
+  .image pic/62/3.png
+
+  In this example, ultimately it ensures that the user can only add employees through the 'addEmployees' method.
+

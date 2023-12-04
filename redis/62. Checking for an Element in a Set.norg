@@ -1,0 +1,34 @@
+@document.meta
+title: 62. Checking for an Element in a Set
+description: 
+authors: mattc
+categories: [
+  SET
+  SISMEMBER
+  SMISMEMBER
+]
+created: 2023-12-04T11:38:44+0800
+updated: 2023-12-04T11:39:08+0800
+version: 1.1.1
+@end
+
+* SET commands to check if value exist
+
+  Sometimes we just want to confirm if a certain value exists in a SET key. However, if the key contains hundreds or even thousands of values, retrieving the data will consume a lot of resources. Therefore, Redis provides the following commands to allow us to simply perform confirmation.
+
+  .image pic/62/1.png
+
+
+* SISMEMBER
+
+  .image pic/62/2.png
+
+  .image pic/62/3.png
+
+
+* SMISMEMBER
+
+  .image pic/62/4.png
+
+  .image pic/62/5.png
+

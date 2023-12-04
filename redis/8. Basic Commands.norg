@@ -1,0 +1,31 @@
+@document.meta
+title: 8. Basic Commands
+description: 
+authors: mattc
+categories: [
+  Commands
+  Data Type
+]
+created: 2023-12-01T17:10:02+0800
+updated: 2023-12-01T17:10:29+0800
+version: 1.1.1
+@end
+
+* Our first redis commands to accesss strings data
+
+  .image pic/8/1.png
+
+
+* Flowchart of data accessing
+
+** SET (save data)
+   .image pic/8/2.png
+
+** GET (retrieve data)
+   .image pic/8/3.png
+
+
+* Commands set is totally different for different types of data
+
+  .image pic/8/4.png
+

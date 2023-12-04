@@ -1,0 +1,21 @@
+* SET optional groups
+
+  .image pic/10/1.png
+
+
+** GET
+   return previous value
+   .image pic/10/2.png
+
+** XX & NX 
+   Conditional save.
+*** XX
+    .image pic/10/3.png
+
+    .image pic/10/4.png
+
+*** NX
+    .image pic/10/5.png
+
+    .image pic/10/6.png
+

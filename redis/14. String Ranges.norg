@@ -1,0 +1,44 @@
+@document.meta
+title: 14. String Ranges
+description: 
+authors: mattc
+categories: [
+  DEL
+  RANGE
+  GETRANGE
+  SETRANGE
+]
+created: 2023-12-02T08:56:39+0800
+updated: 2023-12-02T08:57:09+0800
+version: 1.1.1
+@end
+
+.image pic/14/1.png
+
+
+* DEL
+
+  .image pic/14/2.png
+
+  Note that DEL is useful for any type of data, not just limited to string type.
+
+  .image pic/14/3.png
+
+
+* GETRANGE
+
+  .image pic/14/4.png
+
+  .image pic/14/5.png
+
+  It is important to note that the end index is also inclusive, which is different from the logic in other programming languages.
+
+
+* SETRANGE
+
+  .image pic/14/6.png
+
+  .image pic/14/7.png
+
+  The value of return is the updated number of characters, which includes all contents in the key, not just the updated portion.
+

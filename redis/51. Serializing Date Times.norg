@@ -1,0 +1,32 @@
+@document.meta
+title: 51. Serializing Date Times
+description: 
+authors: mattc
+categories: [
+  Date Time Formats
+  Item
+]
+created: 2023-12-03T20:58:42+0800
+updated: 2023-12-03T20:59:12+0800
+version: 1.1.1
+@end
+
+* Observe item properties
+
+  Next, we need to save the item data to Redis.
+  Before implementation, let's first observe the content of the item data that needs to be stored.
+
+  .image pic/52/1.png
+
+  Here, there is data of Datetime type. We need to decide what format should be stored in Redis.
+
+
+* Date Time Formats
+
+  Assuming the two formats shown in the above image are used for storage, although it is possible, it is not possible to perform sorting, filtering, and other operations.
+
+  .image pic/52/2.png
+
+  Storing in the numerical data type format below allows us to perform sorting and filtering, which is more useful for us. 
+
+  We assume that many people use the website and the bidding time should be more precise. Therefore, we choose to store it in Redis in the format of Unix time as milliseconds.

@@ -14,3 +14,32 @@
 ** (x) [18. Arrays Types (5/22)]{:18. Arrays Types:}
 ** (x) [19. Working with Tuples (6/31)]{:19. Working with Tuples:}
 ** (x) [20. Working with Enums (7/28)]{:20. Working with Enums:}
+** (x) [21. The "any" Type (2/11)]{:21. The "any" Type:}
+** (x) [22. Union Types (7/25)]{:22. Union Types:}
+** (x) [23. Literal Types (8/45)]{:23. Literal Types:} 
+** (x) [24. Type Aliases / Custom Types (3/12)]{:24. Type Aliases Custom Types:}
+** (x) [25. Type Aliases & Object Types (1/2)]{:25. Type Aliases and Object Types:}
+** (x) [26. Function Return Types & "void" (7/32)]{:26. Function Return Types and "void":}
+** (x) [27. Functions as Types (6/45)]{:27. Functions as Types:}
+** (x) [28. Function Types & Callbacks (4/32)]{:28. Function Types and Callbacks:}
+** (x) [29. The "unknown" Type (4/25)]{:29. The "unknown" Type:}
+** (x) [30. The "never" Type (4/21)]{:30. The "never" Type:}
+** (x) [32. Useful Resources & Links]{https://www.udemy.com/course/understanding-typescript/learn/lecture/16888118#content}
+** (x) [34. Using "Watch Mode" (2/10)]{:34. Using "Watch Mode":}
+** (x) [35. Compiling the Entire Project/Multiple FIles (4/19)]{:35. Compiling the Entire Project and Multiple FIles:}
+** (x) [36. Including & Excluding Files (6/40)]{:36. Including and Excluding Files:}
+** (x) [37. Setting a Compilation Target (4/20)]{:37. Setting a Compilation Target:}
+** (x) [38. Understanding TypeScript Core Libs (6/28)]{:38. Understanding TypeScript Core Libs:}
+** (x) [39. More Configuration & Compilation Options (2/14)]{:39. More Configuration and Compilation Options:}
+** (x) [40. Working with Source Maps (2/15)]{:40. Working with Source Maps:}
+** (x) [41. rootDir and outDir (6/37)]{:41. rootDir and outDir:}
+** (x) [58. What are Classes? (5/25)]{:58. What are Classes?:}
+** (x) [59. Creating a First Class (6/22)]{:59. Creating a First Class:}
+** (x) [60. Compiling to JavaScript (3/27)]{:60. Compiling to JavaScript:}
+** (x) [61. Constructor Functions & The "this" Keyword (8/44)]{:61. Constructor Functions and The "this" Keyword:}
+** (x) [62. "private" and "public" Access Modifiers (6/28)]{:62. "private" and "public" Access Modifiers:}
+** (x) [63. Shorthand Initialization (3/15)]{:63. Shorthand Initialization:}
+** (x) [64. "readonly" Properties (3/12)]{:64. "readonly" Properties:}
+** (x) [65. Inheritance (8/40)]{:65. Inheritance:}
+** (x) [66. Overriding Properties & The "protected" Modifier (3/18)]{:66. Overriding Properties and The "protected" Modifier:}
+** (x) [67. Getters & Setters (7/39)]{:67. Getters and Setters:}

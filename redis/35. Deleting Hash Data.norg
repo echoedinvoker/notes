@@ -1,0 +1,39 @@
+@document.meta
+title: 35. Deleting Hash Data
+description: 
+authors: mattc
+categories: [
+  Deleting
+  Hash
+]
+created: 2023-12-02T14:15:52+0800
+updated: 2023-12-02T14:16:18+0800
+version: 1.1.1
+@end
+
+.image pic/33/1.png
+
+
+* HEXISTS
+
+  .image pic/33/2.png
+
+  Special attention should be paid to the fact that this command only checks for the existence of the key, and does not continue to check for the value. Therefore, even if the value is a falsy value, it will still return 1.
+
+  .image pic/33/3.png
+
+
+* HDEL
+
+  .image pic/33/4.png
+
+  .image pic/33/5.png
+
+
+* DEL
+
+  We mentioned before that DEL can delete all types, and hash type is no exception.
+
+  .image pic/33/6.png
+
+  .image pic/33/7.png

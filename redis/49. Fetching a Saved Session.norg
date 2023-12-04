@@ -1,0 +1,37 @@
+@document.meta
+title: 49. Fetching a Saved Session
+description: 
+authors: mattc
+categories: [
+  Session
+  HGETALL
+  Deserialize
+]
+created: 2023-12-03T20:06:43+0800
+updated: 2023-12-03T20:07:15+0800
+version: 1.1.1
+@end
+
+* HGETALL session
+
+  .image pic/50/1.png
+
+  .image pic/50/2.png
+
+  The reason for the error is that when Redis HGETALL cannot find the key, it returns {}. In general programming languages, having an object implies that the user is already logged in, but here it cannot be interpreted in the same way, which leads to the occurrence of errors.
+
+
+* HGETALL return {} when there is no match key
+
+  So we need to add some codes to determine if it is an empty object. When it is an empty object, it will return a null value to conform to the normal operation of the app.
+
+  .image pic/50/3.png
+
+
+* Deserialize
+
+  Remember to deserialize the value returned at the end to ensure the correct format. In this case, you just need to add the ID back.
+
+  .image pic/50/4.png
+
+

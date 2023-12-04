@@ -1,0 +1,29 @@
+@document.meta
+title: 47. Fetching a User
+description: 
+authors: mattc
+categories: [
+  Deserialize
+]
+created: 2023-12-03T19:00:42+0800
+updated: 2023-12-03T19:01:06+0800
+version: 1.1.1
+@end
+
+* Write func to get all keys of a user w/o deserialize
+
+  .image pic/46/2.png
+
+
+* What format we need?
+
+  When we store in Redis, we do not use to save the id, so when retrieving, there will not be an id. However, usually the id will be needed in the subsequent logic.
+
+  .image pic/46/3.png
+
+
+* Create deserialize function
+
+  We use deserialize to ensure that the returned data format is absolutely correct. Here, we mainly use it to add the id back to the data.
+
+  .image pic/46/4.png

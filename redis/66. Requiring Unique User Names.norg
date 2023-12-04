@@ -1,0 +1,37 @@
+@document.meta
+title: 66. Requiring Unique User Names
+description: 
+authors: mattc
+categories: [
+  Unique
+  SET
+]
+created: 2023-12-04T16:00:01+0800
+updated: 2023-12-04T16:00:17+0800
+version: 1.1.1
+@end
+
+* What we wanna implement to our app?
+
+  We want to implement one of the use cases mentioned in the previous lecture, which is "Checking if the username has not been signed up yet," into our app.
+
+  .image pic/65/1.png
+
+
+* Implementing
+
+** Planning
+   .image pic/65/2.png
+
+   We have previously done the signup part, where user information is written into Redis and stored in the format of key user#userId. In this lecture, we are going to create one another key to store all usernames. They are independent keys from each other, which highlights the difference in database design philosophy compared to traditional associations.
+
+** Write codes
+   .image pic/65/3.png
+
+
+* Test on the browser
+
+  .image pic/65/4.png
+
+  .image pic/65/5.png
+

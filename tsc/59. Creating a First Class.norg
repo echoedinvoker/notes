@@ -1,0 +1,29 @@
+@document.meta
+title: 59. Creating a First Class
+description: 
+authors: mattc
+categories: [
+  Class
+  Field
+]
+created: 2023-11-30T07:48:19+0800
+updated: 2023-11-30T07:48:45+0800
+version: 1.1.1
+@end
+
+* Build class & field
+
+  Assuming we want to create an app for internal use by many departments within a company, each department requiring similar methods and data structures with slight differences. This is a perfect scenario for establishing a class to quickly build objects representing the different departments themselves with thier data and methods.
+
+  .image pic/59/1.png
+
+  The name we defined when creating the class above is a field, not a property, because we have not actually generated any data yet, but only described the created object.
+
+
+* Generate instance from class & property
+
+  We use 'new' to generate an instance (object) from a class.
+
+  .image pic/59/2.png
+
+  At this time, you can see that there is real data in the instance, with the name 'Accounting'. This is what is referred to as a property in an object.

@@ -1,0 +1,28 @@
+@document.meta
+title: 58. What are Classes?
+description: 
+authors: mattc
+categories: [
+  Object-oriented Programming
+  Class
+  Instance
+]
+created: 2023-11-30T01:21:31+0800
+updated: 2023-11-30T01:22:06+0800
+version: 1.1.1
+@end
+
+* What is Object-oriented Programming? (OOP)
+
+  OOP stands for Object-Oriented Programming, which means organizing and running the data and logic of our app into different objects. Typically, we determine what objects should exist based on concepts that humans can understand.
+
+  .image pic/42/1.png
+
+
+* Classes & Instances
+
+  Class is the blueprint of an Object that allows us to quickly create Objects (Relative to the literal object). In contrast, we refer to the Object created from a Class as an Instance.
+
+  .image pic/42/2.png
+
+  The data between instances created from the same class will have slight differences, but the structure remains the same.

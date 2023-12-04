@@ -1,0 +1,39 @@
+@document.meta
+title: 65. Inheritance
+description: 
+authors: mattc
+categories: [
+  Inheritance
+  Surper
+]
+created: 2023-12-01T15:03:59+0800
+updated: 2023-12-01T15:04:34+0800
+version: 1.1.1
+@end
+
+* When should we use inheritance
+
+  In front, we have established the class 'Department'. We can use it to create instances for departments such as IT or Accounting. However, the IT department may require additional settings for an admin, while the Accounting department needs a property to store reports. In this case, using inheritance would be a better choice.
+
+
+* Keyword 'extends' to inherit
+
+  Using the keyword 'extends' allows you to inherit the fields, methods, and even the constructor from a single class.
+
+  .image pic/65/1.png
+
+  Above, we create a new class that has no content and simply inherits from 'Department'. When instantiating this class, if there is no constructor, it will directly use the parent class's constructor to create an instance. Therefore, even if ITDepartment has no content at all, no error will occur.
+
+
+* Super function
+
+  When we create a constructor function in 'ITDepartment', the constructor function inherited from the parent will be renamed as 'super' and will not be called when using 'new'. Therefore, the constructor in the child class usually needs to call 'super' at the beginning.
+
+  .image pic/65/2.png
+
+
+* Child class can use all resources from parent class
+
+  Below we have completed the ITDepartment, and you can see that in the child class, you can freely use any resources (field, class, constructor) from the parent class.
+
+  .image pic/65/3.png

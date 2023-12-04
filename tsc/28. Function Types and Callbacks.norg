@@ -1,0 +1,42 @@
+@document.meta
+title: 28. Function Types and Callbacks
+description: 
+authors: mattc
+categories: [
+  Callback type
+  Callback return void
+]
+created: 2023-11-28T20:28:52+0800
+updated: 2023-11-28T20:29:24+0800
+version: 1.1.1
+@end
+
+
+* Callback function type
+
+  We can also directly set the type of the callback function that will be used in the function.
+
+  .image pic/28/1.png
+
+
+* Callback function parameter type
+
+  The part of the parameter is similar to the parameter defined in a general function. When calling a callback function in that function, if the parameter type given to it is incorrect, it will issue a warning.
+
+  .image pic/28/2.png
+
+
+* Callback function return type (DIFFERENT!)
+
+** => void
+   The only part that is different is the return type. Basically, if the return type is defined as void in the callback function type, it means that the original function will not use the callback's return value, regardless of what it returns. It does not actually restrict the type of the callback function's return value.
+
+   .image pic/28/3.png
+
+   So even if the callback function we provide has a return value, no warning will be issued.
+
+** => other types
+   However, when the return type is set to a type other than void, the effect is the same as defining the return type of a regular function.
+
+   .image pic/28/4.png
+

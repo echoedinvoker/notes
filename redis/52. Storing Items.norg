@@ -1,0 +1,37 @@
+@document.meta
+title: 52. Storing Items
+description: 
+authors: mattc
+categories: [
+  Item
+  toMillis
+  DateTime
+  Spread Operator
+]
+created: 2023-12-03T21:48:55+0800
+updated: 2023-12-03T21:50:19+0800
+version: 1.1.1
+@end
+
+* Save item data to Redis
+
+  This lecture will implement the part of storing item data in Redis.
+
+  .image pic/52/3.png
+
+  Because there will be more codes for the items, the lecturer has already specially created folders and files for them so that we can easily distribute the codes.
+
+  Because there are too many keys in the hashed data of the item, and in fact, we only need to process the values of datetime, so we used the spread operator ...
+
+
+* Test on the browser
+
+  .image pic/52/4.png
+
+  .image pic/52/5.png
+
+  Although there are still a bunch of error messages on the webpage, the URL returns the item id, so we can use it to directly query the Redis database in rbook to see if the item has been stored.
+
+  .image pic/52/6.png
+
+

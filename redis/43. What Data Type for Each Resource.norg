@@ -1,0 +1,28 @@
+@document.meta
+title: 43. What Data Type for Each Resource
+description: 
+authors: mattc
+categories: [
+  Things
+  Hash
+  Design
+]
+created: 2023-12-02T21:25:58+0800
+updated: 2023-12-02T21:26:32+0800
+version: 1.1.1
+@end
+
+* 'Things' in our app
+
+  In the previous lecture, we found from the observed queries that the 'things' in the following diagram should be stored in Redis. The next question to ask is, which of these things should be stored as Hash data type?
+
+  .image pic/43/1.png
+
+
+* Store as Hash or not
+
+  .image pic/43/2.png
+
+  .image pic/43/3.png
+
+  The only difficulty in the above classification process occurs in 'bids' because it may have multiple attributes (price, time, user, item), but it is time series data and we do not query it separately (for example, users and items have pages that display individual users or items separately). Additionally, 'bids' itself is also a type of counting function, so in the end, we choose to classify 'bids' into the part that does not use hash.

@@ -1,0 +1,29 @@
+@document.meta
+title: 13. GET and MGET
+description: 
+authors: mattc
+categories: [
+  MGET
+]
+created: 2023-12-02T08:23:55+0800
+updated: 2023-12-02T08:24:19+0800
+version: 1.1.1
+@end
+
+* MGET
+
+** concept
+   Similar to the concept of MSET, MGET is used to retrieve the values of multiple keys in a single GET operation.
+
+   .image pic/13/1.png
+
+   .image pic/13/2.png
+
+** experiment
+
+   .image pic/13/3.png
+
+   .image pic/13/4.png
+
+   So MGET always returns an array, unless there is no key.
+

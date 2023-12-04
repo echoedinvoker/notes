@@ -1,0 +1,27 @@
+@document.meta
+title: 26. First Implementation Task
+description: 
+authors: mattc
+categories: [
+  SSR
+]
+created: 2023-12-02T11:51:50+0800
+updated: 2023-12-02T11:52:32+0800
+version: 1.1.1
+@end
+
+* Problem of our project
+
+  Our project is a backend server created using SvelteKit and generates pages using server-side rendering.
+
+  .image pic/26/1.png
+
+  As shown in the picture, the problem occurs in the rendering part of the page. This is because the production of each page requires a large amount of JavaScript code to run, resulting in a performance decline issue.
+
+* Using Redis to solve it
+
+  We can use Redis to create a cache and store the generated page in it, so that if the user needs this page, it can be directly retrieved from Redis.
+
+  .image pic/26/2.png
+
+  The optimized process mentioned above is very simple and only requires GET and SET commands, but it can significantly improve the performance of the website. We will implement it in the upcoming lecture.

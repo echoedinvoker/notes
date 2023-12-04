@@ -1,0 +1,49 @@
+@document.meta
+title: 45. Serialization and Deserialization
+description: 
+authors: mattc
+categories: [
+  Serialize
+  De-serialize
+]
+created: 2023-12-03T18:29:50+0800
+updated: 2023-12-03T18:30:14+0800
+version: 1.1.1
+@end
+
+* Why we re-build user object previos lecture?
+
+  .image pic/45/1.png
+
+  The above is a question left from the previous lecture, why not directly put the attribute in?
+  To understand the reason, we must first understand serialize and deserialize.
+
+* Issue we met in SET & GET
+
+** SET
+   .image pic/45/2.png
+
+** GET
+   .image pic/45/3.png
+
+
+* Serialize & De-serialize
+
+  In order to solve the above issues, we create two small functions, serialize and deserialize, to help us resolve the problem when using GET and SET.
+
+** Serialize
+   .image pic/45/4.png
+
+** De-serialize
+   .image pic/45/5.png
+
+** Example
+   .image pic/45/6.png
+
+
+* So, back to initial question.. whey we re-build user object?
+
+  .image pic/45/7.png
+
+  Actually, we have already performed the serialization action, but it is not placed in another function. We will explain it in detail in the next lecture.
+

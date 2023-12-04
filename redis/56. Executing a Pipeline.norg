@@ -1,0 +1,19 @@
+* Build commands and Promise.all
+
+According to the practice in the sandbox, now we can implement the getItems using the same method.
+
+.image pic/56/1.png
+
+  The result obtained will be an array composed of individual command results. We still need to handle empty objects and deserialize each result in the same way.
+
+
+* Handling empty object and deserializing
+
+.image pic/56/2.png
+
+  When deserializing, the id of each individual item cannot be directly used. However, this can be easily resolved as bellow.
+
+
+* Get id of each result and return
+
+.image pic/56/3.png

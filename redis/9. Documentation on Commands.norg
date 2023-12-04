@@ -1,0 +1,57 @@
+@document.meta
+title: 9. Documentation on Commands
+description: 
+authors: mattc
+categories: [
+  Commands
+  Category
+  Documentation
+  Syntax
+]
+created: 2023-12-01T17:30:52+0800
+updated: 2023-12-01T17:31:23+0800
+version: 1.1.1
+@end
+
+* Try to catogory String Commands
+
+  Although Redis commands have their own types, it feels like there are many and they are messy. However, they can actually be classified step by step into something very simple.
+
+** Category at start
+   .image pic/9/1.png
+
+** Category by save/retrieve data
+   .image pic/9/2.png
+
+** Group similar commands
+   .image pic/9/3.png
+
+   The bottom pink part is rarely used, usually only in very special situations.
+
+* Redis document
+
+  Using Redis documentation is very important, even if your project has a dedicated Redis library, you still need to frequently refer to the documentation.
+
+  .image pic/9/4.png
+
+** Filter by data type
+   Using data types can often help us quickly find the command we want.
+
+   .image pic/9/5.png
+
+
+   .image pic/9/6.png
+
+** Known the syntax
+   The syntax in the command page is very important, we must start reading the documentation from here.
+
+   .image pic/9/7.png
+
+   If you are interested in a specific keyword in syntax, then scroll down to see its detailed explanation.
+
+   .image pic/9/8.png
+
+   Below is a detailed explanation of the syntax section.
+
+   .image pic/9/9.png
+

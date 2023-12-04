@@ -1,0 +1,48 @@
+@document.meta
+title: 68. How to Count the Number of Likes?
+description: 
+authors: mattc
+categories: [
+  Like
+  Hash
+  SET
+]
+created: 2023-12-04T20:52:43+0800
+updated: 2023-12-04T20:53:07+0800
+version: 1.1.1
+@end
+
+* 'Like' & 'Liked'
+
+** When reload the page, 'Liked' back to 'Like'
+   .image pic/68/1.png
+
+   When we click the like button on the item page, although it changes to "liked", after reloading the page, it will return to "like", indicating that it is not actually connected to our data.
+
+
+** Fix above issue
+   .image pic/68/2.png
+
+   We can determine whether the item exists in the SET of userLikes by the method mentioned above. If it exists, it will return true; otherwise, it will return false. The lecturer frontend has already used this result to control the display of the strings 'Like' and 'Liked' on the page.
+
+   .image pic/68/3.png
+
+
+* Likes number
+
+  Next, we are going to present how many people in total like this item.
+
+  .image pic/68/4.png
+
+** We can't query all SETs at the same time
+   .image pic/68/5.png
+
+   We do not have any commands to query all userLikes SET at once and get the total number of likes. We should consider other methods.
+
+
+** Add key 'like' to item hash
+   .image pic/68/6.png
+
+   We directly add the key 'likes' in the item hash. Every time a user likes/unlikes, we update the userLike SET and also update the value of the key 'likes' in the item hash.
+
+   Some people may want to create an 'itemLikes' key to record the number of likes. However, this would require querying Redis twice (for the item hash and itemLikes) when the user opens item page. It is better to directly write 'likes' into the item hash. This way, only one query to Redis is needed. In the world of Redis, speed is all.

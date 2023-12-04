@@ -1,0 +1,35 @@
+@document.meta
+title: 29. Adding Page Caching
+description: 
+authors: mattc
+categories: [
+  GET
+  SET
+  CashedPage
+]
+created: 2023-12-02T13:08:53+0800
+updated: 2023-12-02T13:09:30+0800
+version: 1.1.1
+@end
+
+* Goal this lecture
+
+  .image pic/29/1.png
+
+  We must complete the missing parts in the function above in order to allow the static page to be cached in Redis in this lecture.
+
+
+* Get cached page
+
+  .image pic/29/2.png
+
+  .image pic/29/3.png
+
+
+* Set cached page
+
+  .image pic/29/4.png
+
+  .image pic/29/5.png
+
+  The part of "set" does not have a return null like "get", and actually the return of "set" seems insignificant, but the lecturer did not explain these issues.

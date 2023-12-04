@@ -1,0 +1,32 @@
+@document.meta
+title: 50. Creating Sessions
+description: 
+authors: mattc
+categories: [
+  Session
+  HSET
+  Serialize
+]
+created: 2023-12-03T20:33:25+0800
+updated: 2023-12-03T20:33:59+0800
+version: 1.1.1
+@end
+
+* Session SET of Redis client
+
+  We need to store the session in Redis for this lecture.
+
+  .image pic/51/1.png
+
+  The slight difference with the user is that the session id is passed in from the outside along with the data (the user id is generated internally using a function).
+
+  Pay special attention not to store the session id in the redis value, as the session id itself is already used as the key and does not need to be stored in the value.
+
+
+* Test on the browser
+
+  .image pic/51/2.png
+
+  .image pic/51/3.png
+
+  Although there are some errors on the page, the top right corner has indeed changed to the logged-in state, so our session SET is successful.

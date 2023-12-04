@@ -1,0 +1,38 @@
+@document.meta
+title: 67. Adding a Like System
+description: 
+authors: mattc
+categories: [
+  Like
+  SET
+]
+created: 2023-12-04T20:20:19+0800
+updated: 2023-12-04T20:20:40+0800
+version: 1.1.1
+@end
+
+* What we gonna implement this lecture?
+
+  We want to implement the likes button for the product and the part that displays its quantity. When the user clicks for the first time, it will increase the likes, and when clicked for the second time, it will cancel the like.
+
+  .image pic/66/1.png
+
+
+* Likes SET key and commands
+
+  Our design logic is as follows: each user will have a dedicated SET key to record the ids of their favorite items. With this SET, we can use commands to implement many features on our website.
+
+  .image pic/66/2.png
+
+
+* implement in codes
+
+  .image pic/66/3.png
+
+
+* Test on the browser
+
+  .image pic/66/4.png
+
+  We still have other parts to write in order to make the like button truly work.
+

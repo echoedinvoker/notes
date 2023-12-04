@@ -1,0 +1,27 @@
+@document.meta
+title: 59. Intersection of Sets
+description: 
+authors: mattc
+categories: [
+  SET
+  SINTER
+]
+created: 2023-12-04T11:01:11+0800
+updated: 2023-12-04T11:46:39+0800
+version: 1.1.1
+@end
+
+* SINTER
+
+  Retrieve the values that intersect in all keys (without creating new keys).
+
+  .image pic/59/1.png
+
+  .image pic/59/2.png
+
+  From a logical perspective, we can see that to obtain the intersect values, it is sufficient to traverse the values of the first key. Therefore, compared to UNION and UINTER, it consumes much fewer resources.
+
+
+* rBook practice
+
+  .image pic/59/3.png

@@ -1,0 +1,36 @@
+@document.meta
+title: 39. More Configuration and Compilation Options
+description: 
+authors: mattc
+categories: [
+  compileOptions
+  Configuration
+]
+created: 2023-11-29T22:22:38+0800
+updated: 2023-11-29T22:23:05+0800
+version: 1.1.1
+@end
+
+* Compile native Javascript file in our project as well
+
+  Sometimes we don't want to use Typescript but still want to have the benefits of Typescript compilation. In such cases, we can use the following two properties.
+
+  .image pic/39/1.png
+
+  Sometimes in a project, there may be some scripts that need to be written in Javascript. We can also enable the option above to have Typescript compile them.
+
+
+
+* For React.JS setting
+
+  The following property is only needed in React.js projects, and currently we do not need to use it.
+
+  .image pic/39/2.png
+
+
+
+* Build Menifest for shipping our project as packackage
+
+  When we want to turn our project into a third-party package, we need to have a complete list of types that can be provided to the users. In this case, we need to use the following properties.
+
+  .image pic/39/3.png

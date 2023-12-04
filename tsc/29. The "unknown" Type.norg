@@ -1,0 +1,56 @@
+@document.meta
+title: 29. The "unknown" Type
+description: 
+authors: mattc
+categories: [
+  unknown
+  any
+]
+created: 2023-11-28T21:02:30+0800
+updated: 2023-11-28T21:03:10+0800
+version: 1.1.1
+@end
+
+
+* Default type of un-init variable
+
+  .image pic/29/1.png
+
+  Using 'any' will make Typescript completely ignore any type checking.
+
+
+* Type 'unknown'
+
+  There is a type 'unknown' that is similar to 'any'. It is used when the variable's type is expected to be known.
+
+  .image pic/29/2.png
+
+  After setting a variable as an unknown type, assigning values of different types to it does not trigger any warnings, which seems to be no different from "any".
+
+
+* Variable of 'unknown' type can NOT be assigned to other variable 
+
+  The only difference between "unknown" and "any" is as follows.
+
+  .image pic/29/3.png
+
+  As mentioned above, variables with an unknown type cannot be assigned to other variables casually. TypeScript will still issue a warning in this situation.
+
+
+* Variable of 'any' type can be assigned to other variable without any warnings (DANGEROUS!!)
+
+  .image pic/29/4.png
+
+  But if it is a variable of any type, it can be assigned to other variables arbitrarily, which is actually very dangerous.
+
+
+* How to remove warnings of unknown
+
+  In unknown situations, we just need to add some codes to perform type checks at runtime to eliminate warnings.
+
+  .image pic/29/5.png
+
+
+* Conclusion
+
+  When we truly do not know what type of value a variable will receive, we prefer to set it as unknown rather than any. This reduces the likelihood of bugs occurring, but the best scenario is to not use either.

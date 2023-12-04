@@ -1,0 +1,46 @@
+@document.meta
+title: 25. Redis Client Libraries
+description: 
+authors: mattc
+categories: [
+  Documentation
+]
+created: 2023-12-02T11:33:43+0800
+updated: 2023-12-02T11:34:11+0800
+version: 1.1.1
+@end
+
+* Chekc codes in the project
+
+  We observed the part related to Redis in the project downloaded from the previous lecture.
+
+** function to accesss to redis
+   .image pic/25/1.png
+
+** client
+   .image pic/25/2.png
+
+
+* Redis Client Library
+
+  In our app, we use the Redis Client Library to send commands to Redis. Different programming languages have different libraries.
+
+  .image pic/25/3.png
+
+
+* Different from ORM
+
+  In the library designed specifically for relational databases, also known as ORM, the code for the original database script is usually greatly simplified. Therefore, people using ORM can use it without needing to understand the database script.
+
+  .image pic/25/5.png
+
+  However, the Redis Client Library is completely different from ORM practices. Regardless of the popular language, Redis Client Libraries usually only replicate Redis commands.
+
+  .image pic/25/4.png
+
+
+* We should to check Redis document instead of Redis Client Library document
+
+  Due to the different approaches mentioned above, the official Redis Client Library usually does not provide detailed documentation for methods or sometimes does not provide any at all.
+
+  .image pic/25/6.png

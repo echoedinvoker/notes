@@ -1,0 +1,65 @@
+@document.meta
+title: 15. Are These Commands Even Useful?
+description: 
+authors: mattc
+categories: [
+  RANGE
+  Encode
+  Compact
+]
+created: 2023-12-02T09:28:36+0800
+updated: 2023-12-02T09:29:15+0800
+version: 1.1.1
+@end
+
+
+* What is RANGE commands for?
+
+  In the previous lecture, we learned about the RANGE instruction, but it seems to be of little use.
+
+  .image pic/15/1.png
+
+  But actually, we can use them in creative ways to achieve incredible performance.
+
+
+* Assume a scenario and problem
+
+  We assume the following scenario and the problems we are facing.
+
+  .image pic/15/2.png
+
+
+* Analyze how users interact with traditional database
+
+  First, we need to analyze how users interact with traditional databases.
+
+  .image pic/15/3.png
+
+
+* Solve it by Redis
+
+  Assuming that each data entry has only a few possible values for its properties, for example, there are only ten possible types, fifteen possible colors, and four possible materials. Under this premise, we will find that many values in traditional databases are repeated.
+
+  So we can use Redis to optimize the process for these duplicate values as follows.
+
+** Encode values from traditional database
+   First, encode each possible value in the properties.
+   .image pic/15/4.png
+
+   So the encoded table is obtained.
+
+   .image pic/15/5.png
+
+** SET encoded data into Redis
+   According to the encoded table, we write the data into Redis in the form of key-value pairs.
+
+   .image pic/15/6.png
+
+   From the above results, it can be observed that the values of multiple attributes for each data entry are compressed into a single string.
+
+** Replace traditional interactions with Redis commands
+   In this way, the interactions of the original traditional database can be replaced by Redis commands.
+
+   .image pic/15/7.png
+
+   As mentioned above, we will find that the RANGE commands come in handy at this time.

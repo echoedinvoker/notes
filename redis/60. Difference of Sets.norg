@@ -1,0 +1,32 @@
+@document.meta
+title: 60. Difference of Sets
+description: 
+authors: mattc
+categories: [
+  SET
+  SDIFF
+]
+created: 2023-12-04T11:10:37+0800
+updated: 2023-12-04T11:23:22+0800
+version: 1.1.1
+@end
+
+* SDIFF
+
+  .image pic/60/1.png
+
+
+* Chart explanation
+
+  The key point is to only check if the value of the *first key* is duplicated with the values of other keys.
+
+  .image pic/60/2.png
+
+  .image pic/60/3.png
+
+
+* rBook practice
+
+  .image pic/60/4.png
+
+  Unlike SUNION and SINTER, in SDIFF, the order of keys will affect the result (actually, it should be said the first key).

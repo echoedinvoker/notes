@@ -1,0 +1,45 @@
+@document.meta
+title: 48. Implementing Sessions
+description: 
+authors: mattc
+categories: [
+  Session
+  Authentication
+  Signup
+  Signin
+]
+created: 2023-12-03T19:31:04+0800
+updated: 2023-12-03T19:31:47+0800
+version: 1.1.1
+@end
+
+* Before building sesson parts...
+
+  Next, we are going to implement the part of accessing session to redis.
+
+  .image pic/48/1.png
+
+  But we need to first understand what a session is and what problems arise when storing sessions in Redis.
+
+
+* Signup
+
+  After the user information is created in the database (of all kinds), a random token needs to be generated and sent to the browser as a key to store the user information in Redis.
+
+  .image pic/48/2.png
+
+
+* Any other request need session token
+
+  Afterwards, the client request must include this session token, and then the server needs to check if this key exists in Redis. In this way, it can confirm whether the user is logged in or not, and the value in the key can be used for other logic.
+
+  .image pic/48/3.png
+
+
+* Signup (where the problem happened)
+
+  .image pic/48/4.png
+
+  Because Redis can only access data using keys, it becomes difficult to verify if a user is logged in when the user provides only a username and password during login. The session token's key only contains the ID information, which is insufficient for confirming user login status.
+
+  This requires understanding other Redis data structures to solve. We will come back to look at this later.

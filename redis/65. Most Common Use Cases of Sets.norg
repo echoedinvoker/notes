@@ -1,0 +1,41 @@
+@document.meta
+title: 65. Most Common Use Cases of Sets
+description: 
+authors: mattc
+categories: [
+  SET
+  Use case
+]
+created: 2023-12-04T15:09:09+0800
+updated: 2023-12-04T15:09:35+0800
+version: 1.1.1
+@end
+
+* SET use cases
+
+  Here are some common examples of using SET. If you are smart enough, you should be able to think of more applications.
+
+  .image pic/64/1.png
+
+** Enforcing uniqueness of any value
+   .image pic/64/2.png
+
+   .image pic/64/3.png
+
+** Creating a relationship between different records
+   .image pic/64/4.png
+
+   .image pic/64/5.png
+
+** Finding common attributes between different things
+   .image pic/64/6.png
+
+   .image pic/64/7.png
+
+** General list of elements where order doesn't matter
+   .image pic/64/8.png
+
+   .image pic/64/9.png
+
+   The above is an example of checking the blacklist when the user logs in.
+

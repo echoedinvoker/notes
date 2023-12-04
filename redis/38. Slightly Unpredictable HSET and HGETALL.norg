@@ -1,0 +1,24 @@
+@document.meta
+title: 38. Slightly Unpredictable HSET and HGETALL
+description: 
+authors: mattc
+categories: [
+  Sandbox
+]
+created: 2023-12-02T15:05:32+0800
+updated: 2023-12-02T15:05:50+0800
+version: 1.1.1
+@end
+
+* Redis Sandbox inside our project
+
+  The lecturer created a sandbox in the project for us to practice using the Redis client library.
+
+  .image pic/36/1.png
+
+  When we practice, we must use `npm run sandbox` to start the sandbox. It is separate from the other parts of the project.
+
+
+* Write some codes to access redis inside
+
+  .image pic/36/2.png

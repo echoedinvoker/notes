@@ -1,0 +1,27 @@
+@document.meta
+title: 66. Overriding Properties and The "protected" Modifier
+description: 
+authors: mattc
+categories: [
+  protected
+  Overriding
+]
+created: 2023-12-01T15:33:45+0800
+updated: 2023-12-01T15:34:15+0800
+version: 1.1.1
+@end
+
+* Override & 'private'
+
+  In the child class, you can freely override the field or method of the parent. 
+
+  .image pic/66/1.png
+
+  'private' allows the field to be accessed only by the class itself, and even the extended class cannot access it.
+
+
+* 'protected'
+
+  Due to the difficulties encountered above, Typescript provides another keyword 'protected' to us. It, like 'private', can protect fields from being accessed externally, but extended classes can access it.
+
+  .image pic/66/2.png

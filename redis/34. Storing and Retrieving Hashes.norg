@@ -1,0 +1,42 @@
+@document.meta
+title: 34. Storing and Retrieving Hashes
+description: 
+authors: mattc
+categories: [
+  Hash
+  Command
+  HGET
+  HSET
+  HGETALL
+]
+created: 2023-12-02T13:59:15+0800
+updated: 2023-12-02T13:59:54+0800
+version: 1.1.1
+@end
+
+.image pic/32/1.png
+
+
+* HSET
+
+.image pic/32/2.png
+
+.image pic/32/3.png
+
+
+* HGET
+
+.image pic/32/4.png
+
+.image pic/32/5.png
+
+
+* HGETALL
+
+.image pic/32/6.png
+
+** Actually return value is array, not object
+.image pic/32/7.png
+
+Actually, the value returned by HGETALL is represented as an array as shown above. Some clients automatically convert it to an object (such as the node-redis we are currently using), while others do not, so we have to do the conversion ourselves.
+

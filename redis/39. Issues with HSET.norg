@@ -1,0 +1,59 @@
+@document.meta
+title: 39. Issues with HSET
+description: 
+authors: mattc
+categories: [
+  Issue
+  HSET
+  Redis Client
+  toString
+  null
+  undefined
+]
+created: 2023-12-02T15:38:09+0800
+updated: 2023-12-02T15:38:47+0800
+version: 1.1.1
+@end
+
+* Error happened when we use client.hSet
+
+  We add more content for storing data in HSET as follows:
+
+  .image pic/37/1.png
+
+  We mentioned before that Redis hash cannot store deeply nested keys, but the error here is not caused by this reason. We will explain in detail below why the error occurred.
+
+
+* Redis Client will prepare native Redis command before access to redis
+
+  The Redis Client will convert our codes into Redis commands as follows.
+
+  .image pic/37/2.png
+
+
+* Redis Client will use .toString() to each value
+
+  The Redis Client will use .toString() on each value and then add it to the command. This is where the problem lies.
+
+  .image pic/37/3.png
+
+  .image pic/37/4.png
+
+  .image pic/37/5.png
+
+  As mentioned above, both strings and objects in JavaScript have the .toString() method. Although object.toString() will result in the strange string '\[object Object\]', it will not produce an error.
+
+
+* Where the error happened?
+
+  But null and undefined do not have .toString(), so an error will occur here.
+
+  .image pic/37/6.png
+
+
+* How to solve it?
+
+  We usually choose to directly remove properties with a value of null or undefined when encountering this situation. If it is really necessary to write these two properties, it is recommended to convert them to empty strings as follows:
+
+  .image pic/37/7.png
+

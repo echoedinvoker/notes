@@ -1,0 +1,33 @@
+@document.meta
+title: 60. Compiling to JavaScript
+description: 
+authors: mattc
+categories: [
+  Compiling
+  Syntax
+  ES5
+  Class
+]
+created: 2023-11-30T21:52:37+0800
+updated: 2023-11-30T21:53:24+0800
+version: 1.1.1
+@end
+
+* TSC Class convert to es2016
+
+  .image pic/60/1.png
+
+  We can see that es2016 JS codes and TSC codes are generally almost the same, except for the part where the type is defined above the constructor. That is a unique part of TSC.
+
+
+* TSC Class convert to es5 (older version)
+
+  .image pic/60/2.png
+
+  ES5 and earlier versions of JS do not have the keyword 'class', so it is necessary to use functions to generate functionality similar to classes in other languages. Therefore, JS codes are very different from TSC.
+
+
+* Conclusion
+
+  We use TSC to compile and convert the same codes into newer or older versions of JS codes. The original TSC codes are no need to chang, which is very convenient.
+

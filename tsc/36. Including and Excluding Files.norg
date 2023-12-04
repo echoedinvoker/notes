@@ -1,0 +1,57 @@
+@document.meta
+title: 36. Including and Excluding Files
+description: 
+authors: mattc
+categories: [
+  Configure
+  Compiler
+  tsconfig.json
+]
+created: 2023-11-29T07:20:24+0800
+updated: 2023-11-29T07:20:57+0800
+version: 1.1.1
+@end
+
+
+* Where to configure interacts between project and TSC compiler
+
+  We can configure how the Typescript compiler interacts with the files in our project at the location shown in the image in tsconfig.json.
+
+  .image pic/36/6.png
+
+
+* 'exclude'
+
+** target file
+   The key 'exclude' allows the compiler to ignore specified files or folders.
+
+   .image pic/36/1.png
+
+   In the above picture, the file "analytics.ts" is ignored. When running "tsc", it will be noticed that "analytics.js" will not be generated.
+
+** target folder
+   Usually, we also ignore certain folders, such as node_modules. We typically do not want any ts files inside to be compiled.
+
+   .image pic/36/2.png
+
+   If 'exclude' is not used, node_modules is a default value. However, if 'exclude' is used, you need to manually add node_modules. This point should be noted.
+
+** using wildcard
+   We can use wildcard symbols as follows.
+
+   .image pic/36/3.png
+
+   \* Represents all files names, ** represents all folder names.
+
+
+* 'include' & 'files'
+
+  .image pic/36/4.png
+
+  In addition, there are two keys to handle the interaction between project content and the compiler:
+
+  - include: specifies which files and folders need to be compiled. If this key is used, any parts that are not specified will be ignored.
+  -- When using include, exclude is usually used to specify exclusions within the scope covered by include.
+  - files: specifies which files should be compiled. It is usually used to specify the scope covered by exclude.
+
+

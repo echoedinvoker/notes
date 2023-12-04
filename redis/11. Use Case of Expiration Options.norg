@@ -1,0 +1,50 @@
+@document.meta
+title: 11. Use Case of Expiration Options
+description: 
+authors: mattc
+categories: [
+  Optional
+  SET
+  Expire
+]
+created: 2023-12-01T20:28:34+0800
+updated: 2023-12-01T20:29:16+0800
+version: 1.1.1
+@end
+
+* SET EX
+
+** Def
+   The optional "EX" after SET is followed by a numerical value, which represents the number of seconds after which this key-value pair will be automatically deleted.
+
+   .image pic/11/1.png
+
+
+** Experiment
+   .image pic/11/2.png
+
+* Other optional in the same group
+
+  .image pic/11/3.png
+
+  We won't explain each optional or command one by one, hoping that everyone has the habit of searching for documents on their own.
+
+
+* Explanation of reason to automatically delete
+
+** Init query
+   .image pic/11/4.png
+
+** Following query (before expire)
+   .image pic/11/5.png
+
+   The speed of this query is much faster than the previous one.
+
+** Following query (after expire)
+   Return to the situation of the init query.
+
+* So, why we need the mechanics to delete value automatically?
+
+  1. Prevent client to get old data.
+
+  2. Release memory, ensure the memory always enough.

@@ -1,0 +1,54 @@
+@document.meta
+title: 27. Functions as Types
+description: 
+authors: mattc
+categories: [
+  Function type
+  Arrow Function type
+]
+created: 2023-11-28T19:39:30+0800
+updated: 2023-11-28T19:40:36+0800
+version: 1.1.1
+@end
+
+* Inferred function type
+
+  Apart from parameters and return type, functions themselves also have a type in TypeScript.
+
+  .image pic/27/1.png
+
+  .image pic/27/2.png
+
+  When we declare a variable above and assign it an initial value of a function's value, TypeScript will infer its type as a function.
+
+
+* Type 'Function'
+
+  Sometimes we may encounter errors when we cannot directly obtain the inferred function type as follows.
+
+  .image pic/27/3.png
+
+  We can explicitly set the type of a variable to be Function when declaring it. Function is a type provided by TypeScript.
+
+  .image pic/27/4.png
+
+
+* Arrow function type
+
+  But the Function type does not include the details of the function, such as parameters and return type information.
+
+  .image pic/27/5.png
+
+  So if a variable is assigned to the wrong function, TypeScript and the runtime will not generate an error, making debugging very difficult.
+
+  We can accurately define the type of a function using the inferred type format that we initially see.
+
+  .image pic/27/6.png
+
+
+* Compatibility issue
+
+  But this approach needs to pay attention to compatibility issues. If a wrong function is assigned halfway, but the function has fewer parameters but the types match, TypeScript will consider this function compatible with the type we defined, so there will be no warning.
+
+  .image pic/27/7.png
+

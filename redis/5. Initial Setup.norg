@@ -1,0 +1,28 @@
+@document.meta
+title: 5. Initial Setup
+description: 
+authors: mattc
+categories: [
+  Setup
+  Install
+  Cloud
+]
+created: 2023-12-01T16:30:20+0800
+updated: 2023-12-01T16:30:43+0800
+version: 1.1.1
+@end
+
+* There are two way to instail Redis and following course
+
+  .image pic/5/1.png
+
+
+* Create subscription/database of Redis on cloud
+
+  The architecture of Redis Cloud is subscription and then database.
+
+  .image pic/5/2.png
+
+  After signing up, an automatic free subscription will be generated, and a database has already been set up under it for our free use.
+
+

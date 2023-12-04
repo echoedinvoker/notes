@@ -1,0 +1,31 @@
+@document.meta
+title: 44. Create User Implementation
+description: 
+authors: mattc
+categories: [
+  Create User
+  Hash
+]
+created: 2023-12-02T22:34:25+0800
+updated: 2023-12-02T22:35:16+0800
+version: 1.1.1
+@end
+
+* Chart of creating a user into Redis
+
+  The following is the process diagram for writing user data into Redis, and according to the analysis from the previous lecture, the data to be written should be of hash type.
+
+  .image pic/44/1.png
+
+  Note that the password has already been encrypted (salted and hashed) before entering createUser, so we don't need to process it again in createUser.
+
+
+* Function of createUser()
+
+  Redis does not automatically generate a unique id for the written data like psql does, so we have to generate it ourselves. However, the lecture has already written a function to generate ids, so we just need to import it and use it.
+
+  .image pic/44/2.png
+
+  If you are unsure about what keys should be used for storing user hash data in Redis, you can refer to the type 'CreateUserAttrs' defined in the lecture. It reveals the design ideas proposed by the lecturer.
+
+  As for why we need to rebuild the user data object instead of directly putting it into attrs, we will explain in the next lecture.

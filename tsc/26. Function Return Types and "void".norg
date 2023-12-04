@@ -1,0 +1,46 @@
+@document.meta
+title: 26. Function Return Types and "void"
+description: 
+authors: mattc
+categories: [
+  Return type
+  Void
+  undefined
+]
+created: 2023-11-28T18:43:08+0800
+updated: 2023-11-28T18:43:49+0800
+version: 1.1.1
+@end
+
+* Return type
+
+  The function itself, in addition to the type of the parameter, also has an important type called the return type.
+
+  .image pic/25/1.png
+
+  The value returned above is the sum of two numbers, so Typescript will infer the return type as number.
+
+
+* Explicitly set return type
+
+  Of course, we can also explicitly define the return type, but it is usually better to use type inference unless the inferred type does not match the requirements or there are special needs that require explicitly defining the return type.
+
+  .image pic/25/2.png
+
+
+* Void type
+
+  However, functions do not always return values. Some functions, such as the following, do not return any value. The return type of these functions will be inferred as void.
+
+  .image pic/25/3.png
+
+  In JavaScript, there is no void type. However, when we try to retrieve the return of the above function or the value of a property that does not exist in an object, we will get undefined.
+
+
+* undefined
+
+  .image pic/25/4.png
+
+  undefined is a real value that can also be used to define the return type. It is somewhat similar to the concept of Literal type. But we usually use void instead of undefined.
+
+  .image pic/25/5.png
