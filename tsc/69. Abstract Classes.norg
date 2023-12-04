@@ -1,0 +1,28 @@
+@document.meta
+title: 69. Abstract Classes
+description: 
+authors: mattc
+categories: [
+  Abstract
+]
+created: 2023-12-04T22:28:15+0800
+updated: 2023-12-04T22:28:31+0800
+version: 1.1.1
+@end
+
+* Child class can override parent properties or methods
+
+  We mentioned before that a child class can not only inherit all the properties and methods of the parent class but also override them.
+
+  .image pic/69/1.png
+
+
+* Abstract class and Abstract properties/methods
+
+  The purpose of certain classes is to provide a unified set of properties and methods for child classes. We define these classes using the keyword 'abstract', and they can never be instantiated.
+
+  .image pic/69/2.png
+
+  When we designate some methods and properties under an abstract class as 'abstract', it means that we are forcing child classes to implement these properties/methods themselves.
+
+  .image pic/69/3.png

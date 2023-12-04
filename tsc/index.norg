@@ -1,4 +1,4 @@
-* (x) Section 1: Getting Started
+* (-) Section 1: Getting Started
 ** (x) [2. What Is TypeScript & Why Should You Use It?(5/20)]{:2- What Is TypeScript and Why Should You Use It?:} 
 ** (x) [4. Installing and Using TypeScript (13/52)]{:4. Installing and Using TypeScript:}
 ** (x) [5. TypeScript Advantages - Overview (5/6)]{:5. TypeScript Advantages - Overview:}
@@ -43,3 +43,38 @@
 ** (x) [65. Inheritance (8/40)]{:65. Inheritance:}
 ** (x) [66. Overriding Properties & The "protected" Modifier (3/18)]{:66. Overriding Properties and The "protected" Modifier:}
 ** (x) [67. Getters & Setters (7/39)]{:67. Getters and Setters:}
+** (x) [68. Static Methods & Properties (5/26)]{:68. Static Methods and Properties:}
+** (x) [69. Abstract Classes (5/25)]{:69. Abstract Classes:}
+** (x) [70. Singletons & Private Constructors (5/30)]{:70. Singletons and Private Constructors:}
+** (x) [72. A First Interface (4/16)]{:72. A First Interface:}
+** (x) [73. Using Interfaces with Classes (6/23)]{:73. Using Interfaces with Classes:}
+** (x) [74. Why Interfaces? (2/12)]{:74. Why Interfaces?:}
+** ( ) [75. Readonly Interface Properties (2/)]{:75. Readonly Interface Properties:}
+** ( ) [76. Extending Interfaces (3/)]{:76. Extending Interfaces:}
+** ( ) [77. Interfaces as Function Types (3/)]{:77. Interfaces as Function Types:}
+** ( ) [78. Optional Parameters & Properties (4/)]{:78. Optional Parameters and Properties:}
+** ( ) [79. Compiling Interfaces to JavaScript (2/)]{:79. Compiling Interfaces to JavaScript:}
+** ( ) [83. Intersection Types (5/)]{:83. Intersection Types:}
+** ( ) [84. More on Type Guards (11/)]{:84. More on Type Guards:}
+** ( ) [85. Discriminated Unions (6/)]{:85. Discriminated Unions:}
+** ( ) [86. Type Casting (8/)]{:86. Type Casting:}
+** ( ) [87. Index Properties (7/)]{:87. Index Properties:}
+** ( ) [88. Function Overloads (6/)]{:88. Function Overloads:}
+** ( ) [89. Optional Chaining (4/)]{:89. Optional Chaining:}
+** ( ) [90. Nullish Coalescing (3/)]{:90. Nullish Coalescing:}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}

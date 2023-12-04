@@ -1,0 +1,36 @@
+@document.meta
+title: 70. Singletons and Private Constructors
+description: 
+authors: mattc
+categories: [
+  Singleton
+  Private Constructor
+]
+created: 2023-12-04T23:08:37+0800
+updated: 2023-12-04T23:09:15+0800
+version: 1.1.1
+@end
+
+* Sometime we only allow one instance for a certain class...
+
+  For example, the AccountingDepartment class below is specifically designed for an accounting department. It seems a bit strange to use it to generate many instances.
+
+  .image pic/70/1.png
+
+  Flexible use of Typescript keywords ensures that only one instance is generated.
+
+
+* Prevent class to be instantiated outside of itself
+
+  So, it can only be instantiated from within the class itself, which sounds a bit strange, but it is a valid operation.
+
+  .image pic/70/2.png
+
+
+* Create static method and property to instantiate and store instance inside
+
+  .image pic/70/3.png
+
+  Please carefully observe the meaning of each prefix word in the above figure. The overall result is to allow users to only obtain an instance through static, and regardless of how many times it is used, they will always get the same instance.
+
+  We call this type of class a singleton class.

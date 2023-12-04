@@ -1,0 +1,26 @@
+@document.meta
+title: 74. Why Interfaces?
+description: 
+authors: mattc
+categories: [
+  Instance
+]
+created: 2023-12-05T00:23:12+0800
+updated: 2023-12-05T00:23:30+0800
+version: 1.1.1
+@end
+
+* Why we use interface?
+
+  Even though it was explained in the previous lecture that interfaces can be implemented into classes to ensure that the class has the properties and methods defined in the interface, what is the purpose of this?
+
+  .image pic/73/1.png
+
+** Share properties and methods between class/instance with same interfaces
+
+   When two classes or instances have implemented common interfaces, they can safely share related properties and methods.
+
+
+** Make sure there is certain feature of a contants or variable
+
+   We use instances to define certain features for a constant or variable, so that there will be no issues when using this constant or variable in the future logic.

@@ -1,0 +1,46 @@
+@document.meta
+title: 68. Static Methods and Properties
+description: 
+authors: mattc
+categories: [
+  Static
+]
+created: 2023-12-04T21:54:53+0800
+updated: 2023-12-04T21:57:29+0800
+version: 1.1.1
+@end
+
+* Some classes we never instantiate them...
+
+  There are some classes that we never instantiate, but instead directly use their methods or properties, such as the Math class below.
+
+  .image pic/68/1.png
+
+  These properties and methods are called static ..., usually attached directly to the class itself rather than its instance. 
+
+  The Math above doesn't even have a constructor, so it is more like a namespace in terms of usage. A namespace is a way to group utility methods and constants together for use.
+
+
+* We can create our static properties/methods
+
+** Build static value in the parent class
+   .image pic/68/2.png
+
+   We usually instantiate child classes that have been inherited, and attach static properties/methods to their parent class. This is a common practice.
+
+** Create static property and method
+   .image pic/68/3.png
+
+
+* Common mistake when using static value inside the class
+
+  When we want to access static properties/methods within a class, the following errors often occur.
+
+** mistake
+   .image pic/68/4.png
+
+   Because static values are attached to the class itself rather than its instance, we cannot use 'this' because 'this' represents an instance.
+
+** correct way
+   .image pic/68/5.png
+
