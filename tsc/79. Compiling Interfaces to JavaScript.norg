@@ -1,0 +1,7 @@
+* Type and Interface are only exist in development
+
+  They will completely disappear after being compiled into .js in .ts, so they only exist and help us during development.
+
+  .image pic/79/1.png
+
+  .image pic/79/1.png

@@ -49,13 +49,13 @@
 ** (x) [72. A First Interface (4/16)]{:72. A First Interface:}
 ** (x) [73. Using Interfaces with Classes (6/23)]{:73. Using Interfaces with Classes:}
 ** (x) [74. Why Interfaces? (2/12)]{:74. Why Interfaces?:}
-** ( ) [75. Readonly Interface Properties (2/)]{:75. Readonly Interface Properties:}
-** ( ) [76. Extending Interfaces (3/)]{:76. Extending Interfaces:}
-** ( ) [77. Interfaces as Function Types (3/)]{:77. Interfaces as Function Types:}
-** ( ) [78. Optional Parameters & Properties (4/)]{:78. Optional Parameters and Properties:}
-** ( ) [79. Compiling Interfaces to JavaScript (2/)]{:79. Compiling Interfaces to JavaScript:}
-** ( ) [83. Intersection Types (5/)]{:83. Intersection Types:}
-** ( ) [84. More on Type Guards (11/)]{:84. More on Type Guards:}
+** (x) [75. Readonly Interface Properties (2/10)]{:75. Readonly Interface Properties:}
+** (x) [76. Extending Interfaces (3/19)]{:76. Extending Interfaces:}
+** (x) [77. Interfaces as Function Types (3/15)]{:77. Interfaces as Function Types:}
+** (x) [78. Optional Parameters & Properties (4/26)]{:78. Optional Parameters and Properties:}
+** (x) [79. Compiling Interfaces to JavaScript (2/9)]{:79. Compiling Interfaces to JavaScript:}
+** (x) [83. Intersection Types (5/28)]{:83. Intersection Types:}
+** (x) [84. More on Type Guards (11/52)]{:84. More on Type Guards:}
 ** ( ) [85. Discriminated Unions (6/)]{:85. Discriminated Unions:}
 ** ( ) [86. Type Casting (8/)]{:86. Type Casting:}
 ** ( ) [87. Index Properties (7/)]{:87. Index Properties:}

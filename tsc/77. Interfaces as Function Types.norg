@@ -1,0 +1,25 @@
+@document.meta
+title: 77. Interfaces as Function Types
+description: 
+authors: mattc
+categories: [
+  Interface
+  Function
+]
+created: 2023-12-05T18:30:23+0800
+updated: 2023-12-05T18:30:50+0800
+version: 1.1.1
+@end
+
+* Review custom function type
+
+  .image pic/77/1.png
+
+
+* Define custom functin type by interface
+
+  Because in JavaScript, a function is a special type of object, so it can also be defined using an interface.
+
+  .image pic/77/2.png
+
+  It seems that using "type" directly is more concise, and there may be some syntax errors in the details of the interface define.

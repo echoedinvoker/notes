@@ -1,0 +1,35 @@
+@document.meta
+title: 83. Intersection Types
+description: 
+authors: mattc
+categories: [
+  Intersection
+]
+created: 2023-12-05T20:15:17+0800
+updated: 2023-12-05T20:15:38+0800
+version: 1.1.1
+@end
+
+* Intersection two object types
+
+  We can use "&" to combine two object types.
+
+  .image pic/83/1.png
+
+  As mentioned above, it can be understood that the result of this method will be a combination of two types of content. (All fields and methods will be preserved)
+
+
+* Intersection object types with interface
+
+  Because interfaces are used to define object types, the above operations can also be implemented using interfaces.
+
+  .image pic/83/2.png
+
+
+* Intersection two union types
+
+  Using type for the intersection of types is suitable not only for combining objects but also for combining Union types. (interface cannot)
+
+  .image pic/83/3.png
+
+  However, it is important to note that unlike combining object types, only the intersection part is left here.

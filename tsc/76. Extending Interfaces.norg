@@ -1,0 +1,32 @@
+@document.meta
+title: 76. Extending Interfaces
+description: 
+authors: mattc
+categories: [
+  Interface
+  entends
+]
+created: 2023-12-05T15:41:43+0800
+updated: 2023-12-05T15:42:17+0800
+version: 1.1.1
+@end
+
+* Class can implement multiple interfaces
+
+  .image pic/76/1.png
+
+  If certain classes only need the property 'name' and do not need the method 'greet', we can separate 'name' from the Greetable interface.
+
+
+* Interface can inheritace other interface
+
+  .image pic/76/2.png
+
+  If there is a method 'greet', then there must be a property 'name', we can let the interface Greetable inherit the interface Named to ensure this relationship.
+
+
+* Interface can inheritace not only one interfaces (Class can't)
+
+  .image pic/76/3.png
+
+  Interface can inherit multiple interfaces, which is different from classes.

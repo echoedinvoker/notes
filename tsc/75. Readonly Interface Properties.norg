@@ -1,0 +1,22 @@
+@document.meta
+title: 75. Readonly Interface Properties
+description: 
+authors: mattc
+categories: [
+  readonly
+  Interface
+]
+created: 2023-12-05T15:27:17+0800
+updated: 2023-12-05T15:27:48+0800
+version: 1.1.1
+@end
+
+* Preffix 'readonly'
+
+  You can add the prefix 'readonly' in front of the field of the interface. Its purpose is to prevent the value of this property from being changed after initialization (type can also user it).
+
+Note that interfaces and types cannot use prefixes such as 'static' or 'private' like classes do, while classes cannot use the prefix 'readonly'.
+
+.image pic/73/2.png
+
+  Although the above diagram seems to represent 'readonly' replacing the functionality of 'private' in a class, there are still some differences between the two. 'Readonly' only prevents the property from being changed, while 'private' prevents external access to its value altogether. They are different.

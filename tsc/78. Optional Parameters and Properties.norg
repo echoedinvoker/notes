@@ -1,0 +1,37 @@
+@document.meta
+title: 78. Optional Parameters and Properties
+description: 
+authors: mattc
+categories: [
+  Optional
+]
+created: 2023-12-05T19:27:45+0800
+updated: 2023-12-05T19:28:12+0800
+version: 1.1.1
+@end
+
+* Optional fields in Interface and Class
+
+  We can define which fields are optional in both interfaces and classes, and we use "?" to define them.
+
+  .image pic/78/1.png
+
+  We can also define optional method like fn?.()
+
+
+* Optional parameter
+
+  The required parameters can also be defined as optional by using "?"
+
+  .image pic/78/2.png
+
+
+* Loose relation
+
+  The image above seems to imply that the relationship between fields, interfaces, classes, and parameters should be the same of optional or not, but in reality, they are loose relationship. 
+
+  The meaning is that although they have relationship between each other, but it does not necessarily have to be optional or required at all.
+
+  .image pic/78/3.png
+
+  As shown in the figure, only in the interface, we define that the field 'name' is optional. The related field and parameter of the class and its constructor are required. As long as the logic is correct, there is no problem.
