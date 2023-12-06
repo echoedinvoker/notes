@@ -56,25 +56,89 @@
 ** (x) [79. Compiling Interfaces to JavaScript (2/9)]{:79. Compiling Interfaces to JavaScript:}
 ** (x) [83. Intersection Types (5/28)]{:83. Intersection Types:}
 ** (x) [84. More on Type Guards (11/52)]{:84. More on Type Guards:}
-** ( ) [85. Discriminated Unions (6/)]{:85. Discriminated Unions:}
-** ( ) [86. Type Casting (8/)]{:86. Type Casting:}
+** (x) [85. Discriminated Unions (6/30)]{:85. Discriminated Unions:}
+** (x) [86. Type Casting (8/46)]{:86. Type Casting:}
 ** ( ) [87. Index Properties (7/)]{:87. Index Properties:}
 ** ( ) [88. Function Overloads (6/)]{:88. Function Overloads:}
 ** ( ) [89. Optional Chaining (4/)]{:89. Optional Chaining:}
 ** ( ) [90. Nullish Coalescing (3/)]{:90. Nullish Coalescing:}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
+** ( ) [94. Built-in Generics & What are Generics?(9/)]{:94. Built-in Generics and What are Generics?:}
+** ( ) [95. Creating a Generic Function (9/)]{:95. Creating a Generic Function:}
+** ( ) [96. Working with Constraints (4/)]{:96. Working with Constraints:}
+** ( ) [97. Another Generic Function (6/)]{:97. Another Generic Function:}
+** ( ) [98. The "keyof" Constraint (3/)]{:98. The "keyof" Constraint:}
+** ( ) [99. Generic Classes (9/)]{:99. Generic Classes:}
+** ( ) [100. A First Summary (1/)]{:100. A First Summary:}
+** ( ) [101. Generic Utility Types (7/)]{:101. Generic Utility Types:}
+** ( ) [102. Generic Types vs Union Types (4/)]{:102. Generic Types vs Union Types:}
+** ( ) [105. A First Class Decorator (5/)]{:105. A First Class Decorator:}
+** ( ) [106. Working with Decorator Factories (2/)]{:106. Working with Decorator Factories:}
+** ( ) [107. Building More Useful Decorators (6/)]{:107. Building More Useful Decorators:}
+** ( ) [108. Adding Multiple Decorators (3/)]{:108. Adding Multiple Decorators:}
+** ( ) [109. Diving into Property Decorators (5/)]{:109. Diving into Property Decorators:}
+** ( ) [110. Accessor & Parameter Decorators (6/)]{:110. Accessor and Parameter Decorators:}
+** ( ) [111. When Do Decorators Execute? (3/)]{:111. When Do Decorators Execute?:}
+** ( ) [112. Returning (and changing) a Class in a Class Decorator (9/)]{:112. Returning (and changing) a Class in a Class Decorator:}
+** ( ) [113. Other Decorator Return Types (4/)]{:113. Other Decorator Return Types:}
+** ( ) [114. Example: Creating an "Autobind" Decorator (9/)]{:114. Example- Creating an "Autobind" Decorator:}
+** ( ) [115. Validation with Decorators - First Steps (7/)]{:115. Validation with Decorators - First Steps:}
+** ( ) [116. Validation with Decorators - Finished (12/)]{:116. Validation with Decorators - Finished:}
+** ( ) [117. Fixing a Validator Bug (1/)]{:117. Fixing a Validator Bug:}
+** ( ) [121. Getting Started (5/)]{:121. Getting Started:}
+** ( ) [122. DOM Element Selection & OOP Rendering (12/)]{:122. DOM Element Selection and OOP Rendering:}
+** ( ) [123. Interacting with DOM Elements (8/)]{:123. Interacting with DOM Elements:}
+** ( ) [124. Creating & Using an "Autobind" Decorator (5/)]{:124. Creating and Using an "Autobind" Decorator:}
+** ( ) [125. Fetching User Input (9/)]{:125. Fetching User Input:}
+** ( ) [126. Creating a Re-Usable Validation Functionality (14/)]{:126. Creating a Re-Usable Validation Functionality:}
+** ( ) [127. Rendering Project Lists (11/)]{:127. Rendering Project Lists:}
+** ( ) [128. Managing Application State with Singletons (16/){:128. Managing Application State with Singletons:}
+** ( ) [129. More Classes & Custom Types (7/)]{:129. More Classes and Custom Types:}
+** ( ) [130. Filtering Projects with Enums (6/)]{:130. Filtering Projects with Enums:}
+** ( ) [131. Adding Inheritance & Generics (19/)]{:131. Adding Inheritance and Generics:}
+** ( ) [132. Rendering Project Items with a Class (12/)]{:132. Rendering Project Items with a Class:}
+** ( ) [133. Using a Getter (4/)]{:133. Using a Getter:}
+** ( ) [134. Utilizing Interfaces to Implement Drag & Drop (10/)]{:134. Utilizing Interfaces to Implement Drag and Drop:}
+** ( ) [135. Drag Events & Reflecting the Current State in the UI (6/)]{:135. Drag Events and Reflecting the Current State in the UI:}
+** ( ) [136. Adding a Droppable Area (8/)]{:136. Adding a Droppable Area:}
+** ( ) [137. Finishing Drag & Drop (7/)]{:137. Finishing Drag and Drop:}
+** ( ) [141. Writing Module Code - Your Options (4/)]{:141. Writing Module Code - Your Options:}
+** ( ) [142. Working with Namespaces (11/)]{:142. Working with Namespaces:}
+** ( ) [143. Organizing Files & Folders (9/)]{:143. Organizing Files and Folders:}
+** ( ) [144. A Problem with Namespace Imports (3/)]{:144. A Problem with Namespace Imports:}
+** ( ) [145. Important: Use Chrome or Firefox (1/)]{:145. Important- Use Chrome or Firefox:}
+** ( ) [146. Using ES Modules (12/)]{:146. Using ES Modules:}
+** ( ) [147. Understanding various Import & Export Syntaxes (5/)]{:147. Understanding various Import and Export Syntaxes:}
+** ( ) [148. How Does Code In Modules Execute? (2/)]{:148. How Does Code In Modules Execute?:}
+** ( ) [152. What is Webpack & Why do we need it? (6/)]{:152. What is Webpack and Why do we need it?:}
+** ( ) [153. Installing Webpack & Important Dependencies (4/)]{:153. Installing Webpack and Important Dependencies:}
+** ( ) [154. Adding Entry & Output Configuration (6/)]{:154. Adding Entry and Output Configuration:}
+** ( ) [155. Adding TypeScript Support with the ts-loader Package (7/)]{:155. Adding TypeScript Support with the ts-loader Package:}
+** ( ) [156. Adjust Webpack Config (1/)]{:156. Adjust Webpack Config:}
+** ( ) [157. Finishing the Setup & Adding webpack-dev-server (4/)]{:157. Finishing the Setup and Adding webpack-dev-server:}
+** ( ) [158. Adding a Production Workflow (4/)]{:158. Adding a Production Workflow:}
+** ( ) [162. Using JavaScript (!) Libraries with TypeScript (9/)]{:162. Using JavaScript (!) Libraries with TypeScript:}
+** ( ) [163. Using "declare" as a "Last Resort" (2/)]{:163. Using "declare" as a "Last Resort":}
+** ( ) [164. No Types Needed: class-transformer (8/)]{:164. No Types Needed- class-transformer:}
+** ( ) [165. TypeScript-embracing: class-validator (6/)]{:165. TypeScript-embracing- class-validator:}
+** ( ) [169. Project Setup (4/)]{:169. Project Setup:}
+** ( ) [170. Getting User Input (3/)]{:170. Getting User Input:}
+** ( ) [171. Setting Up a Google API Key (3/)]{:171. Setting Up a Google API Key:}
+** ( ) [172. Using Axios to Fetch Coordinates for an Entered Address (10/)]{:172. Using Axios to Fetch Coordinates for an Entered Address:}
+** ( ) [173. Rendering a Map with Google Maps (incl. Types!) (7/)]{:173. Rendering a Map with Google Maps (incl. Types!):}
+** ( ) [174. Working with Maps without a Credit Card (1/)]{:174. Working with Maps without a Credit Card:}
+** ( ) [177. Setting Up a React + TypeScript Project (5/)]{:177. Setting Up a React + TypeScript Project:}
+** ( ) [178. How Do React + TypeScript Work Together? (4/)]{:178. How Do React + TypeScript Work Together?:}
+** ( ) [179. Working with Props and Types for Props (7/)]{:179. Working with Props and Types for Props:}
+** ( ) [180. Getting User Input with "refs" (7/)]{:180. Getting User Input with "refs":}
+** ( ) [181. Cross-Component Communication (4/)]{:181. Cross-Component Communication:}
+** ( ) [182. Working with State & Types (4/)]{:182. Working with State and Types:}
+** ( ) [183. Managing State Better (2/)]{:183. Managing State Better:}
+** ( ) [184. More Props & State Work (4/)]{:184. More Props and State Work:}
+** ( ) [185. Adding Styling (1/)]{:185. Adding Styling:}
+** ( ) [186. Types for other React Features (e.g. Redux or Routing) (4/)]{:186. Types for other React Features (e.g. Redux or Routing):}
+** ( ) [190. Executing TypeScript Code with Node.js (4/)]{:190. Executing TypeScript Code with Node.js:}
+** ( ) [191. Setting up a Project (4/)]{:191. Setting up a Project:}
+** ( ) [192. Finished Setup & Working with Types (in Node + Express Apps) (5/)]{:192. Finished Setup and Working with Types (in Node + Express Apps):}
+** ( ) [193. Adding Middleware & Types (6/)]{:193. Adding Middleware and Types:}
+** ( ) [194. Working with Controllers & Parsing Request Bodies (10/)]{:194. Working with Controllers and Parsing Request Bodies:}
+** ( ) [195. More CRUD Operations (10/)]{:195. More CRUD Operations:}

@@ -1,0 +1,59 @@
+@document.meta
+title: 86. Type Casting
+description: 
+authors: mattc
+categories: [
+  Type Casting
+  DOM Element
+  HTMLElement
+  HTMLParagraphElement
+  HTMLInputElement
+]
+created: 2023-12-06T20:03:54+0800
+updated: 2023-12-06T20:04:45+0800
+version: 1.1.1
+@end
+
+> Typescript cannot accurately determine the type of certain values, so we must actively use the technique of 'Type Casting' to inform Typescript of the type of these values.
+
+
+* Get DOM element by tag name
+
+** Union with null
+   .image pic/86/1.png
+
+** Use ! to remove null
+   If it is certain that a null value will not be obtained, use ! to eliminate the null type.
+
+   .image pic/86/7.png
+
+
+* Get DOM element by id
+
+  .image pic/86/2.png
+
+  We thought that we would get HTMLInputElement, the same as the example above, but we got HTMLElement instead. The latter is a generic type for all Dom elements, so it does not have fields designed specifically for individual elements. This is because we are using id to retrieve Dom elements, and Typescript does not deeply inspect the content of Dom elements. Instead, it relies on the means we use to retrieve Dom elements to determine their type.
+
+  .image pic/86/3.png
+
+* Type Casting
+
+  The above is what was mentioned at the beginning, a case where Typescript cannot accurately identify the type of certain values. If we want to assign a more precise type to a variable, we can use the technique of Type Casting as follows.
+
+** Option 1 < >
+   .image pic/86/4.png
+
+** Option 2 as
+   .image pic/86/5.png
+
+   Because the syntax of option 1 sometimes conflicts with the syntax of certain frameworks, a second method of type casting is provided.
+
+** if we do not sure this DOM element exist (it could be null)
+   So in this situation, we should not use "!" and type casting in uncertain parts, and we must use type guards at runtime to determine the type.
+
+   .image pic/86/6.png
+
+   After excluding the possibility of null type with a type guard, we can use Type Casting, but the syntax may need to be adjusted as mentioned above.
+
+
+

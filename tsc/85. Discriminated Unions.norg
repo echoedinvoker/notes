@@ -1,0 +1,34 @@
+@document.meta
+title: 85. Discriminated Unions
+description: 
+authors: mattc
+categories: [
+  Discriminated Union
+  Union
+]
+created: 2023-12-06T16:03:04+0800
+updated: 2023-12-06T16:03:51+0800
+version: 1.1.1
+@end
+
+> When we do type guard for Union of object type or interface, it is easy to make typo errors. Discriminated Unions is a pattern that can help us solve this problem.
+
+* Type Guard of Union of Interfaces
+
+  Let's take the following codes as an example.
+
+  .image pic/85/1.png
+
+  We often make typo mistakes when inputting strings.
+
+
+* Using Discriminated Unions to solve
+
+  .image pic/85/2.png
+
+  It is a pattern, which means that we must follow a certain model in order to solve this problem.
+
+  1. Add the same property to all relevant interfaces, and use literal type.
+
+  2. The bodyguard uses a switch statement to categorize interfaces based on the values of literal type properties.
+
