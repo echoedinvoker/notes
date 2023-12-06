@@ -1,0 +1,11 @@
+* GET Redis
+
+.image pic/1/1.png
+
+
+* SET Redis (scheduled)
+
+.image pic/1/2.png
+
+So when the Redis value has the string "DYNAMIC", the combination during writing must be the dynamic datasource + dynamic value item.
+

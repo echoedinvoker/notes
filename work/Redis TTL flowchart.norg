@@ -1,0 +1,22 @@
+* SET key
+
+.image pic/2/1.png
+
+
+* GET key
+
+.image pic/2/2.png
+
+Dynamic query may encounter the issue of not being able to retrieve the required id for the Dynamic query due to the nonexistence of the Redis key.
+
+
+* Scheduled check TTL of all keys
+
+.image pic/2/3.png
+
+The 'enabled' field will be added to the table 'value_items' in the same table as 'index_code', so querying and updating 'enabled' should be as simple as shown in the above diagram.
+
+
+* Refresh TTL of all keys when changing config
+
+.image pic/2/4.png
