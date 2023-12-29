@@ -58,41 +58,40 @@
 ** (x) [84. More on Type Guards (11/52)]{:84. More on Type Guards:}
 ** (x) [85. Discriminated Unions (6/30)]{:85. Discriminated Unions:}
 ** (x) [86. Type Casting (8/46)]{:86. Type Casting:}
-** ( ) [87. Index Properties (7/)]{:87. Index Properties:}
-** ( ) [88. Function Overloads (6/)]{:88. Function Overloads:}
-** ( ) [89. Optional Chaining (4/)]{:89. Optional Chaining:}
-** ( ) [90. Nullish Coalescing (3/)]{:90. Nullish Coalescing:}
-** ( ) [94. Built-in Generics & What are Generics?(9/)]{:94. Built-in Generics and What are Generics?:}
-** ( ) [95. Creating a Generic Function (9/)]{:95. Creating a Generic Function:}
-** ( ) [96. Working with Constraints (4/)]{:96. Working with Constraints:}
-** ( ) [97. Another Generic Function (6/)]{:97. Another Generic Function:}
-** ( ) [98. The "keyof" Constraint (3/)]{:98. The "keyof" Constraint:}
-** ( ) [99. Generic Classes (9/)]{:99. Generic Classes:}
-** ( ) [100. A First Summary (1/)]{:100. A First Summary:}
-** ( ) [101. Generic Utility Types (7/)]{:101. Generic Utility Types:}
-** ( ) [102. Generic Types vs Union Types (4/)]{:102. Generic Types vs Union Types:}
-** ( ) [105. A First Class Decorator (5/)]{:105. A First Class Decorator:}
-** ( ) [106. Working with Decorator Factories (2/)]{:106. Working with Decorator Factories:}
-** ( ) [107. Building More Useful Decorators (6/)]{:107. Building More Useful Decorators:}
-** ( ) [108. Adding Multiple Decorators (3/)]{:108. Adding Multiple Decorators:}
-** ( ) [109. Diving into Property Decorators (5/)]{:109. Diving into Property Decorators:}
-** ( ) [110. Accessor & Parameter Decorators (6/)]{:110. Accessor and Parameter Decorators:}
-** ( ) [111. When Do Decorators Execute? (3/)]{:111. When Do Decorators Execute?:}
-** ( ) [112. Returning (and changing) a Class in a Class Decorator (9/)]{:112. Returning (and changing) a Class in a Class Decorator:}
-** ( ) [113. Other Decorator Return Types (4/)]{:113. Other Decorator Return Types:}
-** ( ) [114. Example: Creating an "Autobind" Decorator (9/)]{:114. Example- Creating an "Autobind" Decorator:}
-** ( ) [115. Validation with Decorators - First Steps (7/)]{:115. Validation with Decorators - First Steps:}
-** ( ) [116. Validation with Decorators - Finished (12/)]{:116. Validation with Decorators - Finished:}
-** ( ) [117. Fixing a Validator Bug (1/)]{:117. Fixing a Validator Bug:}
-** ( ) [121. Getting Started (5/)]{:121. Getting Started:}
-** ( ) [122. DOM Element Selection & OOP Rendering (12/)]{:122. DOM Element Selection and OOP Rendering:}
-** ( ) [123. Interacting with DOM Elements (8/)]{:123. Interacting with DOM Elements:}
-** ( ) [124. Creating & Using an "Autobind" Decorator (5/)]{:124. Creating and Using an "Autobind" Decorator:}
-** ( ) [125. Fetching User Input (9/)]{:125. Fetching User Input:}
-** ( ) [126. Creating a Re-Usable Validation Functionality (14/)]{:126. Creating a Re-Usable Validation Functionality:}
-** ( ) [127. Rendering Project Lists (11/)]{:127. Rendering Project Lists:}
-** ( ) [128. Managing Application State with Singletons (16/){:128. Managing Application State with Singletons:}
-** ( ) [129. More Classes & Custom Types (7/)]{:129. More Classes and Custom Types:}
+** (x) [87. Index Properties (7/31)]{:87. Index Properties:}
+** (x) [88. Function Overloads (6/50)]{:88. Function Overloads:}
+** (x) [89. Optional Chaining (4/24)]{:89. Optional Chaining:}
+** (x) [90. Nullish Coalescing (3/14)]{:90. Nullish Coalescing:}
+** (x) [94. Built-in Generics & What are Generics?(9/27)]{:94. Built-in Generics and What are Generics?:}
+** (x) [95. Creating a Generic Function (9/51)]{:95. Creating a Generic Function:}
+** (x) [96. Working with Constraints (4/20)]{:96. Working with Constraints:}
+** (x) [97. Another Generic Function (6/28)]{:97. Another Generic Function:}
+** (x) [98. The "keyof" Constraint (3/21)]{:98. The "keyof" Constraint:}
+** (x) [99. Generic Classes (9/50)]{:99. Generic Classes:}
+** (x) [101. Generic Utility Types (7/36)]{:101. Generic Utility Types:}
+** (x) [102. Generic Types vs Union Types (4/25)]{:102. Generic Types vs Union Types:}
+** (x) [105. A First Class Decorator (5/30)]{:105. A First Class Decorator:}
+** (x) [106. Working with Decorator Factories (2/17)]{:106. Working with Decorator Factories:}
+** (x) [107. Building More Useful Decorators (6/42)]{:107. Building More Useful Decorators:}
+** (x) [108. Adding Multiple Decorators (3/19)]{:108. Adding Multiple Decorators:}
+** (x) [109. Diving into Property Decorators (5/41)]{:109. Diving into Property Decorators:}
+** (x) [110. Accessor & Parameter Decorators (6/60)]{:110. Accessor and Parameter Decorators:}
+** (x) [111. When Do Decorators Execute? (3/18)]{:111. When Do Decorators Execute?:}
+** (x) [112. Returning (and changing) a Class in a Class Decorator (9/61)]{:112. Returning (and changing) a Class in a Class Decorator:}
+** (x) [113. Other Decorator Return Types (4/28)]{:113. Other Decorator Return Types:}
+** (x) [114. Example: Creating an "Autobind" Decorator (9/47)]{:114. Example- Creating an "Autobind" Decorator:}
+** (x) [115. Validation with Decorators - First Steps (7/37)]{:115. Validation with Decorators - First Steps:}
+** (x) [116. Validation with Decorators - Finished (12/41)]{:116. Validation with Decorators - Finished:}
+** (x) [117. Fixing a Validator Bug (1/4)]{:117. Fixing a Validator Bug:}
+** (x) [121. Getting Started (5/20)]{:121. Getting Started:}
+** (x) [122. DOM Element Selection & OOP Rendering (12/57)]{:122. DOM Element Selection and OOP Rendering:}
+** (x) [123. Interacting with DOM Elements (8/35)]{:123. Interacting with DOM Elements:}
+** (x) [124. Creating & Using an "Autobind" Decorator (5/23)]{:124. Creating and Using an "Autobind" Decorator:}
+** (x) [125. Fetching User Input (9/37)]{:125. Fetching User Input:}
+** (x) [126. Creating a Re-Usable Validation Functionality (14/34)]{:126. Creating a Re-Usable Validation Functionality:}
+** (x) [127. Rendering Project Lists (11/65)]{:127. Rendering Project Lists:}
+** (x) [128. Managing Application State with Singletons (16/93){:128. Managing Application State with Singletons:}
+** (x) [129. More Classes & Custom Types (7/73)]{:129. More Classes and Custom Types:}
 ** ( ) [130. Filtering Projects with Enums (6/)]{:130. Filtering Projects with Enums:}
 ** ( ) [131. Adding Inheritance & Generics (19/)]{:131. Adding Inheritance and Generics:}
 ** ( ) [132. Rendering Project Items with a Class (12/)]{:132. Rendering Project Items with a Class:}

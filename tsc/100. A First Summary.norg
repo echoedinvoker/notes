@@ -1,0 +1,39 @@
+@document.meta
+title: 100. A First Summary
+description: 
+authors: mattc
+categories: 
+created: 2023-12-09T23:16:10+0800
+updated: 2023-12-09T23:16:23+0800
+version: 1.1.1
+@end
+
+* What is Utility type?
+
+  Utility is a type specifically designed to enhance the type safety, impose certain restrictions, or reduce restrictions for other types. As they are intended to serve other types, they themselves are not concrete types. Therefore, utility types are all generic.
+
+
+* Partial
+
+  This generic represents that all properties in an object are optional.
+
+  .image pic/100/1.png
+
+  .image pic/100/2.png
+
+  .image pic/100/3.png
+
+  .image pic/100/4.png
+
+  .image pic/100/5.png
+
+  The last part uses type casting to eliminate the effect of Partial, so Partial only has a temporary effect in the process of constructing an instance of CourseGoal. However, this is a common usage for Partial.
+
+
+* Readonly
+
+  This generic is a functionality just as its name meaning.
+
+  .image pic/100/6.png
+
+  .image pic/100/7.png

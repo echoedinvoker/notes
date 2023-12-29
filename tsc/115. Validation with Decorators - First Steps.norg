@@ -1,0 +1,49 @@
+@document.meta
+title: 115. Validation with Decorators - First Steps
+description: 
+authors: mattc
+categories: [
+  Decorator
+  Property Decorator
+  Form
+  Input
+  Validation
+]
+created: 2023-12-15T22:19:52+0800
+updated: 2023-12-15T22:20:32+0800
+version: 1.1.1
+@end
+
+* Create a class which will be instantiated when form submitting
+
+  We create a class and at the same time, we build a form in HTML for users to input values and submit. When the user submits, the class will be instantiated based on the input values as follows:
+
+  .image pic/115/1.png
+
+  Operates normally when the user inputs valid values.
+
+  .image pic/115/2.png
+
+
+* User inputs cause error
+
+  However, it is unavoidable to submit in the event of user input errors, which may result in errors or even worse - no errors occur but unexpected results are obtained like bellow.
+
+  .image pic/115/3.png
+
+
+* Traditional way to solve it: add validation in callback
+
+  Usually, in order to handle the situation mentioned above, we need to add validation codes in the callback function of the submit.
+
+  .image pic/115/4.png
+
+
+* Using property decorator to add validation logic
+
+  But by using the property decorator, we can directly use decorators with validation logic on the properties of a class. This way, in the submit callback, we can trigger these validations with another function without writing any validation logic in that function.
+
+  .image pic/115/5.png
+
+  The advantage of this is that the person who creates the class and the person who uses the class are often not the same. This means that the person using the class does not need to understand how the properties in the class work or how to write validation codes which he is not familiar with.
+

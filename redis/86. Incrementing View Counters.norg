@@ -1,0 +1,41 @@
+@document.meta
+title: 86. Incrementing View Counters
+description: 
+authors: mattc
+categories: [
+  View
+  Pipelining
+  Incrementing
+]
+created: 2023-12-12T17:16:37+0800
+updated: 2023-12-12T17:17:31+0800
+version: 1.1.1
+@end
+
+* What we wanna do this lecture?
+
+  In this lecture, we are going to implement the part that increases the number of views. We use two data structures to record the number of views - the hash data of the item itself and the sorted set shared by all items. In other words, when a user views an item page, we need to update these two data structures.
+
+  .image pic/86/1.png
+
+
+* Implementing by pipelining
+
+  To send multiple commands to a Redis server at the same event trigger or at the same time point, pipelining should be used.
+
+  .image pic/86/2.png
+
+  The lecturer has already written the logic to trigger this function externally, so we just need to focus on using the redis client to send commands to the redis server.
+
+
+* Check current work progress
+
+** Per user per item only count ONE view
+   This part is not yet completed, continuously reloading the item page will keep increasing views.
+
+   .image pic/86/3.png
+
+* Most Views of landing page
+  This part still needs to write other query codes in order to display items, so currently nothing can be displayed.
+
+  .image pic/86/4.png

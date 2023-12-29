@@ -1,0 +1,49 @@
+@document.meta
+title: 28. Outputting Lists with "each"
+description: 
+authors: mattc
+categories: [
+  each
+  Iteratelly
+  Loop
+]
+created: 2023-12-12T14:53:10+0800
+updated: 2023-12-12T14:54:35+0800
+version: 1.1.1
+@end
+
+* Avoid input values directly control the view
+
+  .image pic/24/1.png
+
+  As mentioned above, we do not want the values in the input fields to be changed at any time. Instead, they should be written into the card only when submitting.
+
+  We can create another variable to live connect to "card" instead of directly connect the card to input values, and only change the content of this new variable when submitting.
+
+  .image pic/24/2.png
+
+
+* Iteratelly render
+
+  We would like to further submit multiple cards to display on the webpage.
+
+** replace object with array of objects
+   .image pic/24/3.png
+
+** #each
+   .image pic/24/4.png
+
+** test but...
+   .image pic/24/5.png
+
+
+* When update value of array and object, we should override them
+
+  Because Svelte observes changes in variable values,  the following issues may arise.
+
+** Even contents of object/array changed, Svelte compiler won't recognize it
+  .image pic/24/6.png
+
+** Override it to 'change' a array or object
+  .image pic/24/7.png
+

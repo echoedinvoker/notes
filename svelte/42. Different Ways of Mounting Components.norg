@@ -1,0 +1,33 @@
+@document.meta
+title: 42. Different Ways of Mounting Components
+description: 
+authors: mattc
+categories: [
+  Mount
+  Instantiate
+  Root
+]
+created: 2023-12-14T19:00:53+0800
+updated: 2023-12-14T19:01:16+0800
+version: 1.1.1
+@end
+
+* Two ways of implementing component
+
+  We can see that there are two ways to load components as follows.
+
+  .image pic/42/1.png
+
+
+* Why we only use one root component?
+
+  Why do we need to load components in different ways? Can't we use the same method for all of them?
+
+  .image pic/42/2.png
+
+  The answer is yes, but in this case, the component Header is independent of the component App and is directly bound to different DOM elements. This will increase the difficulty of communication between the two.
+
+
+* When to instantiate multiple root?
+
+  So in order to facilitate smooth communication between components, usually there will only be one root component, unless the original requirement is to create completely independent small widget on the page.

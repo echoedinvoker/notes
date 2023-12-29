@@ -1,0 +1,29 @@
+@document.meta
+title: 88. Binding to Component References
+description: 
+authors: mattc
+categories: [
+  Binding
+  Custom Components
+  References
+]
+created: 2023-12-28T11:54:00+0800
+updated: 2023-12-28T11:54:26+0800
+version: 1.1.1
+@end
+
+* Bind custom component to ref
+
+  In addition to the built-in element, we can also bind custom components to a ref using bind:this.
+
+  .image pic/77/1.png
+
+
+* Better use regular props and event propogation 
+
+  However, it is recommended to use regular props and event propagation, as follows:
+
+  .image pic/77/2.png
+
+  We only use bind:this to bind custom components to ref when the above method is not available.
+

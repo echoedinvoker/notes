@@ -1,0 +1,27 @@
+@document.meta
+title: 35. Updating Arrays and Objects Immutably
+description: 
+authors: mattc
+categories: [
+  Reactivity
+  Equal symbol
+  Array
+  Object
+]
+created: 2023-12-13T14:35:22+0800
+updated: 2023-12-13T14:35:53+0800
+version: 1.1.1
+@end
+
+* '=' is crucial for reactivity
+
+  In Svelte, it is important to make arrays and objects responsive (meaning that when their values are updated, the DOM elements will automatically re-render). '=' is crucial in achieving this.
+
+  .image pic/35/1.png
+
+  '=' Besides guaranteeing the ability to overwrite the content of a reference, Svelte actually pays special attention to whether '=' is used during compilation. Therefore, when dealing with variables of arrays and objects, it is necessary to use '='.
+
+
+* Directly mutate array/object will failed to reactive
+
+  Relative examples such as `array.push` and `array.splice` directly mutate the array without using '=', so even if the value of the array is updated, the related DOM elements will not be re-rendered.

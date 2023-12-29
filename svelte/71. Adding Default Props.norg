@@ -1,0 +1,35 @@
+@document.meta
+title: 71. Adding Default Props
+description: 
+authors: mattc
+categories: [
+  Default Props
+  Anchor alignment
+]
+created: 2023-12-23T14:39:10+0800
+updated: 2023-12-23T14:39:29+0800
+version: 1.1.1
+@end
+
+* Remove console warnings
+
+  We see some warnings in the console because the variable 'href' in Button.svelte is not passed a value in many cases.
+
+  .image pic/64/1.png
+
+  Therefore, we need to give this variable a default value so that there won't be any warnings.
+
+  .image pic/64/2.png
+
+  We can give default values such as "" or 0 to variables that meet the specified variable type, but if the variable is truly not being used, giving a default value of null is a better choice because it makes the meaning more clear.
+
+
+* Fix text alignment of the anchor
+
+  The text in Anchor does not automatically center horizontally like a button, so we need to set it ourselves.
+
+  .image pic/64/3.png
+
+  .image pic/64/4.png
+
+

@@ -1,0 +1,27 @@
+@document.meta
+title: 44. Adding Data
+description: 
+authors: mattc
+categories: [
+  Data
+  Item
+]
+created: 2023-12-15T11:05:00+0800
+updated: 2023-12-15T11:05:29+0800
+version: 1.1.1
+@end
+
+* Add MeetUps data
+
+  The app subject we are working on is MeetUps, so it cannot only have a header. It should revolve around MeetUps data to present its content on the page. Therefore, we will add MeetUps data to App.svelte below.
+
+  .image pic/43/1.png
+
+
+* Create component to render ONE meetup
+
+  We should start rendering the SINGLE meetup data and use a independent component to do this.
+
+  .image pic/43/1.png
+
+  We will write its content in the next lecture.

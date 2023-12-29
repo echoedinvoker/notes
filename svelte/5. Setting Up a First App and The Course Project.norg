@@ -1,0 +1,50 @@
+@document.meta
+title: 5. Setting Up a First App and The Course Project
+description: 
+authors: mattc
+categories: [
+  Project
+  Initialize
+  Rollup
+  Compiler
+]
+created: 2023-12-09T19:28:32+0800
+updated: 2023-12-09T19:35:17+0800
+version: 1.1.1
+@end
+
+
+* Flow
+
+  .image pic/5/6.png
+
+  Because Svelte is not a framework, we do not continuously import libraries provided by the framework like we do when writing React or Vue. Instead, we use some syntax recognized by the Svelte compiler (which is not native to JavaScript) to allow the compiled code to generate responsive results. This is the most significant difference compared to other frameworks.
+
+
+* Check package.json
+
+  .image pic/5/1.png
+
+
+* Check main.js and App.svelte
+
+  .image pic/5/2.png
+
+
+* Install dependencies
+
+  To develop a Svelte project, Node.js is necessary. Besides the convenient installation of dependencies below, both the Svelte compiler and Rollup are written in JavaScript and cannot be run in a browser. Therefore, we can only use the runtime provided by Node.js to run them.
+
+  .image pic/5/3.png
+
+  .image pic/5/4.png
+
+
+* Check compiled codes
+
+  .image pic/5/5.png
+
+  The above is the result of the code compiled by the Svelte compiler. These codes must be shipped to the client browser to render the interface.
+
+  It seems like there are a lot more codes than what we have written, but because we don't need to ship the entire framework like other frameworks such as React, Vue, and Angular, the amount of codes that actually need to be shipped is much less. Also, currently, it is in development mode, so the actual amount of codes to be built will be even less.
+

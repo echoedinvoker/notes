@@ -1,0 +1,37 @@
+@document.meta
+title: 50. Creating a "TextInput" Component
+description: 
+authors: mattc
+categories: [
+  Styling
+  Form
+  UI Component
+]
+created: 2023-12-17T15:04:03+0800
+updated: 2023-12-17T15:04:26+0800
+version: 1.1.1
+@end
+
+* Plan to style the form
+
+  In this lecture, we are going to design the style of the content in the form.
+
+  .image pic/49/1.png
+
+  Instead of directly writing style in App.svelte, it is better to make each input block into a UI component and write the style in the UI component.
+
+  Each input block can be independently set with a style, and can be reused, which allows for the unified maintenance of the UI style throughout the entire app.
+
+
+* Create a UI component for the input block
+
+  .image pic/49/2.png
+
+  It should be noted that bind cannot be passed across components, so value and on:input must be used. The value represents the data being bound, and on:input does not require a value after it, indicating that this event will be forwarded directly to the parent component for handling.
+
+
+* Style the form in the UI component
+
+  We can put styling codes inside the UI component so that the UI component can decide how to display itself, without having to write style in App.svelte.
+
+  .image pic/49/3.png

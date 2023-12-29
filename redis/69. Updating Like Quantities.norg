@@ -1,0 +1,41 @@
+@document.meta
+title: 69. Updating Like Quantities
+description: 
+authors: mattc
+categories: [
+  SET
+  HASH
+  Likes
+]
+created: 2023-12-06T23:44:05+0800
+updated: 2023-12-06T23:44:41+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  In this lecture, we are going to implement a mechanism that allows the number of likes on the item page to change.
+
+  .image pic/69/1.png
+
+  When the user clicks "like" for the first time, increase the count by 1. Clicking again will decrease the count by 1.
+
+  .image pic/69/2.png
+
+
+* Implement increase/decrease likes
+
+  We can limit the increment count process of likes by borrowing the unique property of SET data in another process.
+
+** Concept chart
+   .image pic/69/3.png
+
+** Codes
+   .image pic/69/4.png
+
+
+* Test
+
+  .image pic/69/5.png
+
+  .image pic/69/6.png

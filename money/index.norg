@@ -1,13 +1,31 @@
-44100 salary
--3400 rent
--10000 loan
--500*30 living expenses
--658 motorcycle compulsory insurance
--624 telephone fee
--1407 Internet fee
--4200 motorcycle repair
--200 motorcycle maintain
--730 pinus bump
--1341 makeup
+* Init
+  44100 salary
+  -3400 rent
+  -10000 loan
+  -500*30 living expenses
+  -658 motorcycle compulsory insurance
+  -624 telephone fee
+  -1407 Internet fee
+  -4200 motorcycle repair
+  -200 motorcycle maintain
+  -730 pinus bump
+  -1341 makeup
 
-6540 remaining
+  6540 remaining
+
+* Current (9 Dec 12:00)
+  26131 money in jiako
+  1800 cash
+  -3400 rent
+  -450*25 living expenses
+  -658 motorcycle compulsory insurance
+  -4200 motorcycle repair
+  -500 motorcycle maintain
+
+* Current (17 Dec 15:00)
+  6900 money in jiako
+  1000 cash
+  -450*10 living expenses
+
+  remaining 3400
+

@@ -1,0 +1,32 @@
+@document.meta
+title: 89. Validating Forms and Inputs
+description: 
+authors: mattc
+categories: [
+  Validation
+  Form
+]
+created: 2023-12-28T16:25:00+0800
+updated: 2023-12-28T16:25:21+0800
+version: 1.1.1
+@end
+
+* A simple form example
+
+  .image pic/78/1.png
+
+  If I want to add a validation feature that does not allow users to submit when the input for username is less than 3 characters, what can Svelte help me with?
+
+
+* Any build-in validate tool can be used?
+
+  Svelte does not provide any tools specifically designed for validation. We have to write them ourselves.
+
+  .image pic/78/2.png
+
+
+* Usually we will use 3rd party library to do the validation
+
+  Usually, validation is done using a third-party library because writing it yourself can be quite labor-intensive. Unless the form is very simple, it is recommended to use a third-party library.
+
+  .image pic/78/3.png

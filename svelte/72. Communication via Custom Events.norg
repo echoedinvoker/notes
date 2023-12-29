@@ -1,0 +1,54 @@
+@document.meta
+title: 72. Communication via Custom Events
+description: 
+authors: mattc
+categories: [
+  Propogation
+  Event
+  CustomEvent
+]
+created: 2023-12-23T15:39:26+0800
+updated: 2023-12-23T15:40:07+0800
+version: 1.1.1
+@end
+
+* Demand and prepare data property
+
+  In this lecture, we want to make the button 'Favorite' functional.
+
+  .image pic/65/1.png
+
+  The 'Favorite' button is used to change the status of whether the product is a favorite or not, but first and foremost, the product's data itself needs to have relevant properties.
+
+  .image pic/65/2.png
+
+
+* Forward build-in event to dispatch custom event
+
+  .image pic/65/3.png
+
+  MeetUpItem needs to create a custom event because there are three buttons here. If the built-in event 'click' is used, it will cause conflicts.
+
+
+* Props identifier data to child component which want to dispatch custom event
+
+  Because we need to identify which product the button 'favorite' is clicked, we need to pass the product's id to the MeetUpItem component.
+
+  .image pic/65/4.png
+
+
+* Forward custom event to stateful component with data
+
+  Our current stateful component only has one App, so we need to pass the custom event to App for handling.
+
+  .image pic/65/5.png
+
+
+* Rendering conditionally by isFavorite property
+
+  After the stateful component finishes processing, it will return the result to the UI component, and determine the button text to display based on the isFavorite attribute.
+
+  .image pic/65/6.png
+
+  .image pic/65/7.png
+

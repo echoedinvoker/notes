@@ -1,0 +1,73 @@
+@document.meta
+title: 202. Resizing Images
+description: 
+authors: mattc
+categories: [
+  Image
+  Sharp
+  Resize
+]
+created: 2023-12-10T22:33:59+0800
+updated: 2023-12-12T13:16:19+0800
+version: 1.1.1
+@end
+
+* Demand: cut image to square & compress image size
+
+  In the previous lectures, we have completed the functionality that allows users to upload avatars. However, the aspect ratio and size of the image files uploaded by users often vary. In this lecture, we need to process the uploaded image files so that they can be displayed properly on the frontend page without occupying too much storage space on the backend.
+
+  .image pic/202/1.png
+
+
+* Create and insert new middleware for editting image
+
+  We will insert another middleware in the route /updateMe to adjust the image file uploaded by the user.
+
+  .image pic/202/2.png
+
+
+* Store image file to memory by multer and create Sharp object
+
+  This time, we don't let 'multer' directly store the image file into the disk, but instead keep it in memory for us to do image processing. Otherwise, we would have to retrieve the image from the disk for processing. It just not make sense...
+
+  We use the package 'sharp' for image processing.
+
+  .image pic/202/3.png
+
+
+* Editting image with Sharp methods
+
+  After passing the image file into the function 'sharp()', it will return a Sharp object that provides many image processing methods that can be used in chaining.
+
+  .image pic/202/4.png
+
+
+* Store edited image file to disk
+
+  We use the toFile() provided by Sharp object to save the edited image file to the disk. Since req.file.filename is no longer defined in multer, we need to define req.file.filename in this middleware.
+
+  .image pic/202/5.png
+
+  I actually forgot to use next() at the end of this middleware function, which will cause the request to enter an endless waiting state...
+
+
+* Test
+
+  We use a non-square and larger sized image file to update user data for testing to see if the sharpness is doing what it should do.
+
+  .image pic/202/6.png
+
+  .image pic/202/7.png
+
+  .image pic/202/8.png
+
+  The file size of the image has been compressed to nearly half, and the image is rendered accurately, indicating that it may have been pre-cropped into a square shape.
+
+
+* DEBUG: sharp() is asynchronouse function...
+
+  Because sharp() is used for image processing so it requires time, it is actually an asynchronous function. We haven't handled the asynchronous processing above, which may result in some strange outcomes. Therefore, we will now add the necessary handling for asynchronous processing below.
+
+  .image pic/205/1.png
+
+  .image pic/205/2.png

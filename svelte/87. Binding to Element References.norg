@@ -1,0 +1,38 @@
+@document.meta
+title: 87. Binding to Element References
+description: 
+authors: mattc
+categories: [
+  Binding
+  Reference
+  bind:this
+  DOM element
+]
+created: 2023-12-28T11:01:05+0800
+updated: 2023-12-28T11:01:33+0800
+version: 1.1.1
+@end
+
+* A example to save input value by clicking button
+
+  .image pic/76/1.png
+
+  If you want to make the whole process more direct and not use variables to store input values in between...
+
+  .image pic/76/2.png
+
+
+* bind:this
+
+  We can bind the reference of a DOM element to a variable using `bind:this`.
+
+  .image pic/76/3.png
+
+
+* Refer to whole DOM element
+
+  We can use ref to perform any native JavaScript operations on DOM elements, but it is not recommended to use it for manipulation because Svelte has better ways to do manipulation.
+
+  Usually, we only use the ref variable to read the properties of the DOM element, such as value, innerHTML, innerText, textContent, classList, style, etc.
+
+  .image pic/76/4.png

@@ -1,0 +1,69 @@
+@document.meta
+title: 207. Email Templates with Pug- Welcome Emails
+description: 
+authors: mattc
+categories: [
+  Email
+  Mailtrap
+  Pug
+]
+created: 2023-12-13T21:08:43+0800
+updated: 2023-12-13T21:09:13+0800
+version: 1.1.1
+@end
+
+* welcome.pug for calss Email
+
+  We completed the class Email in the previous lecture, which used the pug template 'welcome.pug' to generate the HTML content of the email. Now, we will start building this welcome.pug.
+
+** Copy codes from lecturer repo
+   .image pic/207/1.png
+
+   We create a separate folder for welcome.pug because we need to refactor its content into other files.
+
+** Seperate style codes
+   The styles used in the HTML for email content must be inline styles, but we can refactor them into another file and then include it to maintain clean content.
+
+   .image pic/207/2.png
+
+** Seperate base codes 
+   In writing HTML for emails, you will see the use of many table-related tags. This is because emails can only be written using this method to structure their HTML. However, most of these tags are unrelated to the main content of the email. We can consider them as a base pug template and refactor them out.
+
+   .image pic/207/3.png
+
+   .image pic/207/4.png
+
+   .image pic/207/5.png
+
+** How this pug contents come from?
+   Although the lecturer directly provided us with a pug file, we can observe how he finds suitable HTML for email and converts it into the pug format.
+
+   .image pic/207/6.png
+
+   .image pic/207/7.png
+
+** Import parameters
+   In the class Email, there are also places where we pass some parameters to the pug template to facilitate customization of the email content.
+
+   .image pic/207/8.png
+
+
+* Sending email when user signup by using class Email
+
+** Import class Email
+   .image pic/207/9.png
+
+** Using class Email to send email
+   .image pic/207/10.png
+
+
+* Test
+
+  .image pic/207/11.png
+
+  .image pic/207/12.png
+
+  .image pic/207/13.png
+
+  Some clients are unable to receive HTML content, but we also have a text version of the email content as shown above.
+

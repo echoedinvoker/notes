@@ -1,0 +1,38 @@
+@document.meta
+title: 96. Parsing SORT Output
+description: 
+authors: mattc
+categories: [
+  Deserialization
+  Relational Data
+  SORT
+]
+created: 2023-12-29T19:23:21+0800
+updated: 2023-12-29T19:26:48+0800
+version: 1.1.1
+@end
+
+* Reviews and Plans
+
+  In the previous lecture, we successfully retrieved the data we needed using the SORT command. However, the SORT command can only present the data in the form of an array of strings. We need to convert it into an array of item objects (deserialize) in order to conveniently use this data in other parts of the app.
+
+  .image pic/96/2.png
+
+
+* Turn array of strings to array of item objects
+
+  The deserialize function provided by the course must take in an id and the attributes to be converted into an object. However, in order to obtain the parameters needed to pass into this function, we must first extract the values from the array of strings one group at a time through a while loop.
+
+  .image pic/96/3.png
+
+
+* Add more properties to item object
+
+  It is obvious that we are still lacking some attributes, but these attributes are also present in the Hash table, so we can simply add them.
+
+  .image pic/96/4.png
+
+
+* Conclusion
+
+  So far, we have used two methods to obtain relational data. One is simply using a hash table commands, and the other is through the SORT command. It is obvious that using SORT command is relatively harder, but although it is more complex, it will have better performance. The choice between them depends on the specific needs.

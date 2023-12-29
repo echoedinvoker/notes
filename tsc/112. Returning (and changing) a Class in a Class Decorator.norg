@@ -1,0 +1,52 @@
+@document.meta
+title: 112. Returning (and changing) a Class in a Class Decorator
+description: 
+authors: mattc
+categories: [
+  Decorator
+  return
+  Instantiate
+]
+created: 2023-12-13T16:43:29+0800
+updated: 2023-12-13T16:43:59+0800
+version: 1.1.1
+@end
+
+* Work when class defining
+
+  Below is the decoration function factory we previously created in our lecture. It is used to attach to a class, and when that class is defined, it will render the template passed into the factory within the specified DOM element using its element id.
+
+  .image pic/112/1.png
+
+  But we hope that the template is rendered only when the class is instantiated, how should we do it?
+
+
+* Migrate logic to the return of decoration function
+
+** move logic to return of decoration fucntion
+   The decoration function can return something (not a factory). Who the returned value is assigned to depends on what kind of decoration it is (attached to what). In this example, it is a class decoration, so the returned value will replace the original class or constructor.
+
+   .image pic/112/2.png
+
+** solve type issues
+   After it, two types of issues will occur and we will solve them one by one.
+
+   .image pic/112/3.png
+
+   .image pic/112/4.png
+
+   `new()` represents the constructor. `...args: any[]` inside the parentheses indicates that this constructor can take any number and type of parameters. After the colon, it indicates what will be obtained after instantiating this constructor. In the example above, `:{name: string}` indicates that an object with a string property 'name' will be obtained.
+
+
+* Test
+
+** defining class
+   Previously, the template will be rendered during the class defining stage, regardless of whether the class has been instantiated or not.
+
+   .image pic/112/5.png
+
+** instantiating class
+   The template will only be rendered when the class is instantiated.
+   .image pic/112/6.png
+
+

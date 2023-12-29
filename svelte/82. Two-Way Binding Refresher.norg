@@ -1,0 +1,31 @@
+@document.meta
+title: 82. Two-Way Binding Refresher
+description: 
+authors: mattc
+categories: [
+  Two-Way Binding
+]
+created: 2023-12-26T20:14:29+0800
+updated: 2023-12-26T20:14:53+0800
+version: 1.1.1
+@end
+
+* Two way Binding with split ways
+
+  This is two-way binding without using any simplified syntax. When doing more complex logic, we usually go back to this approach.
+
+  .image pic/72/1.png
+
+
+* Two way Binding with bind:
+
+  Using bind: simplifies the part of on:input, including its handler function, which we have previously learned.
+
+  .image pic/72/2.png
+
+
+* Syntax sugar when same name
+
+  When the variable name is the same as the attribute name, simplified syntax can be used.
+
+  .image pic/72/3.png

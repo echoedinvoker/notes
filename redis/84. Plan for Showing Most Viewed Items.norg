@@ -1,0 +1,40 @@
+@document.meta
+title: 84. Plan for Showing Most Viewed Items
+description: 
+authors: mattc
+categories: [
+  Hash
+  Sorted Set
+  Most View
+  Chart
+]
+created: 2023-12-11T17:21:34+0800
+updated: 2023-12-11T17:22:08+0800
+version: 1.1.1
+@end
+
+* Each Sorting has its own Sorted Set
+
+  We will implement the functionality of displaying items in the landing page.
+
+  .image pic/84/1.png
+
+  The three methods of presenting products in the image require sorting based on the different attributes of the items. In the design of Redis, a Sorted Set will be created for each type of sorting.
+
+
+* Most View
+
+  Let's first discuss the part of "Most View" separately.
+
+** Chart of related data
+   .image pic/84/2.png
+
+   In addition to the concept map above that informs us about the content of the redis data structure related to this part, 
+   However, this leans towards the use of which data.
+
+** Chart of how to build data
+   So, it is suggested to draw the following diagram to understand how to build data.
+
+   .image pic/84/3.png
+
+   Once the concept is clear, the next lecture can begin implementation.

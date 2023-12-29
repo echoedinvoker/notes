@@ -1,0 +1,32 @@
+@document.meta
+title: 6. Writing Some Svelte Code
+description: 
+authors: mattc
+categories: [
+  Live connection
+  export
+  props
+  on
+]
+created: 2023-12-09T20:01:17+0800
+updated: 2023-12-09T20:01:48+0800
+version: 1.1.1
+@end
+
+* Live connection {} & set variable value outside
+
+  .image pic/6/1.png
+
+  So it is 'export' that allows the external to set the value of this variable, this is a bit tricky...
+
+
+* Set variable value inside
+
+  .image pic/6/2.png
+
+
+* Create a button to change variable value, it's automatically reactive
+
+  .image pic/6/3.png
+
+  No need to use useState like ReactJS or Ref like Vue, simply changing the value of a regular variable, as long as it has a live connection to the template, it will be reactive directly!

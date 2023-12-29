@@ -1,0 +1,47 @@
+@document.meta
+title: 16. Using Multiple Components
+description: 
+authors: mattc
+categories: [
+  Nested component
+  Root component
+  Styles
+  CSS
+]
+created: 2023-12-11T09:32:52+0800
+updated: 2023-12-11T09:33:27+0800
+version: 1.1.1
+@end
+
+* Create a new component
+
+  .image pic/16/1.png
+
+
+* How to render our 2nd component on the page?
+
+  We have two options, the first one is to use it as a child component of App.svelte, and the second one is to instantiate it in main.ts.
+
+** instantiate it in main.ts
+   Independent of the original App.svelte approach, this way the project ends up having two root components, which is usually not chosen.
+
+   .image pic/16/2.png
+
+
+** nested under App.svelte
+   Used under App.svelte, it becomes a nested structure for App.svelte as the root. Typically, a project only uses one root component.
+
+   .image pic/16/3.png
+
+
+* Styles in component is Scoped
+
+  Writing CSS codes in the style block of Svelte will only affect the component itself and will not affect any child components underneath it.
+
+  .image pic/16/4.png
+
+  So if you want to style the ContactCard, you need to go to that component and write the styles.
+
+  .image pic/16/5.png
+
+

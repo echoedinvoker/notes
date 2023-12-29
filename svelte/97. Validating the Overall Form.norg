@@ -1,0 +1,33 @@
+@document.meta
+title: 97. Validating the Overall Form
+description: 
+authors: mattc
+categories: [
+  Validation
+  Form
+  Submit
+]
+created: 2023-12-29T11:38:47+0800
+updated: 2023-12-29T11:39:06+0800
+version: 1.1.1
+@end
+
+* Build state presenting valid/invalid of form
+
+  Our current form's submit button can be used at any time, but we want it to only be functional when the form is validated, so as not to submit an invalid form.
+
+  .image pic/83/1.png
+
+  We establish the state 'isFormValid' which represents whether the form is valid. It must be determined based on whether all fields in the form are valid.
+
+  .image pic/83/2.png
+
+
+* Test
+
+** at start
+   .image pic/83/4.png
+** valid
+   .image pic/83/3.png
+** invalid
+   .image pic/83/5.png

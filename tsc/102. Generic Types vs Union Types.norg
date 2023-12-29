@@ -1,0 +1,30 @@
+@document.meta
+title: 102. Generic Types vs Union Types
+description: 
+authors: mattc
+categories: [
+  Generic
+  Union
+  Comparison
+]
+created: 2023-12-10T10:47:47+0800
+updated: 2023-12-10T10:48:12+0800
+version: 1.1.1
+@end
+
+* Are Generic and Union types the same?
+
+  Some people may feel that there is no difference between Generic type and Union type.
+
+  .image pic/101/1.png
+
+
+* The difference lies in whether or not it will be locked into one type.
+
+  .image pic/101/2.png
+
+  .image pic/101/3.png
+
+  As mentioned above, because the Union type is not locked to a single type, the initial definition of "item" as a non-mixed type array contradicts the fact that the "item" parameter in the subsequent definition can still allow three different types.
+
+  In contrast, in Generic, Generic is locked to a specific type (string, number, or boolean) when instantiated in this class, so there will be no conflicting situations like Union mentioned above.

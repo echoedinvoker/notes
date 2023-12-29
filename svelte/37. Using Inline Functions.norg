@@ -1,0 +1,28 @@
+@document.meta
+title: 37. Using Inline Functions
+description: 
+authors: mattc
+categories: [
+  Inline function
+  Handler function
+]
+created: 2023-12-13T15:06:05+0800
+updated: 2023-12-13T15:09:33+0800
+version: 1.1.1
+@end
+
+* Point to function in script
+
+  Abount event handler, our previous approach was to write functions in the script first and then refer to them from the HTML using `on:event={}`. This is a more logically clear way of writing.
+
+  .image pic/37/1.png
+
+* Inline function
+
+  But some people prefer to make the code as concise as possible. In that case, they can choose inline functions, which means writing the handler function directly in the HTML.
+
+  .image pic/37/2.png
+
+  The example above has only one line of content in the function, so the curly braces can be further removed.
+
+  .image pic/37/3.png

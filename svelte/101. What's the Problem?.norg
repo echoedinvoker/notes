@@ -1,0 +1,20 @@
+@document.meta
+title: 101. What's the Problem?
+description: 
+authors: mattc
+categories: [
+  Store
+  Stateful Component
+]
+created: 2023-12-29T14:14:02+0800
+updated: 2023-12-29T14:14:40+0800
+version: 1.1.1
+@end
+
+* Starting new project
+
+  In our previous project, we only used App.svelte as a stateful component and passed data and events through props/event propagation. Starting from this section, our app has multiple features, each with its own stateful component. In contrast, App.svelte does not manage any data and serves as a presentation component.
+
+  .image pic/85/1.png
+
+  The above diagram shows the architecture of the project. Although the feature card and product each have stateful components, they still have a loosely relation to each other. If we follow the logic of the previous section, we can only move the data up to App.svelte in order to pass it through props/event propagation. This would result in App.svelte becoming a large stateful component, which would defeat the purpose of separating the features. Therefore, we need a better way to pass data, and this is where we can use a store.

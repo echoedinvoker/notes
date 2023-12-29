@@ -1,0 +1,43 @@
+@document.meta
+title: 64. Using Slot Props
+description: 
+authors: mattc
+categories: [
+  Slot
+  Module
+  Propogate
+]
+created: 2023-12-21T22:29:39+0800
+updated: 2023-12-21T22:30:08+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  .image pic/61/1.png
+
+* Work in the same component
+
+  .image pic/61/2.png
+
+  This part is nothing special, just like usual. The main purpose here is to lead to the following issues.
+
+
+* Extract variable from child component
+
+  How can we make the variable in the Modal affect the slot content, which belongs to the parent component of the upper layer, how to handle it?
+
+  .image pic/61/3.png
+
+  We can use slots to propogate variables from child to parent.
+
+  .image pic/61/4.png
+
+  Note that although the parent obtains the variable passed by the child, this variable is only effective within the scope of this slot.
+
+
+* Why we not just set all variable in the App.svelte?
+
+  When we want to encapsulate a component into a standalone module, some variables must be declared and operated within it. It a bit like a small app.
+
+

@@ -1,0 +1,52 @@
+@document.meta
+title: 201. Saving Image Name to Database
+description: 
+authors: mattc
+categories: [
+  Photo
+  Upload
+  Update
+]
+created: 2023-12-10T12:38:13+0800
+updated: 2023-12-10T12:38:43+0800
+version: 1.1.1
+@end
+
+* Add 'photo' property to our update data
+
+** Add 'photo' to updateData
+   In our previous lecture, we implemented a limitation where we only extracted the properties 'name' and 'email' from the request body to update user data. Now, we want to include 'photo' as well, but it should be noted that the image data is put into req.file by multer, not req.body. Therefore, we need to write additional code to include it.
+
+   .image pic/201/1.png
+
+** Something wrong...  but I forgot why...
+   I'm not sure why I didn't directly use the User model for updating here before, but instead use req.user.updateOne. The response result is also strange. Let's change it to simply use the User model for updating.
+
+   .image pic/201/2.png
+
+** Test
+   .image pic/201/3.png
+
+   .image pic/201/4.png
+
+   It looks like it's working fine. 😄
+
+
+* Set default photo for new signup user
+
+  In the user model, we only define the type of the 'photo' field as String. Therefore, if a new user signs up, the value of the 'photo' field will be null. This will cause the user profile and the navigator to display no image in the place where the photo should be. This looks odd, so there should be a default image.
+
+** Set default value (filename of default image) to field 'photo'
+   Actually, we only need to prepare the default image file in the correct directory, and then add the option 'default' to the field 'photo' in the user model to specify its filename, and it will be completed. Pretty easy :D
+
+   .image pic/201/5.png
+
+** Test
+   .image pic/201/6.png
+
+   .image pic/201/7.png
+
+   .image pic/201/8.png
+
+   .image pic/201/9.png
+

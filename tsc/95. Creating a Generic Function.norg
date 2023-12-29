@@ -1,0 +1,54 @@
+@document.meta
+title: 95. Creating a Generic Function
+description: 
+authors: mattc
+categories: [
+  Generic Function
+]
+created: 2023-12-08T18:37:53+0800
+updated: 2023-12-08T18:38:10+0800
+version: 1.1.1
+@end
+
+* Problem of return type of funciton
+
+  We will now create a function to merge two objects into one, using the available types in native Javascript.
+
+  .image pic/92/1.png
+
+  We will encounter the above problem. Typescript can only infer that the return type is an object, and it cannot understand the internal details of the object more deeply. It is also difficult for us to define a custom object type when using a function because we cannot know what kind of object the user will pass in.
+
+
+* Using generics function 
+
+  We can replace the object type with generics as follows.
+
+  .image pic/92/a.png
+
+  The T and U above can be any English letters, representing two different custom types. They represent a kind of uncertainty, and the actual format of the type will be determined based on the value of the parameter given when the user calls this function.
+
+  The Typescript error above is because the first parameter of Object.assign() strictly requires passing a value of object type. Therefore, we need to make T inherit from Object type to comply with its definition.
+
+  .image pic/92/b.png
+
+  When the user uses this function, the passed parameters will define the concrete content of types T and U.
+
+  .image pic/92/c.png
+
+
+* We can also define parameter's types when calling function
+
+  We can also define parameter types in the same way when calling the function as follows.
+
+  .image pic/92/d.png
+
+  However, in this example, it doesn't make sense to do so. TypeScript should be allowed to infer the types itself, which is better practice here.
+
+
+* T & U can be concreted to any types, not only object type
+
+  In fact, T and U are not necessarily Object types, they represent all possible types.
+
+  .image pic/92/e.png
+
+  In the example above, T and U got string and number types when the user calls this function.

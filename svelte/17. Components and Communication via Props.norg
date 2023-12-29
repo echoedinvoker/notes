@@ -1,0 +1,23 @@
+@document.meta
+title: 17. Components and Communication via Props
+description: 
+authors: mattc
+categories: [
+  Propogation 
+]
+created: 2023-12-11T09:56:08+0800
+updated: 2023-12-11T09:56:34+0800
+version: 1.1.1
+@end
+
+* Demand: pass variable of parent component to child reactively
+
+.image pic/17/1.png
+
+
+* keyword 'export'
+
+.image pic/17/2.png
+
+  As shown in the above diagram, the approach concatenates the value of the parent's variable to the child. In this case, 'export' is another native JavaScript keyword that has been hijacked by Svelte, indicating that this variable can be modified externally.
+

@@ -1,0 +1,45 @@
+@document.meta
+title: 88. Function Overloads
+description: 
+authors: mattc
+categories: [
+  Type Overload
+  Function
+]
+created: 2023-12-08T09:50:46+0800
+updated: 2023-12-08T09:51:11+0800
+version: 1.1.1
+@end
+
+* TypeScript do NOT deep analyze our Union type, it make some issues...
+
+  When we use Union types to define the parameters and return of a function, the following situations may occur.
+
+  .image pic/88/1.png
+
+  Although we know that using two string parameters in the add function will result in a string, TypeScript does not analyze deeply, causing a TypeScript warning when we use string prototype methods.
+
+
+* TypeScript Overload
+
+** Basic use
+   This technique is to solve the above problem. TypeScript allows us to repeatedly define the custom type of a function as follows.
+
+   .image pic/88/2.png
+
+   If defined as above, when we use this function, TypeScript will first check from top to bottom for a matching custom function type. In the above example, it will match `function(a: string, b: string): string`, so TypeScript indeed knows that this function will return a string.
+
+** Multiple
+   We can define multiple situations, even listing all situations as follows.
+
+   .image pic/88/3.png
+
+** Optional
+   We can even reduce the number of parameters as follows.
+   .image pic/88/4.png
+
+   However, this conflicts with the original definition of the function `function(a: Combinable, b: Combinable): Combinable`, so we make slight changes as follows.
+
+   .image pic/88/5.png
+
+   This way, the overload can perfectly match the original function type.

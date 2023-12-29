@@ -1,0 +1,42 @@
+@document.meta
+title: 125. Fetching User Input
+description: 
+authors: mattc
+categories: [
+  Input
+  Validation
+  Tuple
+]
+created: 2023-12-22T16:44:12+0800
+updated: 2023-12-22T16:44:53+0800
+version: 1.1.1
+@end
+
+* Plan to collect user inputs and validations
+
+  In our previous lecture, we used a decorator to solve the "this" issue in the submit handler. However, the main purpose of the submit is still to collect data from the inputs in the form.
+
+  .image pic/121/1.png
+
+  As shown above, the inputs data we collected should be stored using the tuple data structure. However, if validation fails, an alert should be used to display the error message.
+
+
+* Implement function
+
+  We implement the above ideas in the function getherUserInputs.
+
+  .image pic/121/2.png
+
+  From the above, it can be noticed that there are many details to pay attention to:
+  - The data structure of tuple is only available in TypeScript, not in JavaScript, so we need to use tuple in TypeScript, but use array in JavaScript.
+  - The value of an input element is always a string, regardless of its attribute type.
+  - Do not use undefined as the return type of a function, instead use void.
+
+
+* Plan to refactor validation
+
+  We currently use if conditional statements to do validation as follows.
+
+  .image pic/121/3.png
+
+  But this is not a good method because our code will become messy, and if there are many inputs, our code will become long. In the next lecture, we will use a better and more scalable method to rewrite the validation.

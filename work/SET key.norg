@@ -1,0 +1,32 @@
+* (x) Flow chart
+
+  .image pic/3/2.png
+
+* (-) Check the code for SET key in the backend.
+
+** (x) Schedule execution? 
+   The frontend scheduler sends a request to the route `/data_reader`. It handles three different situations, but whenever it needs to build a Redis key, it calls the function `reader_value_items` in the file `utils/dynamic_data.py` to actually create the Redis key as follows:
+
+   .image pic/4/1.png
+
+*** Idea to implement TTL
+    Create a function to wrap the above `r.set` that can automatically determine whether to add or maintain TTL, and perform the original operation with the same parameters as the original set. Then replact all `r.set` with it.
+
+** (x) Create TTL wrappng function
+*** (x) base function
+    I also write ttl init into the Redis key. If it does not exist, it will be retrieved from the database and created.
+
+*** (x) optimize
+    - Use early return to reduce nested levels.
+    - Error handling
+    -- Redis connection error
+    -- DB get no ttl init value error
+
+**** (x) error handling
+
+** (-) Is there an API that can be called directly?
+*** (x) Test wrappng function independantly
+**** (x) base function
+**** ( ) optimized function
+*** ( ) (after replacing) Test `reader_value_items`
+

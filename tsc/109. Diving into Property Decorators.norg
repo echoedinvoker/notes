@@ -1,0 +1,30 @@
+@document.meta
+title: 109. Diving into Property Decorators
+description: 
+authors: mattc
+categories: [
+  Decoration
+  Property
+]
+created: 2023-12-12T10:12:38+0800
+updated: 2023-12-12T10:13:07+0800
+version: 1.1.1
+@end
+
+* Does Decoration function only work on class?
+
+  In fact, the decoration function does not necessarily have to be added on top of the class, it can also be added on the properties within the class. We will use the following simple class as an example.
+
+  .image pic/109/1.png
+
+
+* What different when we place decoration on property?
+
+  When the decoration function is placed in different positions, the main difference is the variation in the content of the parameters obtained. If the decoration function is added to a regular property, the first parameter will receive the prototype of the class, and the second parameter will receive the name of that property. If the property is static, the first parameter will receive the constructor of that class.
+
+  .image pic/109/2.png
+
+  Above, in order to simplify the explanation of the effects of placing the decoration function in different positions, we did not use a decoration function factory. Instead, we directly defined the decoration function. Therefore, when placing the decoration, there is no need to call it (only the factory needs to be called at first).
+
+
+

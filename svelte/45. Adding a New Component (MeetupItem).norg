@@ -1,0 +1,29 @@
+@document.meta
+title: 45. Adding a New Component (MeetupItem)
+description: 
+authors: mattc
+categories: [
+  Loop
+  Item
+  Template
+  Overlap
+]
+created: 2023-12-15T11:47:13+0800
+updated: 2023-12-15T11:47:46+0800
+version: 1.1.1
+@end
+
+* Curve template of Single MeetUpItem & Loop it
+
+  Continuing from the previous lecture, we complete the markup for MeetUpItem and use the {#each} block sentence in the App to loop through it.
+
+  .image pic/43/3.png
+
+  We haven't yet transmitted any data from the App to MeetUpItem, so currently MeetUpItem is being displayed using the default template. However, the {#each} in the App loops based on the meetups data in the App, so you can see that the MeetUpItem is rendered twice on the left side webpage.
+
+
+* Solve overlap issue
+
+  In the above page, because the Header uses the 'fixed' style, it causes an overlap between the Header and the rendered part of MeetUpItem. To solve this problem, we simply add a section with a margin top setting.
+
+  .image pic/43/4.png

@@ -1,0 +1,60 @@
+@document.meta
+title: 66. Creation and Update Lifecycle Hooks in Action
+description: 
+authors: mattc
+categories: [
+  Lifecycle
+  onMounted
+  Script Executed
+  onDestroy
+  afterUpdate
+  beforeUpdate
+]
+created: 2023-12-22T14:36:27+0800
+updated: 2023-12-22T14:36:54+0800
+version: 1.1.1
+@end
+
+* Script Executed & onMounted
+
+  .image pic/62/2.png
+
+  The lifecycle function is always executed in a fixed order, so even if we place onMounted in a position earlier than others, it will still be executed after the script is executed.
+
+
+* onDestroy
+
+  When this component is detached from the DOM, onDestroy() will be executed.
+
+  .image pic/62/3.png
+
+
+* beforeUpdate & afterUpdate
+
+  These two executed judgments are based on whether the DOM has been updated or not.
+
+** creation
+   .image pic/62/4.png
+
+   The noteworthy part is that when the component is created, the script executed occurs before the DOM is mounted, while onMounted occurs after the DOM is mounted. Therefore, beforeUpdate will appear between the two of them.
+
+** updating
+   .image pic/62/5.png
+
+
+* Use case of beforeUpdate/afterUpdate
+
+  beforeUpdate/afterUpdate is usually used to further manipulate the DOM after it has been updated (especially scrolling). We use beforeUpdate to save the state of the DOM just before it is updated, and then use afterUpdate to further manipulate the DOM based on its previous state.
+
+  .image pic/62/6.png
+
+  The above is confirmed that even if it is beforeUpdate, it will only be executed after all variables have been updated.
+
+  .image pic/62/7.png
+
+  .image pic/62/8.png
+
+  .image pic/62/9.png
+
+  Above, we have created autoscroll to save the value of agree as a simplified example. In actual examples, the data to be saved may be much more complex.
+

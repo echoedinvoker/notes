@@ -1,0 +1,45 @@
+@document.meta
+title: 87. Items by Ending Soonest
+description: 
+authors: mattc
+categories: [
+  Sorted Set
+  EndingAt
+]
+created: 2023-12-13T19:25:24+0800
+updated: 2023-12-13T19:25:54+0800
+version: 1.1.1
+@end
+
+* Planing how to prepare Redis data structure for Ending Soonest
+
+  Next, we need to work on the "Ending Soonest" section of the landing page. In a typical database, we would only need to think about how to design a query to retrieve the desired data from the items table. However, in Redis, we must create a new Sorted Set.
+
+  .image pic/87/1.png
+
+  Next, think about when to do what processing in order to create the Sorted Set.
+
+  .image pic/87/2.png
+
+  In the above figure, we can recall that we have already created a separate Hash table for each item and it contains a member called 'endingAt'. But now we need to create a new Sorted Set specifically for 'endingAt'. Some people may be concerned about data duplication in this case. However, in Redis, this is a reasonable approach.
+
+
+* Implementing codes to building Sorted Set for ending soonest
+
+  .image pic/87/3.png
+
+  You can see that the function createItem has already used pipelining to create a hash table and a sorted set about views. We have also added the command for creating a sorted set about endingAt to the pipelining.
+
+
+* Test if anything work fine (not present result yet)
+
+  Our landing page still won't display any products. We still need to do some work before it will show up, but you can try running the item creation process to see if any errors occur.
+
+  .image pic/87/4.png
+
+  .image pic/87/5.png
+
+  .image pic/87/6.png
+
+  It looks like there are no errors. 😄
+

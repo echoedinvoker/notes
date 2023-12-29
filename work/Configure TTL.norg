@@ -1,0 +1,30 @@
+
+.image pic/3/1.png
+
+* (x) Evaluate the method of storing the initial TTL value.
+
+** (x) Env ❌
+   - Fastest, implement instantly 👍
+   - Hard to trigger anything 👎
+
+** (x) Database ⭕ --> *sys_params*
+   - Need to wait for Entity update. 👎
+   - It is possible to write the updated TTL mechanism in the dao function of the update parameter. 👍
+
+
+* (x) Review the codes for adding & updating parameters.
+
+** (x) Manually add TTL parameter and initial value to table 'sys_params'.
+   .image pic/3/6.png
+
+   So exclude the mechanism of adding an update TTL when establishing the TTL parameter, and only handle the TTL during updates.
+
+** (x) Evaluate where to place the updated TTL mechanism.
+   .image pic/3/5.png
+
+
+* (x) Implementing TTL mechanisma in service layer of update sys_params.
+
+  .image pic/3/7.png
+
+* (x) Optimize by pipelining

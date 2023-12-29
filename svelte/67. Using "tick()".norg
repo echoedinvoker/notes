@@ -1,0 +1,64 @@
+@document.meta
+title: 67. Using "tick()"
+description: 
+authors: mattc
+categories: [
+  Textarea
+  Tick
+  Lifecycle
+]
+created: 2023-12-22T20:33:12+0800
+updated: 2023-12-22T20:33:38+0800
+version: 1.1.1
+@end
+
+* Uppercase selected text in textarea when click TAB
+
+.image pic/63/1.png
+
+We first capture the key number of TAB.
+
+.image pic/63/2.png
+
+Use early return to exclude cases where the key number is not TAB.
+
+.image pic/63/3.png
+
+Reassemble the value of the textarea into the variable text, this will trigger Svelte to update the DOM.
+
+.image pic/63/4.png
+
+
+* Try to keep selected text
+
+We want the selected text to remain highlighted after pressing TAB.
+
+After updating, the DOM does not remember the state of the selection, so we need to use variables to remember the selection range and reassign it after updating the DOM.
+
+Let's first disable the default function of the TAB.
+
+.image pic/63/5.png
+
+
+* Re-range selected text directly
+
+.image pic/63/6.png
+
+Failed, because actually when the variable "text" is updated, Svelte does not immediately update the DOM, but instead waits for the next micro task to update the DOM.
+
+
+* Try afterUpdate()
+
+.image pic/63/7.png
+
+Failed because regular lifecycle functions can only be used at the script level.
+
+
+* tick()
+
+Svelte provides tick() for this situation, which returns a promise that is resolved after the next micro task is completed, and it can be called anywhere.
+
+.image pic/63/8.png
+
+
+

@@ -1,0 +1,51 @@
+@document.meta
+title: 92. Terminology Around Sort
+description: 
+authors: mattc
+categories: [
+  SORT
+  Terminology
+  LIMIT
+  ALPHA
+]
+created: 2023-12-19T19:03:08+0800
+updated: 2023-12-19T19:03:40+0800
+version: 1.1.1
+@end
+
+* Prepare Data structures
+
+  We need to prepare three Hash Tables and one Sorted Set first to illustrate the usage of the SORT command.
+
+  .image pic/92/1.png
+
+  .image pic/92/2.png
+
+
+* SORT command: Terminology confusing
+
+  Then we directly use the SORT command on the Sorted Set, we will get the following error.
+
+  .image pic/92/3.png
+
+  The above error description is misleading because the term "score" does not refer to the score in the Sorted Set, but rather to the member.
+
+  .image pic/92/4.png
+
+
+* SORT command: arguments - ALPHA and LIMIT
+
+** ALPHA
+   The above error is because the SORT command defaults to sorting numerically, but our Sorted Set's members are strings, so it will cause an error. We can use ALPHA to specify sorting by strings.
+
+   .image pic/92/5.png
+
+** LIMIT
+   The usage of LIMIT is the same as other commands, used to limit the quantity of the returned results.
+
+   .image pic/92/6.png
+
+
+   We will further introduce the usage of SORT in the next lecture, but let's briefly introduce it here first.
+
+   Once we are familiar enough with SORT, we will begin explaining how to use it to obtain relational data.

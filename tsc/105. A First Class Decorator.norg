@@ -1,0 +1,32 @@
+@document.meta
+title: 105. A First Class Decorator
+description: 
+authors: mattc
+categories: [
+  Decorator
+  Constructor
+]
+created: 2023-12-10T14:48:44+0800
+updated: 2023-12-10T14:49:51+0800
+version: 1.1.1
+@end
+
+* TSC config to use decorator
+
+  .image pic/105/1.png
+
+* Decorator
+
+** Decorator work on class
+   The decorator is a function that acts on a class, so first we create a very simple class.
+
+   .image pic/105/2.png
+
+** Decorator (must) got constructor of class as parameter
+
+   .image pic/105/3.png
+
+   .image pic/105/44.png
+
+   One special thing about this is that we have removed the part where the class is instantiated, but the decorator's function still works. Therefore, the decorator operates when the class is defined, not when it is instantiated (although it is given the content of the constructor through the pass).
+

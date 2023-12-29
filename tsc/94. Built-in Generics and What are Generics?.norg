@@ -1,0 +1,29 @@
+@document.meta
+title: 94. Built-in Generics and What are Generics?
+description: 
+authors: mattc
+categories: [
+  Generics
+]
+created: 2023-12-08T16:24:30+0800
+updated: 2023-12-08T16:24:49+0800
+version: 1.1.1
+@end
+
+* What is generics?
+
+  Some types need to be defined together with other types. These types are called generics.
+
+  .image pic/91/1.png
+
+
+* Array
+
+  .image pic/91/2.png
+
+
+* Promise
+
+  .image pic/91/3.png
+
+  From the above two examples, it can be seen that generics are actually further defining the type of data derived from this type.

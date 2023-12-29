@@ -1,0 +1,60 @@
+@document.meta
+title: 205. Processing Multiple Images
+description: 
+authors: mattc
+categories: [
+  Sharp
+  Image
+  Filename
+  Uploading
+]
+created: 2023-12-12T13:31:13+0800
+updated: 2023-12-12T13:32:00+0800
+version: 1.1.1
+@end
+
+> In the previous lecture, we only completed the task of saving tour images to memory, but we have not yet processed the images, saved them to the file system, and updated the tour's image paths information. We will complete these tasks in this lecture.
+
+
+* Early return to next() when get invalid/no images
+
+  Considering that even if multer puts the property 'files' into req, it is still possible for the user to provide an invalid image file. Therefore, we have decided to use the following more complex early return condition to filter out invalid image cases.
+
+  .image pic/205/3.png
+
+
+* Editting image with sharp()
+
+  Because most of the content in image processing is similar to the part of uploading user images, we can directly copy the codes from there.
+
+  .image pic/205/4.png
+
+  Make modifications to the different parts as above. Please note that although there is only one cover image, it will be saved in the req.files.imageCover as an array due to the use of upload.fields().
+
+
+* Generate cover image filename
+
+  Next, we need to generate the filename for the tour image. We will also implement it by referring to the method used to generate the user image name.
+
+  .image pic/205/5.png
+
+
+* Update tour property 'imageCover' to the cover iamge filename
+
+  Above, we have completed the image processing, naming, and saving of the cover image to the backend file system. Next, we need to update the property 'imageCover' of the tour to point to the correct cover image filename.
+
+  .image pic/205/6.png
+
+  Observing the codes originally used to update the tour, we found that it simply uses req.body to perform the update. Therefore, we can directly save the previously named result into req.body.imageCover.
+
+  .image pic/205/7.png
+
+
+* Test
+
+  .image pic/205/8.png
+
+  .image pic/205/9.png
+
+  .image pic/205/10.png
+

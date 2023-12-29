@@ -1,0 +1,35 @@
+@document.meta
+title: 98. Improvements and Wrap Up
+description: 
+authors: mattc
+categories: [
+  Simplify
+  Syntax sugar
+  bind
+]
+created: 2023-12-29T12:03:13+0800
+updated: 2023-12-29T12:03:35+0800
+version: 1.1.1
+@end
+
+* Remove init variables
+
+.image pic/84/1.png
+
+  As figure above, we can remove the declaration of initial value if it is certain to be given a value in the `$:`.
+
+
+* Use `bind:` to simplify the code.
+
+** textarea
+.image pic/84/2.png
+
+.image pic/84/3.png
+
+** input
+.image pic/84/4.png
+
+.image pic/84/5.png
+
+The reason why the input part above is not working is because the lecture mentioned that it is due to the dynamic nature of the type. However, I don't really understand this explanation. I personally think it's better to avoid using bind in custom components as much as possible.
+

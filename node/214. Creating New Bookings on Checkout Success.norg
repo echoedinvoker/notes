@@ -1,0 +1,43 @@
+@document.meta
+title: 214. Creating New Bookings on Checkout Success
+description: 
+authors: mattc
+categories: [
+  Booking
+  Stripe
+  Redirect
+]
+created: 2023-12-22T19:30:00+0800
+updated: 2023-12-22T19:32:25+0800
+version: 1.1.1
+@end
+
+* Establish a temporary plan for booking data.
+
+  .image pic/214/1.png
+
+  After the user has successfully made the payment, they will be redirected to the homepage as mentioned above. At this point, we need to create booking data in MongoDB. Although Stripe provides a WebHook mechanism, it can only be used after the app is deployed online. Therefore, we are using a temporary alternative solution here.
+
+  .image pic/214/2.png
+
+  We directly use query strings in the route of the homepage to pass booking data. This is a very insecure practice because users can simply enter this format of URL to create a booking in MongoDB without making any payment.
+
+  So this is a temporary method that we use for testing convenience. In actual production, we will use Stripe's WebHook to handle this matter.
+
+
+* Controller to create booking
+
+  .image pic/214/3.png
+
+  This Controller, besides creating a booking in mongo, also needs to determine whether the user has completed the payment or not. Finally, it should make sensitive data in query strings disappear and not be displayed on the browser.
+(Even if we are only temporarily passing sensitive data through query strings, we do not want them to be directly visible in the browser.)
+
+
+* Test
+
+  .image pic/214/4.png
+
+  .image pic/214/5.png
+
+  .image pic/214/6.png
+

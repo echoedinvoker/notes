@@ -1,0 +1,29 @@
+@document.meta
+title: 49. Adding New Meetups via a Form
+description: 
+authors: mattc
+categories: [
+  Form
+]
+created: 2023-12-17T00:33:29+0800
+updated: 2023-12-17T00:33:58+0800
+version: 1.1.1
+@end
+
+* Create form to add new meetup
+
+  In this lecture, we are going to create a form that allows users to add a new meetup.
+
+** inputs
+   We directly write the form in App.svelte because we haven't learned how to change the state of the parent component in a child component yet.
+
+   .image pic/48/1.png
+
+** submit
+   We use the submit event of the form to trigger the action of adding a new meetup. Of course, we can also use the button click event to trigger it, but the submit event allows the user to press enter to trigger the action of adding a new meetup.
+
+   .image pic/48/3.png
+
+   Note that the push method of an array does not return a new array and trigger a re-render, so we need to use '=' to update the value of meetups.
+
+   Because '=' is used, meetups cannot be constant, so it must be declared with 'let'.

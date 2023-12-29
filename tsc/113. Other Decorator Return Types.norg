@@ -1,0 +1,34 @@
+@document.meta
+title: 113. Other Decorator Return Types
+description: 
+authors: mattc
+categories: [
+  Descriptor
+  Decorator
+]
+created: 2023-12-14T19:42:57+0800
+updated: 2023-12-14T19:43:19+0800
+version: 1.1.1
+@end
+
+* Other kinds of decoration functions which can return
+
+  Not every type of decoration function has a functional return value. Except for class decorators, only the return values of accessor and method decorators have meaning, while the return values of the other two types will be ignored directly.
+
+  .image pic/113/1.png
+
+
+* What these two kinds of decorator return value for?
+
+  Their return value will replace the descriptor originally used to describe the accessor or method. This is something that native Javascript already has, used to describe a property.
+
+  .image pic/113/2.png
+
+
+* So, what is descriptor?
+
+  Object used to describe a property.
+
+  .image pic/113/3.png
+
+  We can change the content and characteristics of property by modifying their descriptors.

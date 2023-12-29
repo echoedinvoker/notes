@@ -1,0 +1,39 @@
+@document.meta
+title: 89. Optional Chaining
+description: 
+authors: mattc
+categories: [
+  Optional Chaining 
+  Fetching
+]
+created: 2023-12-08T14:13:41+0800
+updated: 2023-12-08T14:14:24+0800
+version: 1.1.1
+@end
+
+* When get value of nested property of a fetched data
+
+.image pic/89/1.png
+
+.image pic/89/2.png
+
+When we fetch data from other servers and need to retrieve the value of a property deep within it, it is easy to encounter the above problem because we cannot be certain of the format of the data provided by the other party.
+
+The error occurs because we do not allow the use of . to access properties of undefined. For example, if we try to access undefined.job, an error will occur. However, it is allowed if only the property itself (i.e. undefined) does not exist.
+
+
+* Native/Old JavaScript solution
+
+.image pic/89/3.png
+
+Older JavaScript would use the above method to solve this problem. If the value before && is truthy, the following codes will not be executed, so errors can be avoided.
+
+  (Although there are error prompts, the codes above will not have runtime errors.)
+
+* TypeScript and modern JavaScript can solve it by Optional Chaining
+
+.image pic/89/4.png
+
+If the part before ? is undefined, it will directly return undefined and ignore the part after, thus excluding the possibility of errors occurring.
+
+  (Although there are error prompts, the codes above will not have runtime errors.)

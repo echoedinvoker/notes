@@ -1,0 +1,30 @@
+@document.meta
+title: 103. Updating Store Data
+description: 
+authors: mattc
+categories: [
+  Store
+  set
+  update
+]
+created: 2023-12-29T15:23:41+0800
+updated: 2023-12-29T15:24:03+0800
+version: 1.1.1
+@end
+
+* set()
+
+  Using set() allows you to pass a value, which will directly overwrite the data stored in the store.
+
+  .image pic/103/1.png
+
+  The cartStore we use here is imported from cart-store.js, and it is the same store object that we use in Cart.svelte. So we are handle the same data from different components.
+
+
+* update()
+
+  The difference with set() is that the parameter is a callback function, and the old value will be passed in, and a new value should be returned.
+
+  .image pic/103/2.png
+
+  Be careful not to use the .push() method to mutate the value of the store. It always returns a completely new value.

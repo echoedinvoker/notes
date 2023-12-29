@@ -1,0 +1,17 @@
+@document.meta
+title: 10. Module Introduction
+description: 
+authors: mattc
+categories: [
+  Required Features
+]
+created: 2023-12-10T09:17:13+0800
+updated: 2023-12-10T09:17:40+0800
+version: 1.1.1
+@end
+
+* Required Features
+
+  The following diagram provides a simple explanation of the tasks that front-end JavaScript needs to perform. It mainly revolves around the front-end data, how it is altered, and how it subsequently affects the front-end output.
+
+  .image pic/10/1.png

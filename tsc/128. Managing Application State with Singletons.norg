@@ -1,0 +1,65 @@
+@document.meta
+title: 128. Managing Application State with Singletons
+description: 
+authors: mattc
+categories: [
+  OOP
+  Classes
+  ProjectState
+  Standalone
+  Listener
+]
+created: 2023-12-28T21:11:05+0800
+updated: 2023-12-28T21:11:39+0800
+version: 1.1.1
+@end
+
+* Create New ProjectState class to handle projects data
+
+  .image pic/124/1.png
+
+  There are many ways to render projects into the ul element after submitting, but here we choose the OOP approach and create a new class to manage projects data.
+
+  .image pic/124/2.png
+
+  We encountered two problems. One is how to use the method of ProjectState in other classes, and the other is how to render the DOM after updating the projects data.
+
+  .image pic/124/3.png
+
+* Standalone instance of ProjectState class
+
+  We move the ProjectState class to the front and instantiate it, so that other classes can use its content through this instance.
+
+  .image pic/124/4.png
+
+  We make its instance into standalone because this page only needs one instance to manage projects data, so there won't be multiple instances managing projects data, which would cause data inconsistency issues.
+
+  .image pic/124/5.png
+
+
+* Listener and addListener method in ProjectState class, to react to changes in the state to the DOM!
+
+** Prepare property listener and method addListener in ProjectState class
+   .image pic/124/6.png
+
+** Link to ProjectList class
+
+   Every time projects of ProjectState class updates...
+
+*** class ProjectList retrieves project data from ProjectState through a listener.
+    .image pic/124/7.png
+
+*** Render project list
+    .image pic/124/8.png
+
+** Test
+   .image pic/124/9.png
+
+
+* Clear input fields after submit
+
+  Form is responsible for class ProjectInput, so we look for the part related to submit logic inside it and add the code to clear the input.
+
+  .image pic/124/10.png
+
+  .image pic/124/11.png

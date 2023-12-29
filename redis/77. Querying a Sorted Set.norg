@@ -1,0 +1,58 @@
+@document.meta
+title: 77. Querying a Sorted Set
+description: 
+authors: mattc
+categories: [
+  Sorted set
+  ZRANGE
+]
+created: 2023-12-09T17:44:13+0800
+updated: 2023-12-09T17:45:03+0800
+version: 1.1.1
+@end
+
+* ZRANGE
+
+  This command is somewhat similar to the previously introduced ZCOUNT, but it returns members.
+
+  .image pic/77/1.png
+
+  The following are the parameters of ZRANGE.
+
+* WITHSCORES
+
+  .image pic/77/2.png
+
+
+* BYSCORE
+
+  .image pic/77/3.png
+
+  .image pic/77/4.png
+
+  On score, we can use the syntax previously used in ZCOUNT as bellow.
+
+** turn to exclude (
+   .image pic/77/5.png
+
+** infinit inf
+   .image pic/77/6.png
+
+
+* REV
+
+  .image pic/77/7.png
+
+  Note that REV does not mutate the original value.
+
+  .image pic/77/8.png
+
+
+* LIMIT
+
+  .image pic/77/9.png
+
+  It is obvious that this parameter alone can achieve the result of pagination.
+
+  .image pic/77/10.png
+

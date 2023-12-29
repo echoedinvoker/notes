@@ -1,0 +1,39 @@
+@document.meta
+title: 71. Showing Common Liked Items
+description: 
+authors: mattc
+categories: [
+  User profile
+  SINTER
+]
+created: 2023-12-08T14:52:29+0800
+updated: 2023-12-08T14:53:12+0800
+version: 1.1.1
+@end
+
+* What we gonna do this lecture?
+
+  In this lecture, we are going to implement the part of common like items on the user profile page. It means the items that both the logged-in user and the user on the profile page like.
+
+  .image pic/71/1.png
+
+
+* Where we do implementing?
+
+  The lecturer has already handled the logic for us, except for Redis. We just need to focus on the Redis part.
+
+  .image pic/71/2.png
+
+
+* client.sInter 
+
+  We have previously learned that we can use SINTER to obtain the intersection values between different SETs. However, note that here we need to pass the keys of the SETs in an array format, which is different from the native command.
+
+  .image pic/71/3.png
+
+
+* Test
+
+  .image pic/71/4.png
+
+  It is reasonable for the common like items in the above picture to be the same as the user like items below because the logged-in user is the same as the user in the user profile.

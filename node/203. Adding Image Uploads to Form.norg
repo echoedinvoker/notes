@@ -1,0 +1,40 @@
+@document.meta
+title: 203. Adding Image Uploads to Form
+description: 
+authors: mattc
+categories: [
+  Upload File
+  Multi-Form
+  Image
+]
+created: 2023-12-11T13:58:10+0800
+updated: 2023-12-11T13:58:51+0800
+version: 1.1.1
+@end
+
+* Demand: update user image on the broswer account page
+
+  Previously, we were testing the functionality of uploading user images on Postman, but it was limited to testing the backend functionality only. Currently, we are unable to update user images through a webpage on the browser. In this lecture, we will implement this feature.
+
+  .image pic/203/1.png
+
+
+* file input & label
+
+  We use the input tab and set its type='file', so that it can trigger the OS's data picker and allow us to choose a file to upload.
+
+  .image pic/203/2.png
+
+
+* Build multi-form type request body
+
+  Because if a file is included in the request, it is usually in the format of a multi-form request body. Therefore, we need to create it in index.js and then send it to axios to make a request to the backend.
+
+  .image pic/203/3.png
+
+  axios does not require any changes to the backend, so all we need to do is focus on creating the multi-form in index.js.
+
+  .image pic/203/4.png
+
+  The function has been implemented successfully, the only downside is that the page needs to be reloaded in order to display the new image. The lecturer has tried using native Javascript to automatically update the image after uploading, but it requires too much work, so we won't go into detail about it here.
+

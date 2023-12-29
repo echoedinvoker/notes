@@ -1,0 +1,41 @@
+@document.meta
+title: 73. Adding and Removing Members
+description: 
+authors: mattc
+categories: [
+  Sorted Set
+  Commands
+  ZADD
+  ZSCORE
+  ZREM
+  NX
+  XX
+]
+created: 2023-12-08T16:57:42+0800
+updated: 2023-12-08T16:58:21+0800
+version: 1.1.1
+@end
+
+* ZADD & ZSCORE
+
+  .image pic/73/1.png
+
+  .image pic/73/2.png
+
+
+* ZREM
+
+  .image pic/73/3.png
+
+  .image pic/73/4.png
+
+  One thing to note is that the data stored in Redis is always returned as a string, while the number type values 1 and 0 represent success or failure. When the stored data cannot be retrieved, it will return null. This seems to be a fixed pattern of return values in Redis (native Redis commands).
+
+
+* \[NX|XX\] of ZADD
+
+  These two parameters work in the same way as SET, and occasionally may need to be used.
+
+  .image pic/73/5.png
+
+  We don't provide much explanation for other parameters that we don't commonly use.

@@ -1,0 +1,43 @@
+@document.meta
+title: 60. Using Spread Props and Default Props
+description: 
+authors: mattc
+categories: [
+  Props
+  Optional
+  Spread Props
+]
+created: 2023-12-20T16:57:06+0800
+updated: 2023-12-20T16:57:34+0800
+version: 1.1.1
+@end
+
+* Props of types
+
+  .image pic/57/1.png
+
+
+* Spread props
+
+  .image pic/57/2.png
+
+  .image pic/57/3.png
+
+  When the property names in the object are the same as the props names, you can use the above spread props method to pass props. This can save a lot of time when there are a large number of properties in the object.
+
+
+* Props more props then child compoenent setting
+
+  The part that is being transmitted will not break the page, it will just have a warning. Therefore, we can choose not to handle the excess properties in the object to save time.
+
+  .image pic/57/4.png
+
+
+* Optional Props
+
+  But the props defined in the child component all need to be passed values, although not passing them will not break the page but will have a tsc warning. If it is confirmed that these props are optional, it is recommended to define their initial values.
+
+  .image pic/57/5.png
+
+  .image pic/57/6.png
+

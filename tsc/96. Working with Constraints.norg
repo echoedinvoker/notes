@@ -1,0 +1,35 @@
+@document.meta
+title: 96. Working with Constraints
+description: 
+authors: mattc
+categories: [
+  Constraint type
+  Generics
+]
+created: 2023-12-08T20:36:05+0800
+updated: 2023-12-08T20:36:34+0800
+version: 1.1.1
+@end
+
+* Issue from previous lecture
+
+  In the previous lecture, the function used to merge objects, the type U of our second parameter represents any type, so users can pass values of any type to it as follows.
+
+  .image pic/96/1.png
+
+  Because Object.assign() is designed to simply return the first value when the second value is not of object type, the merge is actually failed silently (no error). This may result in users getting unexpected results without realizing that they have passed incorrect type parameters.
+
+
+* Constrain type to generics
+
+  So if we want to optimize our function so that the second parameter can only accept an object, we can add the following constrain type to U.
+
+  .image pic/96/2.png
+
+  After that, U must be of object type, but it can still have any object structure. When the user passes parameters other than an object, tsc will throw an error.
+
+  .image pic/96/3.png
+
+  So users can be aware of the incorrect parameters they pass in and promptly correct the issue.
+
+  ps: The constraint type can be any type: string, number, Union, it doesn't necessarily have to be an object.

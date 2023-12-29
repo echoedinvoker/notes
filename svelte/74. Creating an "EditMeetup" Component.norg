@@ -1,0 +1,51 @@
+@document.meta
+title: 74. Creating an "EditMeetup" Component
+description: 
+authors: mattc
+categories: [
+  Form
+  Forwarding Custom Event
+]
+created: 2023-12-24T11:27:48+0800
+updated: 2023-12-24T11:28:36+0800
+version: 1.1.1
+@end
+
+* Demand: either show the form or MeetUp items
+
+  Currently, the MeetUp form and MeetUp items sections are displayed simultaneously. We hope that they can switch between each other, meaning that only one section will be displayed at the same time.
+
+  .image pic/67/1.png
+
+
+* Create a MeetUp form component
+
+** Create MeetUpForm component
+   Regardless of the method we use to switch, we need to first establish the MeetUp form component.
+
+   .image pic/67/2.png
+
+** Two options: stateful or presentational component
+   We must make a choice, whether to build the MeetUpForm component using a stateful component or a presentational component approach. Both approaches have their advantages and disadvantages, but here we choose to build the MeetUpForm component using the presentational component approach because so far the entire app only has the MeetUp feature.
+
+   .image pic/67/3.png
+
+** Forward cutom event to App.svelte
+   .image pic/67/4.png
+
+** Test
+   .image pic/67/5.png
+
+
+* Either show the form or MeetUp items by a button
+
+  As mentioned earlier, we do not want to display the MeetUP Form and MeetUP items on the same page at the same time. Therefore, we have created a button below to switch between the two modes.
+
+** Create a button (and a state) to switch between the two modes
+   .image pic/67/6.png
+
+** Test the result
+   .image pic/67/7.png
+
+   .image pic/67/8.png
+

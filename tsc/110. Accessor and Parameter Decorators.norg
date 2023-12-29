@@ -1,0 +1,49 @@
+@document.meta
+title: 110. Accessor and Parameter Decorators
+description: 
+authors: mattc
+categories: [
+  Decorator
+  Accessor
+  Symbol
+]
+created: 2023-12-12T16:18:55+0800
+updated: 2023-12-12T16:19:24+0800
+version: 1.1.1
+@end
+
+* Review previous lecture & Symbol type
+
+  In the previous lecture, we worked on a decoration function called property decorator that is used outside of the class itself. In this lecture, we will work on other types of decorators.
+
+  .image pic/110/1.png
+
+  Sometimes in a class, the `[name]` method is used to name a property or method. In such cases, the Symbol type should be used to define its type.
+
+
+* Accessor decorator
+
+  Plus a third parameter to describe the accessor's object.
+
+** Set
+   .image pic/110/2.png
+
+** Get
+   .image pic/110/3.png
+
+   So it can be observed that descriptors describe together with the set and get of same property.
+
+
+* Method decorator
+
+  The parameters obtained with the Acceccor decorator are the same.
+
+  .image pic/110/4.png
+
+
+* parameter decorator
+
+  The second parameter refers to the method name instead of itself . The functionality of the third parameter is also completely different from the previous two.
+
+  .image pic/110/5.png
+

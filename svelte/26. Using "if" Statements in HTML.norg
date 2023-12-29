@@ -1,0 +1,28 @@
+@document.meta
+title: 26. Using "if" Statements in HTML
+description: 
+authors: mattc
+categories: [
+  Block statement
+  #if
+  Conditional
+]
+created: 2023-12-11T20:35:26+0800
+updated: 2023-12-11T20:36:01+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  .image pic/22/1.png
+
+  Let's start by simply using a button to control whether the card appears.
+
+
+* Create a button to toggle card
+
+  .image pic/22/2.png
+
+  The block statement `{#if} ... {/if}` is the Svelte syntax we are using for the first time. Its function is to determine whether elements in this block should be rendered based on a condition (in this case, using 'done' to be condition).
+
+  Except for special syntax, the writing of conditions is exactly the same as native JavaScript.

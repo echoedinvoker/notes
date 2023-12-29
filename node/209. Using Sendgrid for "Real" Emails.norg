@@ -1,0 +1,38 @@
+@document.meta
+title: 209. Using Sendgrid for "Real" Emails
+description: 
+authors: mattc
+categories: [
+  Email
+  SendGrid
+  Brevo
+  Service
+]
+created: 2023-12-15T15:57:22+0800
+updated: 2023-12-15T15:57:59+0800
+version: 1.1.1
+@end
+
+In this lecture, we will implement the part that can send real letters. The main point is on using different network smtp services to establish the transport object.
+
+.image pic/209/1.png
+
+* SendGrid
+
+  .image pic/209/2.png
+
+  .image pic/209/3.png
+
+  The sender's identity verification requirement has been raised to a ridiculous level, which is completely different from what was shown in the course videos.
+
+
+* Brevo
+
+  In the Q&A, someone recommended Brevo, but they are stuck on the SMS verification part (unable to receive SMS).
+
+  .image pic/209/4.png
+
+
+* Conclusion
+
+  This part is put on hold for now.

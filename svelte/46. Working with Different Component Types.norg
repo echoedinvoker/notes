@@ -1,0 +1,23 @@
+@document.meta
+title: 46. Working with Different Component Types
+description: 
+authors: mattc
+categories: [
+  Component Type
+  Presentational component
+  Stateful component
+]
+created: 2023-12-15T17:08:33+0800
+updated: 2023-12-15T17:09:01+0800
+version: 1.1.1
+@end
+
+We can divide components into two types as follows (unofficial):
+
+.image pic/44/1.png
+
+- Presentational components themselves may have some static data, but all other data is obtained from external sources.
+
+- Presentational components, even though they interact with the user, do not handle the relevant data. Instead, they output to stateful components for processing.
+
+- Try to have as few stateful components as possible, while having a large number of Presentational components.

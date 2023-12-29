@@ -1,0 +1,61 @@
+@document.meta
+title: 116. Validation with Decorators - Finished
+description: 
+authors: mattc
+categories: [
+  Decorators
+  Validation
+]
+created: 2023-12-17T20:04:51+0800
+updated: 2023-12-17T20:05:29+0800
+version: 1.1.1
+@end
+
+* Validation configuration object
+
+  Continuing from the previous lecture, in this lecture we will create a validation configuration object. This object will be used to check whether the object passed in meets the requirements when the function validate() is called.
+
+  .image pic/116/1.png
+
+* Registering validations by decorators
+
+  We use decorators to register validation into the validation configuration object above.
+
+  .image pic/116/2.png
+
+  We can see that we are using the spread operator to merge the original validation configuration object with our new validation configuration object, instead of overriding it.
+
+
+* Validation
+
+  Next, write the validate() function, which will receive an object and check if it complies with our rules.
+
+  It will check if there is a corresponding validation rule in the validation configuration object. If there is, it will proceed with the check. If not, it will skip it.
+
+  .image pic/116/3.png
+
+  It can be observed that there are some type checks here. Even if generics are used, it would be troublesome to define the type. Therefore, type-assertion is used here, specifying it as any. This way, there is no need to worry about the type issue.
+
+  .image pic/116/4.png
+
+
+* Registering validations & validation
+
+  Here we use decorators to register validation into the validation configuration object. And call the validate() function to validate.
+
+  .image pic/116/5.png
+
+* Test
+
+** Lack of price
+   .image pic/116/6.png
+
+** Nagetive price
+   .image pic/116/7.png
+
+** Lack of name
+   .image pic/116/8.png
+
+** Correct inputs
+   .image pic/116/9.png
+

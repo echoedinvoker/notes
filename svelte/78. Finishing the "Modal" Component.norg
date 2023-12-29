@@ -1,0 +1,46 @@
+@document.meta
+title: 78. Finishing the "Modal" Component
+description: 
+authors: mattc
+categories: [
+  Footer
+  Button
+  Custom Event
+]
+created: 2023-12-24T14:02:16+0800
+updated: 2023-12-24T14:02:42+0800
+version: 1.1.1
+@end
+
+* Move Save button to the footer
+
+** Demand
+   Currently, the position of the Save button is incorrect in terms of the structure. According to the structure of the Modal, the button should be placed in the footer.
+
+   .image pic/71/1.png
+
+** Try to directly add 'footer' slot attr to Save button
+   .image pic/71/2.png
+
+   Because the form itself is already using the default slot, it cannot point to another slot internally.
+
+** Move Save button out of form
+   In this way, you can safely use the 'footer' slot, but since the button is no longer inside the form, the logic for triggering the submit function needs to be rewritten.
+   .image pic/71/3.png
+
+** Test
+   .image pic/71/4.png
+
+   .image pic/71/5.png
+
+
+* Add Close button back
+
+  In the case where the default Close button of the 'footer' slot of Modal is covered, we still need a Close button to close the Modal. Therefore, we add a Close button in MeetUpForm.svelte.
+
+  .image pic/71/6.png
+
+  We establish a custom event that name is the same as the default Close button of the Modal, so that in App.svelte we can use the original listener without writing any additional code.
+
+  .image pic/71/7.png
+

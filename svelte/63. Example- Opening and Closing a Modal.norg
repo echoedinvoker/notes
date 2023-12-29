@@ -1,0 +1,38 @@
+@document.meta
+title: 63. Example- Opening and Closing a Modal
+description: 
+authors: mattc
+categories: [
+  Modal
+  Event Forwarding
+]
+created: 2023-12-21T17:08:19+0800
+updated: 2023-12-21T17:08:44+0800
+version: 1.1.1
+@end
+
+* Create a variable to control the modal rendering
+
+  .image pic/60/1.png
+
+  .image pic/60/2.png
+
+  When the modal is displayed, the backdrop of the modal will cover the entire screen, so we cannot click the same button again to close the modal. Therefore, we need to think of other means to close the modal.
+
+
+* Close modal by contents inside Modal
+
+  Usually, we use the following two methods to close the modal.
+
+  .image pic/60/3.png
+
+  Because the operations to be performed are the same (closing the Modal), even though there are two 'click' events, there is no need to name them separately. Let them be captured by the same listener and execute the same handler function.
+
+  .image pic/60/4.png
+
+
+* Close modal by slot contents of Modal
+
+  If the content in the slot is used to trigger the event to close the modal, and the element in the slot and the variable that controls the display of the modal are in the same component, you can directly write a handler function to close the modal without the need for forwarding operations.
+
+  .image pic/60/5.png

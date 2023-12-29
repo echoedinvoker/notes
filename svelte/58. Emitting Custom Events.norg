@@ -1,0 +1,42 @@
+@document.meta
+title: 58. Emitting Custom Events
+description: 
+authors: mattc
+categories: [
+  Event
+  Forward Event
+  Custom Event
+  Event Data
+]
+created: 2023-12-19T16:52:14+0800
+updated: 2023-12-19T16:52:59+0800
+version: 1.1.1
+@end
+
+* Issue when forward multiple events
+
+  When multiple child components forward the same event in various places, the parent component will be unable to distinguish which part the event was passed from.
+
+  .image pic/55/1.png
+
+  We can analyze the passed event object, but this approach is very troublesome.
+
+  .image pic/55/2.png
+
+  .image pic/55/3.png
+
+
+* Custom event
+
+  Instead of directly passing the built-in event, it is better to define different events on our own. This way, the parent can perform different actions based on different events.
+
+  .image pic/55/4.png
+
+  As mentioned above, we do not directly forward the 'click' event but instead forward a customized event. Therefore, the parent cannot capture any events by directly listening for the 'click' event.
+
+  .image pic/55/5.png
+
+  The parent component can listen to individual custom events to handle different actions.
+
+  Using dispatch, besides customizing events, you can also propogate event data.
+

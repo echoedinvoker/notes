@@ -1,0 +1,42 @@
+@document.meta
+title: 90. Relational Data with SORT
+description: 
+authors: mattc
+categories: [
+  SORT
+  Relational Data
+  Sorted Set
+  Hash
+]
+created: 2023-12-17T20:56:26+0800
+updated: 2023-12-17T20:57:08+0800
+version: 1.1.1
+@end
+
+* Plan to use SORT command to get relational data
+
+  In the previous lecture, we learned how to use zRange and hGetAll to retrieve relational data, but this will result in two queries.
+
+  .image pic/90/1.png
+
+  But actually, there is a command that can directly retrieve associated data in one query. We will use this method for the most viewed section.
+
+  .image pic/90/2.png
+
+
+* Use SORT command to get relational data
+
+  .image pic/90/3.png
+
+  SORT is somewhat similar to ZRANGE but does not have a range parameter and uses a hash key in GET. Therefore, in SORT, we simultaneously use keys from both Sorted Set and Hashed table to retrieve data.
+
+
+* Result of SORT command
+
+  .image pic/90/4.png
+
+  You can see that SORT will sort based on the score of the Sorted Set and automatically retrieve the data from the Hashed table and integrate it into the array.
+
+  But this data structure cannot be directly output for app use, so it needs to be deserialized, which will be introduced in the next lecture.
+
+

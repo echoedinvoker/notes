@@ -1,0 +1,28 @@
+@document.meta
+title: 90. Nullish Coalescing
+description: 
+authors: mattc
+categories: [
+  Nullish coalescing
+]
+created: 2023-12-08T15:12:58+0800
+updated: 2023-12-08T15:13:16+0800
+version: 1.1.1
+@end
+
+* Set default value by ||
+
+Sometimes we use the following method to set default values when the obtained data is false.
+
+.image pic/90/1.png
+
+.image pic/90/2.png
+
+Because || uses falcy for judgment, even if the value obtained above or the value entered by the user is an empty string and not null or undefined, we will still get the default value.
+
+
+* Nullish coalescing ??
+
+If we want to keep the empty string or 0, and only use the default value when the value is null or undefined, we need to use nullish coalescing ?? to handle it.
+
+.image pic/90/3.png

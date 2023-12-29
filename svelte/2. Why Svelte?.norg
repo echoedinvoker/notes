@@ -1,0 +1,29 @@
+@document.meta
+title: 2. Why Svelte?
+description: 
+authors: mattc
+categories: [
+  Framework
+  Architecture
+]
+created: 2023-12-09T15:48:14+0800
+updated: 2023-12-09T15:49:54+0800
+version: 1.1.1
+@end
+
+* Server build HTML and send it to client
+
+  .image pic/2/1.png
+
+  This was the only way to generate websites a decade ago, where each page was generated in the backend server and then sent to the client.
+
+  Some modern websites still use this technique, and in certain situations, this method is the best choice.
+
+
+* Server only prepare data for client, client browser handle whole UI reactive itself
+
+  .image pic/2/2.png
+
+  This method only retrieves an HTML file from the backend on the front end at once. Afterwards, it relies on JavaScript code to continuously modify the content of this HTML during runtime (aka DOM), resulting in a smooth display similar to an app.
+
+  But because any code on the front end is public and transparent, and we cannot control the user's device or how they use this website, all sensitive data processing and heavy tasks still need to be done on the backend.

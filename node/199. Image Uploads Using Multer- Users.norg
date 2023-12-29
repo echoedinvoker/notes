@@ -1,0 +1,61 @@
+@document.meta
+title: 199. Image Uploads Using Multer- Users
+description: 
+authors: mattc
+categories: [
+  multer
+  Uploading file
+  photo
+]
+created: 2023-12-09T14:59:43+0800
+updated: 2023-12-09T15:00:11+0800
+version: 1.1.1
+@end
+
+* New demand: update user photo
+
+  We want to add the ability to update photos in the part where we update user data.
+
+  .image pic/199/1.png
+
+
+* Building middleware to parsing file of multi-form by package 'multer'
+
+** uploading file by multi-form
+   Usually, uploading files through an API is done using the multi-form in the request body.
+
+   .image pic/199/2.png
+
+** using 'multer' to parsing multi-form
+   Because the body parsing we use cannot parse files in multi-form, we must use an additional package called 'multer'.
+
+   .image pic/199/3.png
+
+   Below is how to set up 'multer' and the process of creating its middleware.
+
+   .image pic/199/4.png
+
+
+* Checking what 'multer' middleware done
+
+  The 'multer' middleware helps us do two things:
+  1. Copy the file of multi-form to the folder specified in our configuration.
+  2. Generate information about the file and write it into req.file.
+
+** set console.log to check req.file
+   .image pic/199/5.png
+
+   We also take a look at req.body to see if the body parser really cannot handle files of multi-form.
+
+** send requset by Postman
+   .image pic/199/6.png
+
+   .image pic/199/7.png
+
+** logs on the backend console
+   .image pic/199/8.png
+
+** where is our file stored
+   .image pic/199/9.png
+
+   It is evident that our file has indeed been saved, but in the user data, there must be a field to store the path for accessing this file so that JavaScript can correctly access it. We will implement it in the next lecture.

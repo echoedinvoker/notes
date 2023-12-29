@@ -1,0 +1,51 @@
+@document.meta
+title: 99. Generic Classes
+description: 
+authors: mattc
+categories: [
+  Generic Class
+  Object Reference
+]
+created: 2023-12-09T17:04:25+0800
+updated: 2023-12-09T17:05:05+0800
+version: 1.1.1
+@end
+
+* Generic Class
+
+  We create a simple class to add and delete data to an array.
+
+  .image pic/99/1.png
+
+  Even though Typescript yelling to us to define the type of elements in an array, if we don't care and believe that it doesn't matter what type of values are stored in the array, we can define this class as a generic class.
+
+  .image pic/99/2.png
+
+  It seems to be working well. Users defines element type by themselves when a user creates an instance from this class?
+
+
+* Native JavaScript Issue happened at remove method when save objects
+
+  But here is a native JavaScript problem, when the user wants to use it to store objects, the remove method will cause the following issues.
+
+  .image pic/99/3.png
+
+  The above result looks very strange, actually because of the difference in the memory address assignment methods between primitives and objects.
+
+  .image pic/99/5.png
+
+  .image pic/99/6.png
+
+
+* Add restriction to Class
+
+** Option 1: Prohibited to use this class to save objects
+   Users can solve it using the above method, but a better approach is actually to not allow users to use this class to save objects.
+
+   .image pic/99/7.png
+
+** Option 2: Still can save objects but Prohibited to remove method at this case
+   Another option is that this class can still store objects, but the remove method cannot be used when storing objects.
+
+   .image pic/99/8.png
+

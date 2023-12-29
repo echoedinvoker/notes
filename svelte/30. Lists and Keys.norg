@@ -1,0 +1,54 @@
+@document.meta
+title: 30. Lists and Keys
+description: 
+authors: mattc
+categories: [
+  Delete
+  id
+  each
+]
+created: 2023-12-12T21:12:32+0800
+updated: 2023-12-12T21:13:06+0800
+version: 1.1.1
+@end
+
+* Add delete buttons
+
+  We add two buttons, one can delete the first contact card, and the other can delete the last contact card.
+
+  .image pic/26/1.png
+
+  .slice does not modify the array itself but returns a result, which is important. The opposite method is .splice(), which does mutant array.
+
+
+* Test something weired
+
+  .image pic/26/4.png
+
+  As mentioned above, we intentionally create a constant and render it. This constant is only given a value when the component is generated, and its value remains unchanged afterwards.
+
+** delete last
+   .image pic/26/5.png
+
+   The result looks normal.
+
+** delete first
+   .image pic/26/6.png
+
+   The strange result above suggests that Svelte always deletes the last list element, regardless of how it is deleted, and then fits the data into the existing structure, which is why the problem mentioned above occurs.
+
+
+* Set key to element of array
+
+  To solve the above problem, all we need to do is provide each element with a unique identifier when using "each". Svelte will then not use the default way (delete last one) to delete the DOM element mentioned above.
+
+  .image pic/26/7.png
+
+  Let's test again...
+
+  .image pic/26/8.png
+
+  .image pic/26/9.png
+
+  It work properly 😄
+

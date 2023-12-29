@@ -1,0 +1,61 @@
+@document.meta
+title: 107. Building More Useful Decorators
+description: 
+authors: mattc
+categories: [
+  Decorator
+  Constructor
+  Decoration function factory
+  AngularJS
+  Template
+]
+created: 2023-12-11T15:58:22+0800
+updated: 2023-12-11T15:59:13+0800
+version: 1.1.1
+@end
+
+> After understanding how decoration functions are generated and their operating principles in the previous two lectures, we can now create some more meaningful and interesting decoration functions (factory).
+
+
+* More useful decoration function
+
+  The following decoration function allows users to add HTML codes to a specified DOM element.
+
+  .image pic/107/1.png
+
+  The decoration function above actually has no connection with the class itself, so the constructor uses "_" to avoid tsc error.
+
+
+* Relate decoration function to belonged class more
+
+** Planning
+   We want to improve the decoration function above to have a closer association with the attached class as follows.
+
+   .image pic/107/2.png
+
+   The above means that if the template passed by the user contains an h1 tag, the value of the instance's property 'name' will be used to replace the content of the h1 tag.
+
+** Modifying decoration function factory
+   We will implement the above requirements step by step.
+
+*** instantiate class in decoration function
+    Because we need to obtain the value of a property in the instance, we must instantiate the class. Fortunately, the decoration function has a constructor parameter that can easily accomplish this task.
+
+    .image pic/107/3.png
+
+    The reason for the error in the above is that we simply used the type Function to define the constructor, but this definition is incomplete. Many of the functionalities that the constructor itself possesses have not been defined, which leads to the occurrence of a tsc type error when using 'new' to instantiate the class in the above diagram.
+
+*** fix type error and finish the job
+    We will change the type of Function to any, and then we can continue with the subsequent tasks.
+
+    .image pic/107/4.png
+
+
+* AngularJS component
+
+  The example mentioned above is actually very similar to the principle of defining components in Angular. Of course, the content of Angular's decoration function factory is more abundant and elegant.
+
+  .image pic/107/5.png
+
+  We can see that Angular uses decoration to define the template of a component and the bound DOM element. In fact, the concept is exactly the same as the example we mentioned above.
+

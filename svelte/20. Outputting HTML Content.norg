@@ -1,0 +1,34 @@
+@document.meta
+title: 20. Outputting HTML Content
+description: 
+authors: mattc
+categories: [
+  HTML
+  input
+  textarea
+  Sanitize
+]
+created: 2023-12-11T14:27:55+0800
+updated: 2023-12-11T14:28:34+0800
+version: 1.1.1
+@end
+
+* Can we insert HTML codes from input or textarea field?
+
+  .image pic/19/1.png
+
+  As mentioned above, it is not allowed by default, but this is reasonable because if users can freely insert HTML codes through input or textarea elements, they can directly embed a malicious script `<script>...<script>` to harm the entire website.
+
+
+* If we really want to let user can input HTML...
+
+  Svelte still provides a method, as long as the keyword `@html` is used in the live connection, Svelte will treat the content in this live connection as HTML processing.
+
+  .image pic/19/2.png
+
+  However, this is a very dangerous practice. Users can easily insert malicious code as follows.
+
+  .image pic/19/3.png
+
+  So if you want to do this, you must ensure that the source is secure and sanitize the input codes.
+

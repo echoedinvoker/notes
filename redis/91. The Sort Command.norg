@@ -1,0 +1,26 @@
+@document.meta
+title: 91. The Sort Command
+description: 
+authors: mattc
+categories: [
+  SORT
+]
+created: 2023-12-18T16:28:41+0800
+updated: 2023-12-18T16:29:02+0800
+version: 1.1.1
+@end
+
+* SORT is tricky!
+
+  The SORT command may be the trickiest command in Redis, with several peculiarities bellow:
+
+  .image pic/91/1.png
+
+
+* An example on the sheet
+
+  We give a simple example on the sheet (without saving to Redis).
+
+  .image pic/91/2.png
+
+  Although the year is used as a criterion for sorting, it is not included in the result. This is something we need to get used to when using the SORT command.

@@ -1,0 +1,42 @@
+@document.meta
+title: 123. Interacting with DOM Elements
+description: 
+authors: mattc
+categories: [
+  Form
+  this
+  binding
+]
+created: 2023-12-19T18:30:28+0800
+updated: 2023-12-19T18:30:48+0800
+version: 1.1.1
+@end
+
+* Set id of form element
+
+  Our form style looks like this.
+
+  .image pic/119/1.png
+
+  It doesn't look very good because we have already obtained the form element in the previous lecture and assigned it to this.element. Therefore, we can directly add an id to this element to use the style originally written in the CSS file.
+
+  .image pic/119/2.png
+
+
+* Get Input elements as properties
+
+  .image pic/119/3.png
+
+  Will encounter the same null and HTMLElement issues as before, and will solve them using exclamation marks and type casting as well.
+
+
+* Bind 'this' to instance of class
+
+  Because the 'this' in the callback of the listener refers to the event, it is necessary to bind 'this' to the instance of the class.
+
+  .image pic/119/4.png
+
+  Because in a class, 'this' equals the instance of the class itself, so you can directly pass it into bind().
+
+  Another method is to use a decorator for auto bind, which will be introduced in the next lecture.
+

@@ -1,0 +1,26 @@
+@document.meta
+title: 75. Removing the Highest and Lowest Members
+description: 
+authors: mattc
+categories: [
+  Sorted set
+  ZPOPMAX
+  ZPOPMIN
+]
+created: 2023-12-09T10:49:50+0800
+updated: 2023-12-09T10:50:16+0800
+version: 1.1.1
+@end
+
+* ZPOPMAX & ZPOPMIN concept chart
+
+  .image pic/75/1.png
+
+
+* rBook practice
+
+** ZPOPMAX
+   .image pic/75/2.png
+
+** ZPOPMIN
+   .image pic/75/3.png

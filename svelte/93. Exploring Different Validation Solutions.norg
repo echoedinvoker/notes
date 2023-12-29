@@ -1,0 +1,40 @@
+@document.meta
+title: 93. Exploring Different Validation Solutions
+description: 
+authors: mattc
+categories: [
+  Form
+  Validation
+  Type of Component
+]
+created: 2023-12-28T16:55:29+0800
+updated: 2023-12-28T16:55:56+0800
+version: 1.1.1
+@end
+
+* Review MeetUpForm
+
+  Returning to the MeetUp project, we previously created a form for adding MeetUps, but it lacks any validation mechanism. Currently, even if all fields are left blank, a new MeetUp can still be submitted. However, this is clearly unreasonable.
+
+  .image pic/79/1.png
+
+  We have the following two options to add a validation mechanism to the form.
+
+
+* Option 1: make TextInput stateful component
+
+  The first method is to add a prop to TextInput, allowing external validation functions to be passed in. However, this means that TextInput will perform the validation internally, transforming it from a presentational component to a stateful component.
+
+  .image pic/79/2.png
+
+
+* Option 2: keep TextInput stateless component (presentational)
+
+  Another way is to only tell the TextInput the result of data validation and the error message to display when validation fails. In this way, the TextInput can remain as a stateless component, focusing only on displaying data, and can be reused in different places.
+
+  .image pic/79/3.png
+
+
+* Our choice
+
+  We choose Option 2 because we want TextInput to maintain the characteristics of a stateless component and be reusable in different places. However, input data validation will be done in MeetUpForm, so there will be more than just one stateful component, it will have multiple stateful components.

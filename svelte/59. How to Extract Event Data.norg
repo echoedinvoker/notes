@@ -1,0 +1,21 @@
+@document.meta
+title: 59. How to Extract Event Data
+description: 
+authors: mattc
+categories: [
+  DispatchEvent
+  Forward Event
+  CustomEvent
+]
+created: 2023-12-19T17:06:07+0800
+updated: 2023-12-19T17:06:39+0800
+version: 1.1.1
+@end
+
+* Extract CustomEvent
+
+If we use the dispatch forward event to parent component, Handler function of parent component will automatically receives the parameter type as CustomEvent, as shown below.
+
+.image pic/56/1.png
+
+If dispatch has passed data, it will be in the detail property of CustomEvent.

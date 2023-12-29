@@ -1,0 +1,32 @@
+@document.meta
+title: 47. Passing Data Into Components
+description: 
+authors: mattc
+categories: [
+  Presentational component
+  Propogation
+]
+created: 2023-12-15T18:43:15+0800
+updated: 2023-12-15T18:43:55+0800
+version: 1.1.1
+@end
+
+* What type component is MeetUpItem.svelte?
+
+  .image pic/46/1.png
+
+  It is obvious that it belongs to the presentational component, even though there are two buttons, it will still forward the event to other components for processing.
+
+
+* Retrieve data from other component
+
+  .image pic/46/2.png
+
+  Above, we made some adjustments in naming to allow for the use of abbreviated syntax, but considering the cost of communication in collaborative work, it may not be possible to do so.
+
+  We can directly use live connection to insert variables in the string of HTML block, which is something I have never seen in other frameworks. It allows us to have cleaner codes.
+
+
+* Result on page
+
+  .image pic/46/3.png

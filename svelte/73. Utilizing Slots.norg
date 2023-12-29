@@ -1,0 +1,38 @@
+@document.meta
+title: 73. Utilizing Slots
+description: 
+authors: mattc
+categories: [
+  Favorite
+  Conditional
+  Badge
+  Presentational component
+]
+created: 2023-12-24T10:45:50+0800
+updated: 2023-12-24T10:46:30+0800
+version: 1.1.1
+@end
+
+* Conditional attribute of Button
+
+  In addition to the 'mode' attribute, we want to add the 'color' attribute to control the color of the button, and it should automatically determine the value of 'color' based on the variable 'isFavorite'.
+
+  .image pic/66/1.png
+
+  The logic is similar to the previous 'mode' part, which is to add button class strings based on conditions.
+
+  .image pic/66/2.png
+
+  However, buttonStyles should use `$:` in order to dynamically change according to the value of the variable. This point has been overlooked in the previous lectures, so this needs to be noted.
+
+
+* Badget
+
+  In addition to changing the color of the button, we also add a badge to further highlight the favorite item.
+
+  .image pic/66/3.png
+
+  The "Badget" component is naturally a presentational component, and we pass its content using <slot/> to make it not limited to use only in the "MeetUp" feature. Therefore, it can be placed in the UI folder.
+
+  .image pic/66/4.png
+

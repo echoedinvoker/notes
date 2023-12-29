@@ -1,0 +1,42 @@
+@document.meta
+title: 85. Binding Checkboxes and Radio Buttons
+description: 
+authors: mattc
+categories: [
+  Radio
+  Checkbox
+  Binding
+]
+created: 2023-12-27T20:17:53+0800
+updated: 2023-12-27T20:18:13+0800
+version: 1.1.1
+@end
+
+* Checkbox
+
+** try to bind 'value' attr but not work
+   .image pic/74/1.png
+
+** in single checkbox, it use 'checked' attr to store boolean
+   .image pic/74/2.png
+
+** bind
+   .image pic/74/3.png
+
+
+* Radio
+
+** by default, use 'name' to group multiple radio
+   .image pic/74/4.png
+
+** bind:group
+   .image pic/74/5.png
+
+
+* Group checkbox
+  Checkbox also has a pattern of multiple combinations used together, similar to Radio but the values are in an array. In this case, instead of using the attribute "checked", we use "value".
+
+  .image pic/74/6.png
+
+  Use 'value' to store multiple values, and use 'checked' to store boolean, do not confuse them.
+

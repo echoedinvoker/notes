@@ -1,0 +1,26 @@
+@document.meta
+title: 84. Relying on Automatic Number Conversion
+description: 
+authors: mattc
+categories: [
+  Bind
+  Type Conversion
+]
+created: 2023-12-27T19:33:05+0800
+updated: 2023-12-27T19:35:02+0800
+version: 1.1.1
+@end
+
+* Value from input element is always string
+
+  The value of the input element will always be a string, even if the type is "number". If you want to use it as a number, you must first perform a type conversion, otherwise it can easily lead to bugs.
+
+  .image pic/73/1.png
+
+
+
+* Svelte bind already helps you to convert type
+
+  Svelte bind not only simplifies the code, but it also helps you do some additional things, such as converting it to a number when the input type is set to "number".
+
+  .image pic/73/2.png

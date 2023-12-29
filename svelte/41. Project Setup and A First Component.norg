@@ -1,0 +1,28 @@
+@document.meta
+title: 41. Project Setup and A First Component
+description: 
+authors: mattc
+categories: [
+  Structure
+  Refactor
+  Component
+]
+created: 2023-12-14T18:32:40+0800
+updated: 2023-12-14T18:33:10+0800
+version: 1.1.1
+@end
+
+* Write a header in App.svelte
+
+  In main.ts, the component App.svelte is instantiated to render elements in the DOM, so we can add an HTML header in App.svelte to make it appear on our page.
+
+  .image pic/38/1.png
+
+
+* Refactor to another component
+
+  Usually, App.svelte is the only root component. If we write all the components that need to be rendered on every page here, it will definitely become super messy. So usually, App.svelte is used for layout or other important tasks. We don't actually write the logic for rendering the page here, but instead write it in other component files and import them into App.svelte.
+
+  .image pic/38/2.png
+
+  Usually, we group components into folders based on the features of the app. For some components that are not related to any specific feature but are solely used for building the user interface, we place them in the UI folder.

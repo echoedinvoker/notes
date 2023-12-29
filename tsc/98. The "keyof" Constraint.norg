@@ -1,0 +1,35 @@
+@document.meta
+title: 98. The "keyof" Constraint
+description: 
+authors: mattc
+categories: [
+  Generic
+  keyof
+]
+created: 2023-12-09T13:42:45+0800
+updated: 2023-12-09T13:43:07+0800
+version: 1.1.1
+@end
+
+* Create function to extract value from an object
+
+  Let's say that we wanna create a function simply extract value from a object by key.
+
+  .image pic/98/1.png
+
+  Try to add simple type to parameters.
+
+  .image pic/98/2.png
+
+  Typescript tells us that we cannot ensure if the second parameter 'key' is one of the properties of the first parameter object. It make sense, but how?
+
+
+* Setting types with generics and keyof
+
+  First, we use generics to restrict the first parameter to be an object, so that we can obtain the structure of the first parameter when the user calls this function.
+
+  .image pic/98/3.png
+
+  Then we use `keyof T` to represent the union of all property strings in T. We set another generic type that is constrained by it, and assign this generic type to the second parameter to ensure that the second parameter is definitely a key of the first parameter.
+
+  .image pic/98/4.png

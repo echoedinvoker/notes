@@ -1,0 +1,25 @@
+@document.meta
+title: 95. Adding Some Validation Logic
+description: 
+authors: mattc
+categories: [
+  Validation
+  Centralize
+]
+created: 2023-12-28T19:12:43+0800
+updated: 2023-12-28T19:13:14+0800
+version: 1.1.1
+@end
+
+* Implement the validation logic and propogate the validation result
+
+  We have implemented the logic for validation in the MeetUpForm component and propagated the validation results to the child layer's TextInput, allowing TextInput to display different styles and error messages based on its results.
+
+  .image pic/81/1.png
+
+
+* Centralize the validation functions
+
+  We usually centralize various validation functions in one file, such as `validation.js`, and import it wherever needed, not limited to within MeetUpForm.
+
+  .image pic/81/2.png

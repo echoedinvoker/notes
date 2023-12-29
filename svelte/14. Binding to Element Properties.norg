@@ -1,0 +1,42 @@
+@document.meta
+title: 14. Binding to Element Properties
+description: 
+authors: mattc
+categories: [
+  Live connection
+  Bidirectional connection
+  Input
+] 
+created: 2023-12-10T13:42:36+0800
+updated: 2023-12-10T13:43:06+0800
+version: 1.1.1
+@end
+
+* Try to connect input value to script variable
+
+  Instead of using a button to change the value of the variable 'name', we would like to change it to using an input element so that users can input any value to change the variable 'name'. This way, it is more flexible and meets the realistic needs.
+
+  .image pic/14/1.png
+
+  .image pic/14/2.png
+
+* Live connection is single way transfer
+
+  .image pic/14/3.png
+
+  As seen above, we cannot directly change the value of the variable 'name' in the script by using \{name\} in reverse, because the transmission of live connection is one-way. More precisely, it can only go from the script to HTML and cannot go from HTML to the script.
+
+* But codes in live connection still run in script
+
+  However, the codes running in the live connection are still in script.
+  So, we have two options bellow:
+
+** directly write code in live connection
+   .image pic/14/4.png
+
+** transfer function with codes to mutant variable 'name'
+   .image pic/14/5.png
+
+* More clearly explanation
+
+  Simply put, the data transmission of a Live connection is one-way, only from the script to HTML. However, the codes running in the live connection still in script. By utilizing this logic, we can achieve the concept of bidirectional connection.

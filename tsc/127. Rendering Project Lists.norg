@@ -1,0 +1,51 @@
+@document.meta
+title: 127. Rendering Project Lists
+description: 
+authors: mattc
+categories: [
+  List
+  Dynamic id
+  Class
+]
+created: 2023-12-28T14:33:33+0800
+updated: 2023-12-28T14:34:13+0800
+version: 1.1.1
+@end
+
+* Plan: new class for project list
+
+.image pic/123/1.png
+
+
+* Copy class base architecture from ProjectInput
+
+  Because the basic concept are the same: obtain template -> render template -> attach template to DOM, so you can directly copy the properties and constructor of ProjectInput at the beginning.
+
+.image pic/123/2.png
+
+
+* Dynamic id of element
+
+Our project list will be divided into two lists: active and finished. They will be rendered on the same page simultaneously, so we need to add different IDs to their elements in order to distinguish them.
+
+.image pic/123/3.png
+
+Different ids will be passed in the constructor, and here we use syntax sugar to simplify the code.
+
+
+* Attach the template to the DOM
+
+.image pic/123/4.png
+
+
+* Render the contents ot the template
+
+This is different from the previous ProjectInput because our template only has the framework but no content. Therefore, we must generate it ourselves in this class or generate it in the future.
+
+.image pic/123/5.png
+
+
+* Instantialize the lists
+
+.image pic/123/6.png
+

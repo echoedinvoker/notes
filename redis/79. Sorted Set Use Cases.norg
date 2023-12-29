@@ -1,0 +1,31 @@
+@document.meta
+title: 79. Sorted Set Use Cases
+description: 
+authors: mattc
+categories: 
+created: 2023-12-09T23:49:39+0800
+updated: 2023-12-09T23:49:46+0800
+version: 1.1.1
+@end
+
+* Tabulating 'the most' and 'the least' of a collection of a list
+
+  .image pic/78/1.png
+
+  .image pic/78/2.png
+
+  Completely different from traditional databases, traditional databases directly use the columns of the table for sorting. However, Redis requires creating an additional Sorted Set implementation for each type of sorting.
+
+
+* Creating relationship between records and sorted by some criteria
+
+  We have previously used Set to establish associations between different records, but if this association needs to be sorted based on certain criteria, then Sorted Set should be used.
+
+  .image pic/78/3.png
+
+  .image pic/78/4.png
+
+  .image pic/78/5.png
+
+  .image pic/78/6.png
+

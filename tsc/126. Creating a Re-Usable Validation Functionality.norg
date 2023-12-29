@@ -1,0 +1,38 @@
+@document.meta
+title: 126. Creating a Re-Usable Validation Functionality
+description: 
+authors: mattc
+categories: [
+  Validation
+  Interface
+  Reusable
+]
+created: 2023-12-24T16:31:38+0800
+updated: 2023-12-24T16:33:46+0800
+version: 1.1.1
+@end
+
+* Demand: build a reusable validation pattern
+
+The validation condition cannot be used repeatedly in the if-condition as shown below, so we need to establish a pattern that can be reused.
+
+.image pic/122/1.png
+
+
+* Validatable object
+
+.image pic/122/2.png
+
+
+* validation function
+
+.image pic/122/3.png
+
+
+* Replace if condition with validation function & Validatable object
+
+.image pic/122/4.png
+
+  The above approach of verification is very easy to reuse and easy to read, which is a good design pattern.
+
+

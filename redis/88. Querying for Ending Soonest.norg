@@ -1,0 +1,39 @@
+@document.meta
+title: 88. Querying for Ending Soonest
+description: 
+authors: mattc
+categories: [
+  Sorted Set
+  ZRANGE
+  Soonest
+]
+created: 2023-12-14T20:53:51+0800
+updated: 2023-12-14T20:54:29+0800
+version: 1.1.1
+@end
+
+* From Redis to DOM elements represent
+
+  The following is the complete process of retrieving data from Redis and rendering elements on the DOM.
+
+  .image pic/88/1.png
+
+  We only implemented part (1) in this lecture.
+
+
+* Redis command
+
+** native Reids command
+   .image pic/88/2.png
+
+** Redis client method
+   .image pic/88/3.png
+
+
+* Test
+
+  We have not yet implemented the part of the Hash table, so the landing page still does not display any items. However, we can use console.log to test and see if the codes above correctly retrieve the item ids.
+
+  .image pic/88/4.png
+
+

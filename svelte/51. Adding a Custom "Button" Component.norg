@@ -1,0 +1,48 @@
+@document.meta
+title: 51. Adding a Custom "Button" Component
+description: 
+authors: mattc
+categories: [
+  Styling
+  UI Component
+  Button
+]
+created: 2023-12-18T15:01:45+0800
+updated: 2023-12-18T15:02:25+0800
+version: 1.1.1
+@end
+
+* Demand: styling button
+
+  .image pic/51/1.png
+
+  We usually create separate UI components and write the styling inside them instead of styling globally. This is because we want to reuse the components and also we want to keep the styling separate from the component. This is called component styling.
+
+
+* Styles in UI component
+
+  .image pic/51/2.png
+
+  .image pic/51/3.png
+
+
+* Use Button anywhere
+
+  This component is placed in the UI folder, which means it is a UI component. Therefore, we can use it anywhere and it is not limited to a specific feature.
+
+  .image pic/51/4.png
+
+
+* Anchor button
+
+  In addition to button, anchor can also be included in the Button UI component because it has similar functionality and style as button. We use href to determine whether to use a button or an anchor element.
+
+  .image pic/51/5.png
+
+  .image pic/51/6.png
+
+
+* Mode of button
+
+  .image pic/51/7.png
+

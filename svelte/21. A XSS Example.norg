@@ -1,0 +1,37 @@
+@document.meta
+title: 21. A XSS Example
+description: 
+authors: mattc
+categories: [
+  XXS
+  Hack
+]
+created: 2023-12-11T14:33:27+0800
+updated: 2023-12-11T14:33:45+0800
+version: 1.1.1
+@end
+
+* A XSS Example
+  Want to see XSS in action?
+
+  Here's an example (you can quickly enter it here: {https://svelte.dev/repl}):
+
+  @svelte
+  <script>
+  let userInput = '';
+  </script>
+
+  <input type="text" bind:value={userInput} />
+  <div>{@html userInput}</div>
+  @end
+
+  This will render a text input - now enter the following value into that input (you can simply copy & paste it):
+
+  @svelte
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="alert('You were hacked!');">
+  @end
+
+  You should get an alert on your page.
+
+
+  .image pic/19/4.png

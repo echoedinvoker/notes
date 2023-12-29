@@ -1,0 +1,35 @@
+@document.meta
+title: 70. Showing Liked Items
+description: 
+authors: mattc
+categories: [
+  Likes
+  Hash
+  SET
+]
+created: 2023-12-08T11:54:13+0800
+updated: 2023-12-08T11:54:45+0800
+version: 1.1.1
+@end
+
+> In this lecture, we want to make the user profile page able to display the items that the user likes.
+
+.image pic/70/1.png
+
+
+* Plan to get array of objects of items
+
+The design of the lecture project is to use the function "likedItems" to return the items that the user likes in the form of an array of objects. Therefore, we need to write the functionality in two stages as follows.
+
+.image pic/70/2.png
+
+
+* implementing and result
+
+The 2nd step has already been implemented in the "items" section before, so we just need to call it. Therefore, in reality, we only need to write the code for the first step.
+
+.image pic/70/3.png
+
+.image pic/70/4.png
+
+

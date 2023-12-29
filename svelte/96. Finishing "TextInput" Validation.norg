@@ -1,0 +1,32 @@
+@document.meta
+title: 96. Finishing "TextInput" Validation
+description: 
+authors: mattc
+categories: [
+  Validation
+  Touched
+  isEmail
+]
+created: 2023-12-29T11:20:28+0800
+updated: 2023-12-29T11:20:56+0800
+version: 1.1.1
+@end
+
+* Not show invalid styles at first
+
+  .image pic/82/1.png
+
+  We should only display the validation error message after the user has inputted for a certain period of time, for example, after the user has filled in the field and left (blurred) it.
+
+  We establish a state 'touched' to represent the state mentioned above, and use event 'blur' to trigger it.
+
+  .image pic/82/2.png
+
+
+* Finish other fields
+
+  We will demonstrate using the email field below.
+
+  .image pic/82/4.png
+
+  So each field may require a different validation function, and there can be multiple validations applied to the same field.

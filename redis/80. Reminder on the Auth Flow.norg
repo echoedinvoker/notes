@@ -1,0 +1,42 @@
+@document.meta
+title: 80. Reminder on the Auth Flow
+description: 
+authors: mattc
+categories: [
+  Sorted Set
+  Signin
+]
+created: 2023-12-10T11:20:16+0800
+updated: 2023-12-10T11:20:33+0800
+version: 1.1.1
+@end
+
+* Signin is not implemented yet
+
+  Even though we have already implemented the signup part, we have not implemented the signin part. Why didn't we handle it together in the beginning?
+
+  .image pic/79/1.png
+
+
+* The reason we can't implement signin with signup together
+
+** Review of signup
+   The signup part only requires two types of data structures in Redis to complete the functionality.
+
+   .image pic/79/2.png
+
+** Lack of signin
+   But in the case of signin, we cannot find the user id from the username in either of these two data structures.
+
+   .image pic/79/3.png
+
+   This is why we not implement signin yet.
+
+
+* Add Sorted Set for username: user id
+
+  We add this Sorted Set to find the user id from the username, so that we can use the id to find the password in the hash data and perform a comparison.
+
+  .image pic/79/4.png
+
+  The above Sorted Set can actually be completely replaced by another Hashed table, but Sorted Set is more flexible to use. It is common practice to replace Hashed table and Set with Sorted Set.

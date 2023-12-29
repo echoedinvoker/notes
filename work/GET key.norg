@@ -1,0 +1,37 @@
+* Flowchart
+
+  .image pic/3/3.png
+
+
+* (x) Reset TTL of key when get a value
+
+  .image pic/5/1.png
+
+  create a util function get_with_ttl() in utils/redis.py
+
+** (x) key exists
+   - reset TTL of key
+** (x) key not exists
+   - return None
+
+
+* (x) Go dynamic when get None
+
+  .image pic/5/4.png
+
+** (x) get_value_item_by_index()
+** (x) exclude None value scenario
+   implement in test function.
+
+
+* (x) Enable item value and set its key
+
+  .image pic/5/3.png
+
+** (x) create environment for testing
+
+   .image pic/6/1.png
+
+** (x) write processing to Redis
+** (x) enable item value
+

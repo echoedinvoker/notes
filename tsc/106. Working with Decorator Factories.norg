@@ -1,0 +1,30 @@
+@document.meta
+title: 106. Working with Decorator Factories
+description: 
+authors: mattc
+categories: [
+  Decoration function
+  Decoration function factory
+]
+created: 2023-12-11T10:50:40+0800
+updated: 2023-12-11T10:51:01+0800
+version: 1.1.1
+@end
+
+* Decoration function FACTORY
+
+  In the previous lecture, we briefly used the keyword 'function' to declare a decoration function, but a more common practice is to use a decoration function factory to generate a decoration function.
+
+  .image pic/106/1.png
+
+  .image pic/106/2.png
+
+
+* Why we use decoration function FACTORY?
+
+  The advantage of using a factory is that it allows configuration of the content of the decoration function.
+
+  .image pic/106/3.png
+
+  .image pic/106/4.png
+

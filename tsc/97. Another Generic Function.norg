@@ -1,0 +1,44 @@
+@document.meta
+title: 97. Another Generic Function
+description: 
+authors: mattc
+categories: [
+  Generic
+  Constrain
+  Returned type
+]
+created: 2023-12-09T10:34:13+0800
+updated: 2023-12-09T10:34:40+0800
+version: 1.1.1
+@end
+
+* Using generic type
+
+  We create a simple function to inform the length of given value.
+
+  .image pic/97/1.png
+
+  We do not restrict what type of value users can pass in, so generic can be used to define parameters.
+
+  .image pic/97/2.png
+
+
+* Constrain generic type
+
+  But not every type will have the property 'length', so the generic type T must be restricted to have at least the property length.
+
+  .image pic/97/3.png
+
+  .image pic/97/4.png
+
+
+* Check inferred returned type
+
+  Usually, Typescript will infer the return type of a function, but we still need to confirm that the inferred type is accurate enough.
+
+  .image pic/97/5.png
+
+  For example, in the above example, the returned type inferred by Typescript does not seem to be completely accurate, so we can manually define it as follows.
+
+  .image pic/97/6.png
+

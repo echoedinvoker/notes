@@ -1,0 +1,22 @@
+@document.meta
+title: 56. Component Communication Overview
+description: 
+authors: mattc
+categories: [
+  Communication
+  Nested Components
+]
+created: 2023-12-18T20:14:12+0800
+updated: 2023-12-18T20:14:52+0800
+version: 1.1.1
+@end
+
+* Nested Components & Commuication
+
+  .image pic/53/1.png
+
+  In modern frontend frameworks, it is common for a root component to initiate a tree-like structure, which serves as the most effective framework for communication between components.
+
+  Data can go down while custom events can go up.
+
+  The fewer stateful components, the better. In the diagram, only App is stateful, while the others are presentational components.

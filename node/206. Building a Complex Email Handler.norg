@@ -1,0 +1,72 @@
+@document.meta
+title: 206. Building a Complex Email Handler
+description: 
+authors: mattc
+categories: [
+  Email
+  nodemailer
+  html-to-text
+  Transport
+]
+created: 2023-12-12T20:00:51+0800
+updated: 2023-12-12T20:01:27+0800
+version: 1.1.1
+@end
+
+* Demand and Plan
+
+  We have previously used the nodemailer package to integrate with mailtrap and implemented a simple email sending function (only for testing purposes, not actually sending out). This lecture aims to refactor it into a class, so that besides being able to actually send out emails in production mode, it can also apply pug templates to the email content.
+
+  .image pic/206/1.png
+
+  .image pic/206/2.png
+
+
+* Constructor
+
+  This part is to design the data that should be passed in when instantiating this class, and constructing the basic properties.
+
+  .image pic/206/3.png
+
+
+* createTransport
+
+  This part is used for connecting to an external server that provides email sending service. We have done this before, so we can directly copy the class. Since we need to provide real email sending functionality in production mode, we need to use the environment variable ENV_NODE for judgment.
+
+  .image pic/206/4.png
+
+
+* Email Options
+
+  Although it is 'options', in fact, here includes all the information of this email.
+
+** from, to, subject
+   .image pic/206/5.png
+
+** html & text
+   .image pic/206/6.png
+
+   Some users' mailboxes are unable to receive HTML content, so we need to provide a text version. We can simply use the html-to-text package to convert HTML into text content.
+
+   .image pic/206/7.png
+
+
+* Copy some values into pug template
+
+  We need to pass some data into the pug template in order to customize the content of the email. Unless we want every email to be exactly the same.
+
+  .image pic/206/8.png
+
+
+* create instance of transport and send email
+
+  .image pic/206/9.png
+
+
+* sendWelcom (wrapper of send)
+
+  The send() function above requires the input parameters template and subject, both of which are strings. It is easy to make a typo error, so we use another function to wrap it and automatically pass in the parameters to avoid typo errors.
+
+  .image pic/206/10.png
+
+

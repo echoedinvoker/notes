@@ -1,0 +1,24 @@
+@document.meta
+title: 12. Reactive Variables
+description: 
+authors: mattc
+categories: [
+  Dollar symbol
+  Dynamic variable
+]
+created: 2023-12-10T09:56:54+0800
+updated: 2023-12-10T09:58:30+0800
+version: 1.1.1
+@end
+
+* Dynamic value
+
+** Label statement
+   This is actually a native JavaScript feature, not limited to $: but Svelte hijacks $: to use as dynamic value declaration symbol.
+
+   .image pic/12/1.png
+
+** Dynamic value
+   As long as a variable declared with $: is used, it will become dynamic, which means Svelte will automatically detect if there are other variables assigned within the assigned value. When these variables change, dynamic variable will recalculate, similar to Vue's computed.
+
+   .image pic/12/2.png

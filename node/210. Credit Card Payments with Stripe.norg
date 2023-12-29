@@ -1,0 +1,51 @@
+@document.meta
+title: 210. Credit Card Payments with Stripe
+description: 
+authors: mattc
+categories: [
+  Stripe
+  Payment
+]
+created: 2023-12-17T21:55:33+0800
+updated: 2023-12-17T21:55:48+0800
+version: 1.1.1
+@end
+
+* Stripe
+
+  Stripe is a payment platform that allows us to accept payments from users. It is a very popular payment platform, and many companies use it to handle payments.
+
+** Development dashboard
+   .image pic/210/3.png
+
+** Brand design
+   Because we have entrusted the credit card login page to Stripe, we can customize this page here to match the style of our app.
+
+   .image pic/210/1.png
+
+** Stripe API keys
+   .image pic/210/2.png
+
+   Strip's search function is very powerful. Even if many links on the page have a different layout from the course videos, you can still easily find them by using the search keyword.
+
+
+* Stripe documentation
+
+  .image pic/210/4.png
+
+  One thing known about Stripe is that their documentation is very well written. However, at the beginning, we may not be clear about where to start. So, below we will introduce the parts that we should delve into for our project.
+
+  .image pic/210/5.png
+
+  .image pic/210/6.png
+
+  Our project delegates the main tasks of payment to Stripe. The pages that involve filling in credit card information are provided by Stripe. We only need to add Stripe's JavaScript library to our project and integrate Stripe's API on the backend to complete our payment functionality. Therefore, in the documentation, we need to find the Stripe hosted page as shown in the above image and carefully read how to operate it.
+
+
+* Stripe workflow
+
+  .image pic/210/7.png
+
+  From the above figure, it can be seen that our backend only provides session, while the operations related to payment are handled by Stripe. The advantage of this is that we do not need to deal with complex tasks such as security and credit card information. We just need to use their API, which is one of the reasons why we chose Stripe.
+
+  Step three can only be tested in a deployed app and cannot be tested during development. However, we have an alternative solution to solve this problem, which will be discussed in the upcoming lecture.

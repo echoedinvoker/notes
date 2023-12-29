@@ -1,0 +1,28 @@
+@document.meta
+title: 29. "each", "else" and Extracting the Index
+description: 
+authors: mattc
+categories: [
+  else
+  index
+]
+created: 2023-12-12T20:36:10+0800
+updated: 2023-12-12T20:37:12+0800
+version: 1.1.1
+@end
+
+* else inside each
+
+  else keyword can be used in each block statement to print the elements under else when the array is empty.
+
+  .image pic/25/1.png
+
+  This is completely different from "else" in an if block statement, do not confuse them.
+
+
+* index of interation in HTML
+
+  Sometimes when iterating through an array in HTML, we need to use the index for calculations or just for printing. This can be implemented as sameple bellow.
+
+  .image pic/25/2.png
+

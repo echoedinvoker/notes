@@ -1,0 +1,49 @@
+@document.meta
+title: 83. Converting User IDs
+description: 
+authors: mattc
+categories: [
+  Signin
+  Sorted Set
+]
+created: 2023-12-11T11:35:43+0800
+updated: 2023-12-11T16:21:31+0800
+version: 1.1.1
+@end
+
+* Plan of signup steps
+
+In the previous lecture, we inserted zAdd codes to generate a Sorted Set in the signup process. Therefore, now we can utilize it to implement the user signin part.
+
+.image pic/83/1.png
+
+
+* implement signup codes
+
+We have written down all the steps required for the signup function above. Next, we just need to implement these steps.
+
+.image pic/83/2.png
+
+Do not forget that the values we store in the Sorted Set are decimal numbers, but the IDs used in the app are hexadecimal strings, so conversion is required after retrieving the ID.
+
+
+* Test
+
+** Signin with existed user
+.image pic/83/3.png
+
+.image pic/83/4.png
+
+** Signin with non-existed user
+.image pic/83/5.png
+
+.image pic/83/6.png
+
+   I used 'return' incorrectly earlier, so I made a bit corrections above.
+
+
+* Plus: In fact, we don't need SET table anymore
+
+  Because the members of Sorted Set must be unique, it can directly replace the functionality of SET. Since Sorted Set is used here, the previous SET 'usernames:unique' used to check if the username is unique is actually not needed.
+
+  .image pic/83/7.png

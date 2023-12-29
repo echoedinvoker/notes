@@ -1,0 +1,58 @@
+@document.meta
+title: 95. A Few More Arguments
+description: 
+authors: mattc
+categories: [
+  SORT
+  Arguments
+  LIMIT
+  DESC
+]
+created: 2023-12-28T15:32:46+0800
+updated: 2023-12-28T15:33:29+0800
+version: 1.1.1
+@end
+
+* BY convention
+
+  In the previous lecture, we mentioned that using "By nosort" in the SORT command means that the command itself does not perform sorting and instead uses the original sorting of the Sorted Set. However, 'nosort' is not a special value. It simply means that if a key name is used after "BY" that is not present in the Hash table, it indicates that no sorting should be done.
+
+  .image pic/95/1.png
+
+  .image pic/95/2.png
+
+  .image pic/95/3.png
+
+
+* order - DESC & ASC
+
+  .image pic/95/4.png
+
+  .image pic/95/5.png
+
+  .image pic/95/6.png
+
+  .image pic/95/7.png
+
+  So DESC will reverse the order of the results, whether it is in SORT sorting or not.
+
+
+* LIMIT - offset & count
+
+  In Redis, the LIMIT is followed by two numbers representing the number of elements to ignore and the number of elements to retrieve. In the Node.js Redis client, this feature is represented using nested objects.
+
+  .image pic/95/8.png
+
+  .image pic/95/9.png
+
+  .image pic/95/10.png
+
+
+* Current status of project
+
+  Because there is no deserialize yet, the results cannot be displayed in the Most Views section on the page, but the results can already be seen in the console log.
+
+  .image pic/95/11.png
+
+
+

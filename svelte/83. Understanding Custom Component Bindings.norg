@@ -1,0 +1,42 @@
+@document.meta
+title: 83. Understanding Custom Component Bindings
+description: 
+authors: mattc
+categories: [
+  Two-way binding
+  Event forwarding
+  Binding Custom Component
+]
+created: 2023-12-26T21:15:36+0800
+updated: 2023-12-26T21:15:59+0800
+version: 1.1.1
+@end
+
+* Binding custom component's attribute
+
+  .image pic/72/1.png
+
+  We have mentioned before that Svelte does not automatically forward events to the parent by default, so it is strange that bind() above can work.
+
+
+* \(plus) Some attributes cannnot be dynamic 
+
+  In Svelte, there are restrictions on certain attributes that cannot be dynamic.
+
+  .image pic/72/8.png
+
+  Because when "type" is declared with "let", it becomes dynamic, so it cannot be bound to the attribute "type".
+
+
+* Binding to a component's attribute event not input element
+
+** Binding
+   .image pic/72/5.png
+
+   .image pic/72/6.png
+
+** Better use event forwarding
+   Due to the peculiar behavior of this binding pattern, it is particularly prone to bugs when the project becomes complex. Therefore, it is recommended not to use binding for attributes of custom components, but instead use event forwarding. This means triggering events within the custom component through dispatchEvent and receiving events externally through on:xxx. This approach is less error-prone.
+
+   .image pic/72/7.png
+

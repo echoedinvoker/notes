@@ -1,0 +1,96 @@
+* (x) Section 1: Getting Started
+** (x) [2. Why Svelte? (7/22)]{:2. Why Svelte?:}
+** (x) [3. What is Svelte? (4/18)]{:3. What is Svelte?:}
+** (x) [5. Setting Up a First App & The Course Project (11/36)]{:5. Setting Up a First App and The Course Project:}
+** (x) [6. Writing Some Svelte Code (7/22)]{:6. Writing Some Svelte Code:}
+* (x) Section 2: Base Syntax & Core Features
+** (x) [10. Module Introduction (4/10)]{:10. Module Introduction:}
+** (x) [11. Using Curly Braces & Understanding the Core Syntax (6/19)]{:11. Using Curly Braces and Understanding the Core Syntax:}
+** (x) [12. Reactive Variables (6/19)]{:12. Reactive Variables:}
+** (x) [13. More Reactivity (2/23)]{:13. More Reactivity:}
+** (x) [14. Binding to Element Properties (4/16)]{:14. Binding to Element Properties:}
+** (x) [15. Two-Way Binding Shortcut (2/9)]{:15. Two-Way Binding Shortcut:}
+** (x) [16. Using Multiple Components (9/53)]{:16. Using Multiple Components:}
+** (x) [17. Components & Communication via Props (4/18)]{:17. Components and Communication via Props:}
+** (x) [18. Diving Deeper into Bindings (6/23)]{:18. Diving Deeper into Bindings:}
+** (x) [19. Using Self-Extending Properties (1/3)]{:19. Using Self-Extending Properties:}
+** (x) [20. Outputting HTML Content (4/19)]{:20. Outputting HTML Content:}
+** (x) [21. A XSS Example (1/4)]{:21. A XSS Example:}
+** (x) [22. Setting Dynamic CSS Classes (4/24)]{:22. Setting Dynamic CSS Classes:}
+* (x) Section 3: Working with Conditionals & Loops
+** (x) [26. Using "if" Statements in HTML (5/38)]{:26. Using "if" Statements in HTML:}
+** (x) [27. if, else & else-if (4/26)]{:27. if, else and else-if:}
+** (x) [28. Outputting Lists with "each" (8/47)]{:28. Outputting Lists with "each":}
+** (x) [29. "each", "else" & Extracting the Index (2/14)]{:29. "each", "else" and Extracting the Index:}
+** (x) [30. Lists & Keys (10/35)]{:30. Lists and Keys:}
+* (x) Section 4: A Closer Look at Reactivity
+** (x) [35. Updating Arrays & Objects Immutably (2/42)]{:35. Updating Arrays and Objects Immutably:}
+** (x) [36. Understanding Event Modifiers (5/11)]{:36. Understanding Event Modifiers:}
+** (x) [37. Using Inline Functions (3/29)]{:37. Using Inline Functions:}
+* (-) Section 5: Course Project - First Steps
+** (x) [41. Project Setup & A First Component (9/38)]{:41. Project Setup and A First Component:}
+** (x) [42. Different Ways of Mounting Components (5/26)]{:42. Different Ways of Mounting Components:}
+** (x) [43. How to Embed Widgets (1/2)]{:43. How to Embed Widgets:}
+** (x) [44. Adding Data (4/16)]{:44. Adding Data:}
+** (x) [45. Adding a New Component (MeetupItem) (4/23)]{:45. Adding a New Component (MeetupItem):}
+** (x) [46. Working with Different Component Types (4/12)]{:46. Working with Different Component Types:}
+** (x) [47. Passing Data Into Components (6/29)]{:47. Passing Data Into Components:}
+** (x) [48. Adding a "MeetupGrid" Component (4/33)]{:48. Adding a "MeetupGrid" Component:}
+** (x) [49. Adding New Meetups via a Form (9/59)]{:49. Adding New Meetups via a Form:}
+** (x) [50. Creating a "TextInput" Component (11/64)]{:50. Creating a "TextInput" Component:}
+** (x) [51. Adding a Custom "Button" Component (6/83)]{:51. Adding a Custom "Button" Component:}
+** (x) [56. Component Communication Overview (3/31)]{:56. Component Communication Overview:}
+** (x) [57. Event Forwarding (5/33)]{:57. Event Forwarding:}
+** (x) [58. Emitting Custom Events (5/27)]{:58. Emitting Custom Events:}
+** (x) [59. How to Extract Event Data (2/12)]{:59. How to Extract Event Data:}
+** (x) [60. Using Spread Props & Default Props (7/40)]{:60. Using Spread Props and Default Props:}
+** (x) [61. Working with Slots (6/32)]{:61. Working with Slots:}
+** (x) [62. Named & Default Slots (4/15)]{:62. Named and Default Slots:}
+** (x) [63. Example: Opening & Closing a Modal (3/9)]{:63. Example- Opening and Closing a Modal:}
+** (x) [64. Using Slot Props (5/35)]{:64. Using Slot Props:}
+** (x) [65. The Component Lifecycle - Theory (5/16)]{:65. The Component Lifecycle - Theory:}
+** (x) [66. Creation & Update Lifecycle Hooks in Action (7/62)]{:66. Creation and Update Lifecycle Hooks in Action:}
+** (x) [67. Using "tick()" (9/50)]{:67. Using "tick()":}
+** (x) [71. Adding Default Props (3/30)]{:71. Adding Default Props:}
+** (x) [72. Communication via Custom Events (11/59)]{:72. Communication via Custom Events:}
+** (x) [73. Utilizing Slots (5/44)]{:73. Utilizing Slots:}
+** (x) [74. Creating an "EditMeetup" Component (8/40)]{:74. Creating an "EditMeetup" Component:}
+** (x) [75. Communicating Between Components (4/20)]{:75. Communicating Between Components:}
+** (x) [76. Time for More Slots! (3/16)]{:76. Time for More Slots!:}
+** (x) [77. Adding a Re-Usable "Modal" Component (7/61)]{:77. Adding a Re-Usable "Modal" Component:}
+** (x) [78. Finishing the "Modal" Component (3/37)]{:78. Finishing the "Modal" Component:}
+** (x) [82. Two-Way Binding Refresher (3/34)]{:82. Two-Way Binding Refresher:}
+** (x) [83. Understanding Custom Component Bindings (6/58)]{:83. Understanding Custom Component Bindings:}
+** (x) [84. Relying on Automatic Number Conversion (3/15)]{:84. Relying on Automatic Number Conversion:}
+** (x) [85. Binding Checkboxes & Radio Buttons (5/36)]{:85. Binding Checkboxes and Radio Buttons:}
+** (x) [86. Binding <select> Dropdowns (2/11)]{:86. Binding <select> Dropdowns:}
+** (x) [87. Binding to Element References (5/30)]{:87. Binding to Element References:}
+** (x) [88. Binding to Component References (3/21)]{:88. Binding to Component References:}
+** (x) [89. Validating Forms & Inputs (7/27)]{:89. Validating Forms and Inputs:}
+** (x) [93. Exploring Different Validation Solutions (3/26)]{:93. Exploring Different Validation Solutions:}
+** (x) [94. Adding Validation & Error Output to the "TextInput" Component (4/29)]{:94. Adding Validation and Error Output to the "TextInput" Component:}
+** (x) [95. Adding Some Validation Logic (3/25)]{:95. Adding Some Validation Logic:}
+** (x) [96. Finishing "TextInput" Validation (7/32)]{:96. Finishing "TextInput" Validation:}
+** (x) [97. Validating the Overall Form (3/14)]{:97. Validating the Overall Form:}
+** (x) [98. Improvements & Wrap Up (3/15)]{:98. Improvements and Wrap Up:}
+** (x) [101. What's the Problem? (4/40)]{:101. What's the Problem?:}
+** (x) [102. Creating a Writable Store & Subscribing (6/32)]{:102. Creating a Writable Store and Subscribing:}
+** (x) [103. Updating Store Data (5/29)]{:103. Updating Store Data:}
+** (x) [104. Stores and Stateful & Presentational Components (2/21)]{:104. Stores and Stateful and Presentational Components:}
+** ( ) [105. Managing Store Subscriptions (4/)]{:105. Managing Store Subscriptions:}
+** ( ) [106. Using Autosubscriptions (3/)]{:106. Using Autosubscriptions:}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}
+** ( ) []{::}

@@ -1,0 +1,39 @@
+@document.meta
+title: 76. Time for More Slots!
+description: 
+authors: mattc
+categories: [
+  Button
+  Slot
+]
+created: 2023-12-24T12:18:59+0800
+updated: 2023-12-24T12:19:12+0800
+version: 1.1.1
+@end
+
+* Replace attr with slot in the Button
+
+  We use the attribute method in Button.svelte to define the text to be displayed as the button content, but actually using slot for this part would be more elegant. Because of this, the use of props is reduced and Button.svelte becomes more concise.
+
+  .image pic/69/1.png
+
+  .image pic/69/2.png
+
+
+* Edit all places where we used Button
+
+  Because the content of Button.svelte has changed, all places where it is used need to be modified.
+
+  .image pic/69/3.png
+
+  .image pic/69/4.png
+
+  .image pic/69/5.png
+
+
+* Check if all buttons are working as before
+
+  .image pic/69/6.png
+
+  .image pic/69/7.png
+

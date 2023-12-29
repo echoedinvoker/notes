@@ -1,0 +1,79 @@
+@document.meta
+title: 122. DOM Element Selection and OOP Rendering
+description: 
+authors: mattc
+categories: [
+  OOP
+  DOM element
+  documentFragment
+  importNode
+]
+created: 2023-12-18T22:26:11+0800
+updated: 2023-12-18T22:27:02+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  Our goal is to render the form in the input template to the app. We have learned a lot about class types before, so we choose to implement this requirement using OOP.
+
+  .image pic/118/1.png
+
+* Define properties
+
+  First, select two key DOM elements, one is the template where the form is located, and the other is the element we want to render.
+
+  .image pic/118/2.png
+
+  Because we have not defined these two properties yet, we will define them below.
+
+
+* Exclude null by exclamation
+
+  .image pic/118/3.png
+
+  Although we know that we will definitely obtain elements, Typescript does not analyze the content of HTML, so it considers the possibility of obtaining null. We use an exclamation mark to exclude this possibility.
+
+  .image pic/118/4.png
+
+* Type Casting
+
+  `document.getElementById` cannot analyze what element can be obtained with this id, it can only guess that it might be an HTMLElement, but this does not match our definition of properties. Therefore, type casting must be used to accurately define the type.
+
+  .image pic/118/5.png
+
+
+* Copy DOM elements by document.importNode
+
+  `document.importNode` is a way to clone DOM elements. It allows us to copy DOM elements without deleting or altering the original content of the template.
+
+  .image pic/118/6.png
+
+  The second parameter must be set to true in order to fully clone the entire nested DOM elements structure, otherwise only the first layer will be copied.
+
+
+* Convert type to concrete HTMLElement type
+
+  Because `document.importNode` returns a documentFragment type, which is not very useful, we must convert it to an HTML element type in order to use it.
+
+  .image pic/118/7.png
+
+  .image pic/118/8.png
+
+  .image pic/118/9.png
+
+  .image pic/118/10.png
+
+
+* Split insert logic out of constructor
+
+  The lecture intentionally wrote the codes for the insert logic outside of the constructor. Of course, this is a personal preference.
+
+  .image pic/118/11.png
+
+
+* Instantiate class
+
+  According to the logic of this class's constructor, when we instantiate it, the content of the input template will be automatically rendered into the app.
+
+  .image pic/118/12.png

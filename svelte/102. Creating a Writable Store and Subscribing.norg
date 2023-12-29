@@ -1,0 +1,39 @@
+@document.meta
+title: 102. Creating a Writable Store and Subscribing
+description: 
+authors: mattc
+categories: [
+  Store
+  Subscribing
+  Migration
+]
+created: 2023-12-29T14:50:43+0800
+updated: 2023-12-29T14:51:00+0800
+version: 1.1.1
+@end
+
+* Overview of store
+
+  Svelte has a built-in store mechanism that allows us to store data outside of components. This way, even components from different features can share the same data.
+
+  .image pic/102/1.png
+
+
+* Migrate data from stateful component to store
+
+  .image pic/102/2.png
+
+  writable() returns a Store object, not the data itself, do not confuse it.
+
+
+* Subscribing to the store
+
+  .image pic/102/3.png
+
+
+* Test
+
+  .image pic/102/4.png
+
+  Presenting the same results as before, except now our cart data is managed in the store instead of in the component.
+

@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-05T09:15:04.021Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="yWYo0y9p0ODQRDVhQpoe" version="22.1.5" type="device" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-12-22T00:33:22.748Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="8dk4o2VTaRp4hmsDHUF7" version="22.1.11" type="device" pages="8">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="SET key">
-    <mxGraphModel dx="1674" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -39,13 +39,13 @@
           <mxGeometry x="200.0004761904762" y="39.99983606557376" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
         <mxCell id="JA8VL27QsJqAFY8B6OJc-5" value="更新 Redis key 時, 分兩種情況處理&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;1. key 存在: 更新 key 的值並保留該 key 目前的存活時間&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;2. key 不存在: 建立 key 與其值並設置存活時間 (由 config or db 取存活時間的初始值)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="340" y="150" width="500" height="390" as="geometry" />
+          <mxGeometry x="340" y="150" width="310" height="390" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="GET key" id="aaAStJ7nH7R5s7mXr_QC">
-    <mxGraphModel dx="1674" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="DCQyVKpBITfdYSF6sSMA-0" />
         <mxCell id="DCQyVKpBITfdYSF6sSMA-1" parent="DCQyVKpBITfdYSF6sSMA-0" />
@@ -114,13 +114,13 @@
           <mxGeometry x="200.0004761904762" y="39.99983606557376" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
         <mxCell id="KODcV8QDNPRFl_h3SmE5-0" value="取 Redis key 的值得時候, 分兩種情況處理&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;1. key 存在: 初始化該 key 的存活時間, 後返回該 key 的值&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;2. key 不存在: &lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 12px;&quot;&gt;&#x9;&lt;/span&gt;a. 調用動態查詢方法從 db 得到值&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 12px;&quot;&gt;&#x9;&lt;/span&gt;b. 使用查詢用的 key 與 a. 得到的值在 Redis 建立該 key 與其 value&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 12px;&quot;&gt;&#x9;&lt;/span&gt;c. 將 db item_value table 中該對應該 key 資料的屬性 enabled 改為 true&lt;br style=&quot;font-size: 12px;&quot;&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="DCQyVKpBITfdYSF6sSMA-1" vertex="1">
-          <mxGeometry x="510" y="160" width="436" height="390" as="geometry" />
+          <mxGeometry x="510" y="160" width="270" height="390" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Schedule a check for the TTL of all Redis keys" id="I4ATaCpfpbWClsSPL8tg">
-    <mxGraphModel dx="1674" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="s_r8WVftLLBg0mzxRU9f-0" />
         <mxCell id="s_r8WVftLLBg0mzxRU9f-1" parent="s_r8WVftLLBg0mzxRU9f-0" />
@@ -215,20 +215,20 @@
             <mxPoint x="6" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="-0Ogtw8Z4NhiAjBkiv93-0" value="排程檢查 Redis 中的所有 keys 以下兩點&lt;br&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;1. 查詢 DB table value_items 中是此 key 是否存在且啟用, 若無則將此 key 從 Redis 中刪除&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;2. 當 1. pass 時, 檢查該 key 是否過期, 若過期則從 Redis 中刪除此 key, 並將 DB table value_items 中此 key 的狀態改為停用&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="s_r8WVftLLBg0mzxRU9f-27" vertex="1">
+          <mxGeometry x="250" y="45" width="436" height="390" as="geometry" />
+        </mxCell>
         <mxCell id="s_r8WVftLLBg0mzxRU9f-43" value="Redis command" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="s_r8WVftLLBg0mzxRU9f-1" vertex="1">
           <mxGeometry x="50.000476190476206" y="39.99983606557376" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
         <mxCell id="s_r8WVftLLBg0mzxRU9f-44" value="SQL command" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="s_r8WVftLLBg0mzxRU9f-1" vertex="1">
           <mxGeometry x="200.0004761904762" y="39.99983606557376" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
-        <mxCell id="-0Ogtw8Z4NhiAjBkiv93-0" value="排程檢查 Redis 中的所有 keys 以下兩點&lt;br&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;1. 查詢 DB table value_items 中是此 key 是否存在且啟用, 若無則將此 key 從 Redis 中刪除&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;2. 當 1. pass 時, 檢查該 key 是否過期, 若過期則從 Redis 中刪除此 key, 並將 DB table value_items 中此 key 的狀態改為停用&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="s_r8WVftLLBg0mzxRU9f-1" vertex="1">
-          <mxGeometry x="770" y="150" width="436" height="390" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="Update expire config" id="7EgyHnLtFoAq8f9xbcuo">
-    <mxGraphModel dx="1014" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="_l5nAZnNAD7W_C0DtWzh-0" />
         <mxCell id="_l5nAZnNAD7W_C0DtWzh-1" parent="_l5nAZnNAD7W_C0DtWzh-0" />
@@ -238,46 +238,304 @@
         <mxCell id="_l5nAZnNAD7W_C0DtWzh-44" value="SQL command" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="_l5nAZnNAD7W_C0DtWzh-1" vertex="1">
           <mxGeometry x="200.0004761904762" y="39.99983606557376" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-14" value="" style="group" vertex="1" connectable="0" parent="_l5nAZnNAD7W_C0DtWzh-1">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-14" value="" style="group" parent="_l5nAZnNAD7W_C0DtWzh-1" vertex="1" connectable="0">
           <mxGeometry x="40" y="270" width="408.57" height="342.62" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-0" value="KEYS *" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="s-DkSXsj8XYh92IEbch5-14">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-0" value="KEYS *" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="s-DkSXsj8XYh92IEbch5-14" vertex="1">
           <mxGeometry x="38.5704761904762" y="52.339836065573735" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-2" value="Start" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" vertex="1" parent="s-DkSXsj8XYh92IEbch5-14">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-2" value="Start" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" parent="s-DkSXsj8XYh92IEbch5-14" vertex="1">
           <mxGeometry x="250.47000000000008" y="42.620000000000005" width="100" height="56.81" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-3" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;labelBackgroundColor=none;strokeColor=default;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=0;endSize=8;" edge="1" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-0" target="s-DkSXsj8XYh92IEbch5-2">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-3" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;labelBackgroundColor=none;strokeColor=default;strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=block;endFill=0;endSize=8;" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-0" target="s-DkSXsj8XYh92IEbch5-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-4" value="loop key" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="s-DkSXsj8XYh92IEbch5-3">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-4" value="loop key" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" parent="s-DkSXsj8XYh92IEbch5-3" vertex="1" connectable="0">
           <mxGeometry x="0.0361" relative="1" as="geometry">
             <mxPoint x="-4" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-5" value="End" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" vertex="1" parent="s-DkSXsj8XYh92IEbch5-14">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-5" value="End" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" parent="s-DkSXsj8XYh92IEbch5-14" vertex="1">
           <mxGeometry x="250.47000000000008" y="252.62000000000012" width="100" height="56.81" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-10" value="EXPIRE key expire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="s-DkSXsj8XYh92IEbch5-14">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-10" value="EXPIRE key expire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="s-DkSXsj8XYh92IEbch5-14" vertex="1">
           <mxGeometry x="239.04047619047628" y="162.61983606557374" width="122.85714285714285" height="37.37704918032787" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-2" target="s-DkSXsj8XYh92IEbch5-10">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-2" target="s-DkSXsj8XYh92IEbch5-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-10" target="s-DkSXsj8XYh92IEbch5-5">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="s-DkSXsj8XYh92IEbch5-14" source="s-DkSXsj8XYh92IEbch5-10" target="s-DkSXsj8XYh92IEbch5-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-13" value="Update TTL for all Redis keys" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="s-DkSXsj8XYh92IEbch5-14">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-13" value="Update TTL for all Redis keys" style="swimlane;whiteSpace=wrap;html=1;" parent="s-DkSXsj8XYh92IEbch5-14" vertex="1">
           <mxGeometry width="408.57" height="342.62" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="_l5nAZnNAD7W_C0DtWzh-1" source="s-DkSXsj8XYh92IEbch5-16" target="s-DkSXsj8XYh92IEbch5-13">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="_l5nAZnNAD7W_C0DtWzh-1" source="s-DkSXsj8XYh92IEbch5-16" target="s-DkSXsj8XYh92IEbch5-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s-DkSXsj8XYh92IEbch5-16" value="expire config changed" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="_l5nAZnNAD7W_C0DtWzh-1">
+        <mxCell id="s-DkSXsj8XYh92IEbch5-16" value="expire config changed" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="_l5nAZnNAD7W_C0DtWzh-1" vertex="1">
           <mxGeometry x="166.42999999999998" y="130" width="155.71" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZxAn3a5aI-J9f7dibmst-0" value="當生存時間的設定值被變更時, 更新所有 Redis key 的生存時間" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="_l5nAZnNAD7W_C0DtWzh-1">
-          <mxGeometry x="480" y="130" width="436" height="390" as="geometry" />
+        <mxCell id="ZxAn3a5aI-J9f7dibmst-0" value="當生存時間的設定值被變更時, 更新所有 Redis key 的生存時間" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="_l5nAZnNAD7W_C0DtWzh-1" vertex="1">
+          <mxGeometry x="480" y="222.62" width="436" height="390" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="YPAArvwjWAs7EmIVvUwV" name="Page-5">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="852wQLtMLS1HEwCw1hAE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Sev3lX0c8Fv6svDetiVM-5" target="Sev3lX0c8Fv6svDetiVM-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Sev3lX0c8Fv6svDetiVM-5" value="TTL 更新" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="247" y="194" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Sev3lX0c8Fv6svDetiVM-6" target="Sev3lX0c8Fv6svDetiVM-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Sev3lX0c8Fv6svDetiVM-6" value="取得 Redis Keys" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="417" y="194" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Sev3lX0c8Fv6svDetiVM-7" value="建立 Redis Pipeline" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="417" y="294" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Sev3lX0c8Fv6svDetiVM-8" value="執行 Redis Pipeline" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="417" y="492.41" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Sev3lX0c8Fv6svDetiVM-9" value="Pipeline 寫入&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;更新/建立 Key TTL&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;指令" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="247" y="394" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="852wQLtMLS1HEwCw1hAE-1" target="Sev3lX0c8Fv6svDetiVM-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-1" value="Loop Keys Start" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="259.5" y="295.6" width="95" height="56.81" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Sev3lX0c8Fv6svDetiVM-7" target="852wQLtMLS1HEwCw1hAE-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="852wQLtMLS1HEwCw1hAE-7" target="Sev3lX0c8Fv6svDetiVM-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-7" value="End" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="259.5" y="494" width="95" height="56.81" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Sev3lX0c8Fv6svDetiVM-9" target="852wQLtMLS1HEwCw1hAE-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-10" value="資料庫存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=0;" parent="1" vertex="1">
+          <mxGeometry x="117" y="194" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="852wQLtMLS1HEwCw1hAE-11" value="Redis Server 存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=0;" parent="1" vertex="1">
+          <mxGeometry x="117" y="234" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zV-XA2f3TgJNkRzDZ5ij" name="Page-6">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-3" target="5H8l0S021ZkaBtu3CsOd-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-3" value="更新 Key 值&lt;br&gt;保持該 Key TTL 不變" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="180" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-5" target="5H8l0S021ZkaBtu3CsOd-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-22" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5H8l0S021ZkaBtu3CsOd-21" vertex="1" connectable="0">
+          <mxGeometry y="3" relative="1" as="geometry">
+            <mxPoint y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-5" value="Key 存在?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="185" y="320" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-7" target="5H8l0S021ZkaBtu3CsOd-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-7" value="取得 TTL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="345" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-8" target="5H8l0S021ZkaBtu3CsOd-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-26" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5H8l0S021ZkaBtu3CsOd-25" vertex="1" connectable="0">
+          <mxGeometry x="-0.16" y="-3" relative="1" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-8" target="_RkdPuUvrh5rMvi3k43B-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-7" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="_RkdPuUvrh5rMvi3k43B-6" vertex="1" connectable="0">
+          <mxGeometry x="-0.0167" relative="1" as="geometry">
+            <mxPoint x="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-8" value="TTL 存在?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="320" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-10" target="5H8l0S021ZkaBtu3CsOd-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-10" value="取得 TTL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="680" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-14" target="5H8l0S021ZkaBtu3CsOd-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-31" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5H8l0S021ZkaBtu3CsOd-30" vertex="1" connectable="0">
+          <mxGeometry x="-0.12" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-14" target="spAq6rModtwm7T8g7kOy-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-3" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="_RkdPuUvrh5rMvi3k43B-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.08" y="-1" relative="1" as="geometry">
+            <mxPoint y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-14" value="TTL 存在?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="685" y="440" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-16" value="Raise Error" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-17" target="5H8l0S021ZkaBtu3CsOd-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-17" value="Pipeline 寫入指令:&lt;br&gt;建立 TTL Key" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5H8l0S021ZkaBtu3CsOd-18" target="spAq6rModtwm7T8g7kOy-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5H8l0S021ZkaBtu3CsOd-18" value="Pipeline 寫入指令:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;建立 Key w/ 初始TTL" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uJ4hIAW67LSCzL79Vr3F-1" value="資料庫存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=0;" parent="1" vertex="1">
+          <mxGeometry x="689" y="172" width="108" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uJ4hIAW67LSCzL79Vr3F-2" value="Redis Server 存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=0;" parent="1" vertex="1">
+          <mxGeometry x="690" y="212" width="107" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="spAq6rModtwm7T8g7kOy-1" target="5H8l0S021ZkaBtu3CsOd-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="spAq6rModtwm7T8g7kOy-1" value="建立 Redis Pipeline" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="515" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="spAq6rModtwm7T8g7kOy-2" value="執行 Redis Pipeline" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="180" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_RkdPuUvrh5rMvi3k43B-5" value="建立 Key w/ 初始TTL" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="515" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="SkMgKKmdJk_BTcQW3GYY" name="Page-7">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-2" target="x5A51-k5f1XHh7CqvYxc-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-2" value="取得 Key 值" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-3" target="x5A51-k5f1XHh7CqvYxc-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-3" value="Key 存在?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="320" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shape=flexArrow;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-4" target="x5A51-k5f1XHh7CqvYxc-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-4" target="x5A51-k5f1XHh7CqvYxc-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-4" value="DB 取值" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="350" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shape=flexArrow;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-6" target="x5A51-k5f1XHh7CqvYxc-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-6" value="Data" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="x5A51-k5f1XHh7CqvYxc-8" target="x5A51-k5f1XHh7CqvYxc-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-8" value="建立 Key&lt;br&gt;TTL 初始化" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="350" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x5A51-k5f1XHh7CqvYxc-11" value="索引值開啟" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="180" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_yoYTiKGka4CDhmvAHV-1" value="資料庫存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="542" y="220" width="108" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_yoYTiKGka4CDhmvAHV-2" value="Redis Server 存取" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="543" y="260" width="107" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="FLwClTa8q8AICmDjli4Q" name="Page-8">
+    <mxGraphModel dx="1434" dy="790" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JzK_NqR8iJWApiOffk1A-1" target="3VkCIQGAAjrHikiQkbHF-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzK_NqR8iJWApiOffk1A-1" value="取得 All Keys" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3VkCIQGAAjrHikiQkbHF-1" value="建立 Redis Pipeline" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2ynHSNHiiYTUWMdzbraZ-1" target="2ynHSNHiiYTUWMdzbraZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2ynHSNHiiYTUWMdzbraZ-1" value="Loop Keys Start" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="311.6" width="95" height="56.81" as="geometry" />
+        </mxCell>
+        <mxCell id="2ynHSNHiiYTUWMdzbraZ-2" value="Key 過期者&lt;br&gt;加入刪除清單" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="427.5" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PwAuhh7gY4cV3ag7DRdj-1" target="PwAuhh7gY4cV3ag7DRdj-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-1" value="End" style="strokeWidth=1;shape=mxgraph.flowchart.terminator;fontFamily=Helvetica;fontSize=11;fontColor=default;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="512" width="95" height="56.81" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-2" value="關閉無對應 Key&lt;br&gt;的索引值" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="510.40999999999997" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PwAuhh7gY4cV3ag7DRdj-3" target="PwAuhh7gY4cV3ag7DRdj-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-3" value="執行 Pipeline" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="260" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3VkCIQGAAjrHikiQkbHF-1" target="2ynHSNHiiYTUWMdzbraZ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PwAuhh7gY4cV3ag7DRdj-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2ynHSNHiiYTUWMdzbraZ-2" target="PwAuhh7gY4cV3ag7DRdj-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

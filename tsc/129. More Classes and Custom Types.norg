@@ -1,0 +1,55 @@
+@document.meta
+title: 129. More Classes and Custom Types
+description: 
+authors: mattc
+categories: [
+]
+created: 2023-12-29T18:05:44+0800
+updated: 2023-12-29T18:06:26+0800
+version: 1.1.1
+@end
+
+> In the previous code, in order to speed up the course, there were some places where the type was not strictly defined. Here, we will fix these issues.
+
+* Type Project
+
+  The main data type of this app is `Project`, which has not been defined yet up to this point, so we will define it first.
+
+  .image pic/125/1.png
+
+  From the green box above, we can know what the content of the Project type should be. However, we want to further convert it into a class. A class is actually similar to a type, but a class can be instantiated. In this case, we have instances of the project that can be applied more easily.
+
+  .image pic/125/2.png
+
+
+* Type Listener function
+
+  In addition to the project, we also store the listener function in ProjectState. We can use the type to precisely define its parameters and returned type.
+
+  .image pic/125/3.png
+
+  .image pic/125/4.png
+
+  In the blue box above, it can be observed that the listener function will receive the project array as a parameter. This is a subtle logic. If we define the logic of the listener function at the beginning as mentioned above, it will make it easier for us to understand and maintain in the subsequent development.
+
+
+* ISSUE: Render out the previous project repeatedly.
+
+  So far, we have found the following two bugs in the app during actual operation.
+
+  .image pic/125/5.png
+
+  The first bug is caused by a logical problem as follows.
+
+  .image pic/125/6.png
+
+  Because in ProjectClass, all saved projects will be passed into the listener function, so when we add a new project, all projects will be rendered again, causing a problem of duplicate rendering.
+
+  Because the definition in ProjectClass is more general, I made modifications to the content of the listener function passed from ProjectList.
+
+  .image pic/125/7.png
+
+  .image pic/125/8.png
+
+  The final test results successfully resolved the first issue. We will address the second issue in the next lecture.
+

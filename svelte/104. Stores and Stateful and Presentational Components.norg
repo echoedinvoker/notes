@@ -1,0 +1,31 @@
+@document.meta
+title: 104. Stores and Stateful and Presentational Components
+description: 
+authors: mattc
+categories: [
+  Component Types
+  Store
+  Store Pattern
+]
+created: 2023-12-29T15:59:40+0800
+updated: 2023-12-29T16:00:18+0800
+version: 1.1.1
+@end
+
+* So, should components that use store be considered stateful or presentational?
+
+  .image pic/104/1.png
+
+  The above two components use the store, but they do not directly handle data, so they are more inclined towards presentational components. If a feature's data is using the store, usually we will centralize the data management in the store.
+
+
+* Using a single component to access the store is a feature.
+
+  This is a more rigorous approach, but it is not mandatory. It is no harm to directly use the store in individual components.
+
+  .image pic/104/2.png
+
+
+* When not to use store?
+
+  When there is a parent-child relationship between the components of data transmission and only props are needed within three layers, we do not need to use a store.

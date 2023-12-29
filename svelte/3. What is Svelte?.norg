@@ -1,0 +1,25 @@
+@document.meta
+title: 3. What is Svelte?
+description: 
+authors: mattc
+categories: [
+  Framework
+  Compliler
+]
+created: 2023-12-09T16:07:57+0800
+updated: 2023-12-09T16:10:12+0800
+version: 1.1.1
+@end
+
+* What is Svelte?
+
+  .image pic/3/1.png
+
+** Why we need JS codes to be svelte?
+   When all the changes in the front-end HTML during runtime are handled by JavaScript, the client needs to download a larger JavaScript file from the server and it may operate less efficiently. That's why Svelte takes 'svelte' as its main feature.
+
+** How general modern frameworks (React, Angular and Vue) work?
+   They will have a framework that provides developers who write front-end JavaScript codes with some syntax and existing library, allowing developers to write SPA website codes more easily. Then, they will combine the codes written by developers with the codes of the frameworks and ship them to the front-end browser.
+
+** What different of Svelte?
+   Svelte itself is actually a compiler rather than a framework, so when developers finish writing a Svelte project, Svelte will compile these codes into optimized JavaScript instructions and then send them to the client browser. Because there is no need to send the entire framework to the browser, the file size that needs to be shipped is definitely smaller. Moreover, it also runs more efficiently in the browser.

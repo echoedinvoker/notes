@@ -1,0 +1,27 @@
+@document.meta
+title: 86. Binding <select> Dropdowns
+description: 
+authors: mattc
+categories: [
+  Binding
+  Select
+]
+created: 2023-12-27T20:31:06+0800
+updated: 2023-12-27T20:31:25+0800
+version: 1.1.1
+@end
+
+* Bind select element
+
+  .image pic/75/1.png
+
+  Although it may seem more complicated, the option elements affect the value of the select. We simply need to bind the value of the select element, just like binding a simple text input.
+
+
+* Extended idea
+
+** \{#each\} to build options
+   We can use \{#each\} to create options.
+
+** Try to bind option value to object
+   The lecturer mentioned this suggestion, but I didn't quite understand his meaning and also didn't know its usefulness, so I decided not to do it for now.

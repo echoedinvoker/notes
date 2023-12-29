@@ -1,2 +1,6 @@
-** [Redis access logic (backend)]{:Redis access logic (backend):}
-** [Redis TTL flowchart]{:Redis TTL flowchart:}
+
+* (-) Redis TTL
+** (x) [Configure TTL]{:Configure TTL:}
+** (-) [SET key]{:SET key:}
+** (x) [GET key]{:GET key:}
+** ( ) [Schedule checking TTL]{:Schedule checking TTL:}

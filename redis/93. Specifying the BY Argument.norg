@@ -1,0 +1,42 @@
+@document.meta
+title: 93. Specifying the BY Argument
+description: 
+authors: mattc
+categories: [
+  SORT
+  Sorting
+  Relational data
+]
+created: 2023-12-21T15:33:41+0800
+updated: 2023-12-21T15:34:14+0800
+version: 1.1.1
+@end
+
+* Review SORT of previous lecture
+
+  .image pic/93/1.png
+
+  In the previous lecture, we learned that the SORT command will directly sort the members in the Sorted Set.
+
+
+* SORT command but sorting based on value of Hash Table
+
+  But if we want to sort based on the year in the hash table, how should we do it?
+
+  .image pic/93/2.png
+
+  The answer is given directly above, but what does this strange syntax `BY books:*->year` mean?
+
+
+* Explanation of BY books:*->year
+
+  .image pic/93/3.png
+
+  .image pic/93/4.png
+
+  .image pic/93/5.png
+
+  .image pic/93/6.png
+
+  What needs special attention is that we use information that was originally not present in the Sorted Set for sorting, and after sorting, these information used for sorting are discarded, only reporting the members of the Sorted Set.
+

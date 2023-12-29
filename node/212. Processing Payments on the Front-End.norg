@@ -1,0 +1,98 @@
+@document.meta
+title: 211. Integrating Stripe into the Back-End
+description: 
+authors: mattc
+categories: [
+  Stripe
+  Checkout
+  Session
+  CSP
+]
+created: 2023-12-19T21:21:59+0800
+updated: 2023-12-19T21:25:33+0800
+version: 1.1.1
+@end
+
+* Tour template 
+
+** demand & plan
+   .image pic/212/1.png
+
+   .image pic/212/2.png
+
+** no logged user
+   .image pic/212/3.png
+
+   .image pic/212/4.png
+
+   .image pic/212/5.png
+
+** logged user
+   .image pic/212/6.png
+
+
+* Implement frontend Javascript
+
+  .image pic/212/7.png
+
+
+* Install/Import Stripe library
+
+  We have installed the Stripe library in the backend, and the frontend also needs to import the Stripe library in order to use Stripe's functionality in frontend JavaScript.
+
+  .image pic/212/8.png
+
+  Because we only need to use Stripe on the tour page, we import stripe.js in tour.pug.
+
+  .image pic/212/9.png
+
+
+* Get checkout session
+
+** axios get
+   .image pic/212/10.png
+
+
+** solve CSP issue by express-csp
+   A very tricky problem, found an effective solution in Q&A, besides using helm, also need to rely on the express-csp package.
+
+   .image pic/212/12.png
+
+
+** no Stripe issue
+   Because we only import Stripe's js in tour.pug, but stripe.js is loaded on every page, so this problem occurs.
+
+   .image pic/212/13.png
+
+** Test
+   .image pic/212/14.png
+
+
+* Redirect to credit card page
+
+  We use the method provided by Strike to redirect to the credit card page prepared for us by Stripe. This method only requires the session ID.
+
+  .image pic/212/15.png
+
+
+* Error handling for fetching checkout session
+
+  .image pic/212/16.png
+
+
+* Test: redirect to credit card page & check stripe dashboard
+
+  .image pic/212/17.png
+
+  .image pic/212/18.png
+
+  .image pic/212/19.png
+
+  .image pic/212/20.png
+
+  .image pic/212/21.png
+
+
+
+
+

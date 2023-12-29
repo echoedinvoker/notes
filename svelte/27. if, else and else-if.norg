@@ -1,0 +1,22 @@
+* Implement three state of card
+
+In the previous lecture, the ContactCard was only rendered based on a true/false logic. In this lecture, a more complex logic will be used to determine what to render (meaning not only rendering the card, but possibly other elements as well).
+
+** data manipulate
+.image pic/23/1.png
+
+** Block statement else if, else
+.image pic/23/2.png
+
+
+* Test
+
+** Before clicking button
+.image pic/23/3.png
+
+** invalid input
+.image pic/23/4.png
+
+** valid input
+.image pic/23/5.png
+

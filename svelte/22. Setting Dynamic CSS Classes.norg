@@ -1,0 +1,42 @@
+@document.meta
+title: 22. Setting Dynamic CSS Classes
+description: 
+authors: mattc
+categories: [
+  Sugar syntax
+  Dynamic class
+  Styles
+]
+created: 2023-12-11T14:58:59+0800
+updated: 2023-12-11T14:59:25+0800
+version: 1.1.1
+@end
+
+> This lecture discusses how to dynamically change styles.
+
+* Demand
+
+  Currently, the value of the src attribute of the img element is using user input content. If there is no content, it is hoped that there will be some style hints for users to understand the situation.
+
+  .image pic/21/1.png
+
+
+* Curve styles of no image URL statically
+
+  First, try to render the styles with the value of src as undefined in a static state.
+
+  .image pic/21/2.png
+
+
+* Make it dynamic
+
+** Live connection with ternary operator
+   Then make it dynamic. First, separate the styles that need to be dynamically switched and create a separate class for them. Then, in the HTML section, use a ternary operator in the live connection to complete the class switching.
+
+   .image pic/21/3.png
+
+
+** Sugar syntax
+   The above is the original writing method. Svelte provides a simplified version of the syntax for us to use.
+
+   .image pic/21/4.png

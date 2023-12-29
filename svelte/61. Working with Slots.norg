@@ -1,0 +1,43 @@
+@document.meta
+title: 61. Working with Slots
+description: 
+authors: mattc
+categories: [
+  Modal
+  Slot
+]
+created: 2023-12-21T13:43:36+0800
+updated: 2023-12-21T13:44:48+0800
+version: 1.1.1
+@end
+
+* What is slot?
+
+  .image pic/58/1.png
+
+
+* Create Modal
+
+  .image pic/58/2.png
+
+  Above, we have written the basic structure of the Modal, but the content of the Modal is not fixed. Let's discuss how to pass this type of variable content to the Modal.
+
+
+* Content of Modal
+
+** by props
+   .image pic/58/3.png
+
+   But this type of string transmitted cannot be parsed as HTML, so @html needs to be added.
+
+   .image pic/58/4.png
+
+   Although this can transmit HTML, there is a risk of XXS, and it is not a very intuitive writing way for developers.
+
+** by slot
+   We use the slot tag to pass HTML, which makes HTML writing more intuitive and eliminates the risk of XSS.
+
+   .image pic/58/5.png
+
+   The slot tag is actually a specification of HTML itself, it is not something extra defined by Svelte.
+  

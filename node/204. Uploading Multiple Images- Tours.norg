@@ -1,0 +1,42 @@
+@document.meta
+title: 204. Uploading Multiple Images- Tours
+description: 
+authors: mattc
+categories: [
+  Uploading
+  Tours
+  Updating
+  multer
+  multi-form
+]
+created: 2023-12-11T19:45:37+0800
+updated: 2023-12-11T19:46:20+0800
+version: 1.1.1
+@end
+
+* Demand: update specific tour data also need functionality to upload images
+
+  In our tour model, we have fields 'imageCover' and 'images' to store photos of the tour. Therefore, it is necessary for the website to have the functionality of uploading photos. We plan to add this feature to the existing route for updating tours.
+
+  .image pic/204/1.png
+
+
+* Implementing 
+
+  Because the process of uploading image files is similar, you can directly copy the relevant codes from the userController.
+
+  .image pic/204/2.png
+
+  The difference here compared to the user's side is that, in this case, multiple photos are uploaded and provided to two fields, so we must use upload.fields instead of upload.single. Additionally, if there is only one field but multiple photos are required, we use upload.array.
+
+  We will leave the part of processing photos with Sharp for the next lecture to implement. In this lecture, we only need to print out req.files (note: not req.file) in the resizeTourPhoto middleware.
+
+
+* Test
+
+  .image pic/204/3.png
+
+  .image pic/204/4.png
+
+  .image pic/204/5.png
+

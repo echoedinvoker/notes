@@ -1,0 +1,40 @@
+@document.meta
+title: 75. Communicating Between Components
+description: 
+authors: mattc
+categories: [
+  Styling
+  Submitting
+  Centralizing data handling
+]
+created: 2023-12-24T11:58:27+0800
+updated: 2023-12-24T11:59:05+0800
+version: 1.1.1
+@end
+
+* Further styling of the switching button
+
+** margins of the button
+.image pic/68/1.png
+
+.image pic/68/2.png
+
+** mode of the button
+.image pic/68/3.png
+
+
+* Switch back after submitting the form
+
+** demand
+.image pic/68/4.png
+
+** switch the variable in addMeetUp function
+.image pic/68/5.png
+
+   Because we centralize all data/states in a single stateful component to handle, App.svelte, that's why this part feels exceptionally simple.
+
+** Test
+.image pic/68/6.png
+
+.image pic/68/7.png
+

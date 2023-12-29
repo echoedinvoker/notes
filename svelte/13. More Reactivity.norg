@@ -1,0 +1,27 @@
+@document.meta
+title: 13. More Reactivity
+description: 
+authors: mattc
+categories: [
+  Dollar label
+  Expression
+  Statement
+  Dynamic
+]
+created: 2023-12-10T13:12:43+0800
+updated: 2023-12-10T13:13:19+0800
+version: 1.1.1
+@end
+
+* It just run all codes after $\: when reactive
+
+  Actually, the codes following do not necessarily have to declare variables, as long as they are valid codes.
+
+  .image pic/13/1.png
+
+  However, it is important to note that if there is a concept of scope for statements like the one mentioned above, it will only detect variables in the outermost scope.
+
+** Compare to live connection codes
+   Compared to a live connection, although we mentioned before that JavaScript codes can also be placed inside a live connection, it is only limited to expressions, while $\:$ allows statements to be allowed as well.
+
+   .image pic/13/2.png
