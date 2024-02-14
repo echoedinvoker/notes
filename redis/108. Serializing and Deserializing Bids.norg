@@ -1,0 +1,44 @@
+@document.meta
+title: 108. Serializing and Deserializing Bids
+description: 
+authors: mattc
+categories: [
+  List
+  Serialization
+  Deserialization
+  Key
+]
+created: 2024-01-05T19:42:16+0800
+updated: 2024-01-05T19:42:46+0800
+version: 1.1.1
+@end
+
+* Prepare key generator function
+
+  As usual, we first prepare a key generator function to generate key values in order to avoid bugs caused by typo errors.
+
+  .image pic/108/1.png
+
+  Every item requires a list to store its bidding history, and therefore, each list needs a unique key. We differentiate them using the item ID.
+
+  .image pic/108/2.png
+
+
+* Serialize & Deserialize functions
+
+  In queries/bids.ts, we first prepare serialize & deserialize functions for exporting functions.
+
+** serialize
+   The data we store in the List is just a long string, including bid price and unix timestamp information.
+
+   .image pic/108/3.png
+
+   .image pic/108/4.png
+
+** deserialize
+   Used to convert strings stored in a List into the data format required by the app, usually we prefer an object.
+
+   .image pic/108/5.png
+
+   .image pic/108/6.png
+

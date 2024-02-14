@@ -1,0 +1,33 @@
+@document.meta
+title: 111. Validating Bids
+description: 
+authors: mattc
+categories: [
+  Bid
+  Validation
+]
+created: 2024-01-06T15:53:08+0800
+updated: 2024-01-06T15:53:25+0800
+version: 1.1.1
+@end
+
+* What we wanna do this lecture?
+
+  In this lecture, we will implement the validations part from the previous lecture.
+
+  .image pic/111/1.png
+
+
+* Implement validations into creating bid function
+
+  .image pic/111/2.png
+
+
+* Test
+
+  .image pic/111/3.png
+
+  The third validation, based on the above test results, is working.
+
+  The second validation cannot be tested yet because we have not implemented the update of item hash price. Therefore, the price of the item hash is always 0 at the moment. In this situation, there is no chance for this validation to fail.
+

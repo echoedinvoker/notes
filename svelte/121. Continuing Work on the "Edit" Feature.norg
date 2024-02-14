@@ -1,0 +1,27 @@
+@document.meta
+title: 121. Continuing Work on the "Edit" Feature
+description: 
+authors: mattc
+categories: [
+  Store
+  Store update
+]
+created: 2024-01-01T13:11:53+0800
+updated: 2024-01-01T13:12:38+0800
+version: 1.1.1
+@end
+
+* Demand and current status
+
+  In the previous lecture, we have already made MeetUpForm able to automatically extract data from the Store based on the situation and display it on the form. However, the Save button still only has the function of adding a MeetUp. This time, we want to make it capable of modifying a MeetUp.
+
+  .image pic/115/1.png
+
+
+* Implementation creating function
+
+  The logic of handling meetups data is centralized in the store, so first we need to add the modification logic in the store and provide a dispatch string for us to use in the component.
+
+  In the handler function triggered by the submit event of MeetUpForm, we still determine whether to add or modify based on the existence of the id, and call the store's dispatch to execute the corresponding action.
+
+  .image pic/115/2.png

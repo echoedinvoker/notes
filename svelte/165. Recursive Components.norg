@@ -1,0 +1,31 @@
+@document.meta
+title: 165. Recursive Components
+description: 
+authors: mattc
+categories: [
+  Nested data
+  svelte:self
+  Recursive
+]
+created: 2024-01-03T16:07:10+0800
+updated: 2024-01-03T16:07:43+0800
+version: 1.1.1
+@end
+
+* Demand: rendering nested data
+
+  .image pic/165/1.png
+
+
+* In Svelte, using component itself is not allowed
+
+  .image pic/165/2.png
+
+
+* svelte:self
+
+  Svelte provides special components to solve the above problem.
+
+  .image pic/165/3.png
+
+  What needs to be noted is that svelte:self can only be used within this {#if} block.

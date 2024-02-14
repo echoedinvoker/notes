@@ -1,0 +1,39 @@
+@document.meta
+title: 146. Using ES Modules
+description: 
+authors: mattc
+categories: [
+  ES6 module
+  Splitting
+]
+created: 2024-01-11T22:47:55+0800
+updated: 2024-01-11T22:48:22+0800
+version: 1.1.1
+@end
+
+* Namespace is not safe
+
+  .image pic/145/1.png
+
+  As mentioned above, even if a namespace is not referenced, it may not necessarily show an error prompt. This is very dangerous as it can lead to unexpected errors.
+
+
+* Replace namespacee with ES6 module
+
+  Modern browsers provide support for ES6 modules, which allow us to directly use import/export to replace the functionality of namespaces without encountering any namespace issues. However, older browsers may not support this feature.
+
+  .image pic/145/2.png
+
+  .image pic/145/3.png
+
+  Note that although the files we create in /src are .ts files, the browser processes the already compiled .js files. Therefore, the file extension for imports will be .js. In some bundlers like webpack, it allows us to import files without specifying the file extension.
+
+  .image pic/145/4.png
+
+
+* Typescript config & index.html
+
+  We also need to do some settings to make ES6 module work.
+
+  .image pic/145/5.png
+

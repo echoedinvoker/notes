@@ -1,0 +1,37 @@
+@document.meta
+title: 157. Finishing the Setup and Adding webpack-dev-server
+description: 
+authors: mattc
+categories: [
+  Development
+  Setup
+  Webpack
+]
+created: 2024-01-26T19:05:35+0800
+updated: 2024-01-26T19:06:02+0800
+version: 1.1.1
+@end
+
+* Setup developement server
+
+** package.json
+   The script `webpack-dev-server` will run a development server with hot reloading, but you need to configure the parameters of devServer in webpack.config.js, along with some other settings.
+
+   .image pic/152/1.png
+
+** webpack.config.js
+   .image pic/152/2.png
+
+
+* Running developement server
+
+** running dev server
+   .image pic/152/3.png
+
+** hot reloading
+   .image pic/152/4.png
+
+** store compiled codes in memory
+   The development server will store the compiled codes in memory, so it does not actually generate a dist folder, nor does it require bundle.js inside it.
+
+   .image pic/152/5.png

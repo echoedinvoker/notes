@@ -1,0 +1,32 @@
+@document.meta
+title: 120. Items by Price
+description: 
+authors: mattc
+categories: [
+  Sorted Set
+  By Price
+]
+created: 2024-01-17T20:00:15+0800
+updated: 2024-01-17T20:00:47+0800
+version: 1.1.1
+@end
+
+* What we wanna build this lecture?
+
+  In order to create the "Most expensive" section of the landing page, we need to establish a Sorted Set using price sorting.
+
+  .image pic/120/1.png
+
+  The timing to establish a Sorted Set is shown in the above figure, and then we begin to write the corresponding logic into the corresponding functions.
+
+
+* Build Sorted Set of prices
+
+  .image pic/120/2.png
+
+
+* Unable to render the "Most expensive" part yet, still missing...
+
+  In the next lecture, we will follow the same approach as before to render the most viewed items. We will use the SORT command to retrieve the item IDs of the bottom-ranked items and then fetch the required data from the hash table.
+
+  .image pic/120/3.png

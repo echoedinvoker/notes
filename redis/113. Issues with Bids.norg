@@ -1,0 +1,24 @@
+@document.meta
+title: 113. Issues with Bids
+description: 
+authors: mattc
+categories: [
+  Bids
+  Concurrent
+]
+created: 2024-01-10T19:09:35+0800
+updated: 2024-01-10T19:09:53+0800
+version: 1.1.1
+@end
+
+* ISSUE of multiple ppl bidding at the same time
+
+  We create a new item and write a small script in the dev tool to quickly click the bid button.
+
+  .image pic/113/1.png
+
+  In theory, the second person's bidding amount must be greater than the first person's, but because the price of the item has not been updated yet, this limitation does not have an immediate effect.
+
+  .image pic/113/2.png
+
+  In the picture, there are six people who successfully bid with the same amount, which is unreasonable.

@@ -1,0 +1,33 @@
+@document.meta
+title: 139. Animating the Modal
+description: 
+authors: mattc
+categories: [
+  Animation
+  Transition
+]
+created: 2024-01-02T19:54:31+0800
+updated: 2024-01-02T19:54:51+0800
+version: 1.1.1
+@end
+
+* Demand: give modal a transition when it appear and disappear
+
+.image pic/126/1.png
+
+
+* Transition/animate NOT work on custom components
+
+.image pic/126/2.png
+
+The animation learned in the previous lectures cannot be directly applied to custom components, so it is necessary to find the elements that will actually appear/disappear in order to perform transitions or animations.
+
+
+* Find build-in elements which are actually appear and disappear
+
+.image pic/126/3.png
+
+
+* Implement the transition
+
+.image pic/126/4.png

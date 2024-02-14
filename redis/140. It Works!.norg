@@ -1,0 +1,32 @@
+@document.meta
+title: 140. It Works!
+description: 
+authors: mattc
+categories: [
+  Test
+  Lock
+]
+created: 2024-02-13T05:10:44+0800
+updated: 2024-02-13T05:11:07+0800
+version: 1.1.1
+@end
+
+* Test setting
+
+  .image pic/140/1.png
+
+  The above is a test configuration. The lecturer uses three Node.js for testing. We don't need to test it ourselves here.
+
+
+* Test result
+
+  .image pic/140/2.png
+
+  The increase in time from 200ms to 2000ms is because there is currently no cancellation occurring, so our result is successful.
+
+
+* Still some flaws...
+
+  There are still some flaws in the implementation of the lock for extreme cases, which we will address in a later lecture.
+
+  .image pic/140/3.png

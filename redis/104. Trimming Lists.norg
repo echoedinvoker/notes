@@ -1,0 +1,51 @@
+@document.meta
+title: 104. Trimming Lists
+description: 
+authors: mattc
+categories: [
+  List
+  LPOP
+  RPOP
+  LSET
+  LTRIM
+]
+created: 2024-01-04T18:34:17+0800
+updated: 2024-01-04T18:34:46+0800
+version: 1.1.1
+@end
+
+> We will continue to introduce some commands of the List in this lecture as follows.
+
+.image pic/104/8.png
+
+The selected commands above will have an impact on the content of the list.
+
+
+* LPOP & RPOP
+
+  .image pic/104/1.png
+
+  .image pic/104/2.png
+
+  .image pic/104/3.png
+
+  Be very careful about the differences between an array of strings and a string.
+
+
+* LSET
+
+  .image pic/104/4.png
+
+  .image pic/104/5.png
+
+  It does not care about the original value on the index, it will directly overwrite it with the new value.
+
+
+* LTRIM
+
+  Be careful when using this command, it is easy to accidentally delete a large amount of values.
+
+  .image pic/104/6.png
+
+  .image pic/104/7.png
+

@@ -1,0 +1,33 @@
+@document.meta
+title: 126. Loading and Executing Scripts
+description: 
+authors: mattc
+categories: [
+  LUA
+  SCRIPT
+  EVALSHA
+]
+created: 2024-01-25T19:59:34+0800
+updated: 2024-01-25T20:00:05+0800
+version: 1.1.1
+@end
+
+* LUA script to Redis concept charts
+
+** store LUA script to Redis
+   .image pic/126/1.png
+
+** execute LUA script in Redis
+   .image pic/126/2.png
+
+
+* rBook practice
+
+  .image pic/126/3.png
+
+  If you want to update the script...
+
+  .image pic/126/4.png
+
+  In fact, it simply means creating a new script directly.
+

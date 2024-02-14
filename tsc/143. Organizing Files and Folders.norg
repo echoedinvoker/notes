@@ -1,0 +1,38 @@
+@document.meta
+title: 143. Organizing Files and Folders
+description: 
+authors: mattc
+categories: [
+  Split codes
+  reference
+  namespace
+]
+created: 2024-01-10T17:31:22+0800
+updated: 2024-01-10T17:31:58+0800
+version: 1.1.1
+@end
+
+* Split codes by files
+
+.image pic/143/1.png
+
+.image pic/143/2.png
+
+.image pic/143/4.png
+
+.image pic/143/3.png
+
+.image pic/143/5.png
+
+.image pic/143/6.png
+
+
+* Create folders
+
+.image pic/143/7.png
+
+.image pic/143/8.png
+
+
+
+

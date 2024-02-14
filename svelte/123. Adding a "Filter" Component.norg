@@ -1,0 +1,37 @@
+@document.meta
+title: 123. Adding a "Filter" Component
+description: 
+authors: mattc
+categories: [
+  Enum
+  Store
+  Filter
+]
+created: 2024-01-01T15:52:39+0800
+updated: 2024-01-01T15:52:59+0800
+version: 1.1.1
+@end
+
+* Demand: a filter of buttons to filter the list of meetups by favorite
+
+.image pic/117/1.png
+
+
+* Curve a filter 
+
+.image pic/117/2.png
+
+
+* Implement filtering function
+
+.image pic/117/3.png
+
+One key point is that we directly manage the filtering condition of meetups by placing the state 'filterType' in the MeetUpGrid component. This is because the meaning of this state is more related to the rendering part of the component rather than the data itself. Therefore, we manage it here instead of placing it in the App or Store.
+
+
+* Style for active button
+
+.image pic/117/4.png
+
+Above, you can see that I extensively use enums to manage state. This is because our state is usually limited and does not have too many changes. Therefore, using enums to manage it is more convenient and also reduces errors.
+

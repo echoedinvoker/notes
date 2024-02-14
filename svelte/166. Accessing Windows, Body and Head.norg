@@ -1,0 +1,46 @@
+@document.meta
+title: 166. Accessing Windows, Body and Head
+description: 
+authors: mattc
+categories: [
+  Windows
+  Body
+  Head
+]
+created: 2024-01-03T16:42:15+0800
+updated: 2024-01-03T16:42:40+0800
+version: 1.1.1
+@end
+
+* svelte:window
+
+** why svelte provide svelte:window
+   Although we can use the window object in the script to access the window element on the DOM, this is an imperative syntax rather than a declarative syntax, and it is using native Javascript to access DOM elements.
+
+   So Svelte provides svelte:window to allow us to access the window element in the template of a Svelte component using declarative syntax.
+
+   .image pic/166/1.png
+
+** usefull example
+   We can simply bind the properties of the window element to the state, so that we can derive many logics based on the value of that state, even manipulate it.
+
+   .image pic/166/2.png
+
+
+* svelte:body
+
+  Some events or attributes are only available on the body element and not on the window element. Svelte also provides svelte:body to allow us to access the body element through it.
+
+  .image pic/166/3.png
+
+
+* svelte:head
+
+  svelte:head can control the content of <head>, where title and meta are very important for SEO.
+
+** title
+   .image pic/166/4.png
+
+** meta
+   .image pic/166/5.png
+

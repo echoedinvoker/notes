@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2024-01-21T17:13:08.431Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="6cpeExb5TUdyOlfMddQf" version="22.1.21" type="device">
+  <diagram name="Page-1" id="uTXFQFYbFOtyU_u0MqRx">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Tam2cI0QGUNFJBklQejN-8" value="Todo List" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="160" width="200" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Tam2cI0QGUNFJBklQejN-10" value="Render all TODOs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Tam2cI0QGUNFJBklQejN-8" vertex="1">
+          <mxGeometry x="30" y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tam2cI0QGUNFJBklQejN-11" value="Add TODO" style="rounded=0;whiteSpace=wrap;html=1;" parent="Tam2cI0QGUNFJBklQejN-8" vertex="1">
+          <mxGeometry x="40" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tam2cI0QGUNFJBklQejN-14" value="Edit TODO" style="rounded=0;whiteSpace=wrap;html=1;" parent="Tam2cI0QGUNFJBklQejN-8" vertex="1">
+          <mxGeometry x="40" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Tam2cI0QGUNFJBklQejN-15" value="Remove TODO" style="rounded=0;whiteSpace=wrap;html=1;" parent="Tam2cI0QGUNFJBklQejN-8" vertex="1">
+          <mxGeometry x="40" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-fQUa0YBBP4xPHtH5xvD-6" value="DnD chang priority" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Tam2cI0QGUNFJBklQejN-8">
+          <mxGeometry x="40" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

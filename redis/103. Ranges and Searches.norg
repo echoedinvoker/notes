@@ -1,0 +1,71 @@
+@document.meta
+title: 103. Ranges and Searches
+description: 
+authors: mattc
+categories: [
+  List
+  Commands
+  Query
+]
+created: 2024-01-02T19:00:15+0800
+updated: 2024-01-02T19:00:35+0800
+version: 1.1.1
+@end
+
+> In this lecture, we will explain the LRANGE and LPOS commands for the List.
+
+.image pic/102/1.png
+
+LRANGE returns the values within a specified index range, while LPOS returns the index that matches a given value. The key point is that both of them search from the leftmost values.
+
+
+* LRANGE
+
+** chart
+   .image pic/102/2.png
+
+** basic usage
+   .image pic/102/3.png
+
+** negative index is available
+   .image pic/102/4.png
+
+** out of bound is available
+   .image pic/102/5.png
+
+
+* LPOS
+
+  POS = position, so it is searching for the index.
+
+** command self
+
+*** chart
+    .image pic/102/6.png
+
+*** basic usage
+    .image pic/102/7.png
+
+*** only return the first match (from left)
+    .image pic/102/8.png
+
+*** return null if no match
+    .image pic/102/9.png
+
+** with arguments
+   .image pic/102/10.png
+
+*** RANK
+    Specify the index of the returned match.
+    .image pic/102/11.png
+
+*** COUNT
+    Specify the number of indexes to return.
+
+    .image pic/102/12.png
+
+*** MAXLEN
+    Sometimes, the List stores a very large amount of values. In order to avoid spending too much time on queries, you can use MAXLEN to limit the number of values to search.
+
+    .image pic/102/13.png
+

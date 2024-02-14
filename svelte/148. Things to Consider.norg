@@ -1,0 +1,25 @@
+@document.meta
+title: 148. Things to Consider
+description: 
+authors: mattc
+categories: [
+  onMount
+  isLoading
+]
+created: 2024-01-02T23:57:20+0800
+updated: 2024-01-02T23:57:38+0800
+version: 1.1.1
+@end
+
+* onMount
+
+Although we can directly use fetch() in the script, it is recommended to wrap it with onMount(). This way, it will work better in certain situations (especially when SSR), and it will not have any negative impact in other situations.
+
+.image pic/133/1.png
+
+
+* isLoading querying
+
+Just like when submitting, when querying, you can also use isLoading to create a spinner effect.
+
+.image pic/133/2.png

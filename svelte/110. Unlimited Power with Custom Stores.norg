@@ -1,0 +1,25 @@
+@document.meta
+title: 110. Unlimited Power with Custom Stores
+description: 
+authors: mattc
+categories: [
+  Store
+  Dispatch
+  Switch
+]
+created: 2023-12-30T17:49:59+0800
+updated: 2023-12-30T17:50:25+0800
+version: 1.1.1
+@end
+
+* Put logic of data handling into store
+
+  We have already centralized the logic of .set() and .update() in the root component of the feature as follows.
+
+  .image pic/110/1.png
+
+  But we can further abstract the logic of .update() and .set() into the store, so that the root component only needs to call the methods of the store without needing to know the logic inside the store. This allows our components to focus on handling the UI.
+
+  .image pic/110/2.png
+
+  There can be many ways to write the data logic in the Store, as long as it can be exported for use by components. The pattern I used above, using dispatch/switch, is different from the approach used in the lecture in the Store, but both are acceptable.

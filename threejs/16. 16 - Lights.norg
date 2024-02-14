@@ -1,0 +1,81 @@
+@document.meta
+title: 16. 16 - Lights
+description: 
+authors: mattc
+categories: [
+  Light
+]
+created: 2024-01-19T18:26:10+0800
+updated: 2024-01-19T18:26:48+0800
+version: 1.1.1
+@end
+
+* Abstract Light
+
+  Like mesh or camera, Light also has an Abstract class and derives many types of Light from it.
+
+  .image pic/16/1.png
+
+
+* Ambient Light
+
+  This type of light will illuminate all meshes from all directions, unlike real light, it will not create shadows.
+
+  .image pic/16/2.png
+
+  .image pic/16/3.png
+
+  Because of the characteristics of Ambient Light, all other Lights have their own dedicated Helper.
+
+
+* Directional Light
+
+  .image pic/16/4.png
+
+  .image pic/16/5.png
+
+  .image pic/16/6.png
+
+  .image pic/16/7.png
+
+  It should be noted that the Directional Light only determines the direction of the light. Even if a mesh is further away from the origin than the Directional Light, it will not have any effect.
+
+
+* Hemisphere Light
+
+  .image pic/16/8.png
+
+  .image pic/16/9.png
+
+  .image pic/16/10.png
+
+
+* Point Light
+
+  .image pic/16/11.png
+
+  .image pic/16/12.png
+
+  .image pic/16/13.png
+
+  .image pic/16/14.png
+
+
+* React Area Light
+
+  .image pic/16/15.png
+
+  .image pic/16/16.png
+
+  .image pic/16/17.png
+
+
+* Spot Light
+
+  .image pic/16/18.png
+
+  .image pic/16/19.png
+
+  .image pic/16/20.png
+
+  .image pic/16/21.png

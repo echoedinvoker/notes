@@ -1,0 +1,36 @@
+@document.meta
+title: 144. A Problem with Namespace Imports
+description: 
+authors: mattc
+categories: [
+  reference
+  refactoring
+
+]
+created: 2024-01-11T20:36:59+0800
+updated: 2024-01-11T20:37:20+0800
+version: 1.1.1
+@end
+
+* ISSUES: Non-intuitive reference
+
+  We use @autobind and validate() in ProjectInput, but the file where ProjectInput is located does not refer to these two files. However, the code still works fine because these two files are referred to in app.ts and passed to ProjectInput.
+
+  .image pic/144/1.png
+
+  But this way is very unintuitive, so we need to refactor the reference.
+
+
+* Refactor reference
+
+** entry app.ts
+   In the reference in app.ts, we only keep the parts that are used in this file.
+
+   .image pic/144/2.png
+
+** other files
+   So in other files, instead of passing through app.ts, we directly import the required codes using references in individual files.
+
+   .image pic/144/3.png
+
+   This is a more intuitive approach.

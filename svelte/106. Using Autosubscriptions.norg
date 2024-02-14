@@ -1,0 +1,26 @@
+@document.meta
+title: 106. Using Autosubscriptions
+description: 
+authors: mattc
+categories: [
+  Syntax sugar
+  Subscription
+]
+created: 2023-12-29T21:22:33+0800
+updated: 2023-12-29T21:22:55+0800
+version: 1.1.1
+@end
+
+* When simply get data from store, we can use $ syntax
+
+  When we simply retrieve data from the store and use it in markup without any other operations in between, we can use the $ syntax.
+
+  .image pic/106/1.png
+
+  .image pic/106/2.png
+
+* When do we not use $ syntax?
+
+  .image pic/106/3.png
+
+  Usually, the default way is only used when there is a need to transform data. We usually directly retrieve all the data from the store, even if only a portion is used, because this can save a lot of code.

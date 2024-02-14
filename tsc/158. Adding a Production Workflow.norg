@@ -1,0 +1,43 @@
+@document.meta
+title: 158. Adding a Production Workflow
+description: 
+authors: mattc
+categories: [
+  Webpack
+  Production
+]
+created: 2024-01-26T19:41:27+0800
+updated: 2024-01-26T19:41:47+0800
+version: 1.1.1
+@end
+
+* Create webpack config for production
+
+  .image pic/153/1.png
+
+** modify contents
+   .image pic/153/2.png
+
+   Use mode `production` to enable webpack to perform the most optimization steps during compilation.
+
+   Because it does not need to be executed on the local machine, there is no need for `devServer` and `pathOutput`.
+
+** use plugin
+   Compared to module.rules, plugins add operations to the general bundle workflow.
+
+   .image pic/153/5.png
+
+
+* Edit build script in package.json
+
+By default, `webpack` uses `webpack.config.js`, so to use the `webpack.config.prod.js` file, you need to specify the `--config` parameter.
+
+  .image pic/153/4.png
+
+
+
+* Build JS file for production
+
+  .image pic/153/6.png
+
+  .image pic/153/7.png

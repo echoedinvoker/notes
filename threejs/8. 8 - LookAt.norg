@@ -1,0 +1,45 @@
+@document.meta
+title: 8. 8 - LookAt
+description: 
+authors: mattc
+categories: [
+  LookAt
+  Animation
+  Normalization
+  Coordinate
+]
+created: 2024-01-04T21:20:00+0800
+updated: 2024-01-04T21:20:19+0800
+version: 1.1.1
+@end
+
+* Object3D.lookAt()
+
+** prepare
+   .image pic/8/1.png
+
+** documents of Object3D
+   .image pic/8/2.png
+
+   Object3D has a lookAt() function that requires a Vector3 as its parameter, and Object3D.position is also a Vector3. Therefore, we can directly pass Object3D.position into Object3D.lookAt().
+
+** practice
+   .image pic/8/3.png
+
+
+* Challenge: Let center mesh looking at cursor
+
+** set listener to 'mousemove' to get cursor position
+   .image pic/8/4.png
+
+** normalize cursor position and more...
+   normalize means that the range of the cursor's position is the same across different screen sizes. In addition to this, in order for the green mesh to be able to look at the cursor, we must align the origin of the cursor's position (x, y) with the origin of threejs, and the directions must be the same. Only then can the green mesh correctly look towards the cursor's position.
+
+   .image pic/8/5.png
+
+** lookAt() inside the animate() instead of event listener
+   Although it is also possible to achieve the same effect using lookAt() in the event listener, putting lookAt() in animate() can make the rotation animation of the green mesh smoother.
+
+   .image pic/8/6.png
+
+

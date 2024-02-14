@@ -1,0 +1,38 @@
+@document.meta
+title: 165. TypeScript-embracing- class-validator
+description: 
+authors: mattc
+categories: [
+  class-validator
+  Validation
+  Decorators
+]
+created: 2024-01-30T21:20:27+0800
+updated: 2024-01-30T21:21:01+0800
+version: 1.1.1
+@end
+
+* Package which embraces Typescript: 'class-validate'
+
+  Compared to the 'class-transformer' introduced in the previous lecture, we are introducing a package specifically designed for Typescript called 'class-validate'. It allows us to validate properties in a class without having to write decorators ourselves.
+
+  .image pic/157/1.png
+
+
+* Install the package
+
+  .image pic/157/2.png
+
+
+* Make sure tsconfig.json has the following settings
+
+  Because 'class-validate' also uses decorators to validate class properties, the following settings need to be added.
+
+  .image pic/157/3.png
+
+
+* Using the package
+
+  .image pic/157/4.png
+
+  As above, 'class-validate' provides a more complex and elegant decorator factory to validate the properties of a class, so we don't need to reinvent the wheel from scratch.

@@ -1,0 +1,39 @@
+@document.meta
+title: 164. No Types Needed- class-transformer
+description: 
+authors: mattc
+categories: [
+  Model data
+  class-transformer
+]
+created: 2024-01-30T20:52:26+0800
+updated: 2024-01-30T20:52:45+0800
+version: 1.1.1
+@end
+
+* Model data from JSON transmission
+
+  Usually, the data we obtain from other sources is in JSON format. We usually store and convert it into an object, and also use classes to describe its data structure. The benefit of doing this is that it allows us to receive development assistance through IDE prompts. However, the conversion process can be tedious. In such cases, we can use class-transformer to help us convert JSON into a class.
+
+  .image pic/156/1.png
+
+
+* Model data by using package 'class-tranformer'
+
+  .image pic/156/2.png
+
+** install package
+   .image pic/156/3.png
+
+   .image pic/156/4.png
+
+** tsconfic settings
+   Set `modelResolution` to node, otherwise an error will occur.
+
+   .image pic/156/5.png
+
+** Model data by its method 'plainToClass'
+   .image pic/156/6.png
+
+** this package can also be used in native JS
+   Because this package is completely written in JavaScript, it can also be used in native JS.

@@ -27,7 +27,7 @@
 ** (x) [35. Updating Arrays & Objects Immutably (2/42)]{:35. Updating Arrays and Objects Immutably:}
 ** (x) [36. Understanding Event Modifiers (5/11)]{:36. Understanding Event Modifiers:}
 ** (x) [37. Using Inline Functions (3/29)]{:37. Using Inline Functions:}
-* (-) Section 5: Course Project - First Steps
+* (x) Section 5: Course Project - First Steps
 ** (x) [41. Project Setup & A First Component (9/38)]{:41. Project Setup and A First Component:}
 ** (x) [42. Different Ways of Mounting Components (5/26)]{:42. Different Ways of Mounting Components:}
 ** (x) [43. How to Embed Widgets (1/2)]{:43. How to Embed Widgets:}
@@ -77,20 +77,55 @@
 ** (x) [102. Creating a Writable Store & Subscribing (6/32)]{:102. Creating a Writable Store and Subscribing:}
 ** (x) [103. Updating Store Data (5/29)]{:103. Updating Store Data:}
 ** (x) [104. Stores and Stateful & Presentational Components (2/21)]{:104. Stores and Stateful and Presentational Components:}
-** ( ) [105. Managing Store Subscriptions (4/)]{:105. Managing Store Subscriptions:}
-** ( ) [106. Using Autosubscriptions (3/)]{:106. Using Autosubscriptions:}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
+** (x) [105. Managing Store Subscriptions (4/31)]{:105. Managing Store Subscriptions:}
+** (x) [106. Using Autosubscriptions (3/17)]{:106. Using Autosubscriptions:}
+** (x) [107. A Second Store! (7/68)]{:107. A Second Store!:}
+** (x) [108. Subscribing for a Short Period (4/27)]{:108. Subscribing for a Short Period:}
+** (x) [109. Understanding Readable Stores (9/38)]{:109. Understanding Readable Stores:}
+** (x) [110. Unlimited Power with Custom Stores (8/28)]{:110. Unlimited Power with Custom Stores:}
+** (x) [112. Derived Store & Store Bindings (1/5)]{:112. Derived Store and Store Bindings:}
+* (x) Section 11: Course Project - Stores
+** (x) [115. A Possible Error (1/3)]{:115. A Possible Error:}
+** (x) [116. Setting Up a Store (3/48)]{:116. Setting Up a Store:}
+** (x) [117. Using a Custom Store (8/7)]{:117. Using a Custom Store:}
+** (x) [118. Tapping into the Store from Different Components (5/24)]{:118. Tapping into the Store from Different Components:}
+** (x) [119. Adding a "MeetupDetail" Component (13/78)]{:119. Adding a "MeetupDetail" Component:}
+** (x) [120. Preparing the "Edit Meetup" Form (5/72)]{:120. Preparing the "Edit Meetup" Form:}
+** (x) [121. Continuing Work on the "Edit" Feature (9/29)]{:121. Continuing Work on the "Edit" Feature:}
+** (x) [122. Adding a "Delete" Functionality (3/59)]{:122. Adding a "Delete" Functionality:}
+** (x) [123. Adding a "Filter" Component (9/91)]{:123. Adding a "Filter" Component:}
+** (x) [124. Some Final Steps (3/32)]{:Some Final Steps:}
+* (x) Section 12: Motions, Transitions & Animations
+** (x) [128. Animating Values with a Tweened Store (7/96)]{:128. Animating Values with a Tweened Store:}
+** (x) [129. Using a Spring Store Instead (8/40)]{:129. Using a Spring Store Instead:}
+** (x) [130. Preparing a Transition Example (4/26)]{:130. Preparing a Transition Example:}
+** (x) [131. Element Transitions (7/22)]{:131. Element Transitions:}
+** (x) [132. More on Transitions (5/30)]{:132. More on Transitions:}
+** (x) [133. Using Different "in" and "out" Transitions (2/15)]{:133. Using Different "in" and "out" Transitions:}
+** (x) [134. Animating Passive (Affected) Items (3/18)]{:134. Animating Passive (Affected) Items:}
+** (x) [135. Deferred Transitions (1/3)]{:135. Deferred Transitions:}
+* (x) Section 13: Course Project - Transitions
+** (x) [139. Animating the Modal (3/16)]{:139. Animating the Modal:}
+** (x) [140. Animating the Meetup Items (5/21)]{:140. Animating the Meetup Items:}
+** (x) [141. Animating the "Favorite" Badge & Wrap Up (1/13)]{:141. Animating the "Favorite" Badge and Wrap Up:}
+* (x) Section 14: Network interaction via HTTP
+** (x) [144. Adding a REST API (3/9)]{:144. Adding a REST API:}
+** (x) [145. Sending Data via a POST Request (7/37)]{:145. Sending Data via a POST Request:}
+** (x) [146. Showing a Loading Indicator & Sending Correct Data (3/38)]{:146. Showing a Loading Indicator and Sending Correct Data:}
+** (x) [147. Fetching & Transforming Data (3/20)]{:147. Fetching and Transforming Data:}
+** (x) [148. Things to Consider (3/11)]{:148. Things to Consider:}
+** (x) [149. Using the "await" Block (4/16)]{:149. Using the "await" Block:}
+** (x) [150. Http + A Store (6/64)]{:150. Http + A Store:}
+* (x) Section 15: Course Project - HTTP
+** ( ) [154. Storing Meetups on a Server (9/)]{:154. Storing Meetups on a Server:}
+** ( ) [155. Fetching & Transforming Data (5/)]{:155. Fetching and Transforming Data:}
+** ( ) [156. Adding a Loading Spinner (6/)]{:156. Adding a Loading Spinner:}
+** ( ) [157. Updating via PATCH (7/)]{:157. Updating via PATCH:}
+** ( ) [158. Sending "Favorite" Updates & Deleting Data (4/)]{:158. Sending "Favorite" Updates and Deleting Data:}
+** ( ) [159. Fixing the Order of Items (1/)]{:159. Fixing the Order of Items:}
+** ( ) [160. Adding Error Handling (7/)]{:160. Adding Error Handling:}
+* (x) Section 16: Special Elements
+** (x) [164. Dynamic Components (7/69)]{:164. Dynamic Components:}
+** (x) [165. Recursive Components (6/30)]{:165. Recursive Components:}
+** (x) [166. Accessing Windows, Body & Head (7/31)]{:166. Accessing Windows, Body and Head:}
+** (x) [167. Cross-Component Scripts (6/30)]{:167. Cross-Component Scripts:}

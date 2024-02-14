@@ -1,0 +1,21 @@
+@document.meta
+title: 163. Using "declare" as a "Last Resort"
+description: 
+authors: mattc
+categories: [
+  declare
+]
+created: 2024-01-30T20:11:47+0800
+updated: 2024-01-30T20:12:27+0800
+version: 1.1.1
+@end
+
+* Using `declare` tell Typescript things about your code
+
+We cannot recognize the script written in HTML in Typescript, so although the GLOBALS below should be able to be used in app.ts, Typescript is not aware of it, so it will throw an error.
+
+.image pic/155/1.png
+
+  When a Typescript compilation error occurs like this, we can use `declare` to actively inform Typescript about our code.
+
+.image pic/155/2.png

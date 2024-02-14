@@ -1,0 +1,43 @@
+@document.meta
+title: 120. Preparing the "Edit Meetup" Form
+description: 
+authors: mattc
+categories: [
+  Form
+  Store
+  Filling Form
+]
+created: 2024-01-01T12:35:18+0800
+updated: 2024-01-01T12:35:49+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  We want to use the previously established MeetUpForm to edit the Meetup.
+
+  .image pic/114/1.png
+
+
+* Switching between edit and create forms
+
+  Because now although using MeetUpForm, there are two purposes, we must decide which state to use to determine whether it is create or edit. We can define a new state, but here we use the existing state 'id' to determine. If there is an id, it is edit, if not, it is create.
+
+  .image pic/114/2.png
+
+  We need to test if the id has the correct value under different circumstances in order to ensure that MeetUpForm can function properly.
+
+
+* Filling the form automatically
+
+  When we use the form to edit a meetup, we need to automatically retrieve the meetup data from the Store and fill it into the form.
+
+  .image pic/114/3.png
+
+  In theory, after each render of the form component, data will only be retrieved from the Store once. Therefore, after retrieving the data, it is necessary to unsubscribe directly to avoid memory leaks.
+
+
+* Conditionally Title of Form
+
+  .image pic/114/4.png
+

@@ -1,0 +1,19 @@
+@document.meta
+title: 148. How Does Code In Modules Execute?
+description: 
+authors: mattc
+categories: [
+  Execution times
+  Cash
+  Import
+]
+created: 2024-01-17T18:33:58+0800
+updated: 2024-01-17T18:34:24+0800
+version: 1.1.1
+@end
+
+* Execution times of imported file
+
+  When a file is imported multiple times, it will only be executed during the first import. The exported value will be stored in cache, and subsequent imports will directly retrieve it from the cache without executing it again.
+
+  .image pic/147/1.png

@@ -1,0 +1,41 @@
+@document.meta
+title: 145. Sending Data via a POST Request
+description: 
+authors: mattc
+categories: [
+  Fetching Data
+  Firebase
+  Requests
+]
+created: 2024-01-02T22:38:07+0800
+updated: 2024-01-02T22:38:34+0800
+version: 1.1.1
+@end
+
+* Prepare and demand
+
+  Below, we will create a simple app. This app uses a simple form with an input field to submit a hobby and displays it below.
+
+  .image pic/130/1.png
+
+  As shown in the figure, we hope that the app we input is not only stored in memory, but also for long-term data storage, we hope to be able to store the data in Firebase at the same time.
+
+
+* Request codes
+
+  Svelte itself does not have a built-in tool for making requests. Here, we choose to use the browser's fetch API for making requests.
+
+  .image pic/130/2.png
+
+
+* Handle promise
+
+  .image pic/130/3.png
+
+
+* Test the result
+
+  .image pic/130/4.png
+
+  It seems that each time we submit, the result will be stored with another key, this is a problem. Another point is that currently we don't have the functionality to retrieve data from Firebase. Therefore, this app only serves the purpose of storing new data now. It's not complete yet.
+

@@ -1,0 +1,15 @@
+@document.meta
+title: 170. Getting User Input
+description: 
+authors: mattc
+categories: [
+  Form input
+]
+created: 2024-02-07T19:39:15+0800
+updated: 2024-02-07T19:39:27+0800
+version: 1.1.1
+@end
+
+* Catch form input text by Javascript
+
+.image pic/170/1.png

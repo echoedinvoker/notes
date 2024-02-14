@@ -1,0 +1,38 @@
+@document.meta
+title: 136. Adding a Droppable Area
+description: 
+authors: mattc
+categories: [
+  Drag and Drop
+  dataTransfer
+  Allowing Drop
+]
+created: 2024-01-05T15:52:22+0800
+updated: 2024-01-05T15:53:04+0800
+version: 1.1.1
+@end
+
+* Demand: transfer data from dragging element to dropped element
+
+  So far, we have not written any code about data in the drag and drop event handler. Of course, JavaScript cannot know on its own what it needs to do.
+
+  .image pic/136/1.png
+
+
+* Transfer by event.dataTransfer
+
+  We can transmit data in the drag and drop handler through the property 'dataTransfer' of the event object.
+
+  .image pic/136/2.png
+
+  The event 'drop' is closed by default, so event.preventDefault() must be used in the handler of the event 'dragover' to open it.
+
+  In the 'dragover' handler, we added some conditions to prevent anything from being dropped onto this element casually.
+
+
+
+* Define dataTransfer type
+
+  .image pic/136/3.png
+
+  We can define the type of this dataTransfer as mentioned above. We use the string "move" to indicate that this drag and drop is used for data transfer. If we use "copy", it means copying the data. This will also affect the appearance of the cursor.

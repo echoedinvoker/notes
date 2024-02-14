@@ -1,0 +1,38 @@
+@document.meta
+title: 98. HyperLogsLogs
+description: 
+authors: mattc
+categories: [
+  HyperLogsLogs
+  Data structure
+  PFADD
+  PFCOUNT
+]
+created: 2023-12-30T14:57:15+0800
+updated: 2023-12-30T14:57:46+0800
+version: 1.1.1
+@end
+
+* New data structure - HyperLogsLogs
+
+  Similar to the data structure Set, but HyperLogsLogs does not store the actual data, only the uniqueness of the data.
+
+  .image pic/97/1.png
+
+  Even if 'Log' appears twice, HyperLogsLogs has nothing to do with Logging.
+
+
+* Commands
+
+  Regarding the commands for HyperLogsLogs, we only need to know the following two.
+
+** PFADD
+   .image pic/97/2.png
+
+** PFCOUNT
+   .image pic/97/3.png
+
+
+* Practice in rBook
+
+  .image pic/97/4.png

@@ -1,0 +1,92 @@
+@document.meta
+title: 18. 18 - Particles
+description: 
+authors: mattc
+categories: [
+  Particles
+  Texture
+  Snowflakes
+  Animation
+]
+created: 2024-01-24T17:05:17+0800
+updated: 2024-01-24T17:05:51+0800
+version: 1.1.1
+@end
+
+* Particle material and Point
+
+** what is particle?
+   The particle is creating a square on each vertex, and these squares always face the camera.
+
+   .image pic/18/1.png
+
+** documents
+   In order to create particles, we need to use point material, which cannot be used by meshes. We must use points.
+
+   .image pic/18/2.png
+
+** practice codes
+   .image pic/18/3.png
+
+   .image pic/18/4.png
+
+
+* Build snowflakes step by step
+
+  .image pic/18/5.png
+
+  .image pic/18/6.png
+
+  .image pic/18/7.png
+
+  .image pic/18/8.png
+
+
+* Texture
+
+** map
+   Same as before, we prepare the image file (preferably less than 40kb), then use the texture loader to load it, and replace the material property color with the map attribute to apply the image.
+
+   .image pic/18/9.png
+
+** camera near
+   We found that snowflakes disappear when they are too close. This is because the default near value of the perspective camera is 0.1.
+
+   .image pic/18/10.png
+
+   .image pic/18/11.png
+
+** alphaMap
+   The background color of the snowflake image is black. If we want to make the black part transparent, we can simply replace "map" with "alphaMap".
+
+   .image pic/18/12.png
+
+** depthTest
+   It will be found that there is still a black border around each particle. This is because the GPU has difficulty distinguishing which particle is in front and which is behind. We can simply turn off depthTest to solve this problem.
+
+   .image pic/18/13.png
+
+
+* Background
+
+  .image pic/18/14.png
+
+
+* Snowflakes animation
+
+** rotate particles
+   .image pic/18/15.png
+
+** rotate camera
+   Compared to rotating particles, rotating the camera has better performance because it only requires changing one object's attribute.
+
+   .image pic/18/16.png
+
+** try to roate camera with differen direction
+   Because the default autoRotate only allows rotation around the y-axis, I tried different methods to rotate the camera.
+
+   .image pic/18/17.png
+
+   The effect is somewhat strange. Below are the methods provided by the lecturer in the QA. If you have time, you can study them.
+
+   .image pic/18/18.png

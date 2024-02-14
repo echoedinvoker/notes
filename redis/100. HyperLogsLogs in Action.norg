@@ -1,0 +1,44 @@
+@document.meta
+title: 100. HyperLogsLogs in Action
+description: 
+authors: mattc
+categories: [
+  HyperLogLog
+  Views
+  Unique
+]
+created: 2023-12-30T15:52:27+0800
+updated: 2023-12-30T15:54:18+0800
+version: 1.1.1
+@end
+
+* Original Views Increment codes
+
+  We have previously done some codes related to views. Every time we view an item page, we will increase the item hash table and the views count in the Sort Set.
+
+  .image pic/99/1.png
+
+  .image pic/99/2.png
+
+  .image pic/99/3.png
+
+  But as shown in the above experiment, the same account can increase the views of that item without any restrictions by repeatedly reloading the page. This is unreasonable.
+
+
+* Check unique views by implementing HyperLogLog
+
+  We use HyperLogLog to solve the above unreasonable phenomenon.
+
+** using .pfAdd and middle test
+   .image pic/99/4.png
+
+   .image pic/99/5.png
+
+   So it can be found that in NodeJS, the .pfAdd method of the redis client does not return 1 or 0, but rather true or false.
+
+** conditionally incresing views by returned value of .pfAdd
+   So we can simply use the return value of .pfAdd as a condition to determine whether to increase views.
+
+   .image pic/99/6.png
+
+   .image pic/99/7.png

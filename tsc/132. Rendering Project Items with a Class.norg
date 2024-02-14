@@ -1,0 +1,49 @@
+@document.meta
+title: 132. Rendering Project Items with a Class
+description: 
+authors: mattc
+categories: [
+  Instantiation
+  OOP
+  ProjectItem
+]
+created: 2024-01-02T16:56:57+0800
+updated: 2024-01-02T16:57:18+0800
+version: 1.1.1
+@end
+
+* Plan and demand
+
+  We previously used the class Component to load the template in index.html and implement the way to render the form and ul elements onto the DOM. Similarly, we can also use the same way to render the li element.
+
+  .image pic/128/1.png
+
+  The index.html provided in the lecture also includes a template for the li element. Although it is so simple that may raise doubts about the need for a dedicated class, let's still create a ProjectItem class to maintain the concept of Object-Oriented Programming (OOP).
+
+
+* Create class ProjectItem for rendering li element
+
+  Referring to the class Component and the original writing codes of rendering li element in ProjectList, we will write out the ProjectItem.
+
+  .image pic/128/2.png
+
+
+
+* Replace original codes of rendering li with instantiating
+
+  After having the ProjectItem class, we can replace the original codes with the instantiation of the class.
+
+  .image pic/128/3.png
+
+
+* ISSUE: li is out of ul element
+
+  When we observe the actual result of the li element, we will find that it is outside the ul element because when we instantiate the ProjectItem, the first parameter we give is the id of the template element, not the ul element.
+
+  .image pic/128/4.png
+
+  So we only need to modify the content of the first parameter.
+
+  .image pic/128/5.png
+
+  .image pic/128/6.png

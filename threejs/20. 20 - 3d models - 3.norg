@@ -1,0 +1,119 @@
+@document.meta
+title: 20. 20 - 3d models - 3
+description: 
+authors: mattc
+categories: [
+  Multiple animations
+  Animation
+  Optimization
+  Character
+  Mixamo
+  Migrate texture
+]
+created: 2024-02-11T15:23:24+0800
+updated: 2024-02-11T15:24:17+0800
+version: 1.1.1
+@end
+
+* Using Mixamo character with Mixamo animation
+
+** choose character and animation from Maximo and download it
+   .image pic/22/1.png
+
+   .image pic/22/2.png
+
+   .image pic/22/3.png
+
+
+** convert to glb by blender
+   Here we can choose to directly use the FXB loader in the project or use Blender to convert the file format. Since the former has been used in the course videos, I will use the latter for practice here.
+
+   .image pic/22/4.png
+
+   .image pic/22/5.png
+
+
+** export it to glb and using it in our project
+   .image pic/22/7.png
+
+   .image pic/22/8.png
+
+
+* Using another T pose model with Mixamo animation
+
+** download T pose model from other website and import it to blender
+   .image pic/22/9.png
+
+   .image pic/22/10.png
+
+   .image pic/22/11.png
+
+** upload it to Mixamo to build animation for it
+   .image pic/22/12.png
+
+   .image pic/22/13.png
+
+   .image pic/22/14.png
+
+   .image pic/22/15.png
+
+   .image pic/22/16.png
+
+** migrate texture from T pose to aniamtion model
+   .image pic/22/17.png
+
+   .image pic/22/18.png
+
+   .image pic/22/19.png
+
+   .image pic/22/20.png
+
+
+* Multiple animations by addon: Mixamo Rig
+
+  If we want to create a game, characters must have multiple actions instead of just one, so we need to use the Mixamo Rig addon to help us create multiple actions for the character in Blender. However, this addon only supports Blender 3, so we need to pay special attention.
+
+** download/install Mixamo Rig addon
+   .image pic/22/21.png
+
+   .image pic/22/22.png
+
+   .image pic/22/23.png
+
+** add another animation
+   .image pic/22/24.png
+
+   .image pic/22/25.png
+
+   .image pic/22/26.png
+
+   .image pic/22/27.png
+
+   .image pic/22/28.png
+
+** using export file in the project
+   .image pic/22/29.png
+
+* Optimizations
+
+** light more physical
+   .image pic/22/30.png
+
+** remove alias
+   .image pic/22/31.png
+
+   .image pic/22/32.png
+
+** color grading encoding
+   .image pic/22/33.png
+
+* Background color
+
+** by renderer and body
+   .image pic/22/34.png
+
+   .image pic/22/35.png
+
+** by canvas
+   .image pic/22/36.png
+

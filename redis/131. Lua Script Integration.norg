@@ -1,0 +1,36 @@
+@document.meta
+title: 131. Lua Script Integration
+description: 
+authors: mattc
+categories: [
+  LUA Script
+  Custom Client Function
+]
+created: 2024-01-31T20:42:54+0800
+updated: 2024-01-31T20:43:23+0800
+version: 1.1.1
+@end
+
+* Follow steps to complete a custom client function with LUA script
+
+** 1. name the function
+   .image pic/131/1.png
+
+** 2. # of keys in LUA script
+   .image pic/131/2.png
+
+** 3. LUA script
+   .image pic/131/3.png
+
+** 4. instruction on how to pass arguments
+   .image pic/131/4.png
+
+** 5. instruction on how to return values
+   .image pic/131/5.png
+
+
+* Test
+
+  We are trying to test our custom function `client.addOneAndStore` inside the `client.on` to see if it works.
+
+  .image pic/131/6.png

@@ -1,0 +1,34 @@
+@document.meta
+title: 107. Using Lists in Our App
+description: 
+authors: mattc
+categories: [
+  List
+  Use Case
+  Design
+]
+created: 2024-01-04T19:45:25+0800
+updated: 2024-01-04T19:45:58+0800
+version: 1.1.1
+@end
+
+* Product page 
+
+  On the product page, we have added a section for bidding and displaying the bid price history. Therefore, we should implement a bid history list in Redis.
+
+  .image pic/107/1.png
+
+  As mentioned above, the lecturer has already prepared the file and basic framework for bids.ts, but the content has not been written yet.
+
+
+* Design of bid history list
+
+  .image pic/107/2.png
+
+
+* What bid functions should do?
+
+  .image pic/107/3.png
+
+  As above, please note that the data we store in the list is normalized, so it needs to be de-normalized before using it in the app.
+

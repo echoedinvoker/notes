@@ -1,0 +1,38 @@
+@document.meta
+title: 119. Solving Multiple Bids with a Transaction
+description: 
+authors: mattc
+categories: [
+  Transaction
+  Bid
+  Isolated Client
+  MULTI
+  EXEC
+]
+created: 2024-01-12T11:06:01+0800
+updated: 2024-01-12T11:06:25+0800
+version: 1.1.1
+@end
+
+* Plan: implement transaction pattern to create bid
+
+  .image pic/119/1.png
+
+
+* Create isolated client
+
+  .image pic/119/2.png
+
+
+* multi & exec
+
+  .image pic/119/3.png
+
+
+* Test
+
+  .image pic/119/4.png
+
+  This time, there were no bids with the same price obtained. Only one bid exists, thus achieving the goal of the transaction.
+
+

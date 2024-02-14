@@ -1,0 +1,21 @@
+@document.meta
+title: 139. Using WithLock
+description: 
+authors: mattc
+categories: [
+  Lock
+  Pipeline
+]
+created: 2024-02-13T04:50:43+0800
+updated: 2024-02-13T04:51:05+0800
+version: 1.1.1
+@end
+
+* Migrate codes from watch/transaction into withLock's callback
+
+  .image pic/139/1.png
+
+
+* Replace isolated transaction with pipeline
+
+  .image pic/139/2.png

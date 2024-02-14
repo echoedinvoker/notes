@@ -1,0 +1,68 @@
+@document.meta
+title: 155. Adding TypeScript Support with the ts-loader Package
+description: 
+authors: mattc
+categories: [
+  Webpack
+  Loader
+  Build
+  Debugger
+]
+created: 2024-01-26T17:15:04+0800
+updated: 2024-01-26T17:15:39+0800
+version: 1.1.1
+@end
+
+* Set rule to TS file in webpack.config.js
+
+** module.rules
+   In webpack.config.js, `module.rules` can be used to define which types of files need to be processed with what loader.
+
+   .image pic/151/1.png
+
+** ts-loader for TS file
+   .image pic/151/2.png
+
+** exlude node_modules
+   Because there are also many TS files in the node_modules, we must exclude them.
+
+   .image pic/151/3.png
+
+
+* Auto import without extension
+  We have mentioned before in webpack that the imported files do not need to have an extension. However, this functionality is only enabled by default for JS files. If you want to include TS files, you must configure it yourself.
+
+  .image pic/151/4.png
+
+
+* Setup for browser devtool Debugger
+
+  .image pic/151/5.png
+
+
+* Build to single JS file
+
+** create script to build on package.json
+   .image pic/151/6.png
+
+   .image pic/151/7.png
+
+   .image pic/151/8.png
+
+** build JS file
+   The webpack build will generate a single JS file called `bundle.js`. In `index.html`, you just need to load `bundle.js`.
+
+   .image pic/151/9.png
+
+   We can observe that `bundle.js` and see that its content has been highly compressed.
+
+   .image pic/151/10.png
+
+
+* Start project and Debugger
+
+  .image pic/151/11.png
+
+  .image pic/151/12.png
+
+  .image pic/151/13.png

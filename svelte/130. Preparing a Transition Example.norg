@@ -1,0 +1,19 @@
+@document.meta
+title: 130. Preparing a Transition Example
+description: 
+authors: mattc
+categories: [
+  Animation
+]
+created: 2024-01-02T13:41:13+0800
+updated: 2024-01-02T13:41:33+0800
+version: 1.1.1
+@end
+
+* Prepare the component
+
+The following is a component that simply adds and removes elements on the screen. Svelte provides animation effects specifically for this kind of simple change.
+
+.image pic/121/1.png
+
+We have only prepared the components for this lecture. The next lecture will implement the animation part.

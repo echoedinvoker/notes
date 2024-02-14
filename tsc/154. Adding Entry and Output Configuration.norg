@@ -1,0 +1,40 @@
+@document.meta
+title: 154. Adding Entry and Output Configuration
+description: 
+authors: mattc
+categories: [
+  Configuration
+]
+created: 2024-01-19T21:12:46+0800
+updated: 2024-01-19T21:16:41+0800
+version: 1.1.1
+@end
+
+* TypeScript configuration for Webpack
+
+  When using Webpack, there are some limitations in the typescript configuration.
+
+  .image pic/150/1.png
+
+  Webpack 在 compile .js file 的時候, 會依照 tsconfig.json 中 'target' 的設定產生適合 old browser 或 modern browser 的 .js file
+
+
+* Set entry of project and import extension
+
+  The configuration file of Webpack is a .js file, so it operates using node.js. Therefore, you can see that it directly uses `module.exports` to output an object. This object will be used by Webpack as the configuration file.
+
+  `entry` represents the point where Webpack will start and traverse through all files. Then, using ts-loader and TypeScript, it will compile all .ts files into a single .js file.
+
+  However, in webpack, imported js files cannot have the .js extension, so we need to individually modify each ts file to remove the .js.
+
+  .image pic/150/2.png
+
+
+* Output path should be absolute
+
+  .image pic/150/3.png
+
+
+* Not finished yet...
+
+Until now, the configured Webpack is unable to compile .ts files. It can only bundle .js files. This is because any task outside of bundling needs to be explicitly instructed for Webpack to perform. In the next lecture, we will learn how to instruct Webpack to compile .ts files.

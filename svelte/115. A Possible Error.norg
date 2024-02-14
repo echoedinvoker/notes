@@ -1,0 +1,22 @@
+@document.meta
+title: 115. A Possible Error
+description: 
+authors: mattc
+categories: [
+  Error
+]
+created: 2023-12-30T18:00:41+0800
+updated: 2023-12-30T18:01:00+0800
+version: 1.1.1
+@end
+
+* A Possible Error
+
+  In the next lecture, you might get a possible error (see: https://www.udemy.com/sveltejs-the-complete-guide/learn/lecture/14689724/#questions/7385706).
+
+  The fix (described in the linked thread) is simple:
+  You can fix it by adding a line to App.svelte (below the imports).
+
+  `let loadedMeetups = meetups;`
+
+  And then replace all occurrences of meetups (besides the import) with loadedMeetups.

@@ -1,0 +1,71 @@
+@document.meta
+title: 142. Working with Namespaces
+description: 
+authors: mattc
+categories: [
+  Namespace
+  tsconfig
+]
+created: 2024-01-08T18:59:24+0800
+updated: 2024-01-08T18:59:46+0800
+version: 1.1.1
+@end
+
+* Create namespace file and refer it
+
+** create namespace file
+   .image pic/142/1.png
+
+   "namespace" is a syntax exclusive to TypeScript that allows packaging related code together, not limit to interface, it can also be used for class, function, variable, etc.
+
+** refer to it
+   .image pic/142/2.png
+
+   The way of importing a namespace file is completely different from the usual import. It must be done using the `/// <reference path="xxx.ts" />` method, and the original codes must also be enclosed in a namespace with the same name in order to work properly.
+
+** test
+   .image pic/142/3.png
+
+   work as expected 😄
+
+
+* Refer multiple namespace files
+
+** build/refer 2nd namespace
+   We establish another namespace TS file according to the above process and reference it using the tag 'reference' in the same way.
+
+   .image pic/142/4.png
+
+   .image pic/142/5.png
+
+** error reason
+   In short, the reference tag is not importing a script but pointing to a JS file. Due to this logic limitation, the same file can only point to a single JS file at the same time. If it points to two different JS files, an error will occur as mentioned above.
+
+   .image pic/142/6.png
+
+
+
+* Solve compile error
+
+** try to solve it
+   Because it is pointing to two JS files causing an error, we changed the configuration of tsconfig to make the compiled file only generate one JS file.
+
+   .image pic/142/7.png
+
+   Still have error...
+
+** QA solution
+   Finally, the answer was found during the course QA.
+
+   .image pic/142/8.png
+
+   .image pic/142/9.png
+
+
+* Change index.html load JS file
+
+  .image pic/142/10.png
+
+  .image pic/142/11.png
+
+

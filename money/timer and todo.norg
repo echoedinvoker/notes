@@ -1,0 +1,29 @@
+* TODOs
+  - ( ) Create SvelteKit project with Shadcn ui library.
+  - ( ) Create list route and page
+  - ( ) Styling list page
+  - ( ) Make list page RWD
+  - ( ) Make list item draggable
+  - ( ) Non-Javascript mode test
+* Belief
+  - A person's life is largely determined by luck, and even the inclination to work hard is also a result of genetics.
+  -- So I wonder if it is possible to change my behavior and thus change my destiny through creating automated external stimuli.
+* Requirements
+  - Timing the time it takes to do things.
+  -- Every timer needs to be tied to a task.
+  - Countdown rest time
+  - After the rest period, give a choice.
+  -- Take another break.
+  -- Start doing things and start the timer.
+  - Calculate the ratio of rest and work time.
+  - Recore every timer and countdowm.
+  - Timing can be paused.
+  - Counting can be paused.
+  - Authentication
+  - Subscription system
+  - When used without logging in, the records will be stored in the browser.
+  - The records used after logging in will be stored in the database.
+  - Use Redis as the only database.
+  - Need to have a landing page.
+  - Need to have a todo list.
+

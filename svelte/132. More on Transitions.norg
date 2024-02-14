@@ -1,0 +1,33 @@
+@document.meta
+title: 132. More on Transitions
+description: 
+authors: mattc
+categories: [
+  Transitions
+  Animation
+  Transition directive
+]
+created: 2024-01-02T14:41:49+0800
+updated: 2024-01-02T14:42:17+0800
+version: 1.1.1
+@end
+
+* Transition animation is revisable and cancelable at any time
+
+  .image pic/123/1.png
+
+  In the above example, when we click the button during the process of the paragraph flying in from the right, it will fly out to the right from its current position. Similarly, the same applies in reverse, it means we do not need to wait for the animation to finish before triggering it again.
+
+
+
+* Transition directive: global
+
+** default transition only work independently
+   The default behavior of transition is that only one element will generate animation at a time. If multiple elements appear or disappear simultaneously, the transition animation will automatically stop running.
+
+   .image pic/123/2.png
+
+** Using directive |global to transition multiple elements at the same time
+   If we have multiple elements appearing or disappearing at the same time and each element requires a transition effect, we can use the directive |global to avoid the issue of the transition animation automatically stopping.
+
+   .image pic/123/3.png

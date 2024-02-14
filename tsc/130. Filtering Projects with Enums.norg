@@ -1,0 +1,34 @@
+@document.meta
+title: 130. Filtering Projects with Enums
+description: 
+authors: mattc
+categories: [
+  Status
+  Filtering
+]
+created: 2023-12-30T11:51:31+0800
+updated: 2023-12-30T11:51:54+0800
+version: 1.1.1
+@end
+
+* ISSUE: repeat same projects in the two lists
+
+** issue
+   .image pic/126/1.png
+
+** hard point
+   We have defined an enum property to represent the current status for the Project. However, in the ProjectList, we are using a union of strings to represent the status. This inconsistency in the specification of the status can cause problems.
+
+   .image pic/126/2.png
+
+** Solution
+   From the above, it can be seen that ProjectList uses Union strings to define because it needs to render the content of the status string, so it must be done this way. Although the specifications are not unified, we can still solve the problem as follows.
+
+   .image pic/126/3.png
+
+
+* Improve the performance of the previous lecture code
+
+  In the previous lecture, we used a while loop to remove all elements within the ul to avoid printing previous projects repeatedly. However, actually providing an empty string is sufficient.
+
+  .image pic/126/4.png

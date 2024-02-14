@@ -1,0 +1,54 @@
+@document.meta
+title: 2. 2 - What is WebGL and ThreeJs
+description: 
+authors: mattc
+categories: [
+  WebGL
+  OpenGL
+]
+created: 2024-01-03T19:22:57+0800
+updated: 2024-01-03T19:23:17+0800
+version: 1.1.1
+@end
+
+* What is WebGL?
+
+  WebGL is low-level Javascript API, which includes two languages: Javascript and GLSL. It is used to render 3D graphics in a web browser without the use of plug-ins.
+
+.image pic/2/1.png
+
+  API means user can directly use the services provided by the API, without having to know the implementation details of the service.
+
+
+* How to draw a model by WebGL?
+
+** Point >> Line
+.image pic/2/4.png
+
+** Triangle
+.image pic/2/5.png
+
+** Model
+.image pic/2/6.png
+
+** Color to each point
+.image pic/2/7.png
+
+We use OpenGL Language (GLSL) to write the details (Shader) above, and compile the Shader and pass it to WebGL. This part will be handled by the GPU for computation.
+
+The GPU is slower than the CPU but can perform a large number of calculations simultaneously, unlike the CPU's line-by-line calculation method.
+
+
+ * WebGL contains two languages: Javascript and GLSL
+
+.image pic/2/8.png
+
+
+* So, what three.js does?
+
+  Three.js help us write some programs that allows us to write GLSL directly in JavaScript, and then convert this code into GLSL and pass it to WebGL.
+
+  .image pic/2/9.png
+
+
+

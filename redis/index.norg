@@ -87,49 +87,52 @@
 ** (x) [95. A Few More Arguments (9/39)]{:95. A Few More Arguments:}
 ** (x) [96. Parsing SORT Output (8/40)]{:96. Parsing SORT Output:}
 * Section 14: HyperLogLog Structure
-** ( ) [98. HyperLogsLogs (5/)]{:98. HyperLogsLogs:}
-** ( ) [99. When to use HyperLogsLogs (7/)]{:99. When to use HyperLogsLogs:}
-** ( ) [100. HyperLogsLogs in Action (5/)]{:100. HyperLogsLogs in Action:}
-** ( ) [101. Lists (3/)]{:101. Lists:}
-** ( ) [102. Reading and Writing Data to a List (4/)]{:102. Reading and Writing Data to a List:}
-** ( ) [103. Ranges and Searches (6/)]{:103. Ranges and Searches:}
-** ( ) [104. Trimming Lists (5/)]{:104. Trimming Lists:}
-** ( ) [105. Removing Elements (5/)]{:105. Removing Elements:}
-** ( ) [106. List Use Cases (10/)]{:106. List Use Cases:}
-** ( ) [107. Using Lists in Our App (4/)]{:107. Using Lists in Our App:}
-** ( ) [108. Serializing and Deserializing Bids (6/)]{:108. Serializing and Deserializing Bids:}
-** ( ) [109. Retrieving Bid Histories (13/)]{:109. Retrieving Bid Histories:}
-** ( ) [110. More on Bids (4/)]{:110. More on Bids:}
-** ( ) [111. Validating Bids (5/)]{:111. Validating Bids:}
-** ( ) [112. Updating Items with Bids (3/)]{:112. Updating Items with Bids:}
-** ( ) [113. Issues with Bids (4/)]{:113. Issues with Bids:}
-** ( ) [114. Understanding Concurrency Issues (10/)]{:114. Understanding Concurrency Issues:}
-** ( ) [115. Applying Atomic Updates (8/)]{:115. Applying Atomic Updates:}
-** ( ) [116. Transactions (5/)]{:116. Transactions:}
-** ( ) [117. Watching a Key with Transactions (3/)]{:117. Watching a Key with Transactions:}
-** ( ) [118. Isolated Connections for Transactions (4/)]{:118. Isolated Connections for Transactions:}
-** ( ) [119. Solving Multiple Bids with a Transaction (6/)]{:119. Solving Multiple Bids with a Transaction:}
-** ( ) [120. Items by Price (5/)]{:120. Items by Price:}
-** ( ) [121. More on Items by Price (3/)]{:121. More on Items by Price:}
-** ( ) [122. Lua Scripting (3/)]{:122. Lua Scripting:}
-** ( ) [123. Basics of Lua (6/)]{:123. Basics of Lua:}
-** ( ) [124. Handling Arrays (3/)]{:124. Handling Arrays:}
-** ( ) [125. Handling Tables (4/)]{:125. Handling Tables:}
-** ( ) [126. Loading and Executing Scripts (5/)]{:126. Loading and Executing Scripts:}
-** ( ) [127. Providing Arguments (6/)]{:127. Providing Arguments:}
-** ( ) [128. Providing Key lists (7/)]{:128. Providing Key lists:}
-** ( ) [129. When to Use Scripts (4/)]{:129. When to Use Scripts:}
-** ( ) [130. Custom Scripts with Node-Redis (5/)]{:130. Custom Scripts with Node-Redis:}
-** ( ) [131. Lua Script Integration (12/)]{:131. Lua Script Integration:}
-** ( ) [132. Creating a View-Incrementing Script (20/)]{:132. Creating a View-Incrementing Script:}
+** (x) [98. HyperLogsLogs (5/14)]{:98. HyperLogsLogs:}
+** (x) [99. When to use HyperLogsLogs (7/23)]{:99. When to use HyperLogsLogs:}
+** (x) [100. HyperLogsLogs in Action (5/28)]{:100. HyperLogsLogs in Action:}
+* Section 15: Storiing Collections with Lists
+** (x) [101. Lists (3/12)]{:101. Lists:}
+** (x) [102. Reading and Writing Data to a List (4/20)]{:102. Reading and Writing Data to a List:}
+** (x) [103. Ranges and Searches (6/32)]{:103. Ranges and Searches:}
+** (x) [104. Trimming Lists (5/21)]{:104. Trimming Lists:}
+** (x) [105. Removing Elements (5/17)]{:105. Removing Elements:}
+** (x) [106. List Use Cases (10/24)]{:106. List Use Cases:}
+** (x) [107. Using Lists in Our App (4/18)]{:107. Using Lists in Our App:}
+** (x) [108. Serializing and Deserializing Bids (6/22)]{:108. Serializing and Deserializing Bids:}
+** (x) [109. Retrieving Bid Histories (13/32)]{:109. Retrieving Bid Histories:}
+* Section 16: More Practice with the E-Commerce App
+** (x) [110. More on Bids (4/18)]{:110. More on Bids:}
+** (x) [111. Validating Bids (5/23)]{:111. Validating Bids:}
+** (x) [112. Updating Items with Bids (3/28)]{:112. Updating Items with Bids:}
+** (x) [113. Issues with Bids (4/16)]{:113. Issues with Bids:}
+** (x) [114. Understanding Concurrency Issues (10/21)]{:114. Understanding Concurrency Issues:}
+** (x) [115. Applying Atomic Updates (8/23)]{:115. Applying Atomic Updates:}
+** (x) [116. Transactions (5/17)]{:116. Transactions:}
+** (x) [117. Watching a Key with Transactions (3/19)]{:117. Watching a Key with Transactions:}
+** (x) [118. Isolated Connections for Transactions (4/11)]{:118. Isolated Connections for Transactions:}
+** (x) [119. Solving Multiple Bids with a Transaction (6/37)]{:119. Solving Multiple Bids with a Transaction:}
+** (x) [120. Items by Price (5/30)]{:120. Items by Price:}
+** (x) [121. More on Items by Price (3/12)]{:121. More on Items by Price:}
+* Section 17: Extending Redis with Scripting
+** (x) [122. Lua Scripting (3/12)]{:122. Lua Scripting:}
+** (x) [123. Basics of Lua (6/29)]{:123. Basics of Lua:}
+** (x) [124. Handling Arrays (3/10)]{:124. Handling Arrays:}
+** (x) [125. Handling Tables (4/21)]{:125. Handling Tables:}
+** (x) [126. Loading and Executing Scripts (5/14)]{:126. Loading and Executing Scripts:}
+** (x) [127. Providing Arguments (6/22)]{:127. Providing Arguments:}
+** (x) [128. Providing Key lists (7/30)]{:128. Providing Key lists:}
+** (x) [129. When to Use Scripts (4/16)]{:129. When to Use Scripts:}
+** (x) [130. Custom Scripts with Node-Redis (5/23)]{:130. Custom Scripts with Node-Redis:}
+** (x) [131. Lua Script Integration (12/42)]{:131. Lua Script Integration:}
+** (x) [132. Creating a View-Incrementing Script (20/55)]{:132. Creating a View-Incrementing Script:}
 ** ( ) [133. Code Cleanup (1/)]{:133. Code Cleanup:}
-** ( ) [134. Concurrency Revisited (8/)]{:134. Concurrency Revisited:}
-** ( ) [135. Issues with WATCH (5/)]{:135. Issues with WATCH:}
-** ( ) [136. Overview of a Lock (6/)]{:136. Overview of a Lock:}
-** ( ) [137. Understanding the Goal (4/)]{:137. Understanding the Goal:}
-** ( ) [138. Implementing WithLock (11/)]{:138. Implementing WithLock:}
-** ( ) [139. Using WithLock (3/)]{:139. Using WithLock:}
-** ( ) [140. It Works! (3/)]{:140. It Works!:}
+** (x) [134. Concurrency Revisited (8/43)]{:134. Concurrency Revisited:}
+** (x) [135. Issues with WATCH (5/12)]{:135. Issues with WATCH:}
+** (x) [136. Overview of a Lock (6/26)]{:136. Overview of a Lock:}
+** (x) [137. Understanding the Goal (4/30)]{:137. Understanding the Goal:}
+** (x) [138. Implementing WithLock (11/48)]{:138. Implementing WithLock:}
+** (x) [139. Using WithLock (3/11)]{:139. Using WithLock:}
+** (x) [140. It Works! (3/13)]{:140. It Works!:}
 ** ( ) [141. Automatically Expiring Locks (8/)]{:141. Automatically Expiring Locks:}
 ** ( ) [142. Another Lock Issue (8/)]{:142. Another Lock Issue:}
 ** ( ) [143. Solving Accidental Unlocks (3/)]{:143. Solving Accidental Unlocks:}

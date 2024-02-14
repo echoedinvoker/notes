@@ -1,0 +1,48 @@
+@document.meta
+title: 132. Creating a View-Incrementing Script
+description: 
+authors: mattc
+categories: [
+  LUA Script
+  Client function
+]
+created: 2024-01-31T22:15:00+0800
+updated: 2024-01-31T22:15:41+0800
+version: 1.1.1
+@end
+
+* Demand & Steps
+
+  We need to create another Redis custom client function in this lecture to replace the codes in views.ts and lectures, providing steps for us to refer to.
+
+  .image pic/132/1.png
+
+
+* Create function step by step
+
+** 1. identify keys and args function need
+   .image pic/132/2.png
+
+** 2. assign keys and args to variables at the top of LUA script
+   .image pic/132/3.png
+
+   This will not only increase the readability of the script, but also be helpful when defining arguments below.
+
+** 3. LUA script logic
+   In LUA, an empty string and 0 are not false, this point should be noted.
+
+   .image pic/132/4.png
+
+** arguments of function
+   .image pic/132/5.png
+
+
+* Using custom client function & Test
+
+** using function
+   .image pic/132/6.png
+
+   In addition to simplifying codes, it can also solve Redis server round trip and concurrency issues. However, the LUA script part is not type safe, so whether to use this method or not depends on personal preference.
+
+** test
+   .image pic/132/7.png

@@ -1,6 +1,30 @@
+* Evaluate the GUI required for the reset password process.
+** Sending Email
+*** Parameters
+    - transporter
+    -- host
+    -- port
+    -- username
+    -- password
+    - mail options
+    -- from
+    -- to
+    -- subject
+    -- html
+    -- text
+** Mail content
+   - html (backend)
+   -- [html sample]{https://github.com/leemunroe/responsive-html-email-template/blob/master/email-inlined.html}
+   - text: transform html to text
 
-* (-) Redis TTL
-** (x) [Configure TTL]{:Configure TTL:}
-** (-) [SET key]{:SET key:}
-** (x) [GET key]{:GET key:}
-** ( ) [Schedule checking TTL]{:Schedule checking TTL:}
+* 208. Sending Password Reset Emails
+  - email pug codes
+  - reset URL
+
+* 209. Using Sendgrid for "Real" Emails
+  - SendGrid
+    Need to fill in a lot of information and there is a fee.
+  - Brevo
+    Recommended by people in QA, but I am stuck at SMS verification.
+
+

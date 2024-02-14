@@ -1,0 +1,43 @@
+@document.meta
+title: 106. List Use Cases
+description: 
+authors: mattc
+categories: [
+  List
+  Use Cases
+]
+created: 2024-01-04T19:23:16+0800
+updated: 2024-01-04T19:23:33+0800
+version: 1.1.1
+@end
+
+* We don't use List so often, most of the time we use Sorted Set
+
+  .image pic/106/1.png
+
+  .image pic/106/2.png
+
+  Mainly because List lacks any filter and sort functionality, and its performance is not very good in the case of large amounts of data. Therefore, in practice, most situations will use Sorted Set to replace List.
+
+  So, List is usually used when there is a need to continuously append new record, and there is no need for filtering or special sorting. It is suitable for use when only the order of the appended data matters.
+
+
+* List to Hash
+
+  We can use a List to record the id, and then each id corresponds to its respective Hash table.
+
+  .image pic/106/3.png
+
+  Like Sorted Set to Hash table, besides using the above method, we can also directly use the SORT command to achieve the same result and have better performance.
+
+  .image pic/106/4.png
+
+
+* Record more then one kind of information in the List
+
+  So far, it seems that a List can only record one type of data. However, that is not true. In a single value, different types of information can be separated using ":" to record multiple types of data in a List.
+
+  .image pic/106/5.png
+
+  .image pic/106/6.png
+

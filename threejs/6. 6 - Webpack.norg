@@ -1,0 +1,42 @@
+@document.meta
+title: 6. 6 - Webpack
+description: 
+authors: mattc
+categories: [
+  Webpack
+  Import
+  Install
+]
+created: 2024-01-04T13:51:07+0800
+updated: 2024-01-04T13:51:30+0800
+version: 1.1.1
+@end
+
+* Using weabpack to build a project
+
+  The way we used in the previous lecture to import three.js into HTML was using a script tag. However, this way cannot load all classes of three.js due to file size limitations. Another point is that browsers restrict some functionalities of three.js, such as texture.
+
+** build webpack project
+   .image pic/6/1.png
+
+** install threejs by npm
+   .image pic/6/2.png
+
+
+
+* Import CSS
+
+  .image pic/6/3.png
+
+  Because in a webpack project, the entry point is script.js, so you need to import CSS files inside it instead of using link in index.html.
+
+  .image pic/6/4.png
+
+
+* Import threejs module
+
+  Similarly, we import the threejs module in script.js instead of using a script tag in index.html.
+
+  .image pic/6/5.png
+
+  .image pic/6/6.png

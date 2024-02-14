@@ -1,0 +1,38 @@
+@document.meta
+title: 118. Isolated Connections for Transactions
+description: 
+authors: mattc
+categories: [
+  Common Transaction Pattern
+  Connection to Redis
+]
+created: 2024-01-12T09:33:08+0800
+updated: 2024-01-12T09:43:22+0800
+version: 1.1.1
+@end
+
+* Common pattern of using transaction
+
+  In general read/write operations, we usually use WATCH/MULTI/EXEC with the following pattern to solve concurrency issues.
+
+  .image pic/118/1.png
+
+  Using the above pattern into our rbay project as follows
+
+  .image pic/118/2.png
+
+
+* Connection to Redis
+
+  When we connect to Redis from the backend to perform a transaction, we also need to use a separate client for this operation.
+
+** connection for any command
+   .image pic/118/3.png
+
+** connection for the transaction
+   .image pic/118/4.png
+
+   This connection must be established and closed by an isolated client.
+
+** together view
+   .image pic/118/5.png

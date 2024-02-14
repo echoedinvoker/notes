@@ -1,0 +1,29 @@
+@document.meta
+title: 101. Lists
+description: 
+authors: mattc
+categories: [
+  List
+  Data structure
+]
+created: 2024-01-02T18:00:32+0800
+updated: 2024-01-02T18:00:47+0800
+version: 1.1.1
+@end
+
+* New data structure: List
+
+  .image pic/100/1.png
+
+** Store an ordered list of strings
+
+** Not Array! Not Array! Not Array!
+   Please note that this data structure is not an array. Many characteristics and operations of arrays do not exist in lists.
+
+** Implementation as doubled-linked list
+   This is fast for operations at the beginning and end, but operations in the middle are slow, such as iteration or when you need to access data close to very center. So, do not consider it as an array.
+
+** Often used for time-series data
+
+** You should probably use this less often than you think
+   List is a data structure that Redis used a long time ago to solve some use cases. Many of these cases now have better solutions available.

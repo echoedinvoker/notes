@@ -1,0 +1,33 @@
+@document.meta
+title: 134. Animating Passive (Affected) Items
+description: 
+authors: mattc
+categories: [
+  Animation
+  flip
+]
+created: 2024-01-02T15:20:12+0800
+updated: 2024-01-02T15:20:24+0800
+version: 1.1.1
+@end
+
+* Third animation: flip
+
+** situation
+   Often, when an element appears or disappears, it can also affect the position of other elements. By default, the changes in the position of other elements do not have any animation. However, compared to the appearing or disappearing element, this can make the user feel abrupt.
+
+   .image pic/125/1.png
+
+** using flip to add animation to the position change of other elements
+   Therefore, Svelte provides a third animation type called "flip" to handle this situation.
+
+   .image pic/125/2.png
+
+
+* flip options
+
+  Usually, the default duration of a flip animation is a bit too long. We will use options to adjust it.
+
+  .image pic/125/3.png
+
+  The settings of options are the same as what we previously set for transitions. It includes delay, easing, and other options. However, the most commonly used one is duration, which is used to set the animation time.

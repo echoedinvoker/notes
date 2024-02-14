@@ -1,0 +1,38 @@
+@document.meta
+title: 114. Understanding Concurrency Issues
+description: 
+authors: mattc
+categories: [
+  Concurrency
+]
+created: 2024-01-10T19:40:44+0800
+updated: 2024-01-10T19:41:02+0800
+version: 1.1.1
+@end
+
+* Concurrency Issue
+
+  .image pic/114/1.png
+
+  .image pic/114/2.png
+
+  As mentioned above, there is a delay between HGETALL and HSET, which causes the validation in between to fail. This is a concurrency issue.
+
+
+* Not every concurrence is a issue
+
+  .image pic/114/3.png
+
+  As long as a process involves retrieving data from the database and then updating it back to the database, there is a high likelihood of concurrency issues.
+
+  .image pic/114/4.png
+
+  But not every concurrency problem necessarily needs to be solved, for example, in the case of updating the TODO status above, there is no necessity to solve the concurrency problem.
+
+
+
+* Solutions 
+
+  .image pic/114/5.png
+
+

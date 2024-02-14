@@ -1,0 +1,45 @@
+@document.meta
+title: 146. Showing a Loading Indicator and Sending Correct Data
+description: 
+authors: mattc
+categories: [
+  Firebase
+  Spinning
+  isLoading
+  Alert
+]
+created: 2024-01-02T23:19:44+0800
+updated: 2024-01-02T23:20:19+0800
+version: 1.1.1
+@end
+
+* Fetching status annotations
+
+** loading spinner
+   We can import a loading spinner from a third-party package and create a state to detect whether data is currently being fetched. If it is, the loading spinner will be displayed; otherwise, the data will be displayed.
+
+   .image pic/131/1.png
+
+** finished alert
+   .image pic/131/2.png
+
+   Usually, the built-in alert in the browser is not used as shown above, but a third-party package's alert is used instead, such as Shadcn's Alert. This can provide a better user experience (the built-in alert will pause the user's actions).
+
+
+* Fix the submit data and data architecture of firebase
+
+** before changing
+   Currently, every time we submit, a key will be generated under the hobby in Firebase, and all hobbies will be added to it.
+
+   .image pic/131/3.png
+
+   It is obvious that this is not the result we want.
+
+** refactoring codes
+   Change it so that each time you submit, only upload one hobby to firebase.
+
+   .image pic/131/4.png
+
+** after changing
+   .image pic/131/5.png
+

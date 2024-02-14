@@ -1,0 +1,51 @@
+@document.meta
+title: 122. Adding a "Delete" Functionality
+description: 
+authors: mattc
+categories: [
+  Form
+  Delete
+  Store
+]
+created: 2024-01-01T14:17:55+0800
+updated: 2024-01-01T14:18:15+0800
+version: 1.1.1
+@end
+
+* Demand: Delete button in the EDIT form
+*
+  Add a delete button in the form of editing, and click to delete the current meetup from store data.
+
+  .image pic/116/1.png
+
+
+* Prepare Delete button & Turn state showForm to showDialog
+
+  Because clicking the delete button in the form does not immediately delete, but prompts(swith) a dialog to ask if you want to delete. At the same time, only one dialog can appear, so I chose to change "showForm" to "showDialog" as a string type below to control the switching of different dialog windows.
+
+  .image pic/116/2.png
+
+
+* Implement the delete function
+
+  We added the logic for deleting in the store and enabled it to be triggered by the correct button in the confirm delete dialog.
+
+  .image pic/116/3.png
+
+  The showDialog in the function deleteMeetup in App.svelte should be set to null instead of 'confirm-delete'. This is a small error in the image above.
+
+
+* Conditionally render the delete button
+
+  Do not forget that the delete button should only be displayed in the editing form, it is not necessary to display it in the create form.
+
+  .image pic/116/7.png
+
+
+* Test
+
+  .image pic/116/4.png
+
+  .image pic/116/5.png
+
+  .image pic/116/6.png

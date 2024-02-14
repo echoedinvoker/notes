@@ -1,0 +1,29 @@
+@document.meta
+title: 116. Setting Up a Store
+description: 
+authors: mattc
+categories: [
+  Store
+  Meetup
+]
+created: 2024-01-01T00:16:54+0800
+updated: 2024-01-01T00:17:15+0800
+version: 1.1.1
+@end
+
+> In this lecture, we will go back to the Meetup project and incorporate the Store into the Meetup project.
+
+* Before
+
+  The Meetup project only has one resource called "meetups", so it is managed in the App.svelte file.
+
+  .image pic/111/1.png
+
+
+* After
+
+  We establish the meetups store as follows.
+
+  .image pic/111/2.png
+
+  We can see that we have placed the meetups data and its data processing logic in the store, while the components only have the UI part left.

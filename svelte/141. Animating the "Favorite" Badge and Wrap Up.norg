@@ -1,0 +1,37 @@
+@document.meta
+title: 141. Animating the "Favorite" Badge and Wrap Up
+description: 
+authors: mattc
+categories: [
+  Animation
+  Transition
+  Tween
+  Spring
+]
+created: 2024-01-02T20:34:43+0800
+updated: 2024-01-02T20:35:04+0800
+version: 1.1.1
+@end
+
+* Demands
+
+  We also added animation to some details in the MeetUp project.
+
+  .image pic/128/1.png
+
+
+* Badge
+
+  .image pic/128/2.png
+
+
+* Button
+
+  .image pic/128/3.png
+
+  Unfortunately, animate:flip can only be used inside {#each}, so it cannot be simply added to a button.
+
+
+* So, How about Tween and Spring??
+
+  In this project, the only changes in Dom elements are the appearance and disappearance of elements. Therefore, animations only use transition and animate:flip. There is no room for Tween/Spring to play a role. They only have meaning when there is a change in value in the DOM.

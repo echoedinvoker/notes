@@ -1,0 +1,35 @@
+@document.meta
+title: 134. Concurrency Revisited
+description: 
+authors: mattc
+categories: [
+  Concurrency
+  Bid
+  WATCH
+  Retry
+  Transaction
+]
+created: 2024-02-05T17:08:45+0800
+updated: 2024-02-05T17:09:31+0800
+version: 1.1.1
+@end
+
+* Review bids.ts, which we solve concurrency issue by WATCH
+
+  .image pic/133/1.png
+
+
+* Although it prevents errors, it will generate some unnecessary cancellations.
+
+  .image pic/133/2.png
+
+  As mentioned above, if the $10 bid is executed first, the $15 bid will be canceled. If the buyer does not continue bidding, it means that our seller will lose $5.
+
+
+* Retry when the bid is canceled
+
+  The traditional approach is to retry after the transaction is canceled, and set a retry limit, such as ten times. However, this practice will result in wasted Redis requests and cannot guarantee the success of the last request.
+
+  .image pic/133/3.png
+
+  Our upcoming lecture will use another method to replace WATCH for concurrency issue in order to completely solve the aforementioned problem.

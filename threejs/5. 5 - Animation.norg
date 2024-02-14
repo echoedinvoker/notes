@@ -1,0 +1,34 @@
+@document.meta
+title: 5. 5 - Animation
+description: 
+authors: mattc
+categories: [
+  Animation
+  Clock
+  Elapse Time
+]
+created: 2024-01-04T13:19:32+0800
+updated: 2024-01-04T13:19:56+0800
+version: 1.1.1
+@end
+
+* create animation
+
+  requestAnimationFrame() is an API provided by the browser that allows us to perform certain tasks on each frame as follows.
+
+  .image pic/5/1.png
+
+  Above, we use requestAnimationFrame() to slightly adjust the values of the mesh properties in each frame, and then use the renderer object to re-render the scene. This way, we can achieve the effect of animation.
+
+
+* Clock
+
+** issue: in different devices, the frame rate is different, so the animation speed is different.
+   .image pic/5/2.png
+
+** elaspse time
+   To solve the problem of different frame rates, threejs provides the Clock class. We can use it to obtain elapsed time, and calculate the values of mesh properties based on it, unaffected by the device.
+
+   .image pic/5/3.png
+
+   .image pic/5/4.png

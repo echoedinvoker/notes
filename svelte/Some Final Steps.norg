@@ -1,0 +1,26 @@
+@document.meta
+title: Some Final Steps
+description: 
+authors: mattc
+categories: [
+  UI
+  Refactoring
+  Button
+]
+created: 2024-01-01T16:39:12+0800
+updated: 2024-01-01T16:39:40+0800
+version: 1.1.1
+@end
+
+* Demand: Re-place buttons
+
+  Since a section has already been created in MeetUpGrid to place buttons, it would be more reasonable to place the create button in MeetUpGrid in App.svelte as well.
+
+  .image pic/118/1.png
+
+
+* Implementation
+
+  The 'Add New Meetup' button does not need the toggle function, it is sufficient to just open the create form. So besides moving the codes' position, some simplification can also be done.
+
+  .image pic/118/2.png

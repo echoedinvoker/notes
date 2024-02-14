@@ -1,0 +1,32 @@
+@document.meta
+title: 112. Updating Items with Bids
+description: 
+authors: mattc
+categories: [
+  HSET
+  Update Hash
+  Pipeline
+]
+created: 2024-01-08T19:39:58+0800
+updated: 2024-01-08T19:40:28+0800
+version: 1.1.1
+@end
+
+* Plan
+
+In this lecture, we need to update three values in the item hash. We can use HSET to complete this operation.
+
+.image pic/112/1.png
+
+
+* Scripting
+
+So we will add the HSET command in bids.ts, including the two commands RPUSH from the previous lecture, which access Redis. Therefore, we should use a pipeline.
+
+.image pic/112/2.png
+
+
+* Test
+
+  .image pic/112/4.png
+

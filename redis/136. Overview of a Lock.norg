@@ -1,0 +1,49 @@
+@document.meta
+title: 136. Overview of a Lock
+description: 
+authors: mattc
+categories: [
+  LOCK
+  NX
+  Concurrency
+  Process
+]
+created: 2024-02-06T13:53:49+0800
+updated: 2024-02-06T13:54:26+0800
+version: 1.1.1
+@end
+
+* Under what circumstances will problems occur?
+
+  The only issue with concurrency is that when multiple read and write operations occur simultaneously, there may be problems. However, there will be no errors even if pure read or pure write operations occur simultaneously.
+
+  .image pic/136/1.png
+
+  .image pic/136/2.png
+
+  .image pic/136/3.png
+
+
+* LOCK key
+
+  We create a mechanism that requires each process to attempt to create a Lock key before accessing a hash (or other data structure such as a list or sorted set). If the creation is successful, it means that this process is the only one allowed to read and write the hash within the existence of the lock key. If the creation fails, it means that this process must wait for other processes to release the lock key before it can create the lock key. This prevents multiple processes from accessing the hash simultaneously.
+
+  .image pic/136/4.png
+
+
+* LOCK process
+
+** set lock key, NX is the point
+   Because only one process can successfully establish a lock key at the same time, using NX is crucial.
+
+   .image pic/136/5.png
+
+   .image pic/136/6.png
+
+** process which failed to set lock key, wait for a while and try again
+   .image pic/136/7.png
+
+** when process done, delete lock key
+   .image pic/136/8.png
+
+   .image pic/136/9.png

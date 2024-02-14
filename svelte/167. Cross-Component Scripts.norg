@@ -1,0 +1,31 @@
+@document.meta
+title: 167. Cross-Component Scripts
+description: 
+authors: mattc
+categories: [
+  module script
+  script
+  import
+]
+created: 2024-01-03T18:19:55+0800
+updated: 2024-01-03T18:20:17+0800
+version: 1.1.1
+@end
+
+* 'module' script
+
+  In a typical script, JavaScript codes will be executed once every time this component is created and added to the DOM, which is actually different from the behavior of importing a regular JavaScript file.
+
+  If we want the javascript code in the script to be executed only when it is first imported, just like a regular javascript file, we can use module script as shown bellow.
+
+  .image pic/167/1.png
+
+
+
+* share data & closure
+
+  The main function of the 'module' script is to share data between the same components.
+
+  .image pic/167/2.png
+
+  We cannot directly assign `() => active = false` to deactiveNode in the 'module' script above because 'active' is in a different scope. Therefore, we must use closure, which means the function value must be generated within the normal script and then assigned to deactiveNode.

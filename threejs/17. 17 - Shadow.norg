@@ -1,0 +1,92 @@
+@document.meta
+title: 17. 17 - Shadow
+description: 
+authors: mattc
+categories: [
+  Shadow
+]
+created: 2024-01-19T19:28:49+0800
+updated: 2024-01-19T19:29:04+0800
+version: 1.1.1
+@end
+
+* Shadow Types
+
+** Core Shadow
+   This kind of shadow will naturally occur without the need for additional rendering.
+
+   .image pic/17/1.png
+
+** Drop Shadow
+   This type of shadow requires additional rendering, but it can make the result closer to the real world.
+
+   .image pic/17/2.png
+
+   .image pic/17/3.png
+
+   Only the three light sources shown in the picture can produce shadows, so please pay special attention.
+
+
+* Shadow Map
+
+  Drop shadow means to draw a shadow map on the mesh.
+
+  .image pic/17/4.png
+
+
+* Rendering shadow
+
+  We need to enable the renderer to render shadows. Some settings need to be done on the light, mesh, camera, and the renderer itself.
+
+  .image pic/17/5.png
+
+  .image pic/17/6.png
+
+
+* Shadow map will follow the mesh
+
+  When a mesh that generates shadows has animation, the shadows will also move with the animation.
+
+  .image pic/17/7.png
+
+
+* Shadow Map Size
+
+  The Size here does not refer to the size of the shadow area, but rather the resolution of the shadow. The larger the size, the clearer it is, but it also consumes more performance. The default is 512 x 512, and it is not recommended to exceed 1024 x 1024.
+
+  .image pic/17/8.png
+
+  You can see that this parameter is included in the object of Light.
+
+* Render type of renderer
+
+** documentation
+   The Renderer has four types that can be selected to draw a drop shadow.
+
+   .image pic/17/10.png
+
+** prepare
+   .image pic/17/9.png
+
+
+** BasicShadowMap
+   .image pic/17/11.png
+
+   There is a clear dot matrix, but the speed is the fastest.
+
+** PCFShadowMap
+   The default shadow mode may be slightly blurry, but the speed is still considered fast.
+
+   .image pic/17/12.png
+
+** PCFSoftShadowMap
+   Use the same blur algorithm as PCFShadowMap, but with a higher degree of blurring for better results, although it is slower in speed.
+
+   .image pic/17/13.png
+
+** VSMShadowMap
+   Using different algorithms, the results are also very strange, usually not used.
+
+   .image pic/17/14.png
+
+   So usually you choose either PCFShadowMap or PCFSoftShadowMap to use.

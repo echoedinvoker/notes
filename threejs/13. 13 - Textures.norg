@@ -1,0 +1,66 @@
+@document.meta
+title: 13. 13 - Textures
+description: 
+authors: mattc
+categories: [
+  Textures
+  TextureLoader
+  LoadingManager
+]
+created: 2024-01-14T18:07:11+0800
+updated: 2024-01-14T18:07:32+0800
+version: 1.1.1
+@end
+
+* What is texture?
+
+  Texture is a two-dimensional image that can be applied to a three-dimensional geometry.
+
+  .image pic/13/1.png
+
+
+* Types of texture
+
+** color texture
+   .image pic/13/2.png
+
+** displacement texture
+   A black and white image, adjusting the position of the vertices based on the color tone, so it is necessary to improve the segment effect for better results.
+
+   .image pic/13/3.png
+
+** normal texture
+   Blue and purple tones do not require adjusting vertex positions, but the scene needs to have light in order to have an effect. Since there is no need to increase the number of vertices, the performance is better than displacement texture.
+
+   .image pic/13/4.png
+
+** bump texture
+   Using grayscale to determine the proportion of reflected light.
+
+   .image pic/13/5.png
+
+
+* Load texture by TextureLoader
+
+  ThreeJS provides TextureLoader to load texture.
+
+  .image pic/13/6.png
+
+
+* Life cycle handlers of loading image
+
+  "loading image" is a time-consuming operation, especially when the image we are using is on a remote server. Therefore, ThreeJS provides the class LoadingManager to manage this process, allowing us to insert handlers at each stage to handle it.
+
+  .image pic/13/7.png
+
+  .image pic/13/8.png
+
+
+* Practice ux of geometry
+
+  We use simple plane geometry to observe the position of its vertices and the ux coordinates.
+
+  .image pic/13/9.png
+
+  .image pic/13/10.png
+

@@ -1,0 +1,32 @@
+@document.meta
+title: 129. When to Use Scripts
+description: 
+authors: mattc
+categories: [
+  LUA
+]
+created: 2024-01-25T21:23:48+0800
+updated: 2024-01-25T21:24:20+0800
+version: 1.1.1
+@end
+
+* When to use LUA script?
+
+  .image pic/129/1.png
+
+** 1. to solve data over fetching
+   .image pic/129/3.png
+
+** 3. to solve round trips between Redis and application
+   .image pic/129/4.png
+
+
+* LUA script downside
+
+  .image pic/129/2.png
+
+** 1. Keys should be known ahead of time
+   This will reduce the flexibility of many LUA scripts and limit the number of practical applications that can be achieved.
+
+** 3. LUA script is dynamic, weakly typed language
+   If our app is written in Typescript, some advantages we get in Typescript, such as type checking, IDE auto-complete, etc., will be lost once we switch to LUA script.

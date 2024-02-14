@@ -1,0 +1,38 @@
+@document.meta
+title: 135. Drag Events and Reflecting the Current State in the UI
+description: 
+authors: mattc
+categories: [
+  Contract
+  Drag & Drop
+  Droppable
+  Flickering
+]
+created: 2024-01-05T14:57:28+0800
+updated: 2024-01-05T14:58:00+0800
+version: 1.1.1
+@end
+
+* Let class ProductList sign the contract DropTarget
+  We let the ProductList class sign the contract DropTarget, and implement the methods defined in the contract.
+
+  .image pic/135/1.png
+
+  .image pic/135/2.png
+
+
+* Add CSS hint for drop area
+  We add the CSS hint for the drop area to make it more obvious that the item can be dropped here.
+
+.image pic/135/3.png
+
+
+* Fix drop area flickering issue
+
+  When we drag the item to the droppable area, we will find that the color of that area keeps flashing.
+This is because the event 'dragover' keeps triggering continuously, and 'dragleave' is triggered when leaving any element within the ul element, causing these two reasons.
+
+.image pic/135/4.png
+
+  We use the ways shown in the figure above to solve the issues of the 'dragover' and 'dragleave' events respectively.
+

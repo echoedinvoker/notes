@@ -1,0 +1,43 @@
+@document.meta
+title: 109. Retrieving Bid Histories
+description: 
+authors: mattc
+categories: [
+  List
+  Bid
+  LRANGE
+  LPUSH
+]
+created: 2024-01-05T20:18:39+0800
+updated: 2024-01-05T20:20:19+0800
+version: 1.1.1
+@end
+
+* Append new Bid in the Bid History
+
+  .image pic/109/1.png
+
+  As shown in the above figure, the new Bid is continuously added from the right side of the List, and the Bid needs to be combined with the current time to form a string in order to be saved.
+
+  .image pic/109/2.png
+
+
+* Get Bid History
+
+  The part of obtaining Bid History is quite complicated because the logic of the parameters in the export function is different from the logic of the Redis command LRANGE. Therefore, we need to think about how to convert it.
+
+** thinking how to convert params
+   .image pic/109/3.png
+
+** implement
+   .image pic/109/4.png
+
+   Pay attention to not only obtaining the correct array of strings, but also performing deserialize transformations on each string to convert them into objects that are convenient for use in the app.
+
+
+* Test on the browser
+
+  We go to any item page and bid some prices to see if the results will appear in the line chart below.
+
+  .image pic/109/5.png
+

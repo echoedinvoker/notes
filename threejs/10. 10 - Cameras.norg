@@ -1,0 +1,71 @@
+@document.meta
+title: 10. 10 - Cameras
+description: 
+authors: mattc
+categories: [
+  Camera
+]
+created: 2024-01-06T14:37:45+0800
+updated: 2024-01-06T14:38:00+0800
+version: 1.1.1
+@end
+
+* There are five type of camera in three.js, they are all inherited from `Camera` class.
+
+  .image pic/10/1.png
+
+  and class Camera is inherited from `Object3D` class.
+
+
+* Array camera
+
+  Cut the scene into multiple parts, each part has its own camera.
+
+  .image pic/10/2.png
+
+
+* Cube camera
+
+  Use 6 cameras to capture 6 faces, and then combine the 6 faces into one cube camera.
+
+  .image pic/10/3.png
+
+
+* Stereo Camera
+
+  Use two perspective cameras with different color tones to create a 3D effect.
+
+  .image pic/10/4.png
+
+
+* Perspective and Orthographic camera
+
+  .image pic/10/5.png
+
+** defference
+
+   .image pic/10/9.png
+
+
+** params of orchographic camera
+
+   .image pic/10/10.png
+
+
+
+** object distance from camera not affect size in orthographic camera
+
+   .image pic/10/7.png
+
+   .image pic/10/8.png
+
+   .image pic/10/11.png
+
+   .image pic/10/12.png
+
+   Therefore, an orthographic camera cannot distinguish the distance of an object.
+
+
+** orthographic camera is better for 2D game
+
+   .image pic/10/6.png

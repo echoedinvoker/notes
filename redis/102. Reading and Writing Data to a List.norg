@@ -1,0 +1,48 @@
+@document.meta
+title: 102. Reading and Writing Data to a List
+description: 
+authors: mattc
+categories: [
+  List
+  Commands
+]
+created: 2024-01-02T18:24:31+0800
+updated: 2024-01-02T18:24:41+0800
+version: 1.1.1
+@end
+
+* Commands of the list data structure
+
+  .image pic/101/1.png
+
+
+* Create value in the list
+
+** Concept of commands
+   .image pic/101/2.png
+
+   .image pic/101/3.png
+
+   The feature of the list data structure is the ability to add elements from the beginning or the end.
+
+** Practice
+   .image pic/101/4.png
+
+
+* Get information about the list
+
+** Concept of commands
+   .image pic/101/5.png
+
+** LLEN
+   get number of elements in the list
+
+   .image pic/101/6.png
+
+** LINDEX
+   get value of the element in the list by index
+
+   .image pic/101/7.png
+
+   .image pic/101/8.png
+

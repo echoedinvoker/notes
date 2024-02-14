@@ -1,0 +1,38 @@
+@document.meta
+title: 125. Handling Tables
+description: 
+authors: mattc
+categories: [
+  Lua Table
+  Lua Iterate
+]
+created: 2024-01-25T19:42:01+0800
+updated: 2024-01-25T19:42:24+0800
+version: 1.1.1
+@end
+
+* Iterate number
+
+  .image pic/125/1.png
+
+  As above, as long as the starting and ending numbers are given, the process will automatically increase by 1.
+
+
+* Table = JS Object
+
+  Lua table is also known as an associative array. In fact, in Lua, tables are very similar to arrays and can even be used in combination.
+
+  .image pic/125/2.png
+
+
+* Iterate table
+
+  .image pic/125/3.png
+
+** mix with only value element
+   .image pic/125/4.png
+
+** how about using ipairs() instead of pairs()?
+   .image pic/125/5.png
+
+   So pairs() iterates through all elements in the table, while ipairs() only iterates through elements in the table whose keys are numbers.

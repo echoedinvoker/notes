@@ -1,0 +1,132 @@
+@document.meta
+title: 14. 14 - Materials
+description: 
+authors: mattc
+categories: [
+  Materials
+  CubeTextureLoader
+  Scene.background
+  Bump and displacement map
+]
+created: 2024-01-14T23:38:53+0800
+updated: 2024-01-14T23:39:28+0800
+version: 1.1.1
+@end
+
+* What is material?
+
+  Material is a tool used to add features to geometry by coloring pixels on the geometry within the field of view, achieving the effect of increasing features.
+
+  Therefore, pixels outside the field of view will not be colored to save GPU performance.
+
+  The coloring process is completed through shader code.
+
+* Introduce all materials
+
+** No need light
+   .image pic/14/1.png
+
+   .image pic/14/2.png
+
+   .image pic/14/3.png
+
+   .image pic/14/4.png
+
+   .image pic/14/5.png
+
+   .image pic/14/6.png
+
+   .image pic/14/7.png
+
+   .image pic/14/8.png
+
+   .image pic/14/9.png
+
+   .image pic/14/10.png
+
+   .image pic/14/11.png
+
+   .image pic/14/12.png
+
+   .image pic/14/13.png
+
+   .image pic/14/14.png
+
+   .image pic/14/15.png
+
+   .image pic/14/16.png
+
+** Need light
+   .image pic/14/17.png
+
+   .image pic/14/18.png
+
+   .image pic/14/19.png
+
+   .image pic/14/20.png
+
+   .image pic/14/21.png
+
+   .image pic/14/22.png
+
+   .image pic/14/23.png
+
+   .image pic/14/24.png
+
+   .image pic/14/25.png
+
+   .image pic/14/26.png
+
+   .image pic/14/27.png
+
+** special materials
+   We will learn about the remaining few more special ones in the future.
+
+   .image pic/14/28.png
+
+
+* Bump and displacement map
+
+  In front of us, we have learned about bump and displacement texture but not practice yet. Because these effects can only be generated through light, we will proceed with the implementation here.
+
+  .image pic/14/29.png
+
+** bump map
+   Materials that require light usually have specific properties corresponding to bump texture and displacement texture.
+
+   .image pic/14/30.png
+
+** displacement map
+   Displacement map and bump map are mutually exclusive and cannot be used at the same time.
+
+   .image pic/14/31.png
+
+   .image pic/14/32.png
+
+   As shown above, the displacement map relies heavily on vertices to achieve the effect. However, even with a large number of vertices, it still looks strange.
+
+
+* CubeTextureLoader
+
+  CubeTextureLoader is used to generate panoramic seamless textures can be used for the 360 environment map of a scene, as well as to create reflective environments on meshes.
+
+** document
+   .image pic/14/33.png
+
+   There are many types of loaders, each with different functions.
+
+** scene.background
+   .image pic/14/34.png
+
+   The order of images is important, and the images order in the above image is actually incorrect. The image paths need to be inserted according to the order of the document.
+
+
+** reflection of mesh
+   We apply the same cube texture to a sphere mesh to create a reflective environment effect.
+
+   .image pic/14/35.png
+
+   Actually, it is not really a reflection.
+
+
+

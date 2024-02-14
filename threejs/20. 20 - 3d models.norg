@@ -1,0 +1,118 @@
+@document.meta
+title: 20. 20 - 3d models
+description: 
+authors: mattc
+categories: [
+  Blender
+  Model file
+  OBJ
+  GLTF
+  Compression
+  Loader
+]
+created: 2024-02-05T20:51:44+0800
+updated: 2024-02-05T20:52:38+0800
+version: 1.1.1
+@end
+
+* For importing complex 3D models, we need to use blender
+
+** why blender?
+   .image pic/20/1.png
+
+** download/install blender
+   .image pic/20/2.png
+
+** create a 'monkey' mesh
+   Be aware that there are some differences in coordinate axes between threejs and the given context. Below, we only need the mesh and do not require the camera or light, as our intention is to export the mesh for use in threejs.
+
+   .image pic/20/3.png
+
+
+* obj model file
+
+** documentation
+   .image pic/20/4.png
+
+** export obj file by blender
+   .image pic/20/5.png
+
+   .image pic/20/6.png
+
+** contents of obj file
+   .image pic/20/12.png
+
+** loading obj file by OBJLoader
+   .image pic/20/7.png
+
+   .image pic/20/9.png
+
+** mutate mesh or group property  
+   We can change any common attributes in geometry, such as position, rotation, scale, material, texture, color, etc.
+
+   .image pic/20/8.png
+
+   Note that the attributes of "material" are in the "mesh", and not in the "group".
+
+   .image pic/20/10.png
+
+
+* glTF model file
+
+** documentation
+   .image pic/20/11.png
+
+** two types of data
+   There are two types of data in a glTF file, and we export both types.
+
+   .image pic/20/13.png
+
+   .image pic/20/14.png
+
+   .image pic/20/15.png
+
+   The difference between the two types of data is that one is in JSON format and the other is in binary format, but the content should be the same. The lecture tends to use binary format, but if you want to modify the content, using JSON format would be more convenient.
+
+   .image pic/20/16.png
+
+   .image pic/20/17.png
+
+** loading glTF file by GLTFLoader
+   .image pic/20/18.png
+
+
+* Compressed model files
+
+  Some types of model files can be compressed, such as the glTF mentioned above. However, the loader needs to undergo some processing in order to correctly load the compressed model file.
+
+** DRACOLoader documentation
+   This is a Loader specifically designed for loading compressed files, but it is not directly used to load files. Additionally, it also requires some encoding/decoding work. The lecture has already prepared the relevant files for us, so we just need to use them.
+   .image pic/20/19.png
+
+** compress glTF file
+   It is similar to exporting a glTF file, just with an additional step of selecting compression during the process.
+
+   .image pic/20/20.png
+
+   .image pic/20/21.png
+
+** try to load compressed glTF file by GLTFLoader directly
+   .image pic/20/22.png
+
+** Using DRACOLoader
+   .image pic/20/23.png
+
+   As shown above, DRACOLoader is actually intended to be loaded by GLTFLoader and become a part of GLTFLoader.
+
+
+* How about other types of model files?
+
+** use blender import/export to convert type
+   .image pic/20/24.png
+
+   .image pic/20/25.png
+
+   .image pic/20/26.png
+
+** use specific model file loaders
+   .image pic/20/27.png

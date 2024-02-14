@@ -1,0 +1,34 @@
+@document.meta
+title: 149. Using the "await" Block
+description: 
+authors: mattc
+categories: [
+  Await Block
+  Syntax sugar
+  Markup
+]
+created: 2024-01-03T00:43:01+0800
+updated: 2024-01-03T00:43:24+0800
+version: 1.1.1
+@end
+
+* \{#await\} block
+
+** let promise
+   .image pic/134/1.png
+
+   Svelte provides a block in markup that can render the results of a resolved/rejected promise without the need for an intermediate state.
+
+** promise to markup
+   .image pic/134/2.png
+
+
+* Refactor form submitting logic
+
+  Because we have already deleted the local state used to save hobbies, the form's submit will break. We need to fix it.
+
+  .image pic/134/3.png
+
+  As shown above, when the submission is successful, we must query Firebase again to obtain hobbies and directly print them using {#await}.
+
+  If the backend is written by ourselves, we can include the hobbies in the response of the submit. This way, we don't have to query again and can directly assign the promise of the submit to getHobbies. This allows us to use {#await} directly, making our code much cleaner.

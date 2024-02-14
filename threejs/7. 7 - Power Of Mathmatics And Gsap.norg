@@ -1,0 +1,59 @@
+@document.meta
+title: 7. 7 - Power Of Mathmatics And Gsap
+description: 
+authors: mattc
+categories: [
+  Animation
+  Trigonometric functions
+  Linear & Unlinear
+  Gsap
+]
+created: 2024-01-04T15:28:51+0800
+updated: 2024-01-04T15:29:21+0800
+version: 1.1.1
+@end
+
+* How to create a predictable animation
+
+  .image pic/7/1.png
+
+  Simply changing the position alone cannot create animation. Animation must be based on a stable changing value (usually we use elapsed time) in order to produce predictable animations.
+
+** y = f(x)
+   The trajectory of this type of animation can be divided into two types: linear and non-linear. It mainly depends on the power of the elapsed time.
+
+*** linear
+    .image pic/7/2.png
+
+*** unlinear
+    .image pic/7/3.png
+
+    .image pic/7/4.png
+
+** Trigonometric functions
+   Trigonometric functions are very useful tools that can be used to generate animations.
+
+*** sin() cos()
+    .image pic/7/5.png
+
+    .image pic/7/6.png
+
+*** tan()
+    .image pic/7/7.png
+
+    .image pic/7/8.png
+
+
+* Gsap
+
+  In addition to using mathematical methods to create animations, we can also use the third-party package Gsap to create animations.
+
+  .image pic/7/9.png
+
+  .image pic/7/10.png
+
+  We use gsap's .to() for the example.
+
+  .image pic/7/11.png
+
+  In addition to .position, you can also use .scale, .rotation, and so on. .to() actually changes their values with interpolation to achieve animation.

@@ -1,0 +1,42 @@
+@document.meta
+title: 162. Using JavaScript (!) Libraries with TypeScript
+description: 
+authors: mattc
+categories: [
+  Lodash
+  @types
+  Translation
+]
+created: 2024-01-30T19:51:52+0800
+updated: 2024-01-30T19:54:08+0800
+version: 1.1.1
+@end
+
+* There are many libraries just for Javascript, not Typescript
+
+.image pic/154/1.png
+
+.image pic/154/2.png
+
+Because lodash is written in pure Javascript, Typescript will report errors. However, theoretically, Typescript can use Javascript libraries.
+
+
+* But in theory, Typescript can use Javascript library
+
+  We need to make the `noEmitOnError` in tsconfig.json to `false` so that the project can still function in the case of Typescript errors.
+
+.image pic/154/3.png
+
+So even though lodash is written entirely in JavaScript, we can still use TypeScript with it, although there will be a bunch of type errors.
+
+
+* Translate Javascript to Typescript by package @types/xxx
+
+For these type errors, we can use the package @types/xxx to solve them.
+
+.image pic/154/4.png
+
+.image pic/154/5.png
+
+The package @types/xxx itself does not have any logic, it only tells TypeScript what the type of this package is, so TypeScript will not throw errors. @types/xxx itself does not affect the operation of the package, and it supports many projects.
+

@@ -1,0 +1,25 @@
+@document.meta
+title: 121. More on Items by Price
+description: 
+authors: mattc
+categories: [
+  Sorted Sets
+  SORT
+]
+created: 2024-01-17T20:19:15+0800
+updated: 2024-01-17T20:19:35+0800
+version: 1.1.1
+@end
+
+* Copy paste from by-views.ts to by-price.ts
+
+  We want to retrieve the item ids of the most expensive items from the Sorted Set 'items:price' and use them to fetch item data from their respective hash tables. This can be accomplished using a single SORT command.
+
+  Because we have already implemented this process in by-views.ts before, we can simply copy and paste it here and make a modification to the key of the Sorted Set.
+
+  .image pic/121/1.png
+
+
+* Test
+
+  .image pic/121/2.png

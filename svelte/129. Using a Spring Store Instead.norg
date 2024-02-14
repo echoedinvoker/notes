@@ -1,0 +1,51 @@
+@document.meta
+title: 129. Using a Spring Store Instead
+description: 
+authors: mattc
+categories: [
+  Spring
+  Animation
+]
+created: 2024-01-02T11:43:38+0800
+updated: 2024-01-02T11:43:55+0800
+version: 1.1.1
+@end
+
+* Writable
+
+  The course provides a component as follows.
+
+  .image pic/120/1.png
+
+  It is obvious that although "writable" is responsive, there is no animation effect during the state change process.
+
+
+* Tween
+
+  According to what we have learned before, if we want to present an animation effect for the state change process, we can use tween instead of writable.
+
+  .image pic/120/2.png
+
+  However, one drawback of tween is that its animation is linear, which means that the way the animation runs does not comply with the laws of physics.
+
+* Spring
+
+** replace of tween
+   The animation of tween is linear. We can replace tween with another store called 'spring', the only difference between them is the different interpolation methods. The animation of spring is non-linear and operates in accordance with the physical definition.
+
+   .image pic/120/3.png
+
+** options of spring
+   Spring, like tween, has options, but it is designed from a physical perspective. Precision represents accuracy, which means that the higher the precision, the higher the accuracy of the animation, but it will also slow down the speed of the animation. This is a trade-off issue. Usually, we set the precision to around 0.01, which is sufficient accuracy without being too slow.
+
+   .image pic/120/4.png
+
+** place codes of spring to component or split it to ts file?
+   Compared to writable/readable store, it is more common to write tween and spring in a separate ts file. This is because the animation effects of tween and spring are usually targeted at a specific element of a component, so it is more reasonable to write them in the component.
+
+
+* Tween and Spring only out of box for number and date
+
+  This is very important, so above, our data for the Spring component is actually a single array of objects. We specifically separate the properties of numbers to obtain another array of objects, but the type of the properties is still number. This is so that we can use tween and spring to generate animations.
+
+  If the value is not of type number or date but animation needs to be generated, we have to define our own interpolator to generate animation. We will introduce this part in the following chapters.

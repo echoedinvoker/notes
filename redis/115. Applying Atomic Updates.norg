@@ -1,0 +1,49 @@
+@document.meta
+title: 115. Applying Atomic Updates
+description: 
+authors: mattc
+categories: [
+  Concurrency
+  HINCRBY
+  HSETNX
+]
+created: 2024-01-10T20:07:55+0800
+updated: 2024-01-10T20:08:23+0800
+version: 1.1.1
+@end
+
+
+* The reason why concurrency happen
+
+  The reason for the occurrence of concurrent issues is because there is a time delay in the process between reading and updating data.
+
+  .image pic/115/2.png
+
+  So as long as we remove this period of time, there will be no concurrency issues.
+
+  .image pic/115/3.png
+
+  The first solution is to use some different Redis commands, so that we only need to update without needing to read.
+
+  .image pic/115/1.png
+
+
+* Car example
+
+** increase number property of hash
+   .image pic/115/4.png
+
+   .image pic/115/5.png
+
+** set new property of hash
+   .image pic/115/6.png
+
+   .image pic/115/7.png
+
+
+* Is it suitable for our case?
+
+  .image pic/115/8.png
+
+  No, our case is not just about HGETALL to HSET. The update part even requires LPUSH on a List. Using this solution will be very challenging.
+

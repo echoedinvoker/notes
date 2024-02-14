@@ -1,0 +1,31 @@
+@document.meta
+title: 133. Using a Getter
+description: 
+authors: mattc
+categories: [
+  Getter
+  Plural & Singular
+]
+created: 2024-01-04T16:47:14+0800
+updated: 2024-01-04T16:47:43+0800
+version: 1.1.1
+@end
+
+* Explanation the issue
+
+  .image pic/133/1.png
+
+  The above simply displays numbers and can be a bit monotonous, so we try to add some units after them...
+
+  .image pic/133/2.png
+
+  But increasing the units will encounter problems with singular and plural.
+
+
+* Instead of ternary operator, using getter is more elegant
+
+  We can solve the above problem using the ternary operator in the original place, but this will decrease the code's readability. Therefore, we can use a getter to solve this problem and make the code more elegant.
+
+  .image pic/133/3.png
+
+  The name of the getter does not necessarily have to be the same as a certain property, as long as it is related. For above example, in our source, the property is 'project' but the name of the getter is 'person', which is one of the project's properties.

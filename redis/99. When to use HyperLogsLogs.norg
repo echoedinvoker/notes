@@ -1,0 +1,34 @@
+@document.meta
+title: 99. When to use HyperLogsLogs
+description: 
+authors: mattc
+categories: [
+  HyperLogLog
+  Unique
+  SET
+]
+created: 2023-12-30T15:21:58+0800
+updated: 2023-12-30T15:22:14+0800
+version: 1.1.1
+@end
+
+* When to use HyperLogLog?
+
+** Check unique by SET
+   When we use SET to determine the number of views, the SET data structure will record all usernames, which will cause it to become larger and larger as follows.
+
+   .image pic/98/1.png
+
+** Check unique by HyperLogLog
+   To solve the problem of increasing SET capacity, Redis introduced the HyperLogLog data structure. It can address the issues that SET solves before, and regardless of how many usernames are added, HyperLogLog always occupies only 12kb.
+
+   .image pic/98/2.png
+
+
+* The downside of HyperLogLog
+
+  Because HyperLogLog does not actually store any values, there may be possible errors.
+
+  .image pic/98/3.png
+
+  Asking ChatGPT-3.5, it said that it is possible for PFADD to return wrong results. Therefore, HyperLogLog is only suitable for use with data that allows for errors, such as likes, views, visits, etc. If you want to check unique users or email, it is not suitable to use HyperLogLog.

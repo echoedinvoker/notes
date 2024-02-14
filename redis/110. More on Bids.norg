@@ -1,0 +1,38 @@
+@document.meta
+title: 110. More on Bids
+description: 
+authors: mattc
+categories: [
+  Bid
+  Design
+]
+created: 2024-01-05T20:41:33+0800
+updated: 2024-01-05T20:41:57+0800
+version: 1.1.1
+@end
+
+* Check out item page
+
+  We can see that although we can increase the new bid and it will be displayed in the line chart, there are still many other parts that have not been updated synchronously.
+
+  .image pic/110/1.png
+
+
+* What we still need to implement about bid?
+
+  .image pic/110/2.png
+
+  .image pic/110/3.png
+
+  So when we append a bid, we need to validate it. After the validation passes, in addition to adding the bid to the List, we also need to update the data inside the Hash table.
+
+
+* Sorted Set of item prices
+
+  We will create another Sorted Set to store the prices of all items, so that we can quickly retrieve the item with the highest price to display on the homepage.
+
+  .image pic/110/4.png
+
+  It is also the data that we need to synchronize and update when appending a bid.
+
+

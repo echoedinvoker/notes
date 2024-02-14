@@ -1,0 +1,37 @@
+@document.meta
+title: 137. Understanding the Goal
+description: 
+authors: mattc
+categories: [
+  LOCK
+  RedLock
+]
+created: 2024-02-07T20:41:11+0800
+updated: 2024-02-07T20:41:27+0800
+version: 1.1.1
+@end
+
+* Two notes before we start implementing
+
+** note 1: using Redlock instead of lock in real project
+   We will use lock to implement distributed locks for learning purposes, but in actual projects, we should use Redlock to implement distributed locks instead of regular locks.
+
+   .image pic/137/1.png
+
+** note 2: we will build lock in heavy Typescript
+   If you are not familiar with Typescript, you can choose to skip this part.
+
+   .image pic/137/2.png
+
+
+* Plan on codes
+
+** before
+   This is our original code for creating bids. We use WATCH to avoid errors but it may cause issues with canceling bids.
+
+   .image pic/137/3.png
+
+** after
+   We will now change the codes as follows, where `attr.itemId` will be used as the key for locking and will be created using the `SET NX`.
+
+   .image pic/137/4.png

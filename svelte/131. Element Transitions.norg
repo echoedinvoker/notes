@@ -1,0 +1,35 @@
+@document.meta
+title: 131. Element Transitions
+description: 
+authors: mattc
+categories: [
+  Transition
+  Animation
+  Options
+]
+created: 2024-01-02T14:07:19+0800
+updated: 2024-01-02T14:07:33+0800
+version: 1.1.1
+@end
+
+* Introduce transitions
+
+  What was previously learned about svelte/motion (tween, spring) is related to value changes, while transition focuses on the appearance and disappearance of DOM elements.
+
+  There are four types of transitions that can be used as follows, and they all need to be imported before use.
+
+  .image pic/122/1.png
+
+
+* Options of transition
+
+  Transition can set some options. Although some transitions can be set with options, they can still work well without options. However, there are some transitions that definitely require special options to see the effect, such as "fly".
+
+** global options
+   .image pic/122/2.png
+
+   Note that we are not using double braces, but a single brace wrapping an object inside.
+
+** specal options
+   .image pic/122/3.png
+

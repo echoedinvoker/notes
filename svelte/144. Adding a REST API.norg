@@ -1,0 +1,18 @@
+@document.meta
+title: 144. Adding a REST API
+description: 
+authors: mattc
+categories: [
+  Firebase
+  Realtime Database
+]
+created: 2024-01-02T20:50:15+0800
+updated: 2024-01-02T20:50:31+0800
+version: 1.1.1
+@end
+
+* Create a new project with realtime database in Firebase
+
+.image pic/129/1.png
+
+For the purpose of the upcoming fetch API course.

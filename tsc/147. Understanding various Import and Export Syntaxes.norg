@@ -1,0 +1,40 @@
+@document.meta
+title: 147. Understanding various Import and Export Syntaxes
+description: 
+authors: mattc
+categories: [
+  Group import
+  Alias import
+  Default export
+]
+created: 2024-01-17T18:17:28+0800
+updated: 2024-01-17T18:18:03+0800
+version: 1.1.1
+@end
+
+* Group import 
+
+  When we import multiple things from a single file, we can consider using group import.
+
+  .image pic/146/1.png
+
+  .image pic/146/2.png
+
+
+* Alias import
+
+  .image pic/146/3.png
+
+
+* Export/Import default
+
+  A file can use a default export, and its advantage is that it can be named freely when imported.
+
+  .image pic/146/4.png
+
+  The browser will use the presence or absence of curly braces in the import statement to determine whether it is importing a default export or not.
+
+  .image pic/146/5.png
+
+  Usually, named exports are more popular because IDEs usually support auto-import for them. However, default exports usually do not have this feature.
+

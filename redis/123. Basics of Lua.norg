@@ -1,0 +1,57 @@
+@document.meta
+title: 123. Basics of Lua
+description: 
+authors: mattc
+categories: [
+  Lua
+]
+created: 2024-01-22T23:35:04+0800
+updated: 2024-01-22T23:35:18+0800
+version: 1.1.1
+@end
+
+* Lua online test
+
+  .image pic/123/1.png
+
+  .image pic/123/2.png
+
+
+* Declare variable
+
+  In Lua, we usually use 'local' to declare variables.
+
+  .image pic/123/3.png
+
+  You can also declare variables without using 'local', then this variable is global.
+
+  .image pic/123/4.png
+
+  In Lua, it is advisable to avoid declaring global variables as much as possible, especially in Redis.
+
+
+* Condition block and compare operator
+
+  .image pic/123/5.png
+
+
+* 0 and "" are not falcy
+
+  .image pic/123/6.png
+
+  This is very different from other languages, so special attention should be paid.
+
+
+* Boolean and logic operator
+
+  Similar to Python, use "not" to reverse a boolean, and use "and" or "or" as logic operators.
+
+  .image pic/123/7.png
+
+
+* No null and undefine, only nil
+
+  In Lua, there is no null or undefined, only nil, which is falcy.
+
+  .image pic/123/8.png
+

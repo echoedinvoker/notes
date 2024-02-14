@@ -1,0 +1,97 @@
+@document.meta
+title: 3. 3 - Hello Cube
+description: 
+authors: mattc
+categories: [
+  Scene
+  Mesh
+  Camera
+  Renderer
+  CSS
+  Cavnas
+]
+created: 2024-01-03T22:59:11+0800
+updated: 2024-01-03T22:59:43+0800
+version: 1.1.1
+@end
+
+* Create project
+
+  .image pic/3/1.png
+
+
+* Elements of Three.js
+
+  .image pic/3/2.png
+
+  The camera determines which objects will be drawn by the renderer and how they will be drawn, but it does not render them itself.
+
+
+* Scene
+
+  .image pic/3/3.png
+
+  The space used to hold all objects and the camera.
+
+
+* Mesh
+
+  All objects we see in Three.js are composed of Mesh, which is composed of Geometry and Material.
+  So usually we refer to the objects in a Scene as mesh instead of object.
+
+  .image pic/3/4.png
+
+  .image pic/3/5.png
+
+
+* Camera
+
+** documents
+   .image pic/3/6.png
+
+** perspectiveCamera
+   .image pic/3/7.png
+
+** fov & far
+   .image pic/3/8.png
+
+   .image pic/3/9.png
+
+** distortion
+   The closer objects are to the edge of the perspectiveCamera, the more severe the distortion.
+
+   .image pic/3/10.png
+
+   .image pic/3/11.png
+
+
+* Renderer
+
+  .image pic/3/12.png
+
+
+* CSS
+
+  In order to make the entire page display a canvas without scrollbars and borders, we need to make some CSS settings.
+
+  .image pic/3/13.png
+
+  Some browsers may still have a scrollbar, you can add overflow: hidden; to ensure that there is no scrollbar, but it will affect the graphics in the canvas.
+
+  .image pic/3/14.png
+
+
+* Tuning the camera position and angle
+
+  Because everything is added to the scene, it defaults to the position (0, 0, 0), so we need to pull the camera back in order to see the objects.
+
+  .image pic/3/15.png
+
+  .image pic/3/16.png
+
+  .image pic/3/17.png
+
+  The camera above can only see one side of the mesh, so we need to adjust the position and direction of the camera to see multiple sides of the cube.
+
+  .image pic/3/18.png
+

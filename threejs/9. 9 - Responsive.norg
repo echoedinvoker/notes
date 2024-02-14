@@ -1,0 +1,34 @@
+@document.meta
+title: 9. 9 - Responsive
+description: 
+authors: mattc
+categories: [
+  Screen dimension
+  Responsive
+]
+created: 2024-01-05T11:02:50+0800
+updated: 2024-01-05T11:03:47+0800
+version: 1.1.1
+@end
+
+* ISSUE: no respones to screen dimension changes
+
+  When we change the screen dimension, the camera and renderer do not respond to the changes as bellows:
+
+  .image pic/9/1.png
+
+
+* Analyze the code and find the problem.
+
+  We search for the part in codes that obtains the screen dimension.
+
+  .image pic/9/2.png
+
+  As above, we found that both the camera and renderer are using the screen dimension, but they only obtain it once at the beginning and do not detect any subsequent changes in the screen dimension.
+
+
+* Fix the problem: add a listener to detect the screen dimension changes
+
+  So we need to add a listener to monitor screen changes, and when the screen changes, reset the camera and renderer for the screen dimension part.
+
+  .image pic/9/3.png

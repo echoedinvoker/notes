@@ -1,0 +1,33 @@
+@document.meta
+title: 122. Lua Scripting
+description: 
+authors: mattc
+categories: [
+  Lua Scripting
+  Over fetching
+  Concurrency
+]
+created: 2024-01-17T20:36:30+0800
+updated: 2024-01-17T20:36:52+0800
+version: 1.1.1
+@end
+
+* Over fetching
+
+  .image pic/122/1.png
+
+  As shown in the above figure, due to the lack of a Redis command to fetch even numbers, we can only fetch all the data first and then filter it. However, this results in over fetching.
+
+
+* Lua script
+
+  We can write Lua scripts and give them to Redis to execute, so that filtering can be done internally in Redis without the need to retrieve all the data.
+
+  .image pic/122/2.png
+
+
+* Lua script can solve concurrency problems, too
+
+  So Lua script is another option for solving concurrency problems.
+
+  .image pic/122/3.png

@@ -1,0 +1,50 @@
+@document.meta
+title: 128. Animating Values with a Tweened Store
+description: 
+authors: mattc
+categories: [
+  Animation
+  Store
+  Options
+  Tween
+  Easing
+]
+created: 2024-01-01T18:38:36+0800
+updated: 2024-01-01T18:38:59+0800
+version: 1.1.1
+@end
+
+* Tween is another store
+
+** chang value in writable store
+   .image pic/119/1.png
+
+   Although the result above shows that the progress bar will change from 0 to 50 in one second, the process in between is lacking and does not have any animation effect.
+
+** chang value in tween
+   Tween is also a type of store, but when the values inside it change, it automatically fills in the intermediate process for us.
+
+   .image pic/119/2.png
+
+
+* Tween options
+
+** remove setTimout
+   In fact, when using tween to save data, there are some options that can be set when it changes. Therefore, it doesn't make much sense for us to use setTimout externally, as it will be overridden by the effects of the tween's own options.
+
+   .image pic/119/3.png
+
+** introduce common options
+   .image pic/119/4.png
+
+   Interpolate is used to determine how each value in an animation process is obtained. Usually, we use numbers or dates stored in tweens and simply use the default interpolate without needing to define it specifically.
+
+
+* Svelte/easing
+
+  Regarding the option - easing, Svelte provides some well-written functions for us to use directly.
+
+  .image pic/119/5.png
+
+  .image pic/119/6.png
+

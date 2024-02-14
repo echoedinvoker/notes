@@ -1,0 +1,38 @@
+@document.meta
+title: 140. Animating the Meetup Items
+description: 
+authors: mattc
+categories: [
+  Transition
+  flip
+  Animation
+]
+created: 2024-01-02T20:18:57+0800
+updated: 2024-01-02T20:19:24+0800
+version: 1.1.1
+@end
+
+* Transition for MeetUp cart appear and disappear
+
+  Just like the previous lecture, we must find the built-in element that will truly appear and disappear.
+
+  .image pic/127/1.png
+
+  .image pic/127/2.png
+
+* animate:flip
+
+** requirement
+   When a new Meetup is added, we hope that existing Meetups can also have animations when they are moved to a new location.
+
+   .image pic/127/3.png
+
+** limit of animate:flip
+   .image pic/127/4.png
+
+   As mentioned above, animate:flip must be used directly under the {#each} block. This is different from transition:.
+
+** solution of the limit
+   We directly add a div element inside the {#each} block and put all the animations on this div. This is the most direct solution.
+
+   .image pic/127/5.png

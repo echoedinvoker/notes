@@ -1,0 +1,36 @@
+@document.meta
+title: 177. Setting Up a React + TypeScript Project
+description: 
+authors: mattc
+categories: [
+  React
+  Launch
+]
+created: 2024-02-13T01:57:18+0800
+updated: 2024-02-13T01:57:38+0800
+version: 1.1.1
+@end
+
+* Launch a new react project with TypeScript
+
+  React itself has a JSX part that needs to be compiled. If TypeScript is added, it will make the setup a bit more complicated. Therefore, the React team provides us with convenient tools that allow us to use it directly.
+
+  .image pic/172/1.png
+
+  .image pic/172/2.png
+
+
+* React project with TypeScript
+
+  .image pic/172/3.png
+
+  You can see the basic React project structure, but with additional TypeScript configuration files, and all .jsx files have been changed to .tsx.
+
+
+* Prepare for following lectures
+
+** Remove the excess and keep the core part.
+   .image pic/172/4.png
+
+** dummy text for the test
+   .image pic/172/5.png

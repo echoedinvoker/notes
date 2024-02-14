@@ -1,0 +1,53 @@
+@document.meta
+title: 138. Implementing WithLock
+description: 
+authors: mattc
+categories: [
+  Retry
+  Lock
+]
+created: 2024-02-13T04:33:30+0800
+updated: 2024-02-13T04:34:15+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  .image pic/138/1.png
+
+
+* Variables and write some guildlines
+
+  .image pic/138/2.png
+
+  .image pic/138/3.png
+
+
+* Lock key/value
+
+** value: random hash
+   The value of "lock" must be a random value, and we will know why later. Here, we use the built-in crypto.randomBytes in node.js to generate a random hash. This is a common way.
+
+   .image pic/138/4.png
+
+** key: `lock:${key}`
+   .image pic/138/5.png
+
+
+* Retry mechanism by while loop
+
+  We will decrement the variable 'retry' each time in the while loop. When retry equals 0, it will exit the while loop. This is a common way to create a retry mechanism, which is why we previously used 'let' to declare retries.
+
+  .image pic/138/6.png
+
+
+* Aqruied success/failure
+
+  .image pic/138/7.png
+
+  Note that return will exit the entire function, so it will also exit the while loop. Therefore, we use try ... finally to ensure that the lock is always released in the end. The course video does not use try ... finally, but instead releases the lock directly before returning. This can indeed achieve the same purpose, but if there is a problem with the code after the return, the lock will not be released. Therefore, using try ... finally is more secure.
+
+
+* Not complete
+
+  This part still has some flaws, which will be supplemented in the following lecture.

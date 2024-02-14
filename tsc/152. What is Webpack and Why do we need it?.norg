@@ -1,0 +1,28 @@
+@document.meta
+title: 152. What is Webpack and Why do we need it?
+description: 
+authors: mattc
+categories: [
+  ES6 disavanatge
+  Webpack
+  Bundle
+]
+created: 2024-01-17T18:53:38+0800
+updated: 2024-01-17T18:54:11+0800
+version: 1.1.1
+@end
+
+* Disavanatge of using ES6 import/export
+
+  .image pic/148/1.png
+
+  ES6 import/export will generate a lot of requests as mentioned above. Each request, in addition to the time it takes to download the file itself, also requires additional time for other components. This will result in a slower loading speed for the webpage.
+
+
+* Webpack
+
+  The main function of Webpack is to merge multiple js files into one, which can avoid the problems mentioned above and also allow us to use ES6 import/export.
+
+  .image pic/148/2.png
+
+  And it also provides other functions as shown in the picture.

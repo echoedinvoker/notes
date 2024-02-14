@@ -1,0 +1,63 @@
+@document.meta
+title: 131. Adding Inheritance and Generics
+description: 
+authors: mattc
+categories: [
+  Generics
+  Inheritance
+  Abstract Class
+]
+created: 2023-12-30T13:10:57+0800
+updated: 2023-12-30T13:11:46+0800
+version: 1.1.1
+@end
+
+* Split rendering template to hosted element as an independent class
+
+** why?
+   Both the ProjectInput and ProjectList classes include the logic of retrieving data from the template element and rendering it to the hosted element. This design will result in code duplication and is not easy to maintain.
+
+   .image pic/127/1.png
+
+** Build component class
+*** using generics
+    .image pic/127/2.png
+
+*** abstract class
+    The lecturer defined the component class as an abstract class and defined two necessary methods so that this class cannot be instantiated, but I think the latter two methods is not necessary and was only included for teaching purposes.
+
+    .image pic/127/3.png
+
+** inheritance
+   .image pic/127/4.png
+
+
+* Split listener as an independent class from ProjectState
+
+** why?
+   Although this app only has one ProjectState, if there are multiple, each ProjectState will have a listener, which will result in duplicated code and make it difficult to maintain.
+
+   .image pic/127/5.png
+
+** build State class which include listener logic 
+
+*** copy paste from ProjectState
+    .image pic/127/6.png
+
+*** using generics
+    .image pic/127/7.png
+
+
+** inheritance
+   .image pic/127/8.png
+
+   Because the attribute "listener" in the State class, although inherited, is private, it cannot be used in the ProjectState. Therefore, we must change it from private to protected.
+
+   .image pic/127/9.png
+
+
+* Final Test
+
+  .image pic/127/10.png
+
+  Work as before, but the codes are more concise and the program is more readable. 😄

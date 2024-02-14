@@ -1,0 +1,23 @@
+@document.meta
+title: 108. Subscribing for a Short Period
+description: 
+authors: mattc
+categories: [
+  Store
+  Subscription
+]
+created: 2023-12-30T16:38:43+0800
+updated: 2023-12-30T16:38:59+0800
+version: 1.1.1
+@end
+
+* Compare three types of subscription
+
+  We use the three ways of subscribe store in CartItem to compare their quality, starting from the left as the worst and the right as the best way.
+
+  .image pic/108/1.png
+
+  Svelte's subscribe can be placed inside a function and does not need to be at the top level, which is very different from other framework's stores.
+
+  The middle and right side have the same concept, but the writing on the right side is more concise and easier to understand.
+

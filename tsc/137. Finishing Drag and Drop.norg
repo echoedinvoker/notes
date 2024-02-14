@@ -1,0 +1,49 @@
+@document.meta
+title: 137. Finishing Drag and Drop
+description: 
+authors: mattc
+categories: [
+  Switching
+  Status
+]
+created: 2024-01-05T17:04:35+0800
+updated: 2024-01-05T17:05:08+0800
+version: 1.1.1
+@end
+
+* Plan of switching project between different lists
+
+  We stored projects data and the functions that need to be triggered when this data changes in the class ProjectState.
+
+  .image pic/136/4.png
+
+  So it is natural for us to establish a method to complete the switching of project status and the red-render action in this class.
+
+
+* Build switching method in the class ProjectState
+
+** Mutant data
+   .image pic/136/5.png
+
+** Re-render
+   .image pic/136/6.png
+
+
+* Using ProjectState method in drop handler function
+
+  .image pic/136/7.png
+
+
+* Test
+
+  .image pic/136/8.png
+
+
+* ISSUE: When drop on the same list, it still re-render
+
+** explanation the issue
+   .image pic/136/9.png
+
+** solution
+   .image pic/136/10.png
+

@@ -1,0 +1,50 @@
+@document.meta
+title: 20. 20 - 3d models - 2
+description: 
+authors: mattc
+categories: [
+  Blender
+  Animation
+]
+created: 2024-02-06T15:50:59+0800
+updated: 2024-02-06T15:51:30+0800
+version: 1.1.1
+@end
+
+* Create animation by blender
+
+  .image pic/21/1.png
+
+  .image pic/21/2.png
+
+  .image pic/21/3.png
+
+
+* Export .glb model file
+
+  .image pic/21/4.png
+
+  .image pic/21/5.png
+
+
+* Using export file in Javascript and load animation by AnimationMixer
+
+** load model file
+   .image pic/21/6.png
+
+** documents of AnimationMixer
+   .image pic/21/7.png
+
+** load animation by AnimationMixer
+   .image pic/21/8.png
+
+
+* .update() inside animate's callback and calc frame time
+
+  In order to allow the animationMixer to be updated in the callback of animate, we use the let declaration at the top level.
+
+  .image pic/21/9.png
+
+  .update() requires the time difference (in seconds) between the current frame and the previous frame.
+
+  .image pic/21/10.png

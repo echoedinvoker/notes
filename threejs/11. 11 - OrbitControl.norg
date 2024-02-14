@@ -1,0 +1,50 @@
+@document.meta
+title: 11. 11 - OrbitControl
+description: 
+authors: mattc
+categories: [
+  OrbitControl
+  AutotRotation
+  Damping of the camera
+]
+created: 2024-01-09T21:23:27+0800
+updated: 2024-01-09T21:24:50+0800
+version: 1.1.1
+@end
+
+* Orbit controls
+
+  We can instantiate this class to allow users to control the movement of the camera, making the website more interactive.
+
+  .image pic/11/1.png
+
+  .image pic/11/2.png
+
+  What needs to be noted is that the source of import is different from the example in the document.
+
+  .image pic/11/3.png
+
+  We only need to instantiate the `OrbitControls` class to obtain the functionality of controlling the camera.
+
+  .image pic/11/4.png
+
+Because the camera is set to rotate around the origin by default, and this method is also located at the origin, it appears as if it is controlling the mesh, but in reality, it is controlling the camera.
+
+* Auto Rotation
+
+  We can make the `Camera` automatically rotate by setting the `autoRotation` property to `true`.
+
+  .image pic/11/5.png
+
+  .image pic/11/6.png
+
+  Of course, the speed of automatic rotation can be adjusted.
+
+  .image pic/11/7.png
+
+
+* Damping
+
+  This attribute can give the camera's movement a damping effect, making the movement appear smoother.
+
+  .image pic/11/8.png

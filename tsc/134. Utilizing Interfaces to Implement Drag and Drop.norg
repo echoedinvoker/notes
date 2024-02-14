@@ -1,0 +1,52 @@
+@document.meta
+title: 134. Utilizing Interfaces to Implement Drag and Drop
+description: 
+authors: mattc
+categories: [
+  Drag and Drop
+  DragEvent
+  Draggable
+  Interface
+  Contract
+]
+created: 2024-01-05T13:54:16+0800
+updated: 2024-01-05T13:54:45+0800
+version: 1.1.1
+@end
+
+* Interface not only to define custom object type but also contract
+
+  .image pic/134/1.png
+
+  .image pic/134/2.png
+
+  The DragEvent type exists because we have set 'dom' in lib of tsconfig.json.
+
+
+* Implement drag methods and listeners in the Class
+
+** implement
+   .image pic/134/3.png
+
+** replace .bind(this) with @autobind
+   .image pic/134/4.png
+
+
+* Try to drag item but it doesn't work
+
+** try to drag
+   .image pic/134/5.png
+
+** draggable attribute
+   .image pic/134/6.png
+
+   So whether a DOM element can be dragged or not depends on the draggable attribute. The listener/handler we set only determines what actions to take when this fact (item being dragged) occurs.
+
+
+* Check if @autobind work or not
+
+** with @autobind
+   .image pic/134/7.png
+
+** without @autobind
+   .image pic/134/8.png

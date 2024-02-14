@@ -1,0 +1,41 @@
+@document.meta
+title: 128. Providing Key lists
+description: 
+authors: mattc
+categories: [
+  LUA
+  KEYS
+]
+created: 2024-01-25T21:00:04+0800
+updated: 2024-01-25T21:00:28+0800
+version: 1.1.1
+@end
+
+* redis.call()
+
+  In LUA script, we can use `redis.call()` to execute any Redis command.
+
+  .image pic/128/1.png
+
+  .image pic/128/2.png
+
+
+* We should never generate KEY inside LUA script dynamically!
+
+  Although the practice above seems fine, all keys must be passed from external sources rather than generated within the LUA script. If this rule is not followed, it is very likely to make the entire app buggy in the future.
+
+  .image pic/128/3.png
+
+
+* rBook practice: pass KEY from outside
+
+  .image pic/128/4.png
+
+
+* rBook practice: mix KEY and ARGV
+
+  .image pic/128/5.png
+
+  Although above processing is done with number operation, it is uncertain how strings are converted into numbers, so using tonumber() may be safer.
+
+  .image pic/128/6.png

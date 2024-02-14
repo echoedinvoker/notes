@@ -1,0 +1,20 @@
+@document.meta
+title: 147. Fetching and Transforming Data
+description: 
+authors: mattc
+categories: [
+  Fetching
+  Query
+]
+created: 2024-01-02T23:41:57+0800
+updated: 2024-01-02T23:42:27+0800
+version: 1.1.1
+@end
+
+* Query data from firebase
+
+In other frameworks, we may need to use onMounted or useEffect to query an external server and retrieve data when the component is initially loaded. However, in Svelte, we can directly use axios or fetch in the script to achieve the same.
+
+.image pic/132/1.png
+
+  As mentioned above, if we successfully retrieve the data, we can directly deserialize it and assign it to the state, which will automatically render it by Svelte. The logic is simpler and clearer than other frameworks.

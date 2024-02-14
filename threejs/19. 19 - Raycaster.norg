@@ -1,0 +1,65 @@
+@document.meta
+title: 19. 19 - Raycaster
+description: 
+authors: mattc
+categories: [
+  Raycaster
+]
+created: 2024-01-26T22:45:05+0800
+updated: 2024-01-26T22:45:27+0800
+version: 1.1.1
+@end
+
+* Document of Raycaster
+
+  In this lecture, we are going to implement the effect of ray casting. ThreeJS provides the Raycaster class, which makes it very easy for us to achieve this effect.
+
+  .image pic/19/1.png
+
+
+* Prepare the scene and meshes
+
+  .image pic/19/2.png
+
+
+* Instantiate the Raycaster
+
+  We must instantiate the Raycaster class in order to use two important methods, 'setFromCamera' and 'intersectObjects', to achieve the effect of ray casting.
+
+  .image pic/19/3.png
+
+
+* Casting a ray from the camera
+
+  In order to cast a ray from the camera, we need a pointer, but it must be a normalized Vector2 value.
+
+  .image pic/19/4.png
+
+  .image pic/19/5.png
+
+
+* Get the intersected meshes
+
+  .image pic/19/6.png
+
+
+* Change the material properties of the intersected mesh
+
+  .image pic/19/7.png
+
+  The above approach will encounter issues such as ray penetration and the color not reverting back to white when the intersection disappears, and so on.
+
+  .image pic/19/8.png
+
+  The following is the writing after considering many issues.
+
+  .image pic/19/9.png
+
+  The key is that we created another array called 'intersect' to store the first element of the array intersects. This can solve many problems.
+
+
+* Add another effect with Gsap
+
+  In addition to changing the properties of materials, we can also use Gsap to change the properties of objects, such as position, size, rotation, and so on.
+
+  .image pic/19/10.png

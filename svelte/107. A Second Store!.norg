@@ -1,0 +1,52 @@
+@document.meta
+title: 107. A Second Store!
+description: 
+authors: mattc
+categories: [
+  Store
+  Store Update
+  Centralize Store Management
+]
+created: 2023-12-30T10:36:40+0800
+updated: 2023-12-30T10:37:07+0800
+version: 1.1.1
+@end
+
+* I prefare named export
+
+  Previously, when we created the store, we used default export. However, I prefer using named export because the IDE's auto import feature works better. Additionally, the store does not need to have the name "Store" but rather use the name of the data itself. This way, when using the $ syntax sugar, the code will look more natural.
+
+  .image pic/107/2.png
+
+
+* Button: 'Revemo from cart' of CartItem
+
+  The button has been created in CartItem but the functionality has not been implemented yet. We can choose to directly import the store and use its update() to implement its functionality. However, in larger projects, we usually concentrate all the actions of accessing the store in one component. This is better for maintenance and testing.
+
+  .image pic/107/1.png
+
+  I prefer to centralize the update() and set() functions of the Store in the root component of the feature. This makes it easier to maintain and test. However, $ can be used in any component because it is an output from the Store and is not limited to a specific component. (This is only my preference 😄)
+
+  .image pic/107/3.png
+
+
+* Button: 'show description' of CartItem
+
+** problem: how to get product data from cart item?
+   The lecture intentionally puts the description in the product data instead of the cart data, so we have to access the product data from the cart item component. This means we must use a store, otherwise we can only use state lift (which is not what we want).
+
+   .image pic/107/4.png
+
+** migrate products data to store
+   We establish a store exclusively for products. Some people prefer to create only one store in an app, where all feature data is centrally managed. However, here we use a pattern of one store per feature.
+
+   .image pic/107/5.png
+
+
+** fetch products data from store
+   With the products store, you can extract its data in any component.
+
+   .image pic/107/6.png
+
+   Above, I directly use the \$ symbol to extract all the products data and then perform transformations in the component. Therefore, I can use the "$" syntactic sugar. However, I am not sure if this will result in poorer performance.
+

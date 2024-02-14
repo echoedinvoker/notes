@@ -1,0 +1,81 @@
+@document.meta
+title: 112. Derived Store and Store Bindings
+description: 
+authors: mattc
+categories: [
+  Store
+  Store Bindings
+  Store Derived
+  Store conjunction
+]
+created: 2023-12-30T17:53:41+0800
+updated: 2023-12-30T17:54:07+0800
+version: 1.1.1
+@end
+
+* Derived Store & Store Bindings
+  There are two other features which you can use in conjunction with Svelte stores:
+
+** 1) Derived Stores
+
+   You can have a store which produces values based on another store + some adjustment logic.
+
+   Link: https://svelte.dev/tutorial/derived-stores
+
+   Example:
+
+   @svelte
+   import { readable, derived } from 'svelte/store';
+
+   export const time = readable(new Date(), function start(set) {
+   const interval = setInterval(() => {
+   set(new Date());
+   }, 1000);
+
+   return function stop() {
+   clearInterval(interval);
+   };
+   });
+
+   const start = new Date();
+
+   export const elapsed = derived(
+   time,
+   $time => Math.round(($time - start) / 1000)
+   );
+   @end
+
+** 2) Store Bindings
+
+   Allows you to bind: to values stored in a store.
+
+   Link: https://svelte.dev/tutorial/store-bindings
+
+   Example:
+
+   store.js
+
+   @svelte
+   import { writable, derived } from 'svelte/store';
+
+   export const name = writable('world');
+
+   export const greeting = derived(
+   name,
+   $name => `Hello ${$name}!`
+   );
+   @end
+   App.svelte
+
+   @svelte
+   <script>
+   import { name, greeting } from './stores.js';
+   </script>
+
+   <h1>{$greeting}</h1>
+   <input bind:value={$name}>
+
+   <button on:click="{() => $name += '!'}">
+   Add exclamation mark!
+   </button>
+   @end

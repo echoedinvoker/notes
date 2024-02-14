@@ -1,31 +1,27 @@
-* Init
-  44100 salary
-  -3400 rent
-  -10000 loan
-  -500*30 living expenses
-  -658 motorcycle compulsory insurance
-  -624 telephone fee
-  -1407 Internet fee
-  -4200 motorcycle repair
-  -200 motorcycle maintain
-  -730 pinus bump
-  -1341 makeup
+* Money management
+  31071+1700=32771 cash
+  -500*20=10000 food --> 22771
+  -250 motorcycle maintain --> 22521
+  -10000 loan --> 12521
+  43000 salary --> 55521
+  -1088*12 gym --> 42225
 
-  6540 remaining
+  -250 motorcycle maintain --> 41760
+  -3400 rent --> 38360
+  -1096 electricity --> 37264
+  -500*30=15000 food --> 22264
+  -1149 internet --> 21115
+  -744 phone --> 20371
+  -10000 loan --> 10371
 
-* Current (9 Dec 12:00)
-  26131 money in jiako
-  1800 cash
-  -3400 rent
-  -450*25 living expenses
-  -658 motorcycle compulsory insurance
-  -4200 motorcycle repair
-  -500 motorcycle maintain
 
-* Current (17 Dec 15:00)
-  6900 money in jiako
-  1000 cash
-  -450*10 living expenses
 
-  remaining 3400
+* Per day expenses prediction
+** Dinner steak 170
+** After work, Starbucks 130 --> 300
+** eggs 13*2=26 --> 326
+** Probiotics 28 --> 354
+** Salad 65 --> 419
 
+* Projects
+** [timer & todo]{:timer and todo:}

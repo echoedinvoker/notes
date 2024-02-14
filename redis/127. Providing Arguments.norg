@@ -1,0 +1,49 @@
+@document.meta
+title: 127. Providing Arguments
+description: 
+authors: mattc
+categories: [
+  LUA
+  ARGV
+  Arguments
+]
+created: 2024-01-25T20:25:13+0800
+updated: 2024-01-25T20:25:36+0800
+version: 1.1.1
+@end
+
+* Situation that requires argument
+
+  .image pic/127/1.png
+
+  The situation above clearly requires an argument, so only one script is needed to replace these 6 scripts.
+
+
+* ARGV concept charts
+
+** argument always be string
+   .image pic/127/2.png
+
+   Even if the parameters we need in the LUA script are numbers, they must be passed as arguments in string format in Redis CLI.
+
+** allow multiple arguments
+   .image pic/127/3.png
+
+** ARGV is a array
+   .image pic/127/4.png
+
+
+* rBook practice
+
+** ARGV directly
+   .image pic/127/5.png
+
+   Although it is said in the course video that the values passed into the LUA script are also strings, so they must be converted into numbers in order to perform calculations, when I tested it, there was no need to convert them into numbers and the calculations could still be done correctly. This part needs to be confirmed again.
+
+** tonumber(ARGV)
+   The following is the writing in the course, using tonumber() to convert ARGV into a number.
+
+   .image pic/127/6.png
+
+** multiple ARGV
+   .image pic/127/7.png

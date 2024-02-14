@@ -1,0 +1,73 @@
+@document.meta
+title: 4. 4 - Transformation
+description: 
+authors: mattc
+categories: [
+  Object3D
+  Position
+  Rotation
+  Scale
+  Group
+  Helper
+]
+created: 2024-01-04T00:16:17+0800
+updated: 2024-01-04T00:16:43+0800
+version: 1.1.1
+@end
+
+* Object3D
+
+  Object3D is the base class for most of the display objects in three.js, and provides a set of properties and methods for manipulating objects in 3D space.
+
+  .image pic/4/1.png
+
+** which elements of three.js inherit Object3D?
+
+   .image pic/4/2.png
+
+   .image pic/4/3.png
+
+   From the above document, it can be observed that both mesh and camera inherit from Object3D, so both mesh and camera can use the properties and methods of Object3D.
+
+** common use properties of Object3D
+
+*** position
+    .image pic/4/4.png
+
+    .image pic/4/5.png
+
+*** scale
+    .image pic/4/6.png
+
+*** rotation
+    .image pic/4/7.png
+
+    .image pic/4/8.png
+
+    .image pic/4/9.png
+
+** practice
+
+   .image pic/4/10.png
+
+   .image pic/4/11.png
+
+   .image pic/4/12.png
+
+
+* Group
+
+  We can combine multiple meshes using Group to conveniently move, rotate, and resize them together (so Group also inherits Object3D).
+
+  .image pic/4/13.png
+
+
+* Helper
+
+** documents & various helper
+   .image pic/4/14.png
+
+** try to use AxesHelper
+   .image pic/4/15.png
+
+   .image pic/4/16.png

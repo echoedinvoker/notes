@@ -1,0 +1,35 @@
+@document.meta
+title: 130. Custom Scripts with Node-Redis
+description: 
+authors: mattc
+categories: [
+  Script
+  LUA
+]
+created: 2024-01-31T19:54:56+0800
+updated: 2024-01-31T19:55:23+0800
+version: 1.1.1
+@end
+
+* Demand of following lectures
+
+  .image pic/130/1.png
+
+
+* Redis commands of LUA script vs. that of Redis client
+
+  In the original Redis commands, we use `SCRIPT LOAD` to save a LUA script in Redis and obtain an ID. When needed, we can execute it using the ID.
+
+  .image pic/130/2.png
+
+  But in the Redis client, we directly write the LUA script as a function in the Redis client.
+
+  .image pic/130/3.png
+
+
+
+* How to create a custom function with LUA script to Redis client
+
+  Below are each stage of establishing a function. In the upcoming lectures, we will introduce them one by one.
+
+  .image pic/130/4.png

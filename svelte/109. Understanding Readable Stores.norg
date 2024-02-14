@@ -1,0 +1,45 @@
+@document.meta
+title: 109. Understanding Readable Stores
+description: 
+authors: mattc
+categories: [
+  Readable Stores
+]
+created: 2023-12-30T17:20:40+0800
+updated: 2023-12-30T17:20:54+0800
+version: 1.1.1
+@end
+
+* Readable store
+
+  In addition to writable store, Svelte also provides readable store. This type of store can only change data internally, and external sources can only read the data through .subscribe(), and cannot use .set() or .update().
+
+  .image pic/109/1.png
+
+
+* How about .update() internally?
+
+  The callback function only provides .set(). What if we want to update the original data? Don't worry, we can store the data outside of readable() and then pass it as the first argument to readable().
+
+  .image pic/109/2.png
+
+
+* Subscribe readable store in the component
+
+  .image pic/109/3.png
+
+  .image pic/109/4.png
+
+  The key point is that although the returned function will be called when unsubscribed from the store, the count outside of the readable will not be deleted. This is actually a very natural thing.
+
+
+* If want to start counting from the beginning every time we open the card, how to modify it?
+
+  We can add some codes to the returned function to actively reset the count to zero.
+
+  .image pic/109/5.png
+
+
+* Readable store usage
+
+  In addition to the timer, recording the user's geo location is also a good example because this data is provided by the browser, which we cannot control. Therefore, we can only use a readable store to receive the data and obtain it externally through subscription.

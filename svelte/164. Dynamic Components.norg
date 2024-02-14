@@ -1,0 +1,28 @@
+@document.meta
+title: 164. Dynamic Components
+description: 
+authors: mattc
+categories: [
+  Dynamic Components
+]
+created: 2024-01-03T15:23:06+0800
+updated: 2024-01-03T15:23:22+0800
+version: 1.1.1
+@end
+
+* Explanation of the issue
+
+  .image pic/164/1.png
+
+  The above example may not only have two components, but possibly even dozens of components. In this case, the template part in App.svelte will become long and difficult to maintain. We can use dynamic components to solve this problem.
+
+
+* Using dynamic components
+
+  We use dynamic components and store the component in a state so that the attribute 'this' of dynamic components can refer to it.
+
+  .image pic/164/2.png
+
+  The state can be further expanded to store objects, so that besides the component, it can also include other data.
+
+  .image pic/164/3.png

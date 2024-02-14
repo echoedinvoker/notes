@@ -1,0 +1,33 @@
+@document.meta
+title: 116. Transactions
+description: 
+authors: mattc
+categories: [
+  MULTI
+  EXEC
+  Transactions
+  Concurrency
+]
+created: 2024-01-12T08:52:30+0800
+updated: 2024-01-12T08:52:54+0800
+version: 1.1.1
+@end
+
+* Options of handling concurrency
+
+  .image pic/116/1.png
+
+
+* Transaction
+
+  .image pic/116/2.png
+
+  The pipeline does not guarantee that commands are executed one after another, but transactions ensure this by not allowing any other commands to be inserted in between.
+
+
+* MULTI & EXEC
+
+  .image pic/116/3.png
+
+  .image pic/116/4.png
+

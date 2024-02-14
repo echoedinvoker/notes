@@ -1,0 +1,33 @@
+@document.meta
+title: 133. Using Different "in" and "out" Transitions
+description: 
+authors: mattc
+categories: [
+  Transitions
+  Events of transition
+]
+created: 2024-01-02T14:59:54+0800
+updated: 2024-01-02T15:00:30+0800
+version: 1.1.1
+@end
+
+* Different types of transitions in/out
+
+** requirement
+   In the previous lecture, we all set the types of transition in/out at the same time. But if different types of animations are needed for transition in/out, how should we set them?
+
+   .image pic/124/1.png
+
+** in: out:
+   We can simply use "in: out:" instead of "transition:" to achieve this requirement.
+
+   .image pic/124/2.png
+
+   However, in this situation, the reversibility and cancelability of the transition animation may not be achieved. It is important to pay special attention to this point.
+
+
+* Events of transition
+
+  The transition itself emits events, and there are four types of events when combined with the start/end, and in/out animations, as follows.
+
+  .image pic/124/3.png

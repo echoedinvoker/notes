@@ -1,0 +1,89 @@
+@document.meta
+title: 12. 12 - Geometries
+description: 
+authors: mattc
+categories: [
+  Vertice
+  Segments
+  Geometry
+]
+created: 2024-01-11T17:13:30+0800
+updated: 2024-01-11T17:13:54+0800
+version: 1.1.1
+@end
+
+* Vertice
+
+  The figure is formed by connecting each point to create a combination of triangles, and these points are also known as vertices.
+
+  .image pic/12/1.png
+
+  The vertex itself has three main attributes: position, normal, uv.
+
+
+* Geometry
+
+  .image pic/12/2.png
+
+  .image pic/12/3.png
+
+  .image pic/12/4.png
+
+  .image pic/12/5.png
+
+  .image pic/12/6.png
+
+  .image pic/12/7.png
+
+  .image pic/12/8.png
+
+  .image pic/12/9.png
+
+
+* attr segments
+
+  From the various geometry introductions above, it is found that each one has an attribute named "segments."
+
+  .image pic/12/10.png
+
+  .image pic/12/11.png
+
+  As shown above, the higher the value of segments, the more vertices there are, and the finer the shape. However, this cannot be seen on a cube, and is usually used to simulate curves.
+
+  .image pic/12/12.png
+
+  .image pic/12/13.png
+
+  As mentioned above, when we reduce the segments of SphereGeometry to the minimum, it is completely unrecognizable as a sphere because segments is too small.
+
+  .image pic/12/14.png
+
+  .image pic/12/15.png
+
+
+* Buffer geometry
+
+  All geometries are built based on BufferGeometry.
+
+  .image pic/12/16.png
+
+  We can also directly use BufferGeometry to create graphics.
+
+  .image pic/12/17.png
+
+  It can be seen from the document that the value of position in BufferGeometry is composed of Float32Array.
+
+  .image pic/12/18.png
+
+  Actually using BufferGeometry to create a simple triangle in codes as follows
+
+  .image pic/12/19.png
+
+  We observe the content of the BufferGeometry object.
+
+  .image pic/12/20.png
+
+  Upon further observation of the content of BoxGeometry, it can be noticed that its vertices are also created by BufferGeometry. We only need the position to create basic shapes, while normal and uv are two other main properties of BufferGeometry, which will be introduced in a later lecture.
+
+  .image pic/12/21.png
+

@@ -1,0 +1,18 @@
+@document.meta
+title: 135. Deferred Transitions
+description: 
+authors: mattc
+categories: [
+  Animation
+  Deferred Transitions
+]
+created: 2024-01-02T15:23:44+0800
+updated: 2024-01-02T15:24:07+0800
+version: 1.1.1
+@end
+
+* Deferred Transitions
+
+In some applications/ use-cases, you might want to play multiple animations after each other (e.g. animate an item from list A to B) - deferred transitions can help you with that.
+
+Here's a great example: https://svelte.dev/tutorial/deferred-transitions

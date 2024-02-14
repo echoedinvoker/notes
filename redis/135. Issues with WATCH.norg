@@ -1,0 +1,36 @@
+@document.meta
+title: 135. Issues with WATCH
+description: 
+authors: mattc
+categories: [
+  TEST
+  Transaction
+  Cancel
+  WATCH
+  Conccurency
+]
+created: 2024-02-06T13:21:59+0800
+updated: 2024-02-06T13:22:42+0800
+version: 1.1.1
+@end
+
+* Transaction canceled by WATCH
+
+  In the previous lecture, we mentioned that using WATCH to handle concurrency issues can avoid errors, but it can also cause the problem of transaction cancellation.
+
+  .image pic/134/1.png
+
+
+* Test Setup
+
+  The lecturer uses three Node.js scripts simultaneously to simulate the issue of transaction being canceled by WATCH when bidding 50 times for a single item under high loading.
+
+  .image pic/134/2.png
+
+
+* Test result
+
+  .image pic/134/3.png
+
+  The test results show a success rate of 60-70% for transactions. The remaining transactions will be canceled by WATCH, which can result in significant loss of profit for merchants. We hope for a 100% success rate.
+

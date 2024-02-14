@@ -1,0 +1,46 @@
+@document.meta
+title: 15. 15 - Debugging
+description: 
+authors: mattc
+categories: [
+  GUI
+  dat.gui
+]
+created: 2024-01-19T15:08:09+0800
+updated: 2024-01-19T15:08:38+0800
+version: 1.1.1
+@end
+
+* dat.gui & install
+
+  We can add a GUI to directly control parameters on the page to speed up the development process.
+
+  .image pic/15/1.png
+
+  .image pic/15/2.png
+
+  .image pic/15/3.png
+
+  There are three most commonly used types of GUI, and we will introduce them one by one.
+
+
+* Range type
+
+  .image pic/15/4.png
+
+
+* Boolean type
+
+  .image pic/15/5.png
+
+
+* Color type
+
+  .image pic/15/6.png
+
+
+* Named gui
+
+  We can customize names to avoid conflicts when operating on multiple objects with the same name attributes.
+
+  .image pic/15/7.png

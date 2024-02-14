@@ -1,0 +1,31 @@
+@document.meta
+title: 117. Watching a Key with Transactions
+description: 
+authors: mattc
+categories: [
+  WATCH
+  Transactions
+  Concurrency
+]
+created: 2024-01-12T09:17:04+0800
+updated: 2024-01-12T09:17:31+0800
+version: 1.1.1
+@end
+
+* WATCH
+
+  .image pic/117/1.png
+
+* rbook practice
+
+** change watched key
+   .image pic/117/2.png
+
+** set watched key but value is the same
+   .image pic/117/3.png
+
+   This is the point that requires more attention.
+
+** not change watched key
+   .image pic/117/4.png
+
