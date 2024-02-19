@@ -1,0 +1,49 @@
+@document.meta
+title: 30. Adding Functionality to Structs
+description: 
+authors: mattc
+categories: [
+  Method
+  Associated Function
+  Implementation Block
+]
+created: 2024-02-18T16:23:29+0800
+updated: 2024-02-18T16:23:47+0800
+version: 1.1.1
+@end
+
+* How to define method of instance?
+
+** independent function
+   .image pic/16/1.png
+
+   The function displace_car_info above is a function independent of the Car instance, but displace_car_info should be written into the struct as one of its methods, rather than being written independently outside. How do we implement a method in RUST?
+
+** implementation block
+   In RUST, we implement methods through an implementation block, which is a special block that allows us to define a function inside a specific struct or enum. This function will then become a method of that struct or enum.
+
+   .image pic/16/2.png
+
+
+* Three types of methods
+
+  The first parameter of a function defined in an implementation block must be self. This type of function is called a method, and depending on self, there are three different types of methods.
+
+** immutable/mutable reference self
+   .image pic/16/3.png
+
+** not reference self
+   .image pic/16/4.png
+
+   .image pic/16/5.png
+
+
+* Associated function
+
+  The meaning of an associated function is a function under a struct that does not operate on its instance at all, somewhat similar to a static method in other languages.
+
+** create/using associated function
+   .image pic/16/6.png
+
+** create/using constructor function by it
+   .image pic/16/7.png

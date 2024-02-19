@@ -1,30 +1,56 @@
-* Evaluate the GUI required for the reset password process.
-** Sending Email
-*** Parameters
-    - transporter
-    -- host
-    -- port
-    -- username
-    -- password
-    - mail options
-    -- from
-    -- to
-    -- subject
-    -- html
-    -- text
-** Mail content
-   - html (backend)
-   -- [html sample]{https://github.com/leemunroe/responsive-html-email-template/blob/master/email-inlined.html}
-   - text: transform html to text
+* (x) Found where to get all queries types (20%)
+  Sophie explains that conversion and error messages should be set based on the type during the data source setup stage.
+  Create a class called Type_checker and pass the dictionary {colname: type str} into its constructor at the create/update data source location.
+** (x) Found the place to handle type processing (10%)
+** (x) Get all field types when data source is created/updated (10%)
+* (x) Finish Type_checker class (65%)
+** (x) Check all fields' types (5%)
+** (x) Convert types (30%)
+*** (x) Date to ISO 8601 (15%)
+**** (x) Oracle (5%)
+     TIMESTAMP_WITH_LTZ_COLUMN pass, but TIMESTAMP_WITH_TZ_COLUMN failed
+     Oracle's NUMERIC/DECIMAL is int type, and FLOAT is float type, no need to convert
+***** (x) Add TIMESTAMP_WITH_TZ_COLUMN type to exclude list (5%)
+**** (x) MySQL (5%) 
+**** (x) Postgres (5%) 
+*** (x) Decimal to float (15%)
+**** (x) Oracle (5%) 
+**** (x) MySQL (5%)
+**** (x) Postgres (5%) 
+** (x) Type constructor function (5%)
+** (x) Split excluded types to three db (5%)
+*** (x) add db property to each type (5%)
+** (x) Change class name by CamelCase (10%)
+*** (x) type checker (5%)
+*** (x) type converter (5%)
+** (x) Response error (10%)
+*** (x) HTTPException & try...except (5%)
+*** (x) response error with types of same db (5%)
+* (x) Frontend (15%)
+** (x) i8n text for snackbar (7%)
+** (x) implement snackbar when saving data source (8%)
+* (x) Test
+** (x) Saving data source 
+*** (x) Oracle
+**** (x) type 1
+**** (x) type 2
+**** (x) type 3
+**** (x) type 4
+*** (x) MySQL
+**** (x) type 1
+**** (x) type 2
+**** (x) type 3
+**** (x) type 4
+*** (x) Postgres
+**** (x) type 1
+**** (x) type 2
+**** (x) type 3
+**** (x) type 4
+** (x) dynamic get data
+*** (x) Oracle
+*** (x) MySQL
+*** (x) Postgres
+** (x) data reader
 
-* 208. Sending Password Reset Emails
-  - email pug codes
-  - reset URL
-
-* 209. Using Sendgrid for "Real" Emails
-  - SendGrid
-    Need to fill in a lot of information and there is a fee.
-  - Brevo
-    Recommended by people in QA, but I am stuck at SMS verification.
-
-
+* (x) add i18n to status of logging log
+* (x) fix: edit admin loading no end

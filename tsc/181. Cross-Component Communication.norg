@@ -1,0 +1,29 @@
+@document.meta
+title: 181. Cross-Component Communication
+description: 
+authors: mattc
+categories: [
+  Props
+  React
+]
+created: 2024-02-15T08:44:33+0800
+updated: 2024-02-15T08:46:06+0800
+version: 1.1.1
+@end
+
+* Demand: pass value to parent
+
+  Because the data obtained from the input of the form needs to be merged with the original todos data, it must be sent to the App component.
+
+  .image pic/176/1.png
+
+
+* Pass handler function to child
+
+  We can solve this problem by sending a function from the App to NewTodo.
+
+  .image pic/176/2.png
+
+  Because this function also belongs to props, it needs to be defined in Typescript, otherwise a tsc error will occur.
+
+  The definition of props can also be done using type, in addition to using interface.

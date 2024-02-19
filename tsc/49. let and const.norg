@@ -1,0 +1,35 @@
+@document.meta
+title: 49. let and const
+description:
+authors: mattc
+categories: [
+  let
+  const
+  var
+  Scope
+]
+created: 2024-02-15T14:37:43+0800
+updated: 2024-02-15T14:38:19+0800
+version: 1.1.1
+@end
+
+* const
+
+  .image pic/187/1.png
+
+  const is a feature in modern JavaScript used to define constants, but why was let introduced alongside it? Wasn't var already available?
+
+
+* let and var
+
+** same result
+   .image pic/187/2.png
+
+   .image pic/187/3.png
+
+** not the same result
+   .image pic/187/4.png
+
+   .image pic/187/5.png
+
+   So it can be found that actually "let" uses block scope, while "var" uses function scope. The former has a stricter definition, allowing us to write more rigorous code. We should no longer use "var".

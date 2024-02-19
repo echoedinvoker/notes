@@ -1,0 +1,37 @@
+@document.meta
+title: 179. Working with Props and Types for Props
+description: 
+authors: mattc
+categories: [
+  Generics
+  TodoList
+  Props
+]
+created: 2024-02-15T05:15:12+0800
+updated: 2024-02-15T05:15:38+0800
+version: 1.1.1
+@end
+
+* Prepare a TodoList fontional component
+
+  .image pic/174/1.png
+
+  But it is not practical to write data in TodoList, because there may be other components in the App that need to add todo items. In this case, the data must be in the App. Therefore, we need to remove the data from TodoList and pass it into TodoList as props.
+
+
+* Move data to App and props to TodoList
+
+  .image pic/174/2.png
+
+  You can find that there is a type error when using props. This is because React.FC not only defines functional components but also defines the type of props.
+
+
+* React.FC is generic, you can define props in `<>`
+
+** define props in `<>`
+   .image pic/174/3.png
+
+** define by interface
+   This is another option, not mandatory.
+
+   .image pic/174/4.png

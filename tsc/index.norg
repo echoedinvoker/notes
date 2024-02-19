@@ -1,9 +1,10 @@
-* (-) Section 1: Getting Started
+* (x) Section 1: Getting Started
 ** (x) [2. What Is TypeScript & Why Should You Use It?(5/20)]{:2- What Is TypeScript and Why Should You Use It?:} 
 ** (x) [4. Installing and Using TypeScript (13/52)]{:4. Installing and Using TypeScript:}
 ** (x) [5. TypeScript Advantages - Overview (5/6)]{:5. TypeScript Advantages - Overview:}
 ** (x) [6. Course Outline (4/10)]{:6. Course Outline:}
 ** (x) [9. The Course Project Setup (7/47)]{:9. The Course Project Setup:}
+* (x) Section 2: TypeScript Basics & Basic Types
 ** (x) [11. Using Types (10/30)]{:11. Using Types:}
 ** (x) [12. TypeScript Types vs JavaScript Types (5/16)]{:12. TypeScript Types vs JavaScript Types:}
 ** (x) [13. Important: Type Casing(1/3)]{:13. Important - Type Casing:}
@@ -25,6 +26,7 @@
 ** (x) [29. The "unknown" Type (4/25)]{:29. The "unknown" Type:}
 ** (x) [30. The "never" Type (4/21)]{:30. The "never" Type:}
 ** (x) [32. Useful Resources & Links]{https://www.udemy.com/course/understanding-typescript/learn/lecture/16888118#content}
+* ( ) Section 3: The TypeScript Compiler (and its Configuration)
 ** (x) [34. Using "Watch Mode" (2/10)]{:34. Using "Watch Mode":}
 ** (x) [35. Compiling the Entire Project/Multiple FIles (4/19)]{:35. Compiling the Entire Project and Multiple FIles:}
 ** (x) [36. Including & Excluding Files (6/40)]{:36. Including and Excluding Files:}
@@ -33,6 +35,19 @@
 ** (x) [39. More Configuration & Compilation Options (2/14)]{:39. More Configuration and Compilation Options:}
 ** (x) [40. Working with Source Maps (2/15)]{:40. Working with Source Maps:}
 ** (x) [41. rootDir and outDir (6/37)]{:41. rootDir and outDir:}
+** ( ) [42. Stop Emitting Files on Compilation Errors (3/)]{:42. Stop Emitting Files on Compilation Errors:}
+** ( ) [43. Strict Compilation (11/)]{:43. Strict Compilation:}
+** ( ) [44. Code Quality Options (4/)]{:44. Code Quality Options:}
+** ( ) [45. Debugging with Visual Studio Code (4/)]{:45. Debugging with Visual Studio Code:}
+* ( ) Section 4: Next-generation JavaScript & TypeScript
+** (x) [49. let and const (7/16)]{:49. let and const:}
+** (x) [50. Arrow Functions (5/15)]{:50. Arrow Functions:}
+** ( ) [51. Default Function Parameters (2/)]{:51. Default Function Parameters:}
+** ( ) [52. The Spread Operator (...) (5/)]{:52. The Spread Operator:}
+** ( ) [53. Rest Parameters (5/)]{:53. Rest Parameters:}
+** ( ) [54. Array & Object Destructuring (5/)]{:54. Array and Object Destructuring:}
+** ( ) [55. How Code Gets Compiled & Wrap Up (2/)]{:55. How Code Gets Compiled and Wrap Up:}
+* (x) Section 5: Classes & Interfaces
 ** (x) [58. What are Classes? (5/25)]{:58. What are Classes?:}
 ** (x) [59. Creating a First Class (6/22)]{:59. Creating a First Class:}
 ** (x) [60. Compiling to JavaScript (3/27)]{:60. Compiling to JavaScript:}
@@ -54,6 +69,7 @@
 ** (x) [77. Interfaces as Function Types (3/15)]{:77. Interfaces as Function Types:}
 ** (x) [78. Optional Parameters & Properties (4/26)]{:78. Optional Parameters and Properties:}
 ** (x) [79. Compiling Interfaces to JavaScript (2/9)]{:79. Compiling Interfaces to JavaScript:}
+* (x) Section 6: Advanced Types
 ** (x) [83. Intersection Types (5/28)]{:83. Intersection Types:}
 ** (x) [84. More on Type Guards (11/52)]{:84. More on Type Guards:}
 ** (x) [85. Discriminated Unions (6/30)]{:85. Discriminated Unions:}
@@ -62,6 +78,7 @@
 ** (x) [88. Function Overloads (6/50)]{:88. Function Overloads:}
 ** (x) [89. Optional Chaining (4/24)]{:89. Optional Chaining:}
 ** (x) [90. Nullish Coalescing (3/14)]{:90. Nullish Coalescing:}
+* (x) Section 7: Generics 
 ** (x) [94. Built-in Generics & What are Generics?(9/27)]{:94. Built-in Generics and What are Generics?:}
 ** (x) [95. Creating a Generic Function (9/51)]{:95. Creating a Generic Function:}
 ** (x) [96. Working with Constraints (4/20)]{:96. Working with Constraints:}
@@ -70,6 +87,7 @@
 ** (x) [99. Generic Classes (9/50)]{:99. Generic Classes:}
 ** (x) [101. Generic Utility Types (7/36)]{:101. Generic Utility Types:}
 ** (x) [102. Generic Types vs Union Types (4/25)]{:102. Generic Types vs Union Types:}
+* (x) Section 8: Decorators
 ** (x) [105. A First Class Decorator (5/30)]{:105. A First Class Decorator:}
 ** (x) [106. Working with Decorator Factories (2/17)]{:106. Working with Decorator Factories:}
 ** (x) [107. Building More Useful Decorators (6/42)]{:107. Building More Useful Decorators:}
@@ -101,7 +119,7 @@
 ** (x) [135. Drag Events & Reflecting the Current State in the UI (6/58)]{:135. Drag Events and Reflecting the Current State in the UI:}
 ** (x) [136. Adding a Droppable Area (8/34)]{:136. Adding a Droppable Area:}
 ** (x) [137. Finishing Drag & Drop (7/42)]{:137. Finishing Drag and Drop:}
-* (-) Section 10: Moules & Namespaces
+* (x) Section 10: Moules & Namespaces
 ** (x) [141. Writing Module Code - Your Options (4/8)]{:141. Writing Module Code - Your Options:}
 ** (x) [142. Working with Namespaces (11/54)]{:142. Working with Namespaces:}
 ** (x) [143. Organizing Files & Folders (9/49)]{:143. Organizing Files and Folders:}
@@ -109,6 +127,7 @@
 ** (x) [146. Using ES Modules (12/58)]{:146. Using ES Modules:}
 ** (x) [147. Understanding various Import & Export Syntaxes (5/23)]{:147. Understanding various Import and Export Syntaxes:}
 ** (x) [148. How Does Code In Modules Execute? (2/12)]{:148. How Does Code In Modules Execute?:}
+* (x) Section 11: Using Webpack with TypeScript
 ** (x) [152. What is Webpack & Why do we need it? (6/16)]{:152. What is Webpack and Why do we need it?:}
 ** (x) [153. Installing Webpack & Important Dependencies (4/11)]{:153. Installing Webpack and Important Dependencies:}
 ** (x) [154. Adding Entry & Output Configuration (6/30)]{:154. Adding Entry and Output Configuration:}
@@ -116,29 +135,32 @@
 ** (x) [156. Adjust Webpack Config (1/4)]{:156. Adjust Webpack Config:}
 ** (x) [157. Finishing the Setup & Adding webpack-dev-server (4/22)]{:157. Finishing the Setup and Adding webpack-dev-server:}
 ** (x) [158. Adding a Production Workflow (4/31)]{:158. Adding a Production Workflow:}
+* (x) Section 12: 3rd Party Libraries & TypeScript
 ** (x) [162. Using JavaScript (!) Libraries with TypeScript (9/34)]{:162. Using JavaScript (!) Libraries with TypeScript:}
 ** (x) [163. Using "declare" as a "Last Resort" (2/14)]{:163. Using "declare" as a "Last Resort":}
 ** (x) [164. No Types Needed: class-transformer (8/35)]{:164. No Types Needed- class-transformer:}
 ** (x) [165. TypeScript-embracing: class-validator (6/20)]{:165. TypeScript-embracing- class-validator:}
+* ( ) Section 13: Time to Practice! Let's build a "Select & Share a Place" App (Incl. Google Maps)
 ** (x) [169. Project Setup (4/24)]{:169. Project Setup:}
 ** (x) [170. Getting User Input (3/)]{:170. Getting User Input:}
 ** ( ) [171. Setting Up a Google API Key (3/)]{:171. Setting Up a Google API Key:}
 ** ( ) [172. Using Axios to Fetch Coordinates for an Entered Address (10/)]{:172. Using Axios to Fetch Coordinates for an Entered Address:}
 ** ( ) [173. Rendering a Map with Google Maps (incl. Types!) (7/)]{:173. Rendering a Map with Google Maps (incl. Types!):}
 ** ( ) [174. Working with Maps without a Credit Card (1/)]{:174. Working with Maps without a Credit Card:}
+* (x) Section 14: React.js & TypeScript
 ** (x) [177. Setting Up a React + TypeScript Project (5/31)]{:177. Setting Up a React + TypeScript Project:}
-** ( ) [178. How Do React + TypeScript Work Together? (4/)]{:178. How Do React + TypeScript Work Together?:}
-** ( ) [179. Working with Props and Types for Props (7/)]{:179. Working with Props and Types for Props:}
-** ( ) [180. Getting User Input with "refs" (7/)]{:180. Getting User Input with "refs":}
-** ( ) [181. Cross-Component Communication (4/)]{:181. Cross-Component Communication:}
-** ( ) [182. Working with State & Types (4/)]{:182. Working with State and Types:}
-** ( ) [183. Managing State Better (2/)]{:183. Managing State Better:}
-** ( ) [184. More Props & State Work (4/)]{:184. More Props and State Work:}
-** ( ) [185. Adding Styling (1/)]{:185. Adding Styling:}
-** ( ) [186. Types for other React Features (e.g. Redux or Routing) (4/)]{:186. Types for other React Features (e.g. Redux or Routing):}
-** ( ) [190. Executing TypeScript Code with Node.js (4/)]{:190. Executing TypeScript Code with Node.js:}
-** ( ) [191. Setting up a Project (4/)]{:191. Setting up a Project:}
-** ( ) [192. Finished Setup & Working with Types (in Node + Express Apps) (5/)]{:192. Finished Setup and Working with Types (in Node + Express Apps):}
-** ( ) [193. Adding Middleware & Types (6/)]{:193. Adding Middleware and Types:}
-** ( ) [194. Working with Controllers & Parsing Request Bodies (10/)]{:194. Working with Controllers and Parsing Request Bodies:}
-** ( ) [195. More CRUD Operations (10/)]{:195. More CRUD Operations:}
+** (x) [178. How Do React + TypeScript Work Together? (4/18)]{:178. How Do React + TypeScript Work Together?:}
+** (x) [179. Working with Props and Types for Props (7/25)]{:179. Working with Props and Types for Props:}
+** (x) [180. Getting User Input with "refs" (7/26)]{:180. Getting User Input with "refs":}
+** (x) [181. Cross-Component Communication (4/16)]{:181. Cross-Component Communication:}
+** (x) [182. Working with State & Types (4/19)]{:182. Working with State and Types:}
+** (x) [184. More Props & State Work (4/17)]{:184. More Props and State Work:}
+** (x) [185. Adding Styling (1/5)]{:185. Adding Styling:}
+** (x) [186. Types for other React Features (e.g. Redux or Routing) (4/19)]{:186. Types for other React Features (e.g. Redux or Routing):}
+* (x) Section 15: Node.js + Express & TypeScript
+** (x) [190. Executing TypeScript Code with Node.js (4/14)]{:190. Executing TypeScript Code with Node.js:}
+** (x) [191. Setting up a Project (4/15)]{:191. Setting up a Project:}
+** (x) [192. Finished Setup & Working with Types (in Node + Express Apps) (5/23)]{:192. Finished Setup and Working with Types (in Node + Express Apps):}
+** (x) [193. Adding Middleware & Types (6/18)]{:193. Adding Middleware and Types:}
+** (x) [194. Working with Controllers & Parsing Request Bodies (10/35)]{:194. Working with Controllers and Parsing Request Bodies:}
+** (x) [195. More CRUD Operations (10/30)]{:195. More CRUD Operations:}

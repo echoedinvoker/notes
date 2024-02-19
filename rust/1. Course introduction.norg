@@ -1,0 +1,34 @@
+@document.meta
+title: 1. Course introduction
+description: 
+authors: mattc
+categories: [
+  Choose
+  Compare
+  Trade-off
+]
+created: 2024-02-15T19:42:55+0800
+updated: 2024-02-15T19:44:14+0800
+version: 1.1.1
+@end
+
+* Choose programming language is a trade-off, but now RUST is game changer!
+
+** low level language
+   - C, C++
+   - Speed and control
+   - Cost of memory safety
+
+** High level language
+  - Python, JavaScript
+   - More safety
+   - Cost of speed and control
+
+
+** But Rust is a language that gives you both speed and safety!
+   - Rust is a systems programming language as C, C++
+   -- So it is fast
+   - Rust is a memory safe language as Python, JavaScript
+
+
+

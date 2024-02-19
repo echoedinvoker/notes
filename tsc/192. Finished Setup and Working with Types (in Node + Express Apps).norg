@@ -1,0 +1,46 @@
+@document.meta
+title: 192. Finished Setup and Working with Types (in Node + Express Apps)
+description: 
+authors: mattc
+categories: [
+  Node
+  Express
+  Commonjs
+  Nodemon
+]
+created: 2024-02-15T11:15:10+0800
+updated: 2024-02-15T11:15:37+0800
+version: 1.1.1
+@end
+
+* Types of Node.js
+
+  .image pic/183/1.png
+
+  This is because require() is a function in Node, and Typescript does not automatically load any Node.js types like it does with the DOM. Therefore, we must manually import the Node.js types ourselves.
+
+  .image pic/183/2.png
+
+
+* Types of Express.js
+
+  .image pic/183/3.png
+
+  .image pic/183/4.png
+
+  .image pic/183/5.png
+
+  Because there is a syntax similar to "import" in Node.js (only in experiment flag), it is usually used to import modules in the commonjs way. However, when using Typescript, we must use the ES module syntax to import modules in order for Typescript to work with the package. These ES imports will be automatically compiled back to commonjs imports.
+
+
+* Running the project with dev mode
+
+** Typescript watch mode
+   Automatically compile Typescript file to Javascript file when codes change.
+
+   .image pic/183/6.png
+
+** Nodemon
+   Automatically reload the server when the compiled JavaScript file changes.
+
+   .image pic/183/7.png

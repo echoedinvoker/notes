@@ -1,0 +1,35 @@
+@document.meta
+title: 180. Getting User Input with "refs"
+description: 
+authors: mattc
+categories: [
+  React
+  Form
+  Generics
+  useRef
+]
+created: 2024-02-15T05:52:55+0800
+updated: 2024-02-15T05:53:21+0800
+version: 1.1.1
+@end
+
+* UI of NewTodo component
+
+  .image pic/175/1.png
+
+
+* Bind submit event to handler and plan how to get input value
+
+  .image pic/175/2.png
+
+  Note that we use the `React.FormEvent` type specifically to define the form submit event in JSX.
+
+* useRef to get input value
+
+  Because we will use useState elsewhere, here we demonstrate useRef.
+
+  .image pic/175/3.png
+
+  In Typescript, useRef using generic type  to define the type of the value returned.
+
+  .image pic/175/4.png

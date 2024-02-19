@@ -1,0 +1,59 @@
+@document.meta
+title: 22. Bonus - Comments, Prints Commands, Input
+description: 
+authors: mattc
+categories: [
+  Input
+  Print
+  Format
+  Static
+  Underline
+]
+created: 2024-02-17T16:52:07+0800
+updated: 2024-02-17T16:52:37+0800
+version: 1.1.1
+@end
+
+* println! and print!
+
+  .image pic/9/1.png
+
+  .image pic/9/2.png
+
+  .image pic/9/3.png
+
+
+* Format string
+
+** insert values by index
+   .image pic/9/4.png
+
+** insert values by name
+   .image pic/9/5.png
+
+
+* User input
+
+  .image pic/9/6.png
+
+
+* Underline _
+
+** remove unuse error
+   .image pic/9/7.png
+
+   .image pic/9/8.png
+
+** add readablity of number
+   .image pic/9/9.png
+
+
+* Static
+
+  .image pic/9/10.png
+
+  Try not to use static unless there is no special reason.
+
+  Only two situations should use static:
+  1. want to refer to some larger amount of data in memory.
+  2. interested in interior mutability.

@@ -1,0 +1,66 @@
+@document.meta
+title: 15. Compound Data Types
+description: 
+authors: mattc
+categories: [
+  Compound Data Types
+  String
+  Array
+  Vectors
+  Tuple
+]
+created: 2024-02-17T11:56:32+0800
+updated: 2024-02-17T11:56:59+0800
+version: 1.1.1
+@end
+
+* &str
+
+  .image pic/5/1.png
+
+  "fixed" is in contrast to the next type "String", using "mut" can still change its value.
+
+
+* String
+
+  This is another type of string 
+
+  .image pic/5/2.png
+
+  Symbol :: means to use the method or function under type or module.
+
+  Strings created in this way can be modified through various methods of the String class.
+
+  .image pic/5/3.png
+
+
+* array
+
+  .image pic/5/4.png
+
+  Just like JavaScript array, get elements by \[index].
+
+  .image pic/5/5.png
+
+
+* vectors
+
+  Compared to an array, the size is variable.
+
+  .image pic/5/6.png
+
+
+* tuple
+
+  Compared to arrays and vectors, tuples can contain elements of different types.
+
+** create tuple
+   .image pic/5/7.png
+
+** print compound data & get element of tuple
+   .image pic/5/8.png
+
+** empty tuple
+   .image pic/5/9.png
+
+   An empty tuple is not considered compound data because it has no elements, in this case it occupies zero memory.

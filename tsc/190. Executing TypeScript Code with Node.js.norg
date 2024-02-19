@@ -1,0 +1,29 @@
+@document.meta
+title: 190. Executing TypeScript Code with Node.js
+description: 
+authors: mattc
+categories: [
+  Node
+]
+created: 2024-02-15T10:25:22+0800
+updated: 2024-02-15T10:25:41+0800
+version: 1.1.1
+@end
+
+* Is node work on Typescript file??
+
+** try to run Typescript file with node
+*** without Typescript feature
+    .image pic/181/1.png
+
+*** with Typescript feature
+    .image pic/181/2.png
+
+    So based on the above results, we can know that the node does not care about the file name, only the file contents and contents must be Javascript.
+
+
+** Node only work on Javascript "contents"
+
+   So, if a node wants to run a Typescript file, it must first use the Typescript compiler to convert the Typescript file into a Javascript file, and then use node to execute the Javascript file.
+
+   .image pic/181/3.png

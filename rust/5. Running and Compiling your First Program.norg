@@ -1,0 +1,38 @@
+@document.meta
+title: 5. Running and Compiling your First Program
+description: 
+authors: mattc
+categories: [
+  Project
+  Cargo
+  Build
+  Release
+]
+created: 2024-02-15T21:03:56+0800
+updated: 2024-02-15T21:04:18+0800
+version: 1.1.1
+@end
+
+* Compile and Run the program manually
+
+  .image pic/2/1.png
+
+  This way is only useful when there is a single .rs file, it becomes cumbersome if there are dependencies involved.
+
+
+* Compile and Run the program by Cargo utility
+
+  Cargo can help us with compiling and executing multiple files, similar to the role of Javascript npm.
+
+** create new project
+   .image pic/2/2.png
+
+** develop the program
+   .image pic/2/3.png
+
+   .image pic/2/4.png
+
+** release the program for production
+   It will take more time to compile and generate the most efficient .exe file for use in actual production.
+
+   .image pic/2/5.png

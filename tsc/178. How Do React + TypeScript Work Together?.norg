@@ -1,0 +1,30 @@
+@document.meta
+title: 178. How Do React + TypeScript Work Together?
+description: 
+authors: mattc
+categories: [
+  React
+  JSX
+  FunctionComponent
+]
+created: 2024-02-15T04:43:43+0800
+updated: 2024-02-15T04:44:27+0800
+version: 1.1.1
+@end
+
+* Using function component type
+
+  .image pic/173/1.png
+
+  FC is an abbreviation for FunctionComponent, used to define the type of a React function component. For class components, React.ClassComponent can be used for definition.
+
+  .image pic/173/2.png
+
+  It can ensure that the function component always returns JSX, which is very useful when the function component has many conditions in the return statement.
+
+
+* Dev mode
+
+  Use `npm start` to enter dev mode, which automatically detects changes in codes. Once there is a change, it will automatically compile JSX and TypeScript into JavaScript, and refresh the browser automatically.
+
+  .image pic/173/3.png

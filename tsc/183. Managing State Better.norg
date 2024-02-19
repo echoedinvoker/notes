@@ -1,0 +1,29 @@
+@document.meta
+title: 183. Managing State Better
+description: 
+authors: mattc
+categories: [
+  Props
+  React
+  Delete
+  bind
+]
+created: 2024-02-15T09:31:38+0800
+updated: 2024-02-15T09:32:11+0800
+version: 1.1.1
+@end
+
+* Add DELETE button
+
+  .image pic/178/1.png
+
+  First, add the button UI as above. Then, pass the handler function from the App to the TodoList component.
+
+
+* Pass the handler function from the App to the TodoList component
+
+  Similarly, define the props of TodoList so that it can accept a handler function as props.
+
+  .image pic/178/2.png
+
+  What is special here is using .bind to pass parameters from the child component to the handler function passed from the parent. This allows passing parameters without calling the function.

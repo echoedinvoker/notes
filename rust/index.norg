@@ -1,0 +1,26 @@
+* (x) Section 1: Course Orientation
+** (x) [1. Course introduction (3/12)]{:1. Course introduction:}
+** (x) [4. Installing Rust and Web-based Enviroment for Executing Programs (9/)]{:4. Installing Rust and Web-based Enviroment for Executing Programs:}
+** (x) [5. Running and Compiling your First Program (7/34)]{:5. Running and Compiling your First Program:}
+* (x) Section 2: ---- Part 1: Basic Programming with Rust ----
+* (x) Section 3: Quick Startup
+** (x) [12. Variables and Constants (6/36)]{:12. Variables and Constants:}
+** (x) [14. Primitive Data Types (3/20)]{:14. Primitive Data Types:}
+** (x) [15. Compound Data Types (4/37)]{:15. Compound Data Types:}
+** (x) [17. Functions and Code Blocks (6/38)]{:17. Functions and Code Blocks:}
+** (x) [19. Conditionals (6/39)]{:19. Conditionals:}
+** (x) [20. Control Flow (2/19)]{:20. Control Flow:}
+** (x) [22. Bonus - Comments, Prints Commands, Input (7/40)]{:22. Bonus - Comments, Prints Commands, Input:}
+* (x) Section 4: Ownership
+** (x) [22. Ownership Basics (8/74)]{:22. Ownership Basics:}
+** (x)[23. Ownership in Functions (6/33)]{:23. Ownership in Functions:}
+** (x)[25. Borrowing Basics (8/51)]{:25. Borrowing Basics:}
+** (x)[26. Borrowing in Functions (6/31)]{:26. Borrowing in Functions:}
+** (x)[27. Dereferencing (5/102)]{:27. Dereferencing:}
+* (-) Section 5: Custom and Library Provided Useful Types
+** (x) [29. Structs Basics (7/54)]{:29. Structs Basics:}
+** (x) [30. Adding Functionality to Structs (8/49)]{:30. Adding Functionality to Structs:}
+** (x) [31. Enums (6/53)]{:31. Enums:}
+** ( ) [33. Option (6/)]{:33. Option:}
+** ( ) [35. Result (6/)]{:35. Result:}
+** ( ) [37. BONUS: HashMaps (9/)]{:37. BONUS: HashMaps:}

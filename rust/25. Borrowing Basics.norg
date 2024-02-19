@@ -1,0 +1,50 @@
+@document.meta
+title: 25. Borrowing Basics
+description: 
+authors: mattc
+categories: [
+  Borrowing
+  Rule
+]
+created: 2024-02-18T11:00:47+0800
+updated: 2024-02-18T11:01:09+0800
+version: 1.1.1
+@end
+
+* What/Why borrowing?
+
+  .image pic/12/1.png
+
+  Compared to ownership move, borrowing allows us to let other code use this value without changing ownership, which can reduce memory waste, and borrowing follows the following two rules to avoid data race and dangling pointer issues.
+
+
+* Rule 1: At any given time, you can have either one mutable reference or any number of immutable references, but not both.
+
+  This rule helps to prevent data races.
+
+  You should pay attention to the fact that the borrow checker only checks the active moment of references.
+
+  .image pic/12/3.png
+
+  Although the example above may seem to violate rule 1, as mutable and immutable references coexist, there is no issue because mutable and immutable references do not exist simultaneously at the active moment.
+
+  .image pic/12/4.png
+
+  .image pic/12/5.png
+
+
+* Rule 2: Reference must always be valid
+
+  This means that the reference must point to an existing value (when ACTIVE). This rule helps to prevent dangling pointers.
+
+  .image pic/12/6.png
+
+  The above is a simple transfer of ownership from vec_1 to vec_2, but if we change the return of block to a reference as follows
+
+  .image pic/12/7.png
+
+  Above, when reference &vec_1 is returned, it points to a non-existent value (invalid), thus violating rule 2.
+
+  .image pic/12/8.png
+
+  Although the value of vec_1 is cleared at the end of the block, no error occurs because the borrow checker only checks the situation when the reference is active.

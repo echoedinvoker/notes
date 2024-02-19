@@ -1,0 +1,45 @@
+@document.meta
+title: 17. Functions and Code Blocks
+description: 
+authors: mattc
+categories: [
+  Fuctions
+  Return
+  Block
+]
+created: 2024-02-17T14:03:12+0800
+updated: 2024-02-17T14:03:33+0800
+version: 1.1.1
+@end
+
+* Custom function
+
+  .image pic/6/1.png
+
+  .image pic/6/2.png
+
+
+* Types of function
+  .image pic/6/3.png
+
+* Return of function
+
+** expression of last line
+   .image pic/6/4.png
+
+   If the last line is a statement, it will not be returned.
+
+** early return
+   .image pic/6/5.png
+
+** multiple return
+   .image pic/6/6.png
+
+
+* Simple block return
+
+** return of simple block
+   .image pic/6/7.png
+
+** asign simple block to variable
+   .image pic/6/8.png

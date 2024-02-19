@@ -1,0 +1,46 @@
+@document.meta
+title: 14. Primitive Data Types
+description: 
+authors: mattc
+categories: [
+  Type
+  Type Alias
+  Type Conversion
+]
+created: 2024-02-16T20:38:28+0800
+updated: 2024-02-16T20:38:58+0800
+version: 1.1.1
+@end
+
+* Types instruction
+
+** integer
+   .image pic/4/1.png
+
+** float
+   .image pic/4/2.png
+
+** platform spicific integer
+   .image pic/4/3.png
+
+** character
+   .image pic/4/4.png
+
+** boolean
+   .image pic/4/5.png
+
+
+* Type alias
+
+  We can name types to increase code readability.
+
+  .image pic/4/6.png
+
+  Note, this is just to increase readability, we haven't created anything new.
+
+
+* Type conversion
+
+  Variables often need to be converted to a different type, either due to differences in computation precision or compatibility reasons in different code regions. We can achieve type conversion using the following methods.
+
+  .image pic/4/7.png

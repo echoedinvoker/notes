@@ -1,0 +1,68 @@
+@document.meta
+title: 22. Ownership Basics
+description: 
+authors: mattc
+categories: [
+  Ownership
+  Zero runtime cost
+  Primitive types
+]
+created: 2024-02-17T21:00:36+0800
+updated: 2024-02-17T21:03:09+0800
+version: 1.1.1
+@end
+
+* Three basic rules of Ownership:
+** Each value in Rust has a variable that’s called its owner.
+** A value can only have one owner at a time.
+** If the owner goes out of scope, the value will be cleaned up.
+
+   \
+* Basic concept of ownership
+
+  .image pic/10/1.png
+
+** non-volatile & volatile storage
+   .image pic/10/2.png
+
+** memory distribution
+   .image pic/10/3.png
+
+* Ownership move
+
+  .image pic/10/4.png
+
+  .image pic/10/5.png
+
+  .image pic/10/6.png
+
+  .image pic/10/7.png
+
+
+* Rule 3: When a variable goes out of scope, Rust calls a special function for us. This function is called drop, and it’s where the author of String can put the code to return the memory. Rust calls drop automatically at the closing curly bracket.
+
+** prepare nested scope
+   .image pic/10/8.png
+
+** procedure
+   .image pic/10/9.png
+
+   .image pic/10/10.png
+
+   .image pic/10/11.png
+
+** what it prevent? Zero runtime cost
+   .image pic/10/12.png
+
+   .image pic/10/13.png
+
+   Because there are no issues with dangling pointers and memory leaks, Rust does not require a garbage collector or reference counting, so Rust's memory management has zero runtime cost.
+
+
+
+* Some primitive types has no clone, only has copy
+
+  Because the value of primitive types is stored in the stack, they do not have ownership issues, so they do not need to be cloned, just copied.
+
+  .image pic/10/14.png
+

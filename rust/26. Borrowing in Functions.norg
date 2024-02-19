@@ -1,0 +1,38 @@
+@document.meta
+title: 26. Borrowing in Functions
+description: 
+authors: mattc
+categories: [
+  Borrowing
+  Functions
+]
+created: 2024-02-18T11:37:39+0800
+updated: 2024-02-18T11:38:02+0800
+version: 1.1.1
+@end
+
+* Only read value inside function
+
+  .image pic/13/1.png
+
+  .image pic/13/2.png
+
+
+* Mutate value inside function
+
+  .image pic/13/3.png
+
+  The above method, although not incorrect, is very inefficient because it involves shadowing and ownership moving.
+
+  .image pic/13/4.png
+
+
+* Generate value inside function
+
+  If we generate a value in a function and want to return it to the outside, we must move ownership instead of using a reference.
+
+** wrong example: retrun a reference
+   .image pic/13/5.png
+
+** correct example: move ownership
+   .image pic/13/6.png

@@ -1,0 +1,33 @@
+@document.meta
+title: 186. Types for other React Features (e.g. Redux or Routing)
+description: 
+authors: mattc
+categories: [
+  React
+  Redux
+  React-Router
+]
+created: 2024-02-15T10:10:26+0800
+updated: 2024-02-15T10:10:51+0800
+version: 1.1.1
+@end
+
+* There are lots of other hooks, how to check their types?
+
+  In addition to useState, we will also use other hooks in React projects. You can simply use 'K' to check their type settings.
+
+  .image pic/180/1.png
+
+
+* If using package, check its documentation to see how it support types
+
+  .image pic/180/2.png
+
+  Large packages like the one mentioned above usually have documentation regarding the usage of Typescript. Inside, there should be many examples that can be referenced.
+
+
+* Package without types support
+
+  .image pic/180/3.png
+
+  (Now react-router-dom already supports types.)

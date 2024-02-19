@@ -1,0 +1,34 @@
+@document.meta
+title: 20. Control Flow
+description: 
+authors: mattc
+categories: [
+  Loop
+]
+created: 2024-02-17T15:38:07+0800
+updated: 2024-02-17T15:38:19+0800
+version: 1.1.1
+@end
+
+* loop
+
+** only 'loop'
+   .image pic/8/1.png
+
+** break with label
+   .image pic/8/2.png
+
+   .image pic/8/3.png
+
+** been expression and return value
+   .image pic/8/4.png
+
+
+* for loop
+
+  .image pic/8/5.png
+
+
+* while loop
+
+  .image pic/8/6.png

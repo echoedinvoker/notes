@@ -1,0 +1,32 @@
+@document.meta
+title: 50. Arrow Functions
+description: 
+authors: mattc
+categories: [
+  Arrow Functions
+]
+created: 2024-02-15T14:54:06+0800
+updated: 2024-02-15T14:54:28+0800
+version: 1.1.1
+@end
+
+* Parameter of the arrow function
+
+** type parameter cannot omit parentheses
+   In arrow functions, parentheses can be omitted when there is only one parameter. However, when the parameter is a type parameter, parentheses cannot be omitted.
+
+   .image pic/188/1.png
+
+** turn to type whole function
+   .image pic/188/2.png
+
+   But usually this will not omit any code.
+
+
+* Auto type parameters
+
+  In some cases, Typescript will automatically infer the type of the parameter, so if there is only one parameter, the parentheses can be omitted.
+
+  .image pic/188/3.png
+
+  You can use `K` to see if there is an automatic type parameter. If not, you should define it yourself.

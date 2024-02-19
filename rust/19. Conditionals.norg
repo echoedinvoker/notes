@@ -1,0 +1,55 @@
+@document.meta
+title: 19. Conditionals
+description: 
+authors: mattc
+categories: [
+  Condition
+  Match
+]
+created: 2024-02-17T14:54:50+0800
+updated: 2024-02-17T14:55:22+0800
+version: 1.1.1
+@end
+
+* if else
+
+.image pic/7/1.png
+
+** else block is optional
+.image pic/7/2.png
+
+** condition should be boolean, there is no truthy or falsy
+.image pic/7/3.png
+
+
+* if else if else ladder
+
+.image pic/7/4.png
+
+** if ... part is optional
+.image pic/7/5.png
+
+** type return of each branch must be same
+.image pic/7/6.png
+
+
+* match
+
+** instruction
+Match is similar to an if else if else ladder in functionality but has a more concise syntax, consisting of two parts: arm and codes. Arm is equivalent to a condition.
+
+.image pic/7/7.png
+
+** match should be exhaustive
+.image pic/7/8.png
+
+** overlapping arms are not allowed
+   .image pic/7/9.png
+
+** multi-lines codes
+   .image pic/7/10.png
+
+** match can be extra\
+   .image pic/7/11.png
+
+   .image pic/7/12.png

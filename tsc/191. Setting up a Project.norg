@@ -1,0 +1,33 @@
+@document.meta
+title: 191. Setting up a Project
+description: 
+authors: mattc
+categories: [
+  Initialize
+  Node
+  Configuration
+  Install
+]
+created: 2024-02-15T10:47:16+0800
+updated: 2024-02-15T10:48:09+0800
+version: 1.1.1
+@end
+
+* Init the node project
+
+** generate the package.json
+   .image pic/182/1.png
+
+** generate the tsconfig.json
+   .image pic/182/2.png
+
+
+* Configure the Typescript
+
+  .image pic/182/3.png
+
+
+* Install packages
+
+  .image pic/182/4.png
+

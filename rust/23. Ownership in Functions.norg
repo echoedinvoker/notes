@@ -1,0 +1,41 @@
+@document.meta
+title: 23. Ownership in Functions
+description: 
+authors: mattc
+categories: [
+  Function
+  Ownership
+  Moving
+  Primitive
+  Consume
+]
+created: 2024-02-18T09:53:25+0800
+updated: 2024-02-18T09:53:57+0800
+version: 1.1.1
+@end
+
+* Move ownership into function (passing argument) and move out of it (return)
+
+  .image pic/11/1.png
+
+
+* Passing argument without moving ownership (clone)
+
+  .image pic/11/2.png
+
+
+* Move ownership out of function by return
+
+  .image pic/11/3.png
+
+
+* Move ownership into function (passing argument) and move out of it (return)
+
+  .image pic/11/4.png
+
+  If we move ownership to a function, it usually means that we want to consume this value. Therefore, in the example above, it is not commonly seen in implementation. If there is such a requirement, we usually use borrowing to achieve it (will be introduced in the next lecture).
+
+
+* If typs is primitive
+
+  .image pic/11/5.png

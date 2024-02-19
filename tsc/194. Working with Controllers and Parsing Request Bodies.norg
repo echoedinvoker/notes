@@ -1,0 +1,45 @@
+@document.meta
+title: 194. Working with Controllers and Parsing Request Bodies
+description: 
+authors: mattc
+categories: [
+  RequestHandler
+  Body parsing
+  Controllers
+  Model
+  Node
+]
+created: 2024-02-15T13:32:42+0800
+updated: 2024-02-15T13:37:13+0800
+version: 1.1.1
+@end
+
+* Parameters' types has simplified
+
+  .image pic/185/1.png
+
+  The above is a type definition for each parameter, but this will make the code very lengthy. Therefore, the following method can be used to simplify it.
+
+  .image pic/185/2.png
+
+  RequestHandler is defining the entire function, but in reality, it is only defining the types of three parameters.
+
+
+* Finish the logic of the controller function
+
+** create model for instantiating new todo
+   .image pic/185/3.png
+
+   In addition to being able to instantiate new instances, in Typescript, the class can also be used as a type.
+
+** parsing body to get text from request & finish rest work
+   .image pic/185/4.png
+
+   Whenever we know the type but the app doesn't, we can use type casting to directly tell the app what type it is, regardless of the situation. For example, the above code `as {text: string}`.
+
+
+* Point controller function to route & test
+
+  .image pic/185/5.png
+
+  .image pic/185/6.png

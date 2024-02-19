@@ -1,0 +1,35 @@
+@document.meta
+title: 27. Dereferencing
+description: 
+authors: mattc
+categories: [
+  Dereferencing
+]
+created: 2024-02-18T13:31:19+0800
+updated: 2024-02-18T13:31:34+0800
+version: 1.1.1
+@end
+
+> reference and pointer can use the dereference operator (*) to obtain the value
+
+* Primitive
+
+  .image pic/14/1.png
+
+  .image pic/14/2.png
+
+  As mentioned above, we can use dereference to mutate the value pointed to by the reference and retain the original value.
+
+
+* Not primitive
+
+  In non-primitive cases, we can use dereference to access the value pointed to by the pointer, but this value is in the heap. There will be ownership issues when pointing to it from the stack, so we must use .clone() as follows:
+
+  .image pic/14/3.png
+
+  .image pic/14/4.png
+
+  .image pic/14/5.png
+
+
+  The above is one of the use cases of dereference, there are other use cases as well, but mainly to solve problems related to references and to let codes after reference can work.

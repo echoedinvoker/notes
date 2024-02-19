@@ -1,0 +1,61 @@
+@document.meta
+title: 31. Enums
+description: 
+authors: mattc
+categories: [
+  Enum
+  Associated data
+  Implementation block
+]
+created: 2024-02-18T22:37:01+0800
+updated: 2024-02-18T22:37:26+0800
+version: 1.1.1
+@end
+
+* Example: week day
+
+** simple String assignment
+   Assuming we want to get a string for Saturday
+
+   .image pic/17/1.png
+
+   Although the above method is feasible, it cannot unify the representation of the content of Saturday, and it also cannot avoid typing errors.
+
+
+** create vectors to choose the day of the week
+   So we tried to create a vector to select the day of the week. This way, users can choose the day of the week without needing to input a string, thus avoiding typing errors and ensuring uniformity in the string content.
+
+   .image pic/17/2.png
+
+   .image pic/17/3.png
+
+   But this approach requires users to remember that the index of the vector corresponds to the day of the week, which will increase the burden on users.
+
+** enum
+   Enum corresponds to this situation. We use the keyword `enum` to define an enum type, which is somewhat similar to a struct, but instead of fields, it contains variants. 
+
+   Variants are similar to subitems of an enum type, so the type itself is also an enum type, so you don't need to define its type like you do with struct field types.
+
+   .image pic/17/4.png
+
+   Like struct, we can also use an implementation block to implement methods for enums.
+
+   .image pic/17/5.png
+
+   .image pic/17/6.png
+
+
+* Example: travel allowance by travel type
+
+  The second example is about calculating travel allowances. Suppose we need to calculate travel allowances based on different travel methods.
+
+  We can first define the business trip mode as an enumeration type, and then implement a method for the enumeration type to calculate the business trip allowance.
+
+** passing data by method parameter
+   .image pic/17/7.png
+
+** passing data by associated data
+   If miles is necessary data, you can use associated data to pass it into the enum instance at instantiation.
+
+   .image pic/17/8.png
+

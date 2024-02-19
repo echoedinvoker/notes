@@ -1,0 +1,26 @@
+@document.meta
+title: 193. Adding Middleware and Types
+description: 
+authors: mattc
+categories: [
+  Routes
+  Global Middleware
+  Middleware
+]
+created: 2024-02-15T11:49:15+0800
+updated: 2024-02-15T11:49:48+0800
+version: 1.1.1
+@end
+
+* Todos routes
+
+  This part is similar to the original, except for not using many TypeScript features other than import.
+
+  .image pic/184/1.png
+
+
+* Global Error handling middleware
+
+  Global Error handling middleware is determined based on the number of parameters, and appropriate types must be given to these parameters in TypeScript.
+
+  .image pic/184/2.png

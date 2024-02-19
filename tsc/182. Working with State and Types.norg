@@ -1,0 +1,32 @@
+@document.meta
+title: 182. Working with State and Types
+description: 
+authors: mattc
+categories: [
+  useState
+  Generics
+]
+created: 2024-02-15T09:09:54+0800
+updated: 2024-02-15T09:10:27+0800
+version: 1.1.1
+@end
+
+* Demand: update todos and it should be reactive
+
+  .image pic/177/1.png
+
+
+* useState and define its generic type
+
+  .image pic/177/2.png
+
+  We can define the type of data in useState using define generic instead of relying on inferring the initial value.
+
+  .image pic/177/3.png
+
+
+* Refactor type to separate file
+
+  Because the todo type will be referenced in multiple places, it is separated and placed in its own dedicated file.
+
+  .image pic/177/4.png
