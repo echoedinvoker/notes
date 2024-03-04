@@ -1,0 +1,36 @@
+@document.meta
+title: 16. Joining Data to an Element
+description: 
+authors: mattc
+categories: [
+  Each
+  ValueFn
+  Join Data
+  Dynamic
+]
+created: 2024-03-02T23:09:32+0800
+updated: 2024-03-02T23:09:59+0800
+version: 1.1.1
+@end
+
+* Demand: intead of hard coding values of attributes but using data for them
+
+  .image pic/8/1.png
+
+
+* Join data to d3.Selection by d3.Selection.data()
+
+  .image pic/8/2.png
+
+  In the previous course, we learned that the original HTMLElement will be wrapped in the _group property, and above, we can see that the joined data has already been added to the HTMLElement.
+
+  .image pic/8/3.png
+
+
+* Using class to build data item & d3.Selection.each() & other arguments
+
+  We use classes to create data items, which can simplify code and increase data validation, and also adhere more to the concept of OOP.
+
+  After joining the data, in addition to the parameter `d`, there are two other parameters related to the data that can be used. We will use d3.Selection.each() below to see their values.
+
+  .image pic/8/4.png

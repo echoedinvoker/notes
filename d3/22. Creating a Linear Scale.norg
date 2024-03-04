@@ -1,0 +1,21 @@
+@document.meta
+title: 22. Creating a Linear Scale
+description: 
+authors: mattc
+categories: [
+  Linear Scale
+  Bar Chart
+]
+created: 2024-03-03T11:40:47+0800
+updated: 2024-03-03T11:41:04+0800
+version: 1.1.1
+@end
+
+* Try to render bars
+
+  .image pic/12/4.png
+
+
+* Scale down the bars' height values by linear scales
+
+  .image pic/12/5.png

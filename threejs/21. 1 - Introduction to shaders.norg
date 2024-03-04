@@ -1,0 +1,58 @@
+@document.meta
+title: 21. 1 - Introduction to shaders
+description: 
+authors: mattc
+categories: [
+  Shader
+  Vertex Shader
+  Fragment Shader
+]
+created: 2024-02-19T20:28:11+0800
+updated: 2024-02-19T20:28:30+0800
+version: 1.1.1
+@end
+
+* What is shader?
+
+  .image pic/23/1.png
+
+
+* How does shaders work?
+
+  Shaders are programs that run on the GPU, and the GPU is a parallel processor, so it can process a large number of vertices at the same time.
+
+  .image pic/23/2.png
+
+
+* We have two types of shader
+
+  .image pic/23/3.png
+
+
+* Vertex shader
+
+  .image pic/23/4.png
+
+  Shader is a program, each vertex will cause the program to run once, so there are four vertices on the right image that will cause this Vertex shader to run four times to obtain the positions of these four vertices.
+
+
+* Type of data
+
+  .image pic/23/6.png
+
+  After the data is sent to the vertex shader, in addition to calculating the position of each vertex, it will also determine which vertices are visible and which are not. Fragment shader only processes the visible vertices.
+
+
+* Fragment Shader
+
+  .image pic/23/7.png
+
+  .image pic/23/8.png
+
+  .image pic/23/9.png
+
+  .image pic/23/10.png
+
+  After the vertex is shaded by the Fragment Shader, the area between the two vertices is shaded in a gradient manner.
+
+  Attribute data cannot be directly passed into the Fragment Shader, so it must be passed through the Vertex Shader, and when passed to the Vertex Shader it is called Varying data.

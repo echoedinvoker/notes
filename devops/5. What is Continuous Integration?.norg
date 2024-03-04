@@ -1,0 +1,74 @@
+@document.meta
+title: 5. What is Continuous Integration?
+description: 
+authors: mattc
+categories: [
+  Continuous Integration
+]
+created: 2024-03-01T10:58:18+0800
+updated: 2024-03-01T11:09:56+0800
+version: 1.1.1
+@end
+
+* Code development process
+
+** Dev team commits code to central repository
+   .image pic/2/1.png
+
+** build server
+   .image pic/2/2.png
+
+** software repository
+   .image pic/2/3.png
+
+** software testing
+   .image pic/2/4.png
+
+
+* Where the problem lies?
+
+  The traditional approach would be to accumulate codes for a period of time before going to the build server for build and test, which would result in a large number of error notifications being returned to the development team for correction all at once. Furthermore, these errors would have a time delay, making it a painful and highly inefficient task for developers.
+
+  .image pic/2/5.png
+
+  .image pic/2/6.png
+
+
+* Continuous Integration
+  In order to solve the above problem, the concept of Continuous Integration (CI) was introduced. This concept refers to triggering a build for every commit, so that problems can be discovered and resolved as early as possible. However, it is not possible to do this manually, so it must be automated.
+
+  .image pic/2/7.png
+
+  .image pic/2/8.png
+
+  The core purpose of CI is to detect defects early so that problems do not multiply.
+
+
+* Tools
+
+** IDE
+   Developers use these IDEs for development because they integrate with version control tools.
+
+   .image pic/2/9.png
+
+** Version Control
+   .image pic/2/10.png
+
+** Build Tools
+   .image pic/2/11.png
+
+** Software repository
+   Used to store artifacts
+
+   .image pic/2/12.png
+
+** CI Tools
+   Integrate everything.
+
+   .image pic/2/13.png
+
+
+* Overview
+
+  .image pic/2/14.png
+

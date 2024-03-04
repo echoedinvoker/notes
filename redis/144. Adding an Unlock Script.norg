@@ -1,0 +1,18 @@
+@document.meta
+title: 144. Adding an Unlock Script
+description: 
+authors: mattc
+categories: [
+  LUA script
+  Lock
+]
+created: 2024-02-19T19:41:50+0800
+updated: 2024-02-19T19:42:11+0800
+version: 1.1.1
+@end
+
+* Create LUA script and using it to unlock
+
+Proceed with coding according to the plan from the previous lecture as follows.
+
+.image pic/144/1.png

@@ -1,0 +1,29 @@
+@document.meta
+title: 32. Getting Data from Firestore
+description: 
+authors: mattc
+categories: [
+  Firebase
+  Firestore
+  External Data
+]
+created: 2024-03-03T18:30:25+0800
+updated: 2024-03-03T18:30:54+0800
+version: 1.1.1
+@end
+
+* Create firestore database & setting its rules
+
+  .image pic/17/1.png
+
+  The part indicated by the arrow in the above picture must be true in order to read and write, if the default value is false, it must be manually corrected.
+
+
+* Connect to firestore and test
+
+  .image pic/17/2.png
+
+
+* Replace external data source from json to firestore
+
+  .image pic/17/3.png

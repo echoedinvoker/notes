@@ -1,0 +1,20 @@
+@document.meta
+title: 35. The Update Pattern at a Glance
+description: 
+authors: mattc
+categories: [
+  Update
+  Steps
+]
+created: 2024-03-03T19:52:17+0800
+updated: 2024-03-03T19:52:35+0800
+version: 1.1.1
+@end
+
+* Upate function
+
+If you want to update the d3 graph along with the update of the database data without the need for reloading, we must create an update function that includes the five necessary steps for updating.
+
+.image pic/19/1.png
+
+  We will explain the five steps in the following lectures.

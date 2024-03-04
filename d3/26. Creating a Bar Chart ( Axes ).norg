@@ -1,0 +1,25 @@
+@document.meta
+title: 26. Creating a Bar Chart ( Axes )
+description: 
+authors: mattc
+categories: [
+  Axes
+  Transforms
+]
+created: 2024-03-03T14:35:41+0800
+updated: 2024-03-03T14:36:06+0800
+version: 1.1.1
+@end
+
+* Generate Axes by d3 tools
+
+  d3 provides methods to generate functions that can append various axes (requires scales to be established), and then uses d3.Selection.call() to execute these functions to generate the axes.
+
+  .image pic/15/5.png
+
+
+* Move down the x-axis to the right place
+
+  Although we used d3.axisBottom(x) above to generate the function for appending the x-axis, it does not automatically move to the bottom. We must transform the group that wraps the x-axis to move it to the bottom.
+
+  .image pic/15/6.png

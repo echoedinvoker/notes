@@ -1,0 +1,21 @@
+@document.meta
+title: 7. Simple SVG Shapes
+description: 
+authors: mattc
+categories: [
+  HTML
+  SVG
+  Shapes
+]
+created: 2024-03-01T20:32:39+0800
+updated: 2024-03-01T20:32:55+0800
+version: 1.1.1
+@end
+
+* Write svg and its shapes in index.html directly
+
+  SVG tags themselves are just the functionality of a canvas, so you need to define the width and height, and put various shapes inside to create graphics.
+
+  .image pic/1/3.png
+
+  Here we directly write in HTML, using d3 allows us to write code in Javascript to automatically generate SVG graphics in HTML.

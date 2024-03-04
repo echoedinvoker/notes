@@ -1,0 +1,36 @@
+@document.meta
+title: 20. External Data ( JSON )
+description: 
+authors: mattc
+categories: [
+  Json
+  External Data
+  Join
+  OOP
+]
+created: 2024-03-03T10:15:41+0800
+updated: 2024-03-03T10:16:03+0800
+version: 1.1.1
+@end
+
+* Load external data by d3.json (async)
+
+  d3 provides convenient methods for us to access external data. For JSON data, we use d3.json, note that it is an async function.
+
+  .image pic/11/1.png
+
+  The next operation is the same as the previous lecture. Even though there is no shape element in the HTML here, we still write the original part out of habit because the rendering process is dynamic and there may be some stages where shape elements have already been generated in the DOM.
+
+  .image pic/11/2.png
+
+
+* d3.Selection.join to combine enter, update, and exit
+
+  We will find that there are duplicate codes between the original part and the part of Enter Selection, so d3 provides d3.Selection.join() to solve this problem.
+
+  .image pic/11/3.png
+
+
+* OOP
+
+  .image pic/11/4.png

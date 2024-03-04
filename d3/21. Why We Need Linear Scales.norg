@@ -1,0 +1,23 @@
+@document.meta
+title: 21. Why We Need Linear Scales
+description: 
+authors: mattc
+categories: [
+  Scales
+  Linear Scales
+]
+created: 2024-03-03T10:57:35+0800
+updated: 2024-03-03T10:57:54+0800
+version: 1.1.1
+@end
+
+* Why we need linear scales?
+
+  .image pic/12/1.png
+
+  .image pic/12/2.png
+
+
+* Scales
+
+  .image pic/12/3.png

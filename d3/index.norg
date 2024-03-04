@@ -1,0 +1,39 @@
+* (x) Section 2: SVG and D3 Basics
+** (x) [6. What are SVG's? (4/11)]{:6. What are SVG's?:}
+** (x) [7. Simple SVG Shapes (7/71)]{:7. Simple SVG Shapes:}
+** (x) [8. SVG Paths (10/21)]{:8. SVG Paths:}
+** (x) [9. Setting up D3.js (2/54)]{:9. Setting up D3.js:}
+** (x) [10. Selecting Elements (4/15)]{:10. Selecting Elements:}
+** (x) [11. Appending Elements (3/15)]{:11. Appending Elements:}
+** (x) [12. Method Chaining & Attributes (7/30)]{:12. Method Chaining and Attributes:}
+** (x) [13. Text SVG's (3/15)]{:13. Text SVG's:}
+** (x) [14. Groups (4/20)]{:14. Groups:}
+* (x) Section 3: Using Data with D3
+** (x) [16. Joining Data to an Element (9/45)]{:16. Joining Data to an Element:}
+** (x) [18. Joining Data to Multiple Elements (5/9)]{:18. Joining Data to Multiple Elements:}
+** (x) [19. The Enter Selection (8/22)]{:19. The Enter Selection:}
+** (x) [20. External Data ( JSON ) (9/41)]{:20. External Data ( JSON ):}
+* (x) Section 4: Scales & Bar Charts
+** (x) [21. Why We Need Linear Scales (4/9)]{:21. Why We Need Linear Scales:}
+** (x) [22. Creating a Linear Scale (10/39)]{:22. Creating a Linear Scale:}
+** (x) [23. Band Scales (11/35)]{:23. Band Scales:}
+** (x) [24. Min, Max & Extent (6/23)]{:24. Min, Max and Extent:}
+** (x) [25. Creating a Bar Chart ( Groups & Margins ) (11/42)]{:25. Creating a Bar Chart ( Groups and Margins ):}
+** (x) [26. Creating a Bar Chart ( Axes ) (6/35)]{:26. Creating a Bar Chart ( Axes ):}
+** (x) [27. Inverting Scales (7/29)]{:27. Inverting Scales:}
+** (x) [28. Tick Formatting (6/17)]{:28. Tick Formatting:}
+* (x) Section 5: Firestore Database
+** (x) [32. Getting Data from Firestore (17/82)]{:32. Getting Data from Firestore:}
+* (x) Section 6: The D3 Update Pattern
+** (x)[34. Enter & Exit Groups (7/30)]{:34. Enter & Exit Groups:}
+** (x)[35. The Update Pattern at a Glance (5/9)]{:35. The Update Pattern at a Glance:}
+** (x)[36. Creating an Update Function (10/55)]{:36. Creating an Update Function:}
+** (x)[37. D3 Interval Function (6/33)]{:37. D3 Interval Function:}
+** (x)[38. The Exit Selection (4/14)]{:38. The Exit Selection:}
+** (x)[39. Firestore Realtime Data Updates (6/28)]{:39. Firestore Realtime Data Updates:}
+** (x)[40. Updating Our Data (12/41)]{:40. Updating Our Data:}
+* (x) Section 7: D3 Transitions
+** ( ) [42. Enter Transitions (7/)]{:42. Enter Transitions:}
+** ( ) [43. Update Transitions (4/)]{:43. Update Transitions:}
+** ( ) [44. Merge and Refactor (4/)]{:44. Merge and Refactor:}
+** ( ) [45. Tweens and Interpolation (10/)]{:45. Tweens and Interpolation:}

@@ -1,0 +1,36 @@
+@document.meta
+title: 19. The Enter Selection
+description: 
+authors: mattc
+categories: [
+  Virtual Elements
+  Enter Selection
+]
+created: 2024-03-03T09:29:41+0800
+updated: 2024-03-03T09:30:02+0800
+version: 1.1.1
+@end
+
+* ISSUE: when number of data items is more than DOM elements
+
+  In fact, the number of HTMLElements should vary with the data, and should not be hard coded to a fixed number in HTML.
+
+  .image pic/10/1.png
+
+
+* Concept: virtual elements & Enter Selection
+
+  Extra data items will generate virtual elements that are excluded from the _enter property in d3.Selection. We consider them stored in the Enter Selection container.
+
+  .image pic/10/2.png
+
+  We can use d3.Selection.enter() to access these Enter Selections, actually using the content of the _enter property to generate new d3.Selections.
+
+  .image pic/10/3.png
+
+
+* Practice: turn virtual elements into DOM elements by appending them
+
+  .image pic/10/4.png
+
+  .image pic/10/5.png

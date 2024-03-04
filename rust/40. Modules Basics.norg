@@ -1,0 +1,45 @@
+@document.meta
+title: 40. Modules Basics
+description: 
+authors: mattc
+categories: [
+  Organizing
+  Module
+  Public
+  Path
+]
+created: 2024-02-23T19:06:57+0800
+updated: 2024-02-23T19:07:25+0800
+version: 1.1.1
+@end
+
+* Seperate different concerns by modules
+
+  .image pic/22/1.png
+
+  .image pic/22/2.png
+
+
+* Absolute path and relative path
+
+  We use path to specify the location of items (struct, function, enum, ...) in the module tree, so that we can use items outside of the module.
+
+  .image pic/22/3.png
+
+
+* Public items
+
+  .image pic/22/4.png
+
+  .image pic/22/5.png
+
+  Therefore, public items exist independently and do not have any inheritance relationship.
+
+
+* Abbrieviate paths by 'use'
+
+  Sometimes the path of the app can be very long, you can use "use" to avoid repeatedly entering a long path.
+
+  .image pic/22/6.png
+
+  Some people may consider 'use' as 'import' in other languages, but this is not accurate.

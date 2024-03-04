@@ -1,0 +1,73 @@
+@document.meta
+title: 46. Publishing your Crate
+description: 
+authors: mattc
+categories: [
+  Publishing
+  Documentation
+]
+created: 2024-02-26T16:46:59+0800
+updated: 2024-02-26T16:47:22+0800
+version: 1.1.1
+@end
+
+* Register crates.io & get token
+
+  .image pic/26/1.png
+
+  .image pic/26/2.png
+
+  .image pic/26/3.png
+
+  .image pic/26/4.png
+
+
+* Open document website
+
+  Using `cargo doc --open` in Rust will generate a documentation website based on the code.
+
+  .image pic/26/5.png
+
+  Only the public parts will be displayed on this webpage.
+
+  .image pic/26/6.png
+
+
+* Add Document
+
+** section and regular document for items
+   .image pic/26/7.png
+
+** codes
+   .image pic/26/8.png
+
+** document for crate
+   .image pic/26/10.png
+
+
+* Test
+
+  The codes document added above can be directly used to run tests with the command `cargo test`.
+
+  .image pic/26/9.png
+
+
+* Publish
+
+** required fields of Cargo.toml
+   .image pic/26/11.png
+
+** `--allow-dirty` to pass git status check
+   .image pic/26/12.png
+
+** email varification
+   .image pic/26/13.png
+
+** duplicated project name
+   On crates.io, there cannot be projects with the same name, and it is first come first serve. Therefore, if you find a project with the same name already exists, you must change the name and republish.
+
+   .image pic/26/14.png
+
+** successful publish, check the result on crates.io
+   .image pic/26/15.png
+

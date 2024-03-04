@@ -1,0 +1,31 @@
+@document.meta
+title: 142. Another Lock Issue
+description: 
+authors: mattc
+categories: [
+  DEL
+  Delay
+  Expire
+  Lock
+]
+created: 2024-02-19T18:55:24+0800
+updated: 2024-02-19T18:55:54+0800
+version: 1.1.1
+@end
+
+* If DEL delay is executed after the key has expired, what happened?
+
+  There are two mechanisms for deleting our keys, the first is actively using the DEL command, and the second is key expiration by the PX parameter. Under normal circumstances, a process will only have one mechanism applied at a time. However, if the DEL command is delayed for various reasons and is executed after the key has expired, what will happen?
+
+  .image pic/142/1.png
+
+  .image pic/142/2.png
+
+
+* Try to solve above issue by adding GET and comparing token
+
+  .image pic/142/3.png
+
+  .image pic/142/4.png
+
+  As above, the attempt also failed still due to the delay of process#1's DEL.

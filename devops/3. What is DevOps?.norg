@@ -1,0 +1,69 @@
+@document.meta
+title: 3. What is DevOps?
+description: 
+authors: mattc
+categories: [
+  SDLC
+  Agile
+  Waterfall
+  Lifecycle
+]
+created: 2024-03-01T09:52:22+0800
+updated: 2024-03-01T09:52:53+0800
+version: 1.1.1
+@end
+
+* SDLC: Software Development Lifecycle
+
+** SDLC
+   Software development is a well-defined and organized process, basically following the following process for development.
+
+   .image pic/1/1.png
+
+** Models in SDLC
+   According to the different attributes of the project, different SDLC models can be chosen.
+
+   .image pic/1/2.png
+
+** Agile SDLC
+   .image pic/1/3.png
+
+   Waterfall SDLC takes a long time for each stage and is irreversible. Clients often see the results after several months.
+
+   .image pic/1/4.png
+
+   Agile SDLC allows customers to see incremental results early and collect feedback to incorporate into the development of the next iteration.
+
+
+* Dev is Agile but Ops still Waterfall
+
+  This is a phenomenon that is easy to encounter in traditional Ops environments, where the decision of the development team to use agile development instead creates a burden for the Ops team.
+
+  .image pic/1/5.png
+
+  .image pic/1/6.png
+
+  .image pic/1/7.png
+
+
+* DevOps
+
+** DevOps is automation of the deployment process
+   .image pic/1/8.png
+
+** DevOps lifecycle
+   .image pic/1/9.png
+
+   .image pic/1/10.png
+
+   .image pic/1/11.png
+
+   .image pic/1/12.png
+
+   .image pic/1/13.png
+
+   .image pic/1/14.png
+
+   .image pic/1/15.png
+
+   The DevOps lifecycle is an automated process, with fewer manual interventions making it less prone to errors.

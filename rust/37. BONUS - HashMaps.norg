@@ -1,0 +1,54 @@
+@document.meta
+title: 37. BONUS - HashMaps
+description: 
+authors: mattc
+categories: [
+  Dereferencing
+  Hash Map
+  Frequency
+]
+created: 2024-02-22T20:33:13+0800
+updated: 2024-02-22T20:36:43+0800
+version: 1.1.1
+@end
+
+* Create a hash map & get value by key
+
+  .image pic/20/1.png
+
+
+* Check if key exists
+
+** by arms
+   .image pic/20/2.png
+
+** by method of hash map: contains_key
+   .image pic/20/3.png
+
+
+* Iterate over hash map
+
+  .image pic/20/4.png
+
+
+* Two types of insert entry
+
+** overwrite
+   .image pic/20/5.png
+
+** no overwrite
+   .image pic/20/6.png
+
+
+* Use case: calc freq of each el in vectors
+
+** demand
+   .image pic/20/7.png
+
+** solution by hash map
+   .image pic/20/8.png
+
+   `fre_vec.entry(*i).or_insert(0);` will return a mutable reference to the value of this entry, so if we want to change the value, we need to dereference it first.
+
+   Hash map has many use cases, such as associated arrays, database indexing sets, trasposition tables, and others.
+   Hash map is quite fast and when combined with some other complicated data types, can do wonders.

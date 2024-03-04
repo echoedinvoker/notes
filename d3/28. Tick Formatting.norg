@@ -1,0 +1,26 @@
+@document.meta
+title: 28. Tick Formatting
+description: 
+authors: mattc
+categories: [
+  Ticks
+  Axis
+]
+created: 2024-03-03T17:25:33+0800
+updated: 2024-03-03T17:25:49+0800
+version: 1.1.1
+@end
+
+* Modify ticks of y-axis
+
+.image pic/16/6.png
+
+
+* Modify ticks of x-axis
+
+.image pic/16/7.png
+
+.image pic/16/8.png
+
+
+  So there are multiple ways to modify axis ticks. The first is to use the methods provided by d3 to change the content of the d3.Axis function. The second is to generate a new d3.Selection to the directly targets and modify the target elements.

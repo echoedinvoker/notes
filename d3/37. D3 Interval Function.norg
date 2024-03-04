@@ -1,0 +1,27 @@
+@document.meta
+title: 37. D3 Interval Function
+description: 
+authors: mattc
+categories: [
+  Interval
+  Update
+]
+created: 2024-03-04T02:35:36+0800
+updated: 2024-03-04T02:35:51+0800
+version: 1.1.1
+@end
+
+* Currently only fecth/render once
+
+  Currently, the app can only fetch and render data once during loading, so that even though we have already implemented an update function in the previous lecture, it doesn't have much significance.
+
+  .image pic/21/1.png
+
+
+* D3 interval function
+
+  In d3, there is a very easy interval function provided. We use it to test whether the update function can really update the screen according to the changes in data without reloading.
+
+  .image pic/21/2.png
+
+  We will later change to a way of monitoring database data to trigger the update function.

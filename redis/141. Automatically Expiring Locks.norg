@@ -1,0 +1,48 @@
+@document.meta
+title: 141. Automatically Expiring Locks
+description: 
+authors: mattc
+categories: [
+  Lock
+  Error Handling
+  Crash
+  PX
+]
+created: 2024-02-19T18:19:05+0800
+updated: 2024-02-19T18:19:34+0800
+version: 1.1.1
+@end
+
+* Review codes for bidding and ISSUE
+
+Let's first review the codes we wrote for the bids function before, mainly divided into bid logic and generating lock key logic.
+
+  .image pic/141/1.png
+
+The codes above found that in some cases, the bid cannot work.
+
+.image pic/141/2.png
+
+This is because the lock key was not properly deleted, causing the subsequent process to not be executed.
+
+
+* Find out when the lock key is not deleted & solve it
+
+** request redis error
+Because Redis is an external component that we cannot control, sometimes the work of requesting to Redis may fail.
+We must check if the logic of deleting the lock key is functioning properly in this situation.
+
+.image pic/141/3.png
+
+It looks like it has been implemented.
+
+** app crash when runing lock function
+But another situation is that the server crashes directly during the existence of the lock key, in which case the next time the server is restarted, it will find that the lock key is always present, causing other processes to be unable to execute.
+
+.image pic/141/4.png
+
+*** PX
+We added the PX parameter to the SET lock key command, so that no matter what happens, Redis will delete the generated lock key after two seconds.
+
+.image pic/141/5.png
+

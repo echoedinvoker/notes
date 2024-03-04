@@ -1,0 +1,38 @@
+@document.meta
+title: 27. Inverting Scales
+description: 
+authors: mattc
+categories: [
+  Bar Chart
+  Reverse
+  Axis
+]
+created: 2024-03-03T17:04:22+0800
+updated: 2024-03-03T17:04:52+0800
+version: 1.1.1
+@end
+
+* Reverse y-axis
+
+  .image pic/16/1.png
+
+  .image pic/16/2.png
+
+  As above, because the domains remain unchanged, we reversed the ranges. Therefore, although the scale direction of the y-axis is correct, the heights of the bars that were originally long have become short, and the short ones have become long.
+
+
+* Recover heights of bars
+
+  .image pic/16/3.png
+
+
+* Recover position of x-axis
+
+  .image pic/16/4.png
+
+
+* Set y start point of each bar
+
+  The position y of the rect element must be the top of the rect, not the bottom, so we need to calculate the starting y value of each rect. Fortunately, when we reversed the ranges earlier, we actually already calculated the starting value of y.
+
+  .image pic/16/5.png

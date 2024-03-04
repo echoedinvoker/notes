@@ -1,7 +1,7 @@
 * (x) Section 1: Course Orientation
 ** (x) [1. Course introduction (3/12)]{:1. Course introduction:}
 ** (x) [4. Installing Rust and Web-based Enviroment for Executing Programs (9/)]{:4. Installing Rust and Web-based Enviroment for Executing Programs:}
-** (x) [5. Running and Compiling your First Program (7/34)]{:5. Running and Compiling your First Program:}
+** (x) [5. Running and Compiling your First Program (7/34)]{:5. Running and Compiling your First Prograi:}
 * (x) Section 2: ---- Part 1: Basic Programming with Rust ----
 * (x) Section 3: Quick Startup
 ** (x) [12. Variables and Constants (6/36)]{:12. Variables and Constants:}
@@ -17,10 +17,161 @@
 ** (x)[25. Borrowing Basics (8/51)]{:25. Borrowing Basics:}
 ** (x)[26. Borrowing in Functions (6/31)]{:26. Borrowing in Functions:}
 ** (x)[27. Dereferencing (5/102)]{:27. Dereferencing:}
-* (-) Section 5: Custom and Library Provided Useful Types
+* (x) Section 5: Custom and Library Provided Useful Types
 ** (x) [29. Structs Basics (7/54)]{:29. Structs Basics:}
 ** (x) [30. Adding Functionality to Structs (8/49)]{:30. Adding Functionality to Structs:}
 ** (x) [31. Enums (6/53)]{:31. Enums:}
-** ( ) [33. Option (6/)]{:33. Option:}
-** ( ) [35. Result (6/)]{:35. Result:}
-** ( ) [37. BONUS: HashMaps (9/)]{:37. BONUS: HashMaps:}
+** (x) [33. Option (6/59)]{:33. Option:}
+** (x) [35. Result (6/72)]{:35. Result:}
+** (x) [37. BONUS: HashMaps (9/86)]{:37. BONUS - HashMaps:}
+* (x) Section 6: Organizing Your Code
+** (x) [39. Code Organization (7/46)]{:39. Code Organization:}
+** (x) [40. Modules Basics (9/55)]{:40. Modules Basics:}
+** (x) [42. Visualizing and Organizing Modules (8/55)]{:42. Visualizing and Organizing Modules:}
+** (x) [43. Re-exporting and Privacy (7/61)]{:43. Re-exporting and Privacy:}
+** (x) [45. Using External Dependencies (6/61)]{:45. Using External Dependencies:}
+** (x) [46. Publishing your Crate (8/63)]{:46. Publishing your Crate:}
+* (x) Section 7: Testing Code
+** (x) [47. Unit Testing (Basics) (8/64)]{:47. Unit Testing (Basics):}
+** (x) [48. Unit Testing (Testing Panics) (5/50)]{:48. Unit Testing (Testing Panics):}
+** (x) [49. Controlling Tests Execution (3/40)]{:49. Controlling Tests Execution:}
+** (x) [51. Integration Tests (6/46)]{:51. Integration Tests:}
+** (x) [52. BONUS: Benchmark Testing (7/55)]{:52. BONUS- Benchmark Testing:}
+* (x) Section 8: --- Part 2: Intermediate Level Concepts ---
+* (-) Section 9: Flexibility and Abstraction with Generics and Traits
+** (x) [54. Generics (10/70)]{:54. Generics:}
+** ( ) [56. Traits (9/)]{:56. Traits:}
+** ( ) [58. Trait Bounds (6/)]{:58. Trait Bounds:}
+** ( ) [60. Supertraits (5/)]{:60. Supertraits:}
+** ( ) [62. Trait Objects (7/)]{:62. Trait Objects:}
+** ( ) [64. Derived Traits and Marker Traits (4/)]{:64. Derived Traits and Marker Traits:}
+** ( ) [65. Associated Types in Traits (7/)]{:65. Associated Types in Traits:}
+** ( ) [67. Choosing Associated vs Generic Type (10/)]{:67. Choosing Associated vs Generic Type:}
+
+* Index
+** Array
+   - {:$/15. Compound Data Types:}[15. Compound Data Types]
+** Associate Data
+   - {:$/35. Result:}[35. Result]
+** Associated Data
+   - {:$/31. Enums:}[31. Enums]
+** Associated Function
+   - {:$/30. Adding Functionality to Structs:}[30. Adding Functionality To Structs]
+** Block
+   - {:$/17. Functions and Code Blocks:}[17. Functions And Code Blocks]
+** Borrowing
+   - {:$/25. Borrowing Basics:}[25. Borrowing Basics]
+   - {:$/26. Borrowing in Functions:}[26. Borrowing In Functions]
+** Build
+   - {:$/5. Running and Compiling your First Program:}[5. Running And Compiling Your First Program]
+** Cargo
+   - {:$/5. Running and Compiling your First Program:}[5. Running And Compiling Your First Program]
+** Choose
+   - {:$/1. Course introduction:}[1. Course Introduction]
+** Compare
+   - {:$/1. Course introduction:}[1. Course Introduction]
+** Compound Data Types
+   - {:$/15. Compound Data Types:}[15. Compound Data Types]
+** Condition
+   - {:$/19. Conditionals:}[19. Conditionals]
+** Consume
+   - {:$/23. Ownership in Functions:}[23. Ownership In Functions]
+** Dereferencing
+   - {:$/27. Dereferencing:}[27. Dereferencing]
+   - {:$/37. BONUS - HashMaps:}[37. Bonus - Hashmaps]
+** Enum
+   - {:$/31. Enums:}[31. Enums]
+** Format
+   - {:$/22. Bonus - Comments, Prints Commands, Input:}[22. Bonus - Comments, Prints Commands, Input]
+** Frequency
+   - {:$/37. BONUS - HashMaps:}[37. Bonus - Hashmaps]
+** Fuctions
+   - {:$/17. Functions and Code Blocks:}[17. Functions And Code Blocks]
+** Function
+   - {:$/23. Ownership in Functions:}[23. Ownership In Functions]
+** Functions
+   - {:$/26. Borrowing in Functions:}[26. Borrowing In Functions]
+** Hash Map
+   - {:$/37. BONUS - HashMaps:}[37. Bonus - Hashmaps]
+** Implementation Block
+   - {:$/30. Adding Functionality to Structs:}[30. Adding Functionality To Structs]
+   - {:$/31. Enums:}[31. Enums]
+** Implicit
+   - {:$/12. Variables and Constants:}[12. Variables And Constants]
+** Input
+   - {:$/22. Bonus - Comments, Prints Commands, Input:}[22. Bonus - Comments, Prints Commands, Input]
+** Install
+   - {:$/4. Installing Rust and Web-based Enviroment for Executing Programs:}[4. Installing Rust And Web-based Enviroment For Executing Programs]
+** Instance
+   - {:$/29. Structs Basics:}[29. Structs Basics]
+** Loop
+   - {:$/20. Control Flow:}[20. Control Flow]
+** Match
+   - {:$/19. Conditionals:}[19. Conditionals]
+** Method
+   - {:$/30. Adding Functionality to Structs:}[30. Adding Functionality To Structs]
+** Moving
+   - {:$/23. Ownership in Functions:}[23. Ownership In Functions]
+** Mutability
+   - {:$/12. Variables and Constants:}[12. Variables And Constants]
+** Option
+   - {:$/33. Option:}[33. Option]
+   - {:$/35. Result:}[35. Result]
+** Ownership
+   - {:$/22. Ownership Basics:}[22. Ownership Basics]
+   - {:$/23. Ownership in Functions:}[23. Ownership In Functions]
+** Partial Moved
+   - {:$/29. Structs Basics:}[29. Structs Basics]
+** Playground
+   - {:$/4. Installing Rust and Web-based Enviroment for Executing Programs:}[4. Installing Rust And Web-based Enviroment For Executing Programs]
+** Primitive
+   - {:$/23. Ownership in Functions:}[23. Ownership In Functions]
+** Primitive Types
+   - {:$/22. Ownership Basics:}[22. Ownership Basics]
+** Print
+   - {:$/22. Bonus - Comments, Prints Commands, Input:}[22. Bonus - Comments, Prints Commands, Input]
+** Project
+   - {:$/5. Running and Compiling your First Program:}[5. Running And Compiling Your First Program]
+** Release
+   - {:$/5. Running and Compiling your First Program:}[5. Running And Compiling Your First Program]
+** Result
+   - {:$/35. Result:}[35. Result]
+** Return
+   - {:$/17. Functions and Code Blocks:}[17. Functions And Code Blocks]
+** Rule
+   - {:$/25. Borrowing Basics:}[25. Borrowing Basics]
+** Scope
+   - {:$/12. Variables and Constants:}[12. Variables And Constants]
+** Shadow
+   - {:$/12. Variables and Constants:}[12. Variables And Constants]
+** Single Match
+   - {:$/33. Option:}[33. Option]
+** Static
+   - {:$/22. Bonus - Comments, Prints Commands, Input:}[22. Bonus - Comments, Prints Commands, Input]
+** String
+   - {:$/15. Compound Data Types:}[15. Compound Data Types]
+** Struct
+   - {:$/29. Structs Basics:}[29. Structs Basics]
+** Trade-off
+   - {:$/1. Course introduction:}[1. Course Introduction]
+** Tuple
+   - {:$/15. Compound Data Types:}[15. Compound Data Types]
+** Type
+   - {:$/12. Variables and Constants:}[12. Variables And Constants]
+   - {:$/14. Primitive Data Types:}[14. Primitive Data Types]
+** Type Alias
+   - {:$/14. Primitive Data Types:}[14. Primitive Data Types]
+** Type Conversion
+   - {:$/14. Primitive Data Types:}[14. Primitive Data Types]
+** Uncategorised
+   - {:$/2. Version 2.0 of the Course:}[2. Version 2.0 Of The Course]
+   - {:$/3. Advice:}[3. Advice]
+   - {:$/index:}[(x) Section 1: Course Orientation]
+** Underline
+   - {:$/22. Bonus - Comments, Prints Commands, Input:}[22. Bonus - Comments, Prints Commands, Input]
+** Update
+   - {:$/4. Installing Rust and Web-based Enviroment for Executing Programs:}[4. Installing Rust And Web-based Enviroment For Executing Programs]
+** Vectors
+   - {:$/15. Compound Data Types:}[15. Compound Data Types]
+** Zero Runtime Cost
+   - {:$/22. Ownership Basics:}[22. Ownership Basics]

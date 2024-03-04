@@ -1,0 +1,23 @@
+@document.meta
+title: 6. What are SVG's?
+description: 
+authors: mattc
+categories: [
+  SVG
+  Ways
+]
+created: 2024-03-01T17:14:31+0800
+updated: 2024-03-01T17:14:53+0800
+version: 1.1.1
+@end
+
+* What is SVG features?
+
+.image pic/1/1.png
+
+
+* How to use SVG in HTML?
+
+.image pic/1/2.png
+
+

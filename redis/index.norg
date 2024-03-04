@@ -133,10 +133,10 @@
 ** (x) [138. Implementing WithLock (11/48)]{:138. Implementing WithLock:}
 ** (x) [139. Using WithLock (3/11)]{:139. Using WithLock:}
 ** (x) [140. It Works! (3/13)]{:140. It Works!:}
-** ( ) [141. Automatically Expiring Locks (8/)]{:141. Automatically Expiring Locks:}
-** ( ) [142. Another Lock Issue (8/)]{:142. Another Lock Issue:}
-** ( ) [143. Solving Accidental Unlocks (3/)]{:143. Solving Accidental Unlocks:}
-** ( ) [144. Adding an Unlock Script (5/)]{:144. Adding an Unlock Script:}
+** (x) [141. Automatically Expiring Locks (8/34)]{:141. Automatically Expiring Locks:}
+** (x) [142. Another Lock Issue (8/29)]{:142. Another Lock Issue:}
+** (x) [143. Solving Accidental Unlocks (3/10)]{:143. Solving Accidental Unlocks:}
+** (x) [144. Adding an Unlock Script (5/22)]{:144. Adding an Unlock Script:}
 ** ( ) [145. One Last Issue (4/)]{:145. One Last Issue:}
 ** ( ) [146. Providing Expiration Signals (6/)]{:146. Providing Expiration Signals:}
 ** ( ) [147. Alternate Expiration Solution (7/)]{:147. Alternate Expiration Solution:}

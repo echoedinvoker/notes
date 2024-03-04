@@ -111,12 +111,12 @@
 ** (x) [179. Creating a Card Component (12/63)]{:179. Creating a Card Component:}
 ** (x) [180. Creating a Card Component (Cont.) (12/55)]{:180. Creating a Card Component (Cont.):}
 ** (x) [181. Creating the Album Page & Loading Album Data (11/60)]{:181. Creating the Album Page and Loading Album Data:}
-** ( ) [182. ItemPage Component Markup (12/)]{:182. ItemPage Component Markup:}
-** ( ) [183. Styling The ItemPage Component (15/)]{:183. Styling The ItemPage Component:}
-** ( ) [184. Getting The Average Colour of an Image (7/)]{:184. Getting The Average Colour of an Image:}
-** ( ) [185. Using the Average Colour Endpoint in the Album Page (7/)]{:185. Using the Average Colour Endpoint in the Album Page:}
-** ( ) [186. The TrackList Component Markup (11/)]{:186. The TrackList Component Markup:}
-** ( ) [187. The TrackList Component Styling (10/)]{:187. The TrackList Component Styling:}
+** (x) [182. ItemPage Component Markup (12/48)]{:182. ItemPage Component Markup:}
+** (x) [183. Styling The ItemPage Component (15/104)]{:183. Styling The ItemPage Component:}
+** (x) [184. Getting The Average Colour of an Image (7/49)]{:184. Getting The Average Colour of an Image:}
+** (x) [185. Using the Average Colour Endpoint in the Album Page (7/72)]{:185. Using the Average Colour Endpoint in the Album Page:}
+** (x) [186. The TrackList Component Markup (11/64)]{:186. The TrackList Component Markup:}
+** (x) [187. The TrackList Component Styling (10/52)]{:187. The TrackList Component Styling:}
 ** ( ) [188. Creating an Audio Player Component (15/)]{:188. Creating an Audio Player Component:}
 ** ( ) [189. Using the Player Component in The TrackList Component (8/)]{:189. Using the Player Component in The TrackList Component:}
 ** ( ) [190. Handling the TrackList Component When JS is Disabled (7/)]{:190. Handling the TrackList Component When JS is Disabled:}

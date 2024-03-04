@@ -1,0 +1,31 @@
+@document.meta
+title: 23. Band Scales
+description: 
+authors: mattc
+categories: [
+  Band Scales
+  Padding
+  Bar Chart
+]
+created: 2024-03-03T12:26:28+0800
+updated: 2024-03-03T12:27:03+0800
+version: 1.1.1
+@end
+
+* Concept of Band Scales
+
+** why we need it?
+.image pic/13/1.png
+
+** band scales
+.image pic/13/2.png
+
+
+* Practice
+
+.image pic/13/3.png
+
+
+* Padding of band
+
+.image pic/13/4.png

@@ -1,0 +1,35 @@
+@document.meta
+title: 33. Option
+description: 
+authors: mattc
+categories: [
+  Option
+  Single match
+]
+created: 2024-02-19T15:22:20+0800
+updated: 2024-02-19T15:22:53+0800
+version: 1.1.1
+@end
+
+* ISSUE: how to represent absence of a field precisely
+
+  .image pic/18/1.png
+
+  In RUST, we cannot define null values like in JavaScript to express that a value does not exist, so we use 0 above, but the meaning may not be accurately conveyed.
+
+
+* Option enum
+
+  Therefore, RUST provides the Option enum to represent a value that may or may not exist.
+
+  .image pic/18/2.png
+
+  Note that the type of _grade is Option<i32> now. The value Some(80) does not represent the integer 80, but rather an instance of the Option enum with associated data u32 80.
+
+
+* Replace single match
+
+  The `None = {}` above is not needed, which means there is only one case for match. In this case, we can simplify the code using the `if let` syntax as follows
+
+  .image pic/18/3.png
+

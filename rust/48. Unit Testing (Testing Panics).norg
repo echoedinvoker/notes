@@ -1,0 +1,46 @@
+@document.meta
+title: 48. Unit Testing (Testing Panics)
+description: 
+authors: mattc
+categories: [
+  Panics
+  Test
+]
+created: 2024-02-27T16:11:43+0800
+updated: 2024-02-27T16:12:53+0800
+version: 1.1.1
+@end
+
+* Test function which should return panic
+
+** simple panic
+   We add `#[should panic]` to test functions that should trigger a panic.
+
+   .image pic/28/1.png
+
+
+** panic with specific message
+   Sometimes we want to test a specific panic instead of all panics. We can use `#[should panic(expected = "message")]` to specify the message of that panic.
+
+   .image pic/28/2.png
+
+   .image pic/28/3.png
+
+
+* Some features of test function
+
+** independent
+   The test function can exist independently and does not need to be inside mod tests (but conventionally it is done this way).
+
+   .image pic/28/4.png
+
+** become helper function without #\[test\]
+   A `[#test]` is required to be a test function in order to generate a report, otherwise it will be a helper function.
+
+   .image pic/28/5.png
+
+** test function can access private functions
+   However, private methods in the struct still cannot be directly accessed.
+
+   .image pic/28/6.png
+

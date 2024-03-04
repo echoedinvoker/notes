@@ -1,0 +1,28 @@
+@document.meta
+title: 39. Firestore Realtime Data Updates
+description: 
+authors: mattc
+categories: [
+  onSnapshot,
+  Realtime
+]
+created: 2024-03-04T11:53:59+0800
+updated: 2024-03-04T11:56:52+0800
+version: 1.1.1
+@end
+
+* Replace getDocs with onSnapshot
+
+In the previous lecture, we used getDocs to actively query data from Firestore. In this lecture, we will change to using onSnapshot to listen for changes in data in Firestore and automatically trigger a function.
+
+.image pic/22/1.png
+
+
+* Parse out data
+
+.image pic/22/2.png
+
+
+* Draw the chart with data
+
+.image pic/22/3.png

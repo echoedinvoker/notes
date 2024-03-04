@@ -1,0 +1,36 @@
+@document.meta
+title: 8. SVG Paths
+description: 
+authors: mattc
+categories: [
+  Path
+  Curve
+]
+created: 2024-03-01T20:59:44+0800
+updated: 2024-03-01T21:00:05+0800
+version: 1.1.1
+@end
+
+* Path
+
+  Sometimes we need to draw more complex shapes, which can be done using the path shape.
+
+  .image pic/2/1.png
+
+  'Z' will return to the starting point of the drawing, and will also draw a line itself.
+
+  Each letter carries meaning, such as the letters M, L, and C mentioned above, as well as many other letters.
+
+
+* C - curve
+
+** elements of curve
+   .image pic/2/2.png
+
+** draw a curve to close the path
+   The curve cannot automatically return to the starting point like 'Z', so the coordinates must be well designed to close the path.
+
+   .image pic/2/3.png
+
+** draw the torch of the curve
+   .image pic/2/4.png

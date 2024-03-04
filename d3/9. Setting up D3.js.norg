@@ -1,0 +1,46 @@
+@document.meta
+title: 9. Setting up D3.js
+description: 
+authors: mattc
+categories: [
+  Wepack
+  Hot reload
+  Project
+]
+created: 2024-03-01T22:26:24+0800
+updated: 2024-03-01T22:27:03+0800
+version: 1.1.1
+@end
+
+* Terminal commands to create new project
+
+We want to create a front-end project using Typescript and Webpack to achieve type safety and hot reload effects, with the goal of creating d3 charts without using any front-end frameworks (React, Angular, Vue, ...).
+
+  .image pic/3/1.png
+
+
+* Webpack configuration
+
+  .image pic/3/2.png
+
+
+* Script
+
+  .image pic/3/3.png
+
+  When running `webpack serve`, it will automatically execute `npm run build` for compilation, so the `build` script must also be properly configured.
+
+
+* HTML
+
+  .image pic/3/4.png
+
+
+* Source codes
+
+  .image pic/3/5.png
+
+
+* Launch website
+
+  .image pic/3/6.png

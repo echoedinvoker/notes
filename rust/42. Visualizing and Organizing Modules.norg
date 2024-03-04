@@ -1,0 +1,39 @@
+@document.meta
+title: 42. Visualizing and Organizing Modules
+description: 
+authors: mattc
+categories: [
+  Module tree
+  Refactor by file
+  Public
+]
+created: 2024-02-23T20:07:20+0800
+updated: 2024-02-23T20:07:55+0800
+version: 1.1.1
+@end
+
+* Check cargo tree by cargo-modules
+
+** install cargo-modules
+   .image pic/23/1.png
+
+** check cargo tree
+   .image pic/23/3.png
+
+   .image pic/23/2.png
+
+   As above, although the public attributes of RUST items are independent of each other, the path used to reach the target item goes from current scope to the target item layer by layer. Therefore, if any item in between fails, the target item cannot be reached.
+
+
+* First way to refactor module by file (./\[mod name\].rs)
+
+  .image pic/23/4.png
+
+  .image pic/23/5.png
+
+
+* Second way to refactor module by file (./\[mod name\]/mod.rs)
+
+  .image pic/23/6.png
+
+As above, this method can naturally centralize the files of the module and its sub-modules in the same folder, but it may not be as intuitive to understand as the first method.

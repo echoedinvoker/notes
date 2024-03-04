@@ -1,0 +1,54 @@
+@document.meta
+title: 49. Controlling Tests Execution
+description: 
+authors: mattc
+categories: [
+  Test
+  Filter
+  Ignore
+]
+created: 2024-02-29T13:53:12+0800
+updated: 2024-02-29T13:53:42+0800
+version: 1.1.1
+@end
+
+* Only test library
+
+  If there are binary and library, we can just test the library.
+
+  .image pic/29/1.png
+
+
+* Show fn output in test report
+
+  The output of the tested function fn will not be displayed in the test report.
+
+  .image pic/29/2.png
+
+  But if needed, we can use `--show-output` to display the output of fn.
+
+  .image pic/29/3.png
+
+
+* Filter fn
+
+  We can use the name of the test fn to filter the test fn to be executed as follows.
+
+** full fn name
+   .image pic/29/4.png
+
+** partial fn name
+   .image pic/29/5.png
+
+
+* Ignored test fn
+
+  Sometimes some tests are too huge to run together with other tests. We use #\[ignore\] to ignore these tests in regular testing.
+
+** \#\[ignore\]  
+   .image pic/29/6.png
+
+** run ignored test fn
+   We can use `-- --ignored` to only run those ignored test functions.
+
+   .image pic/29/7.png

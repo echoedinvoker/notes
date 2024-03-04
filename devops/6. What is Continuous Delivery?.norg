@@ -1,0 +1,66 @@
+@document.meta
+title: 6. What is Continuous Delivery?
+description: 
+authors: mattc
+categories: [
+  Continuous Delivery
+  Deployment
+  Software testing
+]
+created: 2024-03-01T11:36:25+0800
+updated: 2024-03-01T11:36:48+0800
+version: 1.1.1
+@end
+
+* CI
+
+  .image pic/3/1.png
+
+  The previous lecture explained CI, which makes the software development process more automated and reduces human errors.
+
+
+* Traditional Workflow after CI software
+
+** traditional workflow
+   Due to CI accelerating software updates, the frequency of deployment requirements has increased, resulting in an increase in workload for the Ops team.
+
+   .image pic/3/2.png
+
+   .image pic/3/3.png
+
+   .image pic/3/4.png
+
+   However, the low efficiency of deployment and software testing will delay the lead time and lead to a decrease in customer satisfaction.
+
+
+** deployment work is huge
+   In fact, the work of subordinates is very tedious, which is a big problem.
+
+   .image pic/3/6.png
+
+   Because CI will greatly increase the deployment requirements in the future, this will seriously increase the workload of Ops teams, so CD must solve this.
+
+   .image pic/3/5.png
+
+
+** too many manual works
+   .image pic/3/7.png
+
+
+* Integration of Ops and QA workflow with tools
+
+** tools for Ops
+   .image pic/3/9.png
+
+** tools for QA
+   .image pic/3/10.png
+
+** Integrate automation codes with dev codes
+   After having the tools, the Ops team and QA team can write automation codes to automatically deploy and conduct software testing. Moreover, these codes will be integrated with the codes written by the dev team, enabling continuous deployment (CD).
+
+   .image pic/3/11.png
+
+
+* Overview: CD is extension of CI
+
+  .image pic/3/12.png

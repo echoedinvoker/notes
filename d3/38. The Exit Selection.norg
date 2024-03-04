@@ -1,0 +1,26 @@
+@document.meta
+title: 38. The Exit Selection
+description: 
+authors: mattc
+categories: [
+  Exit
+  Removing Elements
+  Interval
+]
+created: 2024-03-04T02:55:31+0800
+updated: 2024-03-04T02:55:53+0800
+version: 1.1.1
+@end
+
+* Create a method to test if removing exit elements work
+
+In the previous lecture, we tested whether the update selection of the update function was effective. In this lecture, we will test whether the exit selection is effective.
+
+.image pic/21/3.png
+
+
+* Remember d3.Selection.join() is include d3.Selection.exit().remove()
+
+  It is important to note that we must use .exit() to generate a new d3.Selection object and then use its .remove() method to truly remove elements from the DOM, but all of which are included in d3.Selection.join().
+
+.image pic/21/4.png

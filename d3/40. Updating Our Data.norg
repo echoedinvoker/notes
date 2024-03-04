@@ -1,0 +1,24 @@
+@document.meta
+title: 40. Updating Our Data
+description: 
+authors: mattc
+categories: [
+  docChange
+  Update
+  onSnapshot
+]
+created: 2024-03-04T13:47:25+0800
+updated: 2024-03-04T13:50:53+0800
+version: 1.1.1
+@end
+
+* Replace doc.docs with doc.docChanges()
+
+doc.docs simply retrieves all content in that collection, while doc.docChanges() retrieves all changes, making it more efficient to update data.
+
+.image pic/23/1.png
+
+
+* Change memory data based on change types
+
+.image pic/23/2.png

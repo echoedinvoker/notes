@@ -1,0 +1,31 @@
+@document.meta
+title: 35. Result
+description: 
+authors: mattc
+categories: [
+  Result
+  Option
+  Associate Data
+]
+created: 2024-02-20T15:42:25+0800
+updated: 2024-02-20T15:43:03+0800
+version: 1.1.1
+@end
+
+* Demand: when query non-existed student, return error message
+
+  .image pic/19/1.png
+
+
+* Create fn to check if student exists and return type enum Result
+
+  The enum Option is used to define two situations with or without data, while the enum Result is used to define two situations of success and failure.
+
+  .image pic/19/4.png
+
+
+* Combine fn get_grade and check_student by associate data of Result viriant
+
+  Above, we use associate data to write error messages in the Result variant Err. Similarly, we can also pass in `student.grade` as associate data in Ok(), so we no longer need to use the get_grade function to obtain the grade.
+
+  .image pic/19/5.png

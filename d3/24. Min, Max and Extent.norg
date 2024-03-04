@@ -1,0 +1,40 @@
+@document.meta
+title: 24. Min, Max and Extent
+description: 
+authors: mattc
+categories: [
+  Domain
+  Linear Scale
+  Height
+  Bar Chart
+  Helper
+  Max
+  Min
+]
+created: 2024-03-03T13:01:35+0800
+updated: 2024-03-03T13:02:13+0800
+version: 1.1.1
+@end
+
+* ISSUE: height domain should be dynamic
+
+  It is not reasonable for us to hard code the y scales domain, because data orders' are variable. We should set the domain based on the changing values of the data.
+
+.image pic/14/1.png
+
+
+* Helpers of data computation
+
+d3 provides some methods that can iterate through the values of data to find the maximum or minimum value, allowing us to avoid writing iteration code ourselves and making the code more concise.
+
+.image pic/14/2.png
+
+
+* Implement dynamic domain
+
+.image pic/14/3.png
+
+
+* Test
+
+.image pic/14/4.png

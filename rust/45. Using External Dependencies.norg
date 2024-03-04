@@ -1,0 +1,48 @@
+@document.meta
+title: 45. Using External Dependencies
+description: 
+authors: mattc
+categories: [
+  Dependency
+  Trait issue
+  Package
+  External library
+]
+created: 2024-02-26T15:32:00+0800
+updated: 2024-02-26T15:32:42+0800
+version: 1.1.1
+@end
+
+* Demand: intersection of two vectors
+
+Assuming we have two vectors that we want to find the intersection of, there is no direct method available in the standard library. However, we can search on crate.io to see if there is a suitable library that we can use.
+
+.image pic/25/1.png
+
+* Install the package
+
+.image pic/25/2.png
+
+
+* Use external package to solve the problem
+
+.image pic/25/3.png
+
+
+
+* Fix the trait issue
+
+We have not taught the Trait part yet, so here we will first follow the video to solve the problem.
+
+.image pic/25/4.png
+
+.image pic/25/5.png
+
+.image pic/25/6.png
+
+
+* Why/How to choose external package
+
+  .image pic/25/7.png
+
+  .image pic/25/8.png

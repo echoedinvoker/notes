@@ -1,0 +1,76 @@
+@document.meta
+title: 54. Generics
+description: 
+authors: mattc
+categories: [
+  Generics
+  Implementation block
+]
+created: 2024-02-29T19:05:43+0800
+updated: 2024-02-29T19:07:01+0800
+version: 1.1.1
+@end
+
+* Why we need generics?
+
+  Sometimes we want the data type to be defined later, so we first give a placeholder for the type, which is generics.
+
+  .image pic/31/1.png
+
+  As above, we hope to determine the type based on the values used for initialization, so we use generics T, which is a placeholder for a type, and the concrete type will be determined when it is assigned an actual value.
+
+  .image pic/31/2.png
+
+  .image pic/31/3.png
+
+  As shown above, T will be defined based on the initialized value during instantiation.
+
+  .image pic/31/4.png
+
+  The type of values used for initialization determines that T is also different.
+
+  .image pic/31/5.png
+
+  Because T has already been determined as f64 by `_x: 2.0`, T cannot be changed anymore, so `_y: 0` will throw an error.
+
+  .image pic/31/6.png
+
+  We can set another generics U to solve this problem.
+
+
+* Implementation block of generics struct - Specialization
+
+  .image pic/31/7.png
+
+  The Struct behind the implementation block must be given a type to be used as a struct when using generics, but it does not necessarily have to be a generics type, it can also be a concrete type as follows
+
+  .image pic/31/8.png
+
+  As above, we can categorize the function based on different types by setting up multiple implementation blocks, which is called specialization.
+
+  .image pic/31/9.png
+
+
+* Allowed/Not allowed duplicated fn
+
+  .image pic/31/10.png
+
+  .image pic/31/11.png
+
+  Therefore, to determine if there are duplicates, besides the function name, we also need to look at the function signature, which includes the types and number of parameters.
+
+
+* Free fn with generics
+
+  If a fn is not bound to a struct, enum, or trait, then it is a free function, and it can also use generics.
+
+  .image pic/31/12.png
+
+
+* Generics fn create implementations
+
+  In fact, using generics in a function will generate multiple implementations at compile time to accommodate different types.
+
+  .image pic/31/13.png
+
+  These implementations will be generated during compile time, so there will be no performance issues. However, multiple implementations will be generated during compile time, so it will increase the size of the code.

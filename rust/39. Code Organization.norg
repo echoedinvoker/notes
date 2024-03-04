@@ -1,0 +1,56 @@
+@document.meta
+title: 39. Code Organization
+description: 
+authors: mattc
+categories: [
+  Organization
+  Package
+  Crate
+  Module
+]
+created: 2024-02-23T16:58:25+0800
+updated: 2024-02-23T16:59:29+0800
+version: 1.1.1
+@end
+
+* Concept
+
+** Package > crate > module
+   .image pic/21/1.png
+
+   .image pic/21/3.png
+
+   .image pic/21/4.png
+
+*** package
+    .image pic/21/2.png
+
+*** crate
+    .rs is the meaning of RUST crate, divided into two types: library crate and binary crate. Binary crate will be compiled into .exe, while the purpose of library crate is to be shared rather than executed.
+
+*** module
+    The module is where we place our code, categorize and hide it through modules to achieve encapsulation.
+
+    In a module, you can also include modules. This structure is called a module tree.
+
+
+* Practice
+
+** create new package
+   .image pic/21/5.png
+
+** run main.rs
+   .image pic/21/6.png
+
+** create library create and other binary crate
+   .image pic/21/7.png
+
+   Because there are multiple binary crates, you must use `--bin` to specify the name of the binary crate to execute.
+
+   .image pic/21/8.png
+
+   Every binary crate must have an entry point, while library crates do not need one.
+
+   .image pic/21/9.png
+
+   Only the main.rs under src will be replaced with the package name after compilation, other binary crates will not be renamed.

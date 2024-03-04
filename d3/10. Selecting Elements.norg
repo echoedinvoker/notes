@@ -1,0 +1,32 @@
+@document.meta
+title: 10. Selecting Elements
+description: 
+authors: mattc
+categories: [
+  Selection
+]
+created: 2024-03-02T18:47:12+0800
+updated: 2024-03-02T18:47:38+0800
+version: 1.1.1
+@end
+
+* Select single element
+
+** native JS
+   .image pic/4/1.png
+
+** d3
+   .image pic/4/2.png
+
+
+
+* Select multipla elements
+
+** native JS
+   .image pic/4/3.png
+
+** d3
+   .image pic/4/4.png
+
+
+   The d3.Selection wrapper can give HTML elements more methods and properties, allowing us to implement more things.

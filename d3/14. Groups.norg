@@ -1,0 +1,30 @@
+@document.meta
+title: 14. Groups
+description: 
+authors: mattc
+categories: [
+  Group
+  Transform
+]
+created: 2024-03-02T20:26:34+0800
+updated: 2024-03-02T20:26:50+0800
+version: 1.1.1
+@end
+
+* Another svg element 'group', but it's not shape
+
+  The group element itself does not generate any shape, it is just a container that can hold other shapes or elements, even other groups. This allows for transforming all these elements at once.
+
+  .image pic/7/1.png
+
+
+* Create a group element and put some shapes inside it
+
+** purpose
+   .image pic/7/2.png
+
+** create group and using it to hold other shapes
+   .image pic/7/3.png
+
+** transform
+   .image pic/7/4.png

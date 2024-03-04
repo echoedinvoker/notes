@@ -1,0 +1,25 @@
+@document.meta
+title: 11. Appending Elements
+description: 
+authors: mattc
+categories: [
+  Selection
+  Append
+]
+created: 2024-03-02T19:03:43+0800
+updated: 2024-03-02T19:04:08+0800
+version: 1.1.1
+@end
+
+* One of d3.Selection methods: .append()
+
+.append() can add the specified HTMLElement to the HTMLElement currently wrapped by d3.Selection. This is one of the most commonly used methods of d3.Selection.
+
+.image pic/4/5.png
+
+
+* Nested append() calls
+
+Because .append itself will also return a new d3.Selection, so you can keep appending.
+
+.image pic/4/6.png

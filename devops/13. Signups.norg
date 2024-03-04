@@ -1,0 +1,36 @@
+@document.meta
+title: 13. Signups
+description: 
+authors: mattc
+categories: [
+
+]
+created: 2024-03-01T13:46:51+0800
+updated: 2024-03-01T13:47:26+0800
+version: 1.1.1
+@end
+
+* Signup
+
+  .image pic/5/1.png
+
+** GitHub
+   already have an account (by google)
+
+** GoDaddy
+   not only to sign up, but also to buy a domain
+
+   Using a less popular domain name will be cheaper.
+
+   .image pic/5/2.png
+
+   .image pic/5/3.png
+
+   .image pic/5/4.png
+
+** Docker hub
+   already have an account (by google)
+
+** SonarCloud
+   .image pic/5/5.png
+

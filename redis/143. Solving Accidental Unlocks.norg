@@ -1,0 +1,18 @@
+@document.meta
+title: 143. Solving Accidental Unlocks
+description: 
+authors: mattc
+categories: [
+  Lock
+  LUA script
+]
+created: 2024-02-19T19:15:27+0800
+updated: 2024-02-19T19:15:49+0800
+version: 1.1.1
+@end
+
+* Using LUA script
+
+  In the previous attempt in the second half of the lecture, the attempt failed because a SET lock was inserted between GET and DEL by other processes. This time, I suggest that we write GET and DEL into the same LUA script and execute it on the Redis server, so that we can ensure that no other commands will interfere with the process.
+
+  .image pic/143/1.png

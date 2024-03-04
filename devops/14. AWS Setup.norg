@@ -1,0 +1,174 @@
+@document.meta
+title: 14. AWS Setup
+description: 
+authors: mattc
+categories: [
+  AWS
+  MFA
+  IAM
+  Billing
+  CloudWatch
+]
+created: 2024-03-01T16:06:32+0800
+updated: 2024-03-01T16:06:56+0800
+version: 1.1.1
+@end
+
+* Create a new AWS account
+
+  .image pic/6/1.png
+
+  .image pic/6/2.png
+
+  .image pic/6/3.png
+
+
+* Check if account console is enabled
+
+  .image pic/6/4.png
+
+  .image pic/6/5.png
+
+  If the account is normal, it will be as shown above.
+
+
+* Support center
+
+  If any issues occur during the process, please go to the support center, submit a ticket, and wait for AWS to respond.
+
+  .image pic/6/6.png
+
+
+* MFA of root user setting
+
+  MFA is two-factor authentication, which requires downloading the Google Authenticator app on your phone to use.
+
+  .image pic/6/7.png
+
+  .image pic/6/8.png
+
+  .image pic/6/9.png
+
+  .image pic/6/10.png
+
+  .image pic/6/11.png
+
+
+* Create IAM user
+
+  It is highly recommended not to use the root user to operate AWS, it is recommended to use IAM user instead.
+
+  .image pic/6/12.png
+
+  .image pic/6/13.png
+
+  .image pic/6/14.png
+
+  .image pic/6/15.png
+
+  .image pic/6/16.png
+
+
+* MFA of IAM user setting
+
+  .image pic/6/17.png
+
+  .image pic/6/18.png
+
+  .image pic/6/19.png
+
+
+* Billing preferences setting
+
+  .image pic/6/20.png
+
+  .image pic/6/21.png
+
+  .image pic/6/22.png
+
+  .image pic/6/23.png
+
+  .image pic/6/24.png
+
+  .image pic/6/25.png
+
+  .image pic/6/26.png
+
+
+* CloudWatch setting
+
+  Because the course requirements will exceed the limits of the free tier, it is recommended to set up alerts to avoid going over budget.
+
+  .image pic/6/27.png
+
+  .image pic/6/28.png
+
+  .image pic/6/29.png
+
+  .image pic/6/30.png
+
+  .image pic/6/31.png
+
+  .image pic/6/32.png
+
+  .image pic/6/33.png
+
+  .image pic/6/34.png
+
+  .image pic/6/35.png
+
+  .image pic/6/36.png
+
+  .image pic/6/37.png
+
+  .image pic/6/38.png
+
+  .image pic/6/39.png
+
+  .image pic/6/40.png
+
+  .image pic/6/41.png
+
+
+* Certificate binding
+
+  We need to bind the Certificate we published on AWS with the Domain we purchased on GoDaddy, so that HTTPS can work correctly.
+
+  .image pic/6/42.png
+
+  .image pic/6/43.png
+
+  .image pic/6/44.png
+
+  .image pic/6/45.png
+
+  .image pic/6/46.png
+
+  .image pic/6/47.png
+
+  .image pic/6/48.png
+
+  .image pic/6/49.png
+
+  .image pic/6/50.png
+
+  .image pic/6/51.png
+
+  .image pic/6/52.png
+
+  .image pic/6/53.png
+
+
+* Change URL of IAM user login page & Login with IAM user
+
+  .image pic/6/54.png
+
+  .image pic/6/55.png
+
+  .image pic/6/56.png
+
+  Please note that when we use an IAM user URL, the root account will be automatically logged out immediately.
+
+  .image pic/6/57.png
+
+  .image pic/6/58.png

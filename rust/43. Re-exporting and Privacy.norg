@@ -1,0 +1,71 @@
+@document.meta
+title: 43. Re-exporting and Privacy
+description: 
+authors: mattc
+categories: [
+  Path
+  Public
+  Instantiating
+  New
+  Enum
+]
+created: 2024-02-26T14:10:18+0800
+updated: 2024-02-26T14:10:49+0800
+version: 1.1.1
+@end
+
+* Try to use struct of lib.rs in main.rs
+
+  We must bring the struct in lib.rs into the scope of main.rs in order to use it.
+
+  .image pic/24/1.png
+
+  Using `use::\[project name`]` represents the path of lib.rs, but it can be seen above that the module of lib.rs is private, which prevents the use of its struct.
+
+  .image pic/24/2.png
+
+  Above, we simply set the module as public, although it can solve the problem, it will make all modules public, which is not ideal. Therefore, we can use `pub use` to specify the structs that need to be exposed, so that RUST does not need to browse the entire module to find the struct, which will be more efficient.
+
+
+* pub use
+
+  Using `pub use` can specify the needed struct to be exposed outside of that scope, so that RUST can avoid navigating through the entire module to find the struct, which is more efficient.
+
+  .image pic/24/3.png
+
+
+* Nested pub use
+
+  .image pic/24/4.png
+
+
+* Public fields of struct
+
+  In struct public does not mean its fields are automatically public, we must specifically designate the fields as public, or a better method is to create a fn new to initialize the struct, so that the fields can remain private when instantiating the struct.
+
+  .image pic/24/5.png
+
+  .image pic/24/6.png
+
+  .image pic/24/7.png
+
+
+* Public enum
+
+  The difference between enum and struct is that variant cannot be individually public, it can only be used public for the enum itself, which means all variants of that enum are public.
+
+  .image pic/24/8.png
+
+
+* Continue with instantiating Order and Customer objects
+
+  Use the same walkthrough as above to obtain the `Order` and `Customer` objects.
+
+  .image pic/24/9.png
+
+
+* Public method
+
+  .image pic/24/10.png
+
+  .image pic/24/11.png

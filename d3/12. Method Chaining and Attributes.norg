@@ -1,0 +1,33 @@
+@document.meta
+title: 12. Method Chaining and Attributes
+description: 
+authors: mattc
+categories: [
+  Attributes
+  Selection
+  Chaining Methods
+]
+created: 2024-03-02T19:40:24+0800
+updated: 2024-03-02T19:40:51+0800
+version: 1.1.1
+@end
+
+* d3.Selection.attr(name, value)
+
+  Another commonly used method of d3.Selection is .attr(), which can be used to add attributes to the wrapped HTMLElement.
+
+  .image pic/5/1.png
+
+  Note that the numerical values do not need to be enclosed in double quotes like in HTML, but can simply use the number directly.
+
+
+* Chain methods
+
+  .append() will return a d3.Selection of the appended element, while .attr() will return a d3.Selection of the current element, so we can use chaining methods to simplify the code.
+
+  .image pic/5/2.png
+
+
+* Complete the shapes' attributes
+
+  .image pic/5/3.png

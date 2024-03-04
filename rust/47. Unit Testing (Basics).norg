@@ -1,0 +1,41 @@
+@document.meta
+title: 47. Unit Testing (Basics)
+description: 
+authors: mattc
+categories: [
+  Unit Testing
+  Assertion
+  Result
+]
+created: 2024-02-27T15:03:55+0800
+updated: 2024-02-27T15:20:07+0800
+version: 1.1.1
+@end
+
+* Create test project and running test
+
+** configure annotation
+  .image pic/27/2.png
+
+** test result
+  .image pic/27/3.png
+
+
+The test function can obtain test results in two ways:
+
+* Assertion macro
+
+   .image pic/27/4.png
+   Usually, when panic occurs, the program will terminate, but `cargo test` will only produce a FAILED result and continue running other tests.
+
+   .image pic/27/5.png
+
+   .image pic/27/6.png
+
+
+* Result enum
+
+  .image pic/27/7.png
+
+  \? after the function that returns a Result, if an Err is returned, it will early return and terminate the program. If an Ok is returned, it will continue executing.
+

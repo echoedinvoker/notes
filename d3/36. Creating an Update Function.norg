@@ -1,0 +1,42 @@
+@document.meta
+title: 36. Creating an Update Function
+description: 
+authors: mattc
+categories: [
+  Update
+  Refactor
+  Rely on data
+]
+created: 2024-03-03T20:59:08+0800
+updated: 2024-03-03T21:02:24+0800
+version: 1.1.1
+@end
+
+* Create update function & plan
+
+  .image pic/20/1.png
+
+  We must move the codes that rely on data to the update function, and leave the others at the top level, so that we can call the update function again when the data is updated to update our charts.
+
+
+* Refactor ScaleGenerator
+
+  .image pic/20/2.png
+
+  .image pic/20/3.png
+
+  From the example above, we can see that as long as we focus on reconstructing each class, writing code that does not depend on data in the constructor, and writing code that depends on data in its update method, we will naturally achieve the goal of the update function.
+
+
+* Refactor BarRenderer
+
+  The characteristic of d3.Selection is to continuously establish new correspondences between the current data and DOM elements, so we do not need to consider whether d3.Selection depends on data. We can directly place it with relevant codes in the update method.
+
+  .image pic/20/4.png
+
+
+* Refactor AxisRenderer
+
+  .image pic/20/5.png
+
+  .image pic/20/6.png
