@@ -1,0 +1,37 @@
+@document.meta
+title: 51. Setting up a Pie Chart
+description: 
+authors: mattc
+categories: [
+  Pie Chart
+  Generator
+  Space
+]
+created: 2024-03-09T20:50:18+0800
+updated: 2024-03-09T20:51:40+0800
+version: 1.1.1
+@end
+
+* Append svg element
+
+  Plan the space, in addition to the pie chart, there is also a legend, and some space around it for breathing.
+
+  .imgae pic/30/2.png 
+
+
+* Append group element
+
+  Group does not have length and width, it is a point, so if the shape is circular, the group is usually the center of the circle.
+
+  .imgae pic/30/3.png 
+
+
+* Create pie function and test it with dummy data
+
+  Use pie() to generate a function that can be used to input data and obtain the angles (in radians) needed for the wedges.
+
+  .imgae pic/30/4.png 
+
+  You can see that in addition to increasing the angle, the original data will also be retained.
+
+  We first write all the codes in onMount (except those that should obviously be placed outside), this is the place most similar to native Javascript, and later we will slowly move the codes out of onMount or even refactor them into different files.

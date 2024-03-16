@@ -1,0 +1,103 @@
+@document.meta
+title: 20. VM-Automatically(Windows and MacOS Intel chip)
+description: 
+authors: mattc
+categories: [
+  Vagrant
+  Automation
+  Virtualization
+  Issues
+  SSH
+]
+created: 2024-03-07T17:06:56+0800
+updated: 2024-03-07T17:07:26+0800
+version: 1.1.1
+@end
+
+* Concepts
+
+** vagrant cannot replace hypervisor
+   .image pic/10/1.png
+
+** problem from manual setup vm
+   .image pic/10/2.png
+
+** vagrant for vm
+   .image pic/10/3.png
+
+** vagrant architecture
+   .image pic/10/4.png
+
+   So it is obvious that Vagrant achieves virtualization through a hypervisor, rather than replacing the hypervisor.
+
+** steps
+   .image pic/10/5.png
+
+* Create a centOS vm
+
+** create file structure
+   .image pic/10/6.png
+
+   Each folder (ubuntu, centos) represents a VM, and the Vagrant commands we run within it will determine which VM to execute based on the current directory.
+
+** check(not download from) box name and init vm
+   .image pic/10/7.png
+
+   .image pic/10/8.png
+
+   We use `vagrant init` to generate the text file Vagrantfile, `vagrant up` will create a virtual machine based on the content of this file. If there are any changes in the content, you must use `vagrant reload` to update the virtual machine.
+
+** issues
+*** virtualbox version is not support
+    .image pic/10/9.png
+
+    We use `vagrant up` to start a VM or create a VM (if the VM does not exist). If the box image needed is not on the host, it will automatically download from Vagrant Cloud.
+
+    .image pic/10/10.png
+
+    .image pic/10/11.png
+
+*** antivirus, VPN, proxy
+    .image pic/10/13.png
+
+*** ssh auth failed, turn to use vagrant which version is greater than 2.3.8
+    .image pic/10/14.png
+
+    .image pic/10/15.png
+
+    .image pic/10/16.png
+
+    .image pic/10/18.png
+
+    .image pic/10/19.png
+
+    .image pic/10/20.png
+
+    .image pic/10/21.png
+
+    .image pic/10/22.png
+
+** ssh to vm and execute commands in it
+   .image pic/10/23.png
+
+** vagrant commands to halt vm and check current vm status
+   .image pic/10/24.png
+
+
+* Create Ubuntu vm and some other vagrant commands
+
+** create vm
+   .image pic/10/25.png
+
+** check if ssh work
+   .image pic/10/26.png
+
+** global status & boxes in the host
+   .image pic/10/27.png
+
+
+* Check/Use History commands
+
+  .image pic/10/28.png
+
+  .image pic/10/29.png

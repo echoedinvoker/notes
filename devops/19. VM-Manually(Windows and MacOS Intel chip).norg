@@ -1,0 +1,134 @@
+@document.meta
+title: 19. VM-Manually(Windows and MacOS Intel chip)
+description: 
+authors: mattc
+categories: [
+  Virtualization
+  Virtual Machine
+  CentOS
+  Ubuntu
+  Setup
+  ISO
+  Install
+  Network adapter
+]
+created: 2024-03-07T14:42:51+0800
+updated: 2024-03-07T14:43:35+0800
+version: 1.1.1
+@end
+
+* Preparation
+
+** enable virtualization of bios
+   .image pic/9/1.png
+
+** disable windows features (only for windows)
+   .image pic/9/2.png
+
+** if vm os cannot connect to correct IP, follow the steps below
+   .image pic/9/3.png
+
+
+* CentOS
+
+** create virtual machine
+   .image pic/9/4.png
+
+   .image pic/9/5.png
+
+   .image pic/9/6.png
+
+   .image pic/9/7.png
+
+   .image pic/9/8.png
+
+** download iso file
+   .image pic/9/9.png
+
+   .image pic/9/10.png
+
+** load iso file to vm
+   .image pic/9/13.png
+
+
+** network adapter setting
+   .image pic/9/14.png
+
+   .image pic/9/15.png
+
+** install os
+   .image pic/9/16.png
+
+   .image pic/9/17.png
+
+   .image pic/9/18.png
+
+   .image pic/9/19.png
+
+   .image pic/9/20.png
+
+   .image pic/9/21.png
+
+   .image pic/9/22.png
+
+   .image pic/9/23.png
+
+   .image pic/9/24.png
+
+** setup user/password after done
+   .image pic/9/25.png
+
+   .image pic/9/26.png
+
+   .image pic/9/27.png
+
+   .image pic/9/28.png
+
+   .image pic/9/29.png
+
+   .image pic/9/30.png
+
+** connect from host
+   .image pic/9/31.png
+
+   .image pic/9/32.png
+
+
+* Ubuntu
+
+  The process is almost the same as CentOS, the differences will be explained below, omitting the same parts.
+
+** create virtual machine
+   .image pic/9/33.png
+
+   .image pic/9/34.png
+
+
+** download iso file
+   .image pic/9/11.png
+
+   .image pic/9/12.png
+
+   .image pic/9/35.png
+
+** install os
+   .image pic/9/36.png
+
+   .image pic/9/37.png
+
+   .image pic/9/38.png
+
+   .image pic/9/39.png
+
+   .image pic/9/40.png
+
+   .image pic/9/41.png
+
+   .image pic/9/42.png
+
+** connect from host
+   .image pic/9/43.png
+
+   .image pic/9/44.png
+
+   .image pic/9/45.png

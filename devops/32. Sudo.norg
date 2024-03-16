@@ -1,0 +1,55 @@
+@document.meta
+title: 32. Sudo
+description: 
+authors: mattc
+categories: [
+  Sudo
+  Sudoers List
+  Priviledge
+]
+created: 2024-03-15T19:27:32+0800
+updated: 2024-03-15T19:33:13+0800
+version: 1.1.1
+@end
+
+* Only users in sudoers list can use 'sudo'
+
+.image pic/19/1.png
+
+.image pic/19/2.png
+
+
+* Edit sudoers list by visudo
+
+.image pic/19/3.png
+
+.image pic/19/4.png
+
+.image pic/19/5.png
+
+The password required to be entered each time 'sudo' is used is the password of the regular user, not the password of the root user. Typically, the root user does not have a password for security reasons.
+
+This mode that requires entering a password is called interactive mode, and we can add some syntax to the sudoers list to disable it.
+
+.image pic/19/6.png
+
+.image pic/19/7.png
+
+.image pic/19/8.png
+
+.image pic/19/9.png
+
+This method carries a great risk. If a file is accidentally saved with syntax errors (assuming only this method is used), it will result in no regular user being able to use the sudo command. Although there are ways to resolve this, it will create more problems.
+
+
+* Edit sudoer list from \/etc/sudoers.d/
+
+There is another way to manage the sudoers list, which is to create a file under /etc/sudoers.d/ to store the sudoers list. All files in this folder will be read (file names do not matter).
+
+.image pic/19/10.png
+
+.image pic/19/11.png
+
+.image pic/19/12.png
+
+.image pic/19/13.png

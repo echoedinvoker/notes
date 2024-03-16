@@ -1,0 +1,17 @@
+@document.meta
+title: 56. Project Challenge
+description: 
+authors: mattc
+categories: [
+  Challenge
+]
+created: 2024-03-15T10:03:21+0800
+updated: 2024-03-15T10:03:43+0800
+version: 1.1.1
+@end
+
+* Challenge
+
+Currently, the graph only updates when adding expense information, but if expenses in Firestore are updated or removed, the graph will not update. We challenge ourselves to complete this part.
+
+.image pic/34/2.png

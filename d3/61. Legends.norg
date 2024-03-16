@@ -1,0 +1,32 @@
+@document.meta
+title: 61. Legends
+description: 
+authors: mattc
+categories: [
+  Legend
+  Generator
+]
+created: 2024-03-16T19:48:49+0800
+updated: 2024-03-16T19:49:08+0800
+version: 1.1.1
+@end
+
+* Pacakge to create legend and install it
+
+We can start from scratch to create a legend ourselves, but that would be very troublesome, so we can directly use a package to create a legend.
+
+.image pic/37/1.png
+
+.image pic/37/2.png
+
+
+* Create a legend generator and call it by new group
+
+.image pic/37/3.png
+
+
+* Styling
+
+According to the different styles, we need to use different methods to change it.
+
+.image pic/37/4.png

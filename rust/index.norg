@@ -40,9 +40,9 @@
 * (x) Section 8: --- Part 2: Intermediate Level Concepts ---
 * (-) Section 9: Flexibility and Abstraction with Generics and Traits
 ** (x) [54. Generics (10/70)]{:54. Generics:}
-** ( ) [56. Traits (9/)]{:56. Traits:}
-** ( ) [58. Trait Bounds (6/)]{:58. Trait Bounds:}
-** ( ) [60. Supertraits (5/)]{:60. Supertraits:}
+** (x) [56. Traits (9/60)]{:56. Traits:}
+** (x) [58. Trait Bounds (6/40)]{:58. Trait Bounds:}
+** (x) [60. Supertraits (5/51)]{:60. Supertraits:}
 ** ( ) [62. Trait Objects (7/)]{:62. Trait Objects:}
 ** ( ) [64. Derived Traits and Marker Traits (4/)]{:64. Derived Traits and Marker Traits:}
 ** ( ) [65. Associated Types in Traits (7/)]{:65. Associated Types in Traits:}

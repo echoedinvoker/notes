@@ -1,0 +1,40 @@
+@document.meta
+title: 60. Arc Update Tween
+description: 
+authors: mattc
+categories: [
+  Interpolation
+  Update
+  Animation
+]
+created: 2024-03-16T18:52:45+0800
+updated: 2024-03-16T18:53:05+0800
+version: 1.1.1
+@end
+
+* ISSUE: animation of existing arcs
+
+  .image pic/36/1.png
+
+  We have already created animations for entering and exiting, but we found that other existing arcs do not have animations, so the overall look is strange. Now we need to solve this problem.
+
+  update animation for existing arcs requires three situations:
+  1. A new arc comes in
+  2. An arc goes out
+  3. The value of the original arc is updated
+
+  Fortunately, we do not need to handle these three situations separately.
+
+
+* Save current piese data to each DOM element
+
+  We know that for enter and exit, we need to provide the current piece of data to interpolate(), along with 0. But for update, interpolate() needs the piece of data from the previous state, so we need to save the piece of data to the DOM element.
+
+  .image pic/36/2.png
+
+
+* Create update tween and implement it
+
+  .image pic/36/3.png
+
+  Above, we can directly interpolate the entire piece of data, which is actually the simplest method. For special needs and considering performance, we may only interpolate specific properties of the piece of data, such as when entering or exiting.

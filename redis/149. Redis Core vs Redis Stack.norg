@@ -1,0 +1,25 @@
+@document.meta
+title: 149. Redis Core vs Redis Stack
+description: 
+authors: mattc
+categories: [
+  Redis Stack
+  Module
+]
+created: 2024-03-12T15:45:49+0800
+updated: 2024-03-12T15:46:10+0800
+version: 1.1.1
+@end
+
+* How to load Redis module?
+
+  .image pic/149/1.png
+
+  Compiling raw source codes of modules is difficult because bugs can easily occur, so instead of manually loading them, we prefer to directly use Redis Stack.
+
+
+* Redis Stack
+
+  .image pic/149/2.png
+
+  .image pic/149/3.png

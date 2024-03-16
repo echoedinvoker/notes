@@ -1,0 +1,79 @@
+@document.meta
+title: 29. Redirections
+description: 
+authors: mattc
+categories: [
+  Standard output
+  Error output
+  Redirections
+  Black hole
+  Pipeline
+]
+created: 2024-03-11T19:19:19+0800
+updated: 2024-03-11T19:19:57+0800
+version: 1.1.1
+@end
+
+* Standard output and redirection
+
+** standard output
+   .image pic/16/1.png
+
+** redirect to file
+
+*** overwrite
+    .image pic/16/2.png
+
+*** append
+    .image pic/16/3.png
+
+** echo
+   .image pic/16/4.png
+
+** example to integrate multiple outputs into one file
+   .image pic/16/5.png
+
+
+* Redirect to black hole
+
+** if we don't want output to be displayed or saved in any files
+   .image pic/16/6.png
+
+** clear file's content
+   .image pic/16/7.png
+
+
+* Error output and & redirection
+
+  .image pic/16/8.png
+
+  Actually, our regular `>` is the default stdout, which is separate from error stdout.
+
+  .image pic/16/9.png
+
+  We can use `&>` to redirect both default stdout and error stdout to the same place.
+
+  .image pic/16/10.png
+
+
+* Pipeline
+
+** wc -l
+   .image pic/16/11.png
+
+** pipeline
+   .image pic/16/12.png
+
+** more examples
+   .image pic/16/13.png
+
+
+* Search file (by its name, not contents)
+
+** realtime
+   .image pic/16/14.png
+
+   .image pic/16/15.png
+
+** not realtime
+   .image pic/16/16.png

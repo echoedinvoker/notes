@@ -1,0 +1,39 @@
+@document.meta
+title: 146. Providing Expiration Signals
+description: 
+authors: mattc
+categories: [
+  Signal
+  Lock
+  Concurrency
+]
+created: 2024-03-12T13:48:26+0800
+updated: 2024-03-12T13:51:53+0800
+version: 1.1.1
+@end
+
+* Issue from last lecture
+
+  .image pic/146/1.png
+
+
+* Add signaml to withlock cb
+
+  .image pic/146/2.png
+
+
+* Use withlock with signal
+
+  .image pic/146/3.png
+
+  fn pause is asynchronous, I forgot 'await'...
+
+
+* Test
+
+  .image pic/146/4.png
+
+
+* But still not perfect...
+
+  Because when using withlock, the content passed into cb must add signal conditions before updating Redis, and depending on the situation, it may need to do an early return or throw an error. When working in a team, it is very possible that others may not know that this should be done, or after a long period of time, one may also forget.

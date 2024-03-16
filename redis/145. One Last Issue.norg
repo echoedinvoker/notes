@@ -1,0 +1,25 @@
+@document.meta
+title: 145. One Last Issue
+description: 
+authors: mattc
+categories: [
+  Lock
+  Issue
+  Abort
+]
+created: 2024-03-08T14:15:00+0800
+updated: 2024-03-08T14:15:51+0800
+version: 1.1.1
+@end
+
+* Last issue about lock
+
+  In the previous lectures, we have solved many issues caused by locks. Now, there is only one remaining issue that needs to be resolved as shown in the following diagram.
+
+  .image pic/145/1.png
+
+  In fact, the lock does not actually lock the hash table in Redis, but everyone follows a convention to access the hash table in order to achieve the effect of locking.
+
+  When we set the lock, PX is a fixed two seconds. If it exceeds, the key will be automatically deleted. If the callback function being used is still processing data at that time, it will cause problems.
+
+  So we need to stop the callback and revert the effects it produces if the lock expires but the callback has not yet completed.

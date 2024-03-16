@@ -1,0 +1,24 @@
+@document.meta
+title: 49. Adding Data to Firestore
+description: 
+authors: mattc
+categories: [
+  Form Actions
+  Add Data
+  Firestore
+]
+created: 2024-03-09T14:21:31+0800
+updated: 2024-03-09T14:21:57+0800
+version: 1.1.1
+@end
+
+* Use Form Action to add new expense to Firestore
+
+  .image pic/29/9.png
+
+
+* Test
+
+  .image pic/29/10.png
+
+  .image pic/29/11.png

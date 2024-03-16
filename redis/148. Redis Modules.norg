@@ -1,0 +1,29 @@
+@document.meta
+title: 148. Redis Modules
+description: 
+authors: mattc
+categories: [
+  Modules
+]
+created: 2024-03-12T15:35:36+0800
+updated: 2024-03-12T15:35:53+0800
+version: 1.1.1
+@end
+
+* Basic data structures
+
+  .image pic/148/1.png
+
+  When we want to create more advanced features for our app, such as search, using Redis's data structure itself may be very difficult.
+
+
+* Redis module
+
+  To solve the above problem, Redis can load modules, modules can add new data structures and commands to help us.
+
+  .image pic/148/2.png
+
+
+* Most popular Redis module
+
+  .image pic/148/3.png

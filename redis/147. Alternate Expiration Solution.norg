@@ -1,0 +1,33 @@
+@document.meta
+title: 147. Alternate Expiration Solution
+description: 
+authors: mattc
+categories: [
+  Proxy
+  Lock
+]
+created: 2024-03-12T14:56:56+0800
+updated: 2024-03-12T14:57:19+0800
+version: 1.1.1
+@end
+
+* Create fn to wrap Redis client with Proxy
+
+  .image pic/147/1.png
+
+
+* use it inside withlock()
+
+  .image pic/147/2.png
+
+
+* Use withlock, replace Redis client with proxied client
+
+  .image pic/147/3.png
+
+  Now, other developers using withlock do not need to set early return when writing the content of the callback function, just pass in the proxied client to it.
+
+
+* Test
+
+  .image pic/147/4.png

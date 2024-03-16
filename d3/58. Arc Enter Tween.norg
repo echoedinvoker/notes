@@ -1,0 +1,31 @@
+@document.meta
+title: 58. Arc Enter Tween
+description: 
+authors: mattc
+categories: [
+  Interpolation
+  Animation
+  Pie
+]
+created: 2024-03-15T10:38:13+0800
+updated: 2024-03-15T10:48:32+0800
+version: 1.1.1
+@end
+
+* Demand and analysis
+
+.image pic/35/1.png
+
+
+* Implement enter tween
+
+The first time I used tween was in a bar chart. At that time, I directly interpolated the entire data. But here, according to the requirements, interpolation is done on only certain attributes of the data.
+
+.image pic/35/2.png
+
+But interpolation is always based on the data, this has not changed.
+
+
+* Implement exit tween
+
+.image pic/35/3.png

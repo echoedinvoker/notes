@@ -1,0 +1,39 @@
+@document.meta
+title: 25. More Commands ( mkdir, cp, mv, touch etc)
+description: 
+authors: mattc
+categories: [
+  Command
+  Argument
+  Option
+  Linux
+]
+created: 2024-03-11T11:44:54+0800
+updated: 2024-03-11T11:45:18+0800
+version: 1.1.1
+@end
+
+* Multiple arguments
+
+  Most commands can have multiple arguments as follows
+
+  .image pic/13/1.png
+
+* Variant syntax of arguments
+
+  .image pic/13/2.png
+
+* A command is grouped by three parts: command, arguments and options
+
+  .image pic/13/3.png
+
+  Options and arguments can both be multiple, but different options do not need spaces between them.
+
+  We don't need to memorize options, we can use `--help` to query or google the command.
+
+
+* Removed files/directories are not recoverable
+
+  .image pic/13/4.png
+
+  Above, we easily deleted all files and directories under the user home directory using `rm -rf *`. These files and directories cannot be recovered, so be careful when using the `rm` command.

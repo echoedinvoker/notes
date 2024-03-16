@@ -1,0 +1,48 @@
+@document.meta
+title: 58. Trait Bounds
+description: 
+authors: mattc
+categories: [
+  Traits
+  Trait Bounds
+  Generics
+]
+created: 2024-03-10T16:36:42+0800
+updated: 2024-03-10T16:37:04+0800
+version: 1.1.1
+@end
+
+* Trait bound
+
+** following example of last lecture
+   .image pic/33/1.png
+
+   In the previous lecture, we used the trait _Shape on the struct _Square and struct _Rectangle. In this lecture, we will continue to introduce Trait Bound.
+
+** why trait bound?
+   .image pic/33/2.png
+
+   Above, we have created a free function designed to accept an object with area and perimeter methods, so we use generics. However, RUST does not know that this generic has these two methods, so we can use trait bounds to tell RUST what trait restricts this generic to solve this problem.
+
+   .image pic/33/3.png
+
+
+* Other syntax of trait bound
+
+** impl
+   .image pic/33/4.png
+
+** where clause
+   .image pic/33/5.png
+
+** generic can be bounded by multiple traits
+   If you want T to be bound by multiple traits, you can use the + symbol to concatenate multiple traits.
+
+
+* Trait bounnd to the return instance
+
+** only one syntax is allowed
+   .image pic/33/6.png
+
+** return type conditionally is NOT allowed
+   .image pic/33/7.png

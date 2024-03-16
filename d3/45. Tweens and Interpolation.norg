@@ -1,0 +1,22 @@
+@document.meta
+title: 45. Tweens and Interpolation
+description: 
+authors: mattc
+categories: [
+  Tween
+  Transition
+]
+created: 2024-03-04T16:52:36+0800
+updated: 2024-03-04T16:52:49+0800
+version: 1.1.1
+@end
+
+* Simple transition hard to handle complex attributes
+
+.image pic/26/1.png
+
+
+* Tween
+
+.image pic/26/2.png
+

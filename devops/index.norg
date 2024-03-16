@@ -7,4 +7,25 @@
 ** (x) [12. Tools Prerequisites for Ubuntu 20 (1/16)]{:12. Tools Prerequisites for Ubuntu 20:}
 ** (x) [13. Signups (8/26)]{:13. Signups:}
 ** (x) [14. AWS Setup (30/119)]{:14. AWS Setup:}
-** ( ) [15. Outro (1/)]{:15. Outro:}
+* (-) Section 3: VM Setup
+** (x) [17. What is Virtualization (9/25)]{:17. What is Virtualization:}
+** (x) [18. Introduction (5/15)]{:18. Introduction:}
+** (x) [19. VM-Manually(Windows & MacOS Intel chip) (27/128)]{:19. VM-Manually(Windows and MacOS Intel chip):}
+** (x) [20. VM-Automatically(Windows & MacOS Intel chip) (19/111)]{:20. VM-Automatically(Windows and MacOS Intel chip):}
+* (-) Section 4: Linux
+** (x) [23. Introduction to Linux (20/40)]{:23. Introduction to Linux:}
+** (x) [24. Commands and File systems (11/52)]{:24. Commands and File systems:}
+** (x) [25. More Commands ( mkdir, cp, mv, touch etc) (13/26)]{:25. More Commands ( mkdir, cp, mv, touch etc):}
+** (x) [26. Vim editor (13/10)]{:26. Vim editor:}
+** (x) [27. File Types (11/55)]{:27. File Types:}
+** (x) [28. Filters (21/87)]{:28. Filters:}
+** (x) [29. Redirections (14/58)]{:29. Redirections:}
+** (x) [30. Users and Groups (14/80)]{:30. Users and Groups:}
+** (x) [31. File permissions (14/61)]{:31. File permissions:}
+** (x) [32. Sudo (9/53)]{:32. Sudo:}
+** ( ) [33. Package Management (15/)]{:33. Package Management:}
+** ( ) [34. Services (5/)]{:34. Services:}
+** ( ) [35. Processes (10/)]{:35. Processes:}
+** ( ) [36. Archiving (6/)]{:36. Archiving:}
+** ( ) [37. Ubuntu commands (10/)]{:37. Ubuntu commands:}
+** ( ) [38. Linux Commands (0/)]{:38. Linux Commands:}

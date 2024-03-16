@@ -33,7 +33,27 @@
 ** (x)[39. Firestore Realtime Data Updates (6/28)]{:39. Firestore Realtime Data Updates:}
 ** (x)[40. Updating Our Data (12/41)]{:40. Updating Our Data:}
 * (x) Section 7: D3 Transitions
-** ( ) [42. Enter Transitions (7/)]{:42. Enter Transitions:}
-** ( ) [43. Update Transitions (4/)]{:43. Update Transitions:}
-** ( ) [44. Merge and Refactor (4/)]{:44. Merge and Refactor:}
-** ( ) [45. Tweens and Interpolation (10/)]{:45. Tweens and Interpolation:}
+** (x) [42. Enter Transitions (7/32)]{:42. Enter Transitions:}
+** (x) [44. Merge and Refactor (4/8)]{:44. Merge and Refactor:}
+** (x) [45. Tweens and Interpolation (10/42)]{:45. Tweens and Interpolation:}
+* (x) Section 8: Project One - Donut Chart (Budget Planner)
+** (x) [46. Introduction & Setup (4/88)]{:46. Introduction and Setup:}
+** (x) [47. HTML Template & Matetrialize (13/79)]{:47. HTML Template and Matetrialize:}
+** (x) [48. Firestore Setup (4/44)]{:48. Firestore Setup:}
+** (x) [49. Adding Data to Firestore (11/152)]{:49. Adding Data to Firestore:}
+** (x) [50. Pie Charts & Arcs (4/11)]{:50. Pie Charts and Arcs:}
+** (x) [51. Setting up a Pie Chart (11/55)]{:51. Setting up a Pie Chart:}
+** (x) [53. Realtime Data Setup (7/14)]{:53. Realtime Data Setup:}
+** (x) [54. Drawing the Enter Selection (7/40)]{:54. Drawing the Enter Selection:}
+** (x) [55. Ordinal Scales (7/18)]{:55. Ordinal Scales:}
+** (x) [56. Project Challenge (2/8)]{:56. Project Challenge:}
+** (x) [58. Arc Enter/Exit Tween (10/30)]{:58. Arc Enter Tween:}
+** (x) [60. Arc Update Tween (14/80)]{:60. Arc Update Tween:}
+** (x) [61. Legends (7/46)]{:61. Legends:}
+* ( ) Section 9: Project Two - Line Chart (Crypto Dashboard)
+** ( ) [62. Interactive D3 Visuals (2/)]{:62. Interactive D3 Visuals:}
+** ( ) [63. Event Listeners (2/)]{:63. Event Listeners:}
+** ( ) [64. Mouseover Events (7/)]{:64. Mouseover Events:}
+** ( ) [65. Named Transitions (bug fix) (2/)]{:65. Named Transitions (bug fix):}
+** ( ) [66. Click Events (5/)]{:66. Click Events:}
+** ( ) [67. Tooltips (11/)]{:67. Tooltips:}

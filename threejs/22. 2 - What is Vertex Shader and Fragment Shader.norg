@@ -1,0 +1,116 @@
+@document.meta
+title: 22. 2 - What is Vertex Shader and Fragment Shader
+description: 
+authors: mattc
+categories: [
+  RawShaderMaterial
+  Shader
+  GLSL
+  Vertex
+]
+created: 2024-03-08T19:51:23+0800
+updated: 2024-03-08T19:51:43+0800
+version: 1.1.1
+@end
+
+** RawShaderMaterial & Load GLSL scripts to it
+
+** document
+   .image pic/24/1.png
+
+** load script into RawShaderMaterial
+   .image pic/24/2.png
+
+
+* GLSL script introduction
+
+** strong typed
+   .image pic/24/3.png
+
+   .image pic/24/4.png
+
+   .image pic/24/5.png
+
+** Vec class
+   .image pic/24/6.png
+
+   .image pic/24/7.png
+
+   .image pic/24/8.png
+
+** function
+   .image pic/24/9.png
+
+   .image pic/24/10.png
+
+   .image pic/24/11.png
+
+
+* Vertex Shader
+
+** concepts
+
+*** main
+    .image pic/24/12.png
+
+*** init/final position
+    .image pic/24/13.png
+
+*** matrix multiplication
+    .image pic/24/14.png
+
+*** attribute (data from geometry)
+    .image pic/24/15.png
+
+    .image pic/24/16.png
+
+    .image pic/24/17.png
+
+** coding
+
+*** basic structure
+    .image pic/24/18.png
+
+*** mutate init position
+    .image pic/24/19.png
+
+*** mutate final position
+    .image pic/24/20.png
+
+*** check modelMatrix and viewMatrix's effect
+    .image pic/24/21.png
+
+    .image pic/24/22.png
+
+    .image pic/24/23.png
+
+** coding pattern
+
+*** combine modelMatrix and viewMatrix
+    .image pic/24/24.png
+
+*** split main codes to multiple lines
+    .image pic/24/25.png
+
+    .image pic/24/26.png
+
+
+* Fragment shader
+
+** concepts
+
+*** define float precision
+    .image pic/24/27.png
+
+*** main
+    .image pic/24/28.png
+
+** coding
+   .image pic/24/29.png
+
+   .image pic/24/30.png
+
+   .image pic/24/31.png
+
+*** change the order of r,g,b and a
+    .image pic/24/32.png

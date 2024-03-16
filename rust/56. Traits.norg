@@ -1,0 +1,50 @@
+@document.meta
+title: 56. Traits
+description: 
+authors: mattc
+categories: [
+  Trait
+  Default Trait
+  Layout
+]
+created: 2024-03-06T16:07:29+0800
+updated: 2024-03-06T16:07:57+0800
+version: 1.1.1
+@end
+
+* Why we need trait
+
+  .image pic/32/1.png
+
+  .image pic/32/2.png
+
+  If in other languages it may be possible to achieve the requirement using the concept of inheritance, but RUST does not have the concept of class inheritance.
+
+
+* Trait fn
+
+  In the trait block, we specify the type of method that has not yet been defined, and then define its content in the implement block, and force the content's fn name, input/output to be the same.
+
+  .image pic/32/3.png
+
+  .image pic/32/4.png
+
+  .image pic/32/5.png
+
+
+* Default content of trait fn
+
+  If content is also filled in when defining trait fn, the content here will be used in types that have not been implemented.
+
+  .image pic/32/6.png
+
+
+* Share the layout which not method
+
+  Trait can only share methods. If you want to share layouts, you can directly use other structs to wrap the same parts in different structs.
+
+  .image pic/32/7.png
+
+  .image pic/32/8.png
+
+  .image pic/32/9.png

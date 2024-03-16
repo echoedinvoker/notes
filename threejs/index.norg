@@ -20,12 +20,12 @@
 ** (x) [20. 20 - 3d models - 1 (29/143)]{:20. 20 - 3d models:}
 ** (x) [20. 20 - 3d models - 2 (29/47)]{:20. 20 - 3d models - 2:}
 ** (x) [20. 20 - 3d models - 3 (29/197)]{:20. 20 - 3d models - 3:}
-* (x) Section 2: Shaders
+* (-) Section 2: Shaders
 ** (x) [21. 1 - Introduction to shaders (9/36)]{:21. 1 - Introduction to shaders:}
-** ( ) [22. 2 - What is Vertex Shader and Fragment Shader]{:22. 2 - What is Vertex Shader and Fragment Shader:}
-** ( ) [23. 3 - Attributes]{:23. 3 - Attributes:}
-** ( ) [24. 4 - Uniforms]{:24. 4 - Uniforms:}
-** ( ) [25. 5 - Built-in functions]{:25. 5 - Built-in functions:}
-** ( ) [26. 6 - Noises]{:26. 6 - Noises:}
-** ( ) [27. 7 - Texturing With Shaders]{:27. 7 - Texturing With Shaders:}
-** ( ) [28. 8 - Post Processing]{:28. 8 - Post Processing:}
+** (x) [22. 2 - What is Vertex Shader and Fragment Shader (39/225)]{:22. 2 - What is Vertex Shader and Fragment Shader:}
+** (x) [23. 3 - Attributes (11/72)]{:23. 3 - Attributes:}
+** (x) [24. 4 - Uniforms (10/85)]{:24. 4 - Uniforms:}
+** ( ) [25. 5 - Built-in functions (27/)]{:25. 5 - Built-in functions:}
+** ( ) [26. 6 - Noises (6/)]{:26. 6 - Noises:}
+** ( ) [27. 7 - Texturing With Shaders (5/)]{:27. 7 - Texturing With Shaders:}
+** ( ) [28. 8 - Post Processing (24/)]{:28. 8 - Post Processing:}

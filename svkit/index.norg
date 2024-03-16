@@ -117,19 +117,19 @@
 ** (x) [185. Using the Average Colour Endpoint in the Album Page (7/72)]{:185. Using the Average Colour Endpoint in the Album Page:}
 ** (x) [186. The TrackList Component Markup (11/64)]{:186. The TrackList Component Markup:}
 ** (x) [187. The TrackList Component Styling (10/52)]{:187. The TrackList Component Styling:}
-** ( ) [188. Creating an Audio Player Component (15/)]{:188. Creating an Audio Player Component:}
+** (x) [188. Creating an Audio Player Component (15/105)]{:188. Creating an Audio Player Component:}
 ** ( ) [189. Using the Player Component in The TrackList Component (8/)]{:189. Using the Player Component in The TrackList Component:}
 ** ( ) [190. Handling the TrackList Component When JS is Disabled (7/)]{:190. Handling the TrackList Component When JS is Disabled:}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
-** ( ) []{::}
+** ( ) [191. Customizing Error Pages (12/)]{:191. Customizing Error Pages:}
+** ( ) [192. Adding a Retry Button in Error Page (8/)]{:192. Adding a Retry Button in Error Page:}
+** ( ) [193. Playlist Page Data (7/)]{:193. Playlist Page Data:}
+** ( ) [194. Playlist Page Markup & Styling (14/)]{:194. Playlist Page Markup & Styling:}
+** ( ) [195. Playlist Tracks Load More Button (9/)]{:195. Playlist Tracks Load More Button:}
+** ( ) [196. Playlist Tracks Pagination For Disabled JS (13/)]{:196. Playlist Tracks Pagination For Disabled JS:}
+** ( ) [197. Follow & Unfollow Playlist Form Actions (10/)]{:197. Follow & Unfollow Playlist Form Actions:}
+** ( ) [198. Follow & Unfollow Button (10/)]{:198. Follow & Unfollow Button:}
+** ( ) [199. Enhancing Follow & Unfollow When JS is Enabled (9/)]{:199. Enhancing Follow & Unfollow When JS is Enabled:}
+** ( ) [200. Creating a Toasts Store & Component (12/)]{:200. Creating a Toasts Store & Component:}
 ** ( ) []{::}
 ** ( ) []{::}
 ** ( ) []{::}

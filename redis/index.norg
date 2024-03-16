@@ -137,14 +137,14 @@
 ** (x) [142. Another Lock Issue (8/29)]{:142. Another Lock Issue:}
 ** (x) [143. Solving Accidental Unlocks (3/10)]{:143. Solving Accidental Unlocks:}
 ** (x) [144. Adding an Unlock Script (5/22)]{:144. Adding an Unlock Script:}
-** ( ) [145. One Last Issue (4/)]{:145. One Last Issue:}
-** ( ) [146. Providing Expiration Signals (6/)]{:146. Providing Expiration Signals:}
-** ( ) [147. Alternate Expiration Solution (7/)]{:147. Alternate Expiration Solution:}
-** ( ) [148. Redis Modules (3/)]{:148. Redis Modules:}
-** ( ) [149. Redis Core vs Redis Stack (2/)]{:149. Redis Core vs Redis Stack:}
-** ( ) [150. Using Modules in Production (6/)]{:150. Using Modules in Production:}
-** ( ) [151. Overview on Search (4/)]{:151. Overview on Search:}
-** ( ) [152. Creating and Using an Index (7/)]{:152. Creating and Using an Index:}
+** (x) [145. One Last Issue (4/25)]{:145. One Last Issue:}
+** (x) [146. Providing Expiration Signals (6/30)]{:146. Providing Expiration Signals:}
+** (x) [147. Alternate Expiration Solution (7/50)]{:147. Alternate Expiration Solution:}
+** (x) [148. Redis Modules (3/10)]{:148. Redis Modules:}
+** (x) [149. Redis Core vs Redis Stack (2/20)]{:149. Redis Core vs Redis Stack:}
+** (x) [150. Using Modules in Production (6/19)]{:150. Using Modules in Production:}
+** (x) [151. Overview on Search (4/17)]{:151. Overview on Search:}
+** (x) [152. Creating and Using an Index (7/32)]{:152. Creating and Using an Index:}
 ** ( ) [153. Details on Indexes (8/)]{:153. Details on Indexes:}
 ** ( ) [154. Index Field Types (6/)]{:154. Index Field Types:}
 ** ( ) [155. Numeric Queries (6/)]{:155. Numeric Queries:}

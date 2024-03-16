@@ -1,4 +1,16 @@
-- (x) Get logs retention days data
-- (x) i18n dict for logs retention days
-- (x) Render logs retention days inputs on the system parameters page
-- (x) API to delete logs older than retention days
+* (x) Trace from props_polar from all ends
+** (x) props_polar.ts -> helpers/snippet.ts --> mixin.ts -> ChartPropsSettingTemplate.vue --> stores/snippetEditor.ts --> stores/pageTree.ts --> Snippet.vue
+*** (x) helpers/snippet.ts
+    產生一些 helper function, 例如 getSnippetPropsMeta 可以傳入 type 取得對應 props_ 中的欄位設定
+*** (x) ChartPropsSettingTemplate.vue
+    綁訂 store 'snippetEditor'
+*** (x) stores/pageTree.ts
+    建立 node tree, 將 snippetEditor 存入node children 中
+
+
+* (x) Build Ml_Polar default data and print inside Ml_Polar
+* (x) Build Ml_Polar default option and print inside Ml_Polar
+* (x) Install npm 'polar-d3' and render it inside Ml_Polar with default data and options
+* (x) Create configuration props in props_polar.ts
+* (x) Print dynamic configuration data inside Ml_Polar
+* ( ) View Body implementation

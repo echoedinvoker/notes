@@ -1,0 +1,37 @@
+@document.meta
+title: 152. Creating and Using an Index
+description: 
+authors: mattc
+categories: [
+  rbook
+  Redis Search
+  FT commands
+]
+created: 2024-03-16T13:43:36+0800
+updated: 2024-03-16T13:43:59+0800
+version: 1.1.1
+@end
+
+* Preare some hash tables of specific subject in rbook
+
+.image pic/152/1.png
+
+.image pic/152/2.png
+
+
+* Create index in rbook
+
+.image pic/152/3.png
+ 
+.image pic/152/4.png
+
+
+* Search by Redis Search command
+
+.image pic/152/5.png
+
+.image pic/152/6.png
+
+.image pic/152/7.png
+
+The three types of searches above use different syntax, from parentheses, braces to brackets. In our upcoming lectures, we will discuss the implications of these syntax differences.

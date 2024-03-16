@@ -1,0 +1,70 @@
+@document.meta
+title: 47. HTML Template and Matetrialize
+description: 
+authors: mattc
+categories: [
+  Materialize-css
+  Form
+  Header
+  CSS
+  Styling
+]
+created: 2024-03-09T10:51:29+0800
+updated: 2024-03-09T14:25:01+0800
+version: 1.1.1
+@end
+
+* Create new project
+
+  .image pic/28/1.png
+
+
+* Install Materialize-css and body test
+
+** npm install
+   .image pic/28/2.png
+
+** import
+*** CSS
+   .image pic/28/3.png
+*** JS
+    .image pic/29/12.png
+
+For the JS part, after several attempts, it seems that only the cdn method can be used for installation. If you want to unify, the CSS part can also be unified using cdn.
+
+** body test
+   If Materialize-css is functioning properly, we should be able to change the background color by adding a class name to the body.
+
+   .image pic/28/4.png
+
+
+* Materialize-css header
+
+  .image pic/28/5.png
+
+
+* Materialize-css layout (grid like)
+
+  .image pic/28/6.png
+
+  m6 + m5 only has 11 blocks, the remaining one block will be on the far right. We use push-m1 to place this remaining block between two divs.
+
+
+* Form
+
+** create component file and import
+   .image pic/28/7.png
+
+** basic elements
+   .image pic/28/8.png
+
+** error message
+   .image pic/28/9.png
+
+** card-content: spaces for form content
+   .image pic/28/10.png
+
+
+* Global CSS Styling
+
+  .image pic/28/11.png

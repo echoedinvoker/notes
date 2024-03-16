@@ -1,0 +1,20 @@
+@document.meta
+title: 50. Pie Charts and Arcs
+description: 
+authors: mattc
+categories: [
+  Arc
+  Pie
+  Generators
+]
+created: 2024-03-09T14:45:29+0800
+updated: 2024-03-09T14:45:47+0800
+version: 1.1.1
+@end
+
+* Generators make our life easier
+
+In an arc pie chart, each wedge cannot be created using a simple shape like 'rect' as in a bar chart. Instead, it must be created using a path. However, the calculation process to convert data into a path is complex, so d3 provides some generators to assist in this process.
+
+.image pic/30/1.png
+

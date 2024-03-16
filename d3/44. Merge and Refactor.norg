@@ -1,0 +1,14 @@
+> The following introduces two ways to refactor codes
+
+* d3.transition() instead of d3.Selection.transition()
+
+.image pic/25/1.png
+
+.image pic/25/2.png
+
+
+* d3.Selection.merge()
+
+.image pic/25/3.png
+
+.image pic/25/4.png

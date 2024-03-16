@@ -1,0 +1,52 @@
+@document.meta
+title: 18. Introduction
+description: 
+authors: mattc
+categories: [
+  Steps
+  Tools
+  Methods
+  Labs
+]
+created: 2024-03-07T10:31:40+0800
+updated: 2024-03-07T10:32:04+0800
+version: 1.1.1
+@end
+
+* What VM we are using?
+
+.image pic/8/1.png
+
+
+* Methods
+
+** Manual & Automatic
+.image pic/8/2.png
+
+Why don't we just use automation?
+
+** Thumb Rule
+.image pic/8/3.png
+
+
+* Requirements
+
+.image pic/8/4.png
+
+
+* Steps and Tools
+
+** manual
+.image pic/8/5.png
+
+** automatic
+.image pic/8/6.png
+
+
+* Lab
+
+** manual
+.image pic/8/7.png
+
+** automatic
+.image pic/8/8.png

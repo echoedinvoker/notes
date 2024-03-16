@@ -1,0 +1,52 @@
+@document.meta
+title: 24. 4 - Uniforms
+description: 
+authors: mattc
+categories: [
+  Animation
+  Shader
+  Sin
+  Uniform
+]
+created: 2024-03-16T16:17:11+0800
+updated: 2024-03-16T16:17:39+0800
+version: 1.1.1
+@end
+
+* Use sin to offset the shape and color
+
+** shape
+   .image pic/26/1.png
+
+** color
+   .image pic/26/2.png
+
+
+* Uniform
+
+  .image pic/26/3.png
+
+  The advantage of using uniforms is that we can adjust the variables in the shader in the JS script without needing to recompile the shader.
+
+  In addition to directly writing in JS script, there are many methods to adjust values in JS script, which can help us create some animation effects as follows:
+
+
+* Create animation by time elapsed to shape and color
+
+** shape
+   .image pic/26/4.png
+
+** colr
+   .image pic/26/5.png
+
+
+* Listen cursor place to change color
+
+** implement
+   .image pic/26/6.png
+
+** test
+   .image pic/26/7.png
+
+   .image pic/26/8.png
+

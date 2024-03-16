@@ -1,0 +1,29 @@
+@document.meta
+title: 151. Overview on Search
+description: 
+authors: mattc
+categories: [
+  Redis Search
+  Hash Table
+]
+created: 2024-03-16T13:04:32+0800
+updated: 2024-03-16T13:05:13+0800
+version: 1.1.1
+@end
+
+* Why we use Redis Search?
+
+  .image pic/151/1.png
+
+  With Redis Search, we can query hash tables of a certain topic using criteria without needing to create additional data structures.
+
+
+* How to implement Redis Search?
+
+  We only need to create an index for a particular topic of hash tables records once to use it for search, for example, we need to create an index for items, users, and bids separately.
+
+  .image pic/151/2.png
+
+  .image pic/151/3.png
+
+  Although Redis Search only has two commands as mentioned above, there are many variations that need to be discussed. We will introduce them in the upcoming lectures.

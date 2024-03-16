@@ -1,0 +1,67 @@
+@document.meta
+title: 23. Introduction to Linux
+description: 
+authors: mattc
+categories: [
+  Linux
+  Open Source
+  Kernel
+]
+created: 2024-03-11T09:55:47+0800
+updated: 2024-03-11T09:56:09+0800
+version: 1.1.1
+@end
+
+* Contents and areas
+
+.image pic/11/1.png
+
+.image pic/11/2.png
+
+
+* Open source
+
+.image pic/11/3.png
+
+
+* Linux history
+
+.image pic/11/4.png
+
+
+* Principles of Linux
+
+.image pic/11/5.png
+
+
+* Why Linux?
+
+.image pic/11/6.png
+
+
+* Architecture
+
+.image pic/11/7.png
+
+
+* Linux distributions
+
+** desktop
+.image pic/11/8.png
+
+** server
+.image pic/11/9.png
+
+
+* Packaging managers of software
+
+.image pic/11/10.png
+
+The packaging manager is different in that the file extensions of the software are not the same, and the installation instructions are also different.
+
+.image pic/11/11.png
+
+
+* Directories
+
+.image pic/11/12.png

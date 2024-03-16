@@ -1,0 +1,100 @@
+@document.meta
+title: 28. Filters
+description: 
+authors: mattc
+categories: [
+  Commands
+  Linux
+  grep
+  head
+  tail
+  Logs
+  awk
+  sed
+  Readers
+]
+created: 2024-03-11T15:50:29+0800
+updated: 2024-03-11T15:51:21+0800
+version: 1.1.1
+@end
+
+* grep
+
+** introduction
+   .image pic/15/1.png
+
+** common usage
+   We often only know that there is a certain parameter but do not remember in which file it is, you can use the following method to find it.
+
+   .image pic/15/2.png
+
+
+* Commands of reader
+
+  .image pic/15/3.png
+
+  Less is similar to vim in operation but does not have an edit function, so we usually use less to read longer files.
+
+
+* head and tail
+
+** head
+   .image pic/15/4.png
+
+** tail
+   Similar to `head`, but with the added option `-f` which is very useful for debugging.
+
+   .image pic/15/5.png
+
+*** use `tail -f` to monitor log file
+    Usually, the first step we debug is to start from here.
+
+    .image pic/15/6.png
+
+    .image pic/15/7.png
+
+
+* Filter contents by cut or awk
+
+** cut
+   .image pic/15/8.png
+
+   .image pic/15/9.png
+
+** awk
+   The "cut" command needs to be used with a clear delimiter, while "awk" does not require it. "Awk" can use regular expressions to perform more complex cutting.
+
+   .image pic/15/10.png
+
+
+* Replace/remove string by vim or sed
+
+  .image pic/15/11.png
+
+** vim
+*** replace string
+    .image pic/15/12.png
+
+**** \\c
+     .image pic/15/13.png
+
+     .image pic/15/14.png
+
+     .image pic/15/15.png
+
+**** /g
+     .image pic/15/16.png
+
+     .image pic/15/17.png
+
+*** remove string
+    .image pic/15/18.png
+
+    .image pic/15/19.png
+
+** sed
+   .image pic/15/20.png
+
+   Note, sed itself acts on all contents so there is no need for `%`.
+
+   .image pic/15/21.png

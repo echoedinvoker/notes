@@ -1,0 +1,32 @@
+@document.meta
+title: 42. Enter Transitions
+description: 
+authors: mattc
+categories: [
+  Transition
+  Enter
+  Update
+]
+created: 2024-03-04T15:31:00+0800
+updated: 2024-03-04T15:31:19+0800
+version: 1.1.1
+@end
+
+* d3.Selection.transition()
+
+We can easily use d3.Selection.transition() to implement transition effects.
+
+  Just put the start and end values of the attribute that needs a transition effect above and below d3.Selection.transition().
+
+  .image pic/24/2.png
+
+  Although the update part of the transition was successful, the exit and enter parts failed because the end and start states of these two parts are lack.
+
+
+* Split d3.Selection.join() for implementing transition
+
+So we divide d3.Selection.join() into three parts: d3.Selection.enter(), d3.Selection.exit(), and d3.Selection, so that we can operate on these three parts separately.
+
+  .image pic/24/3.png
+
+We manually added the initial values of y and height attributes above the enter part in d3.Selection.transition(), so this satisfies the conditions for generating the transition.

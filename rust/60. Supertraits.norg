@@ -1,0 +1,42 @@
+@document.meta
+title: 60. Supertraits
+description: 
+authors: mattc
+categories: [
+  Supertraits
+  Generics
+  Trait Bound
+]
+created: 2024-03-15T15:05:41+0800
+updated: 2024-03-15T15:06:13+0800
+version: 1.1.1
+@end
+
+* Super trait to struct
+
+** previous codes
+   .image pic/34/1.png 
+
+** add super trait
+   .image pic/34/2.png 
+
+** fix: all super trait must be implemented
+   .image pic/34/3.png 
+
+
+* Super trait for trait bounding generics
+
+  .image pic/34/4.png 
+
+  .image pic/34/5.png 
+
+  The above method requires manually adding it to the generics of each fn.
+
+  If the situation allows, the new trait bounds can be directly made into a super trait, so that it is not necessary to add this trait bounds to each fn, but the restrictions on struct are more stringent.
+
+  .image pic/34/6.png 
+
+
+* Conclution
+
+  The super trait is very helpful for the structure of organizational traits, allowing us to better organize traits, reduce duplicate code, and improve code readability.

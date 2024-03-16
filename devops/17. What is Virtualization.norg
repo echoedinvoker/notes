@@ -1,0 +1,39 @@
+@document.meta
+title: 17. What is Virtualization
+description: 
+authors: mattc
+categories: [
+  Hypervisor
+  Virtualization
+]
+created: 2024-03-07T10:16:36+0800
+updated: 2024-03-07T10:16:45+0800
+version: 1.1.1
+@end
+
+* Life before Virtualization
+
+  .image pic/7/1.png
+
+  Therefore, in order to achieve isolation, excessive waste of resources and money is caused.
+
+
+* What is virtualization?
+
+  .image pic/7/2.png
+
+  .image pic/7/3.png
+
+
+* Terminology
+
+  .image pic/7/4.png
+
+
+* Types of Hypervisor
+
+  .image pic/7/5.png
+
+  .image pic/7/6.png
+
+  A type 1 hypervisor can use clustering to provide high availability, meaning that if one hypervisor has an issue, other hypervisors will automatically take over, ensuring that users do not experience service interruptions.

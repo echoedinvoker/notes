@@ -1,0 +1,58 @@
+@document.meta
+title: 23. 3 - Attributes
+description: 
+authors: mattc
+categories: [
+  Attributes
+  ItemSize
+  Shader
+  Geometry
+]
+created: 2024-03-14T17:09:16+0800
+updated: 2024-03-14T17:11:25+0800
+version: 1.1.1
+@end
+
+* Pass other Geometry attributes to the shaders
+
+  In the previous lecture, we passed the position of Geometry to the shader. This time, we are trying to pass other attributes to the shader.
+
+  .image pic/25/1.png
+
+  We are trying to pass the uv attribute to the shader, but we need to be aware that it is a Vector2, so we need to use vec2 to receive it. Additionally, we must fill in two extra values to make it a Vector4 in order to multiply it with the matrix.
+
+  .image pic/25/2.png
+
+  .image pic/25/3.png
+
+  .image pic/25/4.png
+
+  If the itemSize of the attribute is defined as 2, you can use its x, y property to get the value. If it is defined as 3, you can use its x, y, z property to get the value. If it is defined as 4, you can use its x, y, z, w property to get the value.
+
+  .image pic/25/5.png
+
+
+* Create custom attribute of Geometry for the shaders
+
+** custom attribute
+   .image pic/25/6.png
+
+   .image pic/25/7.png
+
+** to vertex shader
+   The original plane shape is placed on the x and y axes with the vertex, while z remains zero. We use a custom attribute to adjust the value of z.
+
+   .image pic/25/8.png
+
+   .image pic/25/9.png
+
+** to fragment shader
+   Use the same set of data to make adjustments to both the vertex shader and fragment shader in order to achieve a consistent effect.
+
+   .image pic/25/10.png
+
+** Random values
+We often use random numbers to simulate random landscapes and things like that. Here is a simplified example.
+
+   .image pic/25/11.png
+

@@ -1,0 +1,102 @@
+@document.meta
+title: 30. Users and Groups
+description: 
+authors: mattc
+categories: [
+  User
+  Group
+  Root
+]
+created: 2024-03-15T16:51:33+0800
+updated: 2024-03-15T16:51:52+0800
+version: 1.1.1
+@end
+
+* Concepts
+
+** users
+.image pic/17/1.png
+
+** types of users
+.image pic/17/2.png
+
+Service does not have a login shell, cannot log into the system for security reasons.
+
+
+* switch to root user
+
+.image pic/17/3.png
+
+
+* files: /etc/passwd, /etc/shadow, /etc/group
+
+** /etc/passwd: user info
+.image pic/17/4.png
+
+** /etc/shadow
+Although there is a password field in /etc/passwd, the password is stored in /etc/shadow.
+
+.image pic/17/5.png
+
+** /etc/group
+.image pic/17/6.png
+
+
+* Get integrated user info
+
+We can use 'id' to query user-related information, which is composed of the above three files.
+
+.image pic/17/7.png
+
+Here, the main focus is to organize all the information of the user's groups.
+
+
+* useradd
+
+.image pic/17/8.png
+
+
+* create group & add user to group
+
+** groupadd & usermod -aG
+.image pic/17/9.png
+
+** vim /etc/group
+.image pic/17/10.png
+
+.image pic/17/11.png
+
+
+* passwd
+
+.image pic/17/12.png
+
+
+* Switch to regular user
+
+.image pic/17/13.png
+
+
+* last & lsof -u
+
+** last
+The user who logs into the system will be displayed, so switching between users does not count.
+
+.image pic/17/14.png
+
+** lsof -u
+.image pic/17/15.png
+
+.image pic/17/16.png
+
+
+* userdel
+
+.image pic/17/17.png
+
+.image pic/17/18.png
+
+
+* groupdel
+
+.image pic/17/19.png

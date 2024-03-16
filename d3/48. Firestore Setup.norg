@@ -1,0 +1,33 @@
+@document.meta
+title: 48. Firestore Setup
+description: 
+authors: mattc
+categories: [
+  Firebase
+  Firestore
+  Env
+]
+created: 2024-03-09T11:42:31+0800
+updated: 2024-03-09T12:05:01+0800
+version: 1.1.1
+@end
+
+* Create new collection in firestore
+
+.image pic/29/1.png
+
+
+* Install firebase
+
+.image pic/29/2.png
+
+.image pic/29/3.png
+
+.image pic/29/4.png
+
+
+* Initialize firebase app
+
+  We import the firebase configuration informations using private/static env.
+
+  .image pic/29/7.png

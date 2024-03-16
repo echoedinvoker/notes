@@ -1,0 +1,36 @@
+@document.meta
+title: 150. Using Modules in Production
+description: 
+authors: mattc
+categories: [
+  Deployment
+  Redis Labs
+  Managed Redis
+  Redis Stack
+]
+created: 2024-03-12T16:06:12+0800
+updated: 2024-03-12T16:06:42+0800
+version: 1.1.1
+@end
+
+* Why not use Redis Stack from the beginning?
+
+  .image pic/150/1.png
+
+  According to the way we deploy, there are certain situations where the Redis module cannot be used.
+
+
+* Options of production
+
+** 1. Managed Redis by provider
+   .image pic/150/2.png
+
+** 2. Create/Manage Redis by ourself
+   .image pic/150/3.png
+
+** 3. Managed Redis by Redis Labs (They will create Redis on provider cloud)
+   .image pic/150/4.png
+
+   It is important to note that Redis Labs also uses providers (AWS, GC, Azure) to create Redis VMs, they just help manage them.
+
+   The most easy way is usually the third one, but if the project is already using the first one, you still need to know how to use Redis core data structures to achieve the goal.

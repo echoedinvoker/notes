@@ -1,0 +1,46 @@
+* Up vagrant virtual machine & SSH into
+
+.image pic/12/1.png
+
+  In this lecture, we will be using CentOS for practice, so we need to go to its directory and up the virtual machine.
+
+.image pic/12/2.png
+
+
+* Basic commands
+
+.image pic/12/3.png
+
+
+* root user
+
+.image pic/12/4.png
+
+.image pic/12/5.png
+
+
+* command to back to user home directory
+
+.image pic/12/6.png
+
+
+* check some directories
+
+** bin
+.image pic/12/7.png
+
+.image pic/12/8.png
+
+** etc
+.image pic/12/9.png
+
+.image pic/12/10.png
+
+** tmp
+.image pic/12/11.png
+
+** boot
+.image pic/12/12.png
+
+** proc
+.image pic/12/13.png
