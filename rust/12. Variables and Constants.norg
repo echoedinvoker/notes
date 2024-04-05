@@ -10,7 +10,7 @@ categories: [
   Shadow
 ]
 created: 2024-02-16T20:00:57+0800
-updated: 2024-02-16T20:01:27+0800
+updated: 2024-03-31T19:16:19+0800
 version: 1.1.1
 @end
 
@@ -27,10 +27,10 @@ version: 1.1.1
 
 * Mutability of variables
 
-* by default, variables are immutable
+** by default, variables are immutable
   .image pic/3/4.png
 
-* keyword `mut` to make a variable mutable
+** keyword `mut` to make a variable mutable
   .image pic/3/5.png
 
 

@@ -2,17 +2,17 @@
 ** (x) [3. What is DevOps? (15/47)]{:3. What is DevOps?:}
 ** (x) [5. What is Continuous Integration? (8/44)]{:5. What is Continuous Integration?:}
 ** (x) [6. What is Continuous Delivery? (5/30)]{:6. What is Continuous Delivery?:}
-* (-) Section 2: Prerequisites Info & Setup
+* (x) Section 2: Prerequisites Info & Setup
 ** (x) [8. Tools Prerequisite Information (5/10)]{:8. Tools Prerequisite Information:}
 ** (x) [12. Tools Prerequisites for Ubuntu 20 (1/16)]{:12. Tools Prerequisites for Ubuntu 20:}
 ** (x) [13. Signups (8/26)]{:13. Signups:}
 ** (x) [14. AWS Setup (30/119)]{:14. AWS Setup:}
-* (-) Section 3: VM Setup
+* (x) Section 3: VM Setup
 ** (x) [17. What is Virtualization (9/25)]{:17. What is Virtualization:}
 ** (x) [18. Introduction (5/15)]{:18. Introduction:}
 ** (x) [19. VM-Manually(Windows & MacOS Intel chip) (27/128)]{:19. VM-Manually(Windows and MacOS Intel chip):}
 ** (x) [20. VM-Automatically(Windows & MacOS Intel chip) (19/111)]{:20. VM-Automatically(Windows and MacOS Intel chip):}
-* (-) Section 4: Linux
+* (x) Section 4: Linux
 ** (x) [23. Introduction to Linux (20/40)]{:23. Introduction to Linux:}
 ** (x) [24. Commands and File systems (11/52)]{:24. Commands and File systems:}
 ** (x) [25. More Commands ( mkdir, cp, mv, touch etc) (13/26)]{:25. More Commands ( mkdir, cp, mv, touch etc):}
@@ -23,9 +23,62 @@
 ** (x) [30. Users and Groups (14/80)]{:30. Users and Groups:}
 ** (x) [31. File permissions (14/61)]{:31. File permissions:}
 ** (x) [32. Sudo (9/53)]{:32. Sudo:}
-** ( ) [33. Package Management (15/)]{:33. Package Management:}
-** ( ) [34. Services (5/)]{:34. Services:}
-** ( ) [35. Processes (10/)]{:35. Processes:}
-** ( ) [36. Archiving (6/)]{:36. Archiving:}
-** ( ) [37. Ubuntu commands (10/)]{:37. Ubuntu commands:}
-** ( ) [38. Linux Commands (0/)]{:38. Linux Commands:}
+** (x) [33. Package Management (15/79)]{:33. Package Management:}
+** (x) [34. Services (5/36)]{:34. Services:}
+** (x) [35. Processes (10/66)]{:35. Processes:}
+** (x) [36. Archiving (6/34)]{:36. Archiving:}
+** (x) [37. Ubuntu commands (10/73)]{:37. Ubuntu commands:}
+* (x) Section 5: Vagrant & Linux Servers
+** (x) [41. Vagrant IP, RAM & CPU (13/70)]{:41. Vagrant IP, RAM and CPU:}
+** (x) [42. Vagrant Sync Directories (7/31)]{:42. Vagrant Sync Directories:}
+** (x) [43. Provisioning (8/56)]{:43. Provisioning:}
+** (x) [44. Website Setup (15/70)]{:44. Website Setup:}
+** (x) [45. Wordpress Setup (21/111)]{:45. Wordpress Setup:}
+** (x) [46. Automate Website setup (8/37)]{:46. Automate Website setup:}
+** (x) [47. Automate Wordpress Setup (7/188)]{:47. Automate Wordpress Setup:}
+** (x) [48. Multi VM Vagrant file (15/65)]{:48. Multi VM Vagrant file:}
+* (x) Section 6: Variables, JSON & YAML
+** (x) [50. Variables & Python DS (18/44)]{:50. Variables n Python DS:}
+** (x) [51. JSON & YAML (12/42)]{:51. JSON n YAML:}
+* (x) Section 7: VProfile Project Setup Manual & Automated
+** (x) [53. Introduction (14/51)]{:53. Introduction:}
+** (x) [54. VM Setup (11/59)]{:54. VM Setup:}
+** (x) [55. DB, Cache & Queue Setup (17/122)]{:55. DB, Cache n Queue Setup:}
+** (x) [56. App setup (18/111)]{:56. App setup:}
+** (x) [57. Nginx Setup (6/34)]{:57. Nginx Setup:}
+** (x) [58. Validate (5/28)]{:58. Validate:}
+** (x) [60. Automated - Code (5/47)]{:60. Automated - Code:}
+** (x) [61. Automated - Execution (6/35)]{:61. Automated - Execution:}
+* (x) Section 8: Networking
+** (x) [62. ISO (15/30)]{:62. ISO:}
+** (x) [63. Understanding Networks & IP (15/40)]{:63. Understanding Networks n IP:}
+** (x) [64. Protocols, ports etc (8/32)]{:64. Protocols, ports etc:}
+** (x) [65. Networking Commands (15/104)]{:65. Networking Commands:}
+* (x) Section 9: Introducing Containers
+** (x) [66. What are containers (6/22)]{:66. What are containers:}
+** (x) [67. What is Docker (3/8)]{:67. What is Docker:}
+** (x) [68. Hands on Docker Containers (11/85)]{:68. Hands on Docker Containers:}
+** (x) [69. Vprofile Project on Containers (11/51)]{:69. Vprofile Project on Containers:}
+** (x) [70. Microservices (8/20)]{:70. Microservices:}
+** (x) [71. Microservice Project (9/74)]{:71. Microservice Project:}
+* ( ) Section 10: Bash Scripting
+** (x) [73. Introduction (4/10)]{:73. Introduction:}
+** (x) [74. VM Setup (3/23)]{:74. VM Setup:}
+** (x) [75. First Script (7/34)]{:75. First Script:}
+** (x) [76. Sample Script (7/55)]{:76. Sample Script:}
+** (x) [78. Variables (6/45)]{:78. Variables:}
+** ( ) [79. Command line arguments (7/)]{:79. Command line arguments:}
+** ( ) [80. System Variables (2/)]{:80. System Variables:}
+** ( ) [81. Quotes (3/)]{:81. Quotes:}
+** ( ) [82. Command Substitution (4/)]{:82. Command Substitution:}
+** ( ) [83. Exporting Variables (8/)]{:83. Exporting Variables:}
+** ( ) [84. User Input (3/)]{:84. User Input:}
+** ( ) [85. Decision Making part1 (5/)]{:85. Decision Making part1:}
+** ( ) [86. Decision Making part2 (4/)]{:86. Decision Making part2:}
+** ( ) [87. Monitoring Script]{:87. Monitoring Script:}
+** ( ) [88. Loops]{:88. Loops:}
+** ( ) [89. While Loops]{:89. While Loops:}
+** ( ) [90. Remote Command Execution]{:90. Remote Command Execution:}
+** ( ) [91. SSH Key Exchange]{:91. SSH Key Exchange:}
+** ( ) [92. Finale Part1]{:92. Finale Part1:}
+** ( ) [93. Finale Part2]{:93. Finale Part2:}

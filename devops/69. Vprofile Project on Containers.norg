@@ -1,0 +1,53 @@
+@document.meta
+title: 69. Vprofile Project on Containers
+description: 
+authors: mattc
+categories: [
+  Docker-compose
+  Vprofile
+]
+created: 2024-04-01T00:12:57+0800
+updated: 2024-04-01T00:13:22+0800
+version: 1.1.1
+@end
+
+* Create a VM for docker-compose lab
+
+Before, we used a vprofile project built with multiple VMs. In this lecture, we will use docker-compose to containerize each part, so we need a new VM for this lab.
+
+.image pic/66.png
+
+.image pic/67.png
+
+
+* Create a docker-compose file
+
+In this lecture, we will use the docker-compose.yml file prepared by the teacher, and in the docker section, we will start from scratch.
+
+.image pic/68.png
+
+.image pic/69.png
+
+.image pic/70.png
+
+.image pic/71.png
+
+  We copy and paste from GitHub to the VM, and some of the images used in the docker-compose.yml are also uploaded to DockerHub by the teacher, so it can directly pull them down using docker-compose.
+
+.image pic/72.png
+
+
+* Run containers by docker-compose and check it on browser
+
+.image pic/73.png
+
+.image pic/74.png
+
+.image pic/75.png
+
+
+* Stop/remove all containers and images
+
+.image pic/76.png
+
+.image pic/77.png

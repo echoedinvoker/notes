@@ -1,0 +1,46 @@
+@document.meta
+title: 41. Styling React Applications
+description: 
+authors: mattc
+categories: [
+  Styling
+  Inline Styling
+  Global Styling
+]
+created: 2024-04-02T15:53:04+0800
+updated: 2024-04-02T15:53:23+0800
+version: 1.1.1
+@end
+
+* React is no opinionated about how you style your components
+
+React focuses on the view part and does not force you to use a specific CSS framework. You can design your components in any way you want.
+
+* Inline styling in JSX
+
+.image pic/59.png
+
+The value behind the 'style' attribute must be an object, so the first layer of curly braces should be converted into JS mode, and the second layer of curly braces should be in the form of an object.
+
+.image pic/60.png
+
+This method, although in line with the concept of colocation mentioned in the previous lecture, is prone to getting out of control as codes become more complex, so most people still choose the method below.
+
+
+* Import CSS file globally
+
+We import the css file in App.js, so its effects will apply to all components, meaning it is global.
+
+.image pic/61.png
+
+Note that in JSX, if you want to use class, the attribute must be `className`.
+
+.image pic/62.png
+
+This method is usually used in styling that needs to be global, but it also brings back the issue of separation of concerns by technology. We will learn more advanced techniques to overcome this later.
+
+* Fix style
+
+.image pic/63.png
+
+.image pic/64.png

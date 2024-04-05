@@ -1,0 +1,20 @@
+@document.meta
+title: 35. Components as Building Blocks
+description: 
+authors: mattc
+categories: 
+created: 2024-04-02T14:21:53+0800
+updated: 2024-04-02T14:21:53+0800
+version: 1.1.1
+@end
+
+* Component as building block
+
+.image pic/41.png
+
+.image pic/42.png
+
+
+* Component trees
+
+.image pic/43.png

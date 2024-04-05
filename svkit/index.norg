@@ -118,9 +118,9 @@
 ** (x) [186. The TrackList Component Markup (11/64)]{:186. The TrackList Component Markup:}
 ** (x) [187. The TrackList Component Styling (10/52)]{:187. The TrackList Component Styling:}
 ** (x) [188. Creating an Audio Player Component (15/105)]{:188. Creating an Audio Player Component:}
-** ( ) [189. Using the Player Component in The TrackList Component (8/)]{:189. Using the Player Component in The TrackList Component:}
-** ( ) [190. Handling the TrackList Component When JS is Disabled (7/)]{:190. Handling the TrackList Component When JS is Disabled:}
-** ( ) [191. Customizing Error Pages (12/)]{:191. Customizing Error Pages:}
+** (x) [189. Using the Player Component in The TrackList Component (8/37)]{:189. Using the Player Component in The TrackList Component:}
+** (x) [190. Handling the TrackList Component When JS is Disabled (7/81)]{:190. Handling the TrackList Component When JS is Disabled:}
+** (x) [191. Customizing Error Pages (12/53)]{:191. Customizing Error Pages:}
 ** ( ) [192. Adding a Retry Button in Error Page (8/)]{:192. Adding a Retry Button in Error Page:}
 ** ( ) [193. Playlist Page Data (7/)]{:193. Playlist Page Data:}
 ** ( ) [194. Playlist Page Markup & Styling (14/)]{:194. Playlist Page Markup & Styling:}

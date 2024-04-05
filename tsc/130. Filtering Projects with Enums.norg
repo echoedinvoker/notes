@@ -7,11 +7,11 @@ categories: [
   Filtering
 ]
 created: 2023-12-30T11:51:31+0800
-updated: 2023-12-30T11:51:54+0800
+updated: 2024-03-20T22:50:43+0800
 version: 1.1.1
 @end
 
-* ISSUE: repeat same projects in the two lists
+* Issue: repeat same projects in the two lists
 
 ** issue
    .image pic/126/1.png

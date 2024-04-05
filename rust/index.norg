@@ -43,10 +43,20 @@
 ** (x) [56. Traits (9/60)]{:56. Traits:}
 ** (x) [58. Trait Bounds (6/40)]{:58. Trait Bounds:}
 ** (x) [60. Supertraits (5/51)]{:60. Supertraits:}
-** ( ) [62. Trait Objects (7/)]{:62. Trait Objects:}
-** ( ) [64. Derived Traits and Marker Traits (4/)]{:64. Derived Traits and Marker Traits:}
-** ( ) [65. Associated Types in Traits (7/)]{:65. Associated Types in Traits:}
-** ( ) [67. Choosing Associated vs Generic Type (10/)]{:67. Choosing Associated vs Generic Type:}
+** (x) [62. Trait Objects (7/45)]{:62. Trait Objects:}
+** (x) [64. Derived Traits and Marker Traits (4/36)]{:64. Derived Traits and Marker Traits:}
+** (x) [65. Associated Types in Traits (7/33)]{:65. Associated Types in Traits:}
+** (x) [67. Choosing Associated vs Generic Type (10/62)]{:67. Choosing Associated vs Generic Type:}
+* ( ) Section 10: Functional Programming Aspects
+** (x) [68. Closures (9/133)]{:68. Closures:}
+** (x) [70. Practice on CLosures (1/46)]{:70. Practice on CLosures:}
+** ( ) [70. Functional Pointers]{:70. Functional Pointers:}
+** ( ) [71. Practice on Functional Pointers]{:71. Practice on Functional Pointers:}
+** ( ) [72. Iterators]{:72. Iterators:}
+** ( ) [73. IntoIter]{:73. IntoIter:}
+** ( ) [75. Iterating over Collections]{:75. Iterating over Collections:}
+** ( ) [76. Combinators]{:76. Combinators:}
+** ( ) [78. Bonus - Iterating Through Option]{:78. Bonus - Iterating Through Option:}
 
 * Index
 ** Array

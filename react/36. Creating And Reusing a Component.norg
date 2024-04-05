@@ -1,0 +1,27 @@
+@document.meta
+title: 36. Creating And Reusing a Component
+description: 
+authors: mattc
+categories: 
+created: 2024-04-02T14:21:40+0800
+updated: 2024-04-02T14:21:43+0800
+version: 1.1.1
+@end
+
+* Create a new component other than App
+
+** component MUST
+.image pic/44.png
+
+** nested component but not nested declaration
+.image pic/45.png
+
+** write some content to display
+.image pic/46.png
+
+.image pic/47.png
+
+
+* Component is reusable
+
+.image pic/48.png

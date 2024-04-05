@@ -1,0 +1,58 @@
+* (x) Section 1: Intro
+** (x) [2. Methodology (2/20)]{:2. Methodology:}
+** (x) [3. Create Project (13/41)]{:3. Create Project:}
+** (x) [4. Additional Dependencies (8/28)]{:4. Additional Dependencies:}
+** (x) [5. Final Setup (24/184)]{:5. Final Setup:}
+** (x) [6. Backend (7/31)]{:6. Backend:}
+* (x) Section 2: Sign Up Page
+** (x) [8. Sign Up Form (17/87)]{:8. Sign Up Form:}
+** (x) [9. Form Interactions (18/37)]{:9. Form Interactions:}
+** (x) [11. API Request (12/35)]{:11. API Request:}
+** (x) [12. ref or reactive (6/16)]{:12. ref or reactive:}
+** (x) [13. Mock Service Worker (MSW) (18/44)]{:13. Mock Service Worker (MSW):}
+** (x) [14. Event Modifier (5/10)]{:14. Event Modifier:}
+** (x) [15. Proxy (7/43)]{:15. Proxy:}
+** (x) [16. Styling (13/54)]{:16. Styling:}
+** (x) [17. Style Override (4/22)]{:17. Style Override:}
+* (x) Section 3: API Request/Response Handling
+** (x) [18. Disable Button (12/83)]{:18. Disable Button:}
+** (x) [19. Refactor Tests (9/82)]{:19. Refactor Tests:}
+** (x) [20. Spinner (6/36)]{:20. Spinner:}
+** (x) [21. Task: Sign Up Success Response (1/30)]{:21. Task- Sign Up Success Response:}
+** (x) [23. Sign Up Success Response (12/44)]{:23. Sign Up Success Response:}
+** (x) [24. Hide Form (13/93)]{:24. Hide Form:}
+** (x) [27. Sign Up Failure (18/93)]{:27. Sign Up Failure:}
+** (x) [28. Unit Tests (6/55)]{:28. Unit Tests:}
+* (x) Section 4: Validation
+** (x) [29. Displaying Validation Error (14/200)]{:29. Displaying Validation Error:}
+** (x) [30. Input Component (21/49)]{:30. Input Component:}
+** (x) [31. Input Error Style (11/67)]{:31. Input Error Style:}
+** (x) [32. Repeating Tests (11/81)]{:32. Repeating Tests:}
+** (x) [33. Password Mismatch (6/44)]{:33. Password Mismatch:}
+** (x) [34. Hide Errors (13/70)]{:34. Hide Errors:}
+* (x) Section 5: i18n - Internationalization
+** (x) [35. vue-i18n (13/59)]{:35. vue-i18n:}
+** (x) [36. Fixing Tests (12/67)]{:36. Fixing Tests:}
+** (x) [37. Language Selector (17/106)]{:37. Language Selector:}
+** (x) [38. Potential Issues & Refactor (7/58)]{:38. Potential Issues n Refactor:}
+** (x) [39. Store Language in LocalStorage (28/115)]{:39. Store Language in LocalStorage:}
+** (x) [40. Language in Requests (12/147)]{:40. Language in Requests:}
+** (x) [41. Extract API Function (10/79)]{:41. Extract API Function:}
+* ( ) Section 6: Activation Page
+** ( ) [42. Client-side Routing (11/)]{:42. Client-side Routing:}
+** ( ) [43. NavBar (12/)]{:43. NavBar:}
+** ( ) [44. NavBar Style (6/)]{:44. NavBar Style:}
+** ( ) [45. Task: Activation Page (1/)]{:45. Task- Activation Page:}
+** ( ) [46. Task: Activation Page - Requirement List (1/)]{:46. Task- Activation Page - Requirement List:}
+** ( ) [47. Activation Page (3/)]{:47. Activation Page:}
+** ( ) [48. Activation Request (10/)]{:48. Activation Request:}
+** ( ) [49. Use Route Param (15/)]{:49. Use Route Param:}
+** ( ) [50. Task: Handling Api Response (1/)]{:50. Task- Handling Api Response:}
+** ( ) [51. Task: Handling Api Response - Requirement List (1/)]{:51. Task- Handling Api Response - Requirement List:}
+** ( ) [52. Handling Api Response (8/)]{:52. Handling Api Response:}
+** ( ) [53. Extract Repeating Components (21/)]{:53. Extract Repeating Components:}
+** ( ) [54. Task: Language in Request (1/)]{:54. Task- Language in Request:}
+** ( ) [55. Task: Language in Request - Requirement (1/)]{:55. Task- Language in Request - Requirement:}
+** ( ) [56. Language in Request (2/)]{:56. Language in Request:}
+** ( ) [57. Axios Interceptor (11/)]{:57. Axios Interceptor:}
+** ( ) [58. Unit Tests (25/)]{:58. Unit Tests:}

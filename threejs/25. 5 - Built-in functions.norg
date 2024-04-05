@@ -1,0 +1,108 @@
+@document.meta
+title: 25. 5 - Built-in functions
+description: 
+authors: mattc
+categories: [
+  Geometry
+  Position
+  UV
+  Shader
+  GLSL
+]
+created: 2024-03-19T13:16:10+0800
+updated: 2024-03-19T13:16:59+0800
+version: 1.1.1
+@end
+
+* Review 
+
+** geometry to mesh
+.image pic/27/1.png
+ 
+.image pic/27/2.png
+
+** generating positions
+.image pic/27/3.png
+
+.image pic/27/4.png
+
+** generating uv
+.image pic/27/5.png
+
+
+* Why we need GLSL built-in functions?
+
+Using GLSL built-in functions can help us develop shaders more quickly without needing to write too many mathematical expressions ourselves.
+
+.image pic/27/6.png
+
+.image pic/27/7.png
+
+
+* Built-in functions
+
+** common use functions
+   .image pic/27/8.png
+
+** triangle functions
+   .image pic/27/9.png
+
+** absolute function
+   .image pic/27/10.png
+
+** number system functions
+   .image pic/27/11.png
+
+** mix (gradient)
+   .image pic/27/12.png
+
+   .image pic/27/13.png
+
+   .image pic/27/14.png
+
+** clamp
+   .image pic/27/15.png
+
+   .image pic/27/16.png
+
+   .image pic/27/17.png
+
+   .image pic/27/18.png
+
+   .image pic/27/19.png
+
+** step
+   .image pic/27/20.png
+
+   .image pic/27/21.png
+
+** smoothstep
+   .image pic/27/22.png
+
+   .image pic/27/23.png
+
+** modulus
+   .image pic/27/24.png
+
+   .image pic/27/25.png
+
+** length
+   .image pic/27/26.png
+
+** distance
+   .image pic/27/27.png
+
+*** distance to fragment
+    .image pic/27/28.png
+
+*** distance to vertex
+    .image pic/27/29.png
+
+
+* There are 1000+ GLSL built-in functions
+
+  .image pic/27/30.png
+
+  .image pic/27/31.png
+
+  .image pic/27/32.png

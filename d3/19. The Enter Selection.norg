@@ -7,11 +7,11 @@ categories: [
   Enter Selection
 ]
 created: 2024-03-03T09:29:41+0800
-updated: 2024-03-03T09:30:02+0800
+updated: 2024-03-20T22:51:13+0800
 version: 1.1.1
 @end
 
-* ISSUE: when number of data items is more than DOM elements
+* Issue: when number of data items is more than DOM elements
 
   In fact, the number of HTMLElements should vary with the data, and should not be hard coded to a fixed number in HTML.
 

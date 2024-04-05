@@ -1,0 +1,29 @@
+@document.meta
+title: 74. VM Setup
+description: 
+authors: mattc
+categories: [
+  Vagrantfile
+  Setup
+]
+created: 2024-04-01T12:21:39+0800
+updated: 2024-04-01T12:22:23+0800
+version: 1.1.1
+@end
+
+* Download Vagrantfile and up the first VM
+
+  The Vagrantfile provided in the course contains three VMs. At the beginning of the course, we only need to use the first one.
+
+  .image pic/94.png
+
+  It is best to change the third octet of the private IP to 56, otherwise there may be problems exceeding the range.
+
+  .image pic/95.png
+
+
+* Change hostname
+
+  There is a operation to change the hostname in the course video, but it was found that the hostname of the scriptbox already automatically meets the requirements so there is no need to make any changes.
+
+  .image pic/96.png

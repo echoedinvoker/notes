@@ -7,11 +7,11 @@ categories: [
   Single match
 ]
 created: 2024-02-19T15:22:20+0800
-updated: 2024-02-19T15:22:53+0800
+updated: 2024-03-20T22:51:25+0800
 version: 1.1.1
 @end
 
-* ISSUE: how to represent absence of a field precisely
+* Issue: how to represent absence of a field precisely
 
   .image pic/18/1.png
 

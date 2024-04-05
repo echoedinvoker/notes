@@ -1,0 +1,71 @@
+@document.meta
+title: 16. Styling
+description: 
+authors: mattc
+categories: [
+  Styling
+  CSS
+  Bootstrap
+  RWD
+]
+created: 2024-03-24T00:16:48+0800
+updated: 2024-03-24T00:17:13+0800
+version: 1.1.1
+@end
+
+* Global and scoped styling
+
+** global
+.image pic/87.png
+
+** scoped
+.image pic/88.png
+
+** dynamic attribute
+.image pic/89.png
+
+
+* Import Bootstrap CSS by link
+
+.image pic/90.png
+
+
+* main with class 'container'
+
+.image pic/91.png
+
+
+* form elements styling
+
+** document
+.image pic/92.png
+
+** practice
+.image pic/93.png
+
+
+* Card style to form
+
+** document
+.image pic/94.png
+
+** practice
+.image pic/95.png
+
+
+* class: text-center
+
+  In addition to text, it can also center the button, image, and other elements, but you might create a new div to wrap the element.
+
+.image pic/96.png
+
+
+* RWD
+
+** document
+.image pic/97.png
+
+It's best to read through all the content in this section once.
+
+** practice
+.image pic/98.png

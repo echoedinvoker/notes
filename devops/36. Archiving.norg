@@ -1,0 +1,50 @@
+@document.meta
+title: 36. Archiving
+description: 
+authors: mattc
+categories: [
+  Archiving
+  Compression
+  ZIP
+  Tarball
+]
+created: 2024-03-17T16:12:50+0800
+updated: 2024-03-17T16:13:30+0800
+version: 1.1.1
+@end
+
+* Why we need to archive files?
+
+.image pic/23/1.png
+
+
+* tar
+
+** create compressed Tarball
+.image pic/23/2.png
+
+   Archive logs in real world usually have the file name accompanied by the date, I just forgot to do that.
+
+** extract files from compressed Tarball
+.image pic/23/3.png
+
+.image pic/23/4.png
+
+** tar command has rich features, too rich...
+.image pic/23/5.png
+
+* zip
+
+Sometimes we don't want to use too many rich features, just want to compress files, we can use zip, which is a simple compression tool.
+
+And the files we often download are also in zip format.
+
+** zip files
+.image pic/23/6.png
+
+Just need one option `-r`
+
+** unzip files
+.image pic/23/7.png
+
+No need for any options

@@ -1,0 +1,6 @@
+* (x) create hooks for transfer data to other formats
+** (x) csv
+** (x) excel
+** (x) pdf
+* (x) Create component for layout the buttons to output data
+* (x) Binds hooks functionalities to the buttons

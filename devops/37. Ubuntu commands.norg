@@ -1,0 +1,88 @@
+@document.meta
+title: 37. Ubuntu commands
+description: 
+authors: mattc
+categories: [
+  Ubuntu
+  Debian
+  ufw
+]
+created: 2024-03-17T17:29:14+0800
+updated: 2024-03-17T17:29:49+0800
+version: 1.1.1
+@end
+
+* Mostly used commands are similar between CentOS and Ubuntu
+
+  .image pic/24/1.png
+
+  .image pic/24/2.png
+
+  So below, we will only explain the different points.
+
+
+* Add new user
+
+** `useradd` won't create home directory
+   .image pic/24/3.png
+
+** better use `adduser`
+   .image pic/24/4.png
+
+
+* Default editor to check sudoer list
+
+  .image pic/24/5.png
+
+  .image pic/24/6.png
+
+  .image pic/24/7.png
+
+
+* Instead of RPM, package manager of Ubuntu is Debian based
+
+  .image pic/24/8.png
+
+  .image pic/24/9.png
+
+  We can use `dpkg -l` to query installed packages, and `dpkg -r` to remove packages.
+
+
+* Ubuntu repo and Command `apt update`
+
+  Just like CentOS has yum, Ubuntu also has apt (apt-get can also be used, it is an older version, basically just use apt)
+
+  .image pic/24/10.png
+
+  The repo list of CentOS will automatically update every 24 hours, and will also automatically update before installation, so there is no need to manually update the list before each installation like Ubuntu.
+
+
+* Command `apt search` and why ubuntu is so popular
+
+  .image pic/24/11.png
+
+
+* Command `apt install`
+
+  .image pic/24/12.png
+
+
+* Command `apt upgrate`
+
+  .image pic/24/13.png
+
+* Command `apt remove`
+
+  .image pic/24/14.png
+
+
+* Default settings of installed services
+
+  .image pic/24/15.png
+
+  .image pic/24/16.png
+
+
+* Command `apt purge` & ubuntu firewall
+
+  .image pic/24/17.png

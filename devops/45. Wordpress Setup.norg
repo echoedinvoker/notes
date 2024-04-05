@@ -1,0 +1,95 @@
+@document.meta
+title: 45. Wordpress Setup
+description: 
+authors: mattc
+categories: [
+  Web server
+  Vagrant
+  WordPress
+]
+created: 2024-03-18T16:40:36+0800
+updated: 2024-03-18T16:41:09+0800
+version: 1.1.1
+@end
+
+* Course schedule
+
+  .image pic/29/1.png
+
+
+* Check document to install WordPress on Ubuntu
+
+  .image pic/29/2.png
+
+  .image pic/29/3.png
+
+
+* Create new vm instance
+
+  We must find a suitable box file from Vagrant Cloud according to the recommended Ubuntu version in the document to initialize the Vagrantfile.
+
+  .image pic/29/4.png
+
+  .image pic/29/5.png
+
+  .image pic/29/6.png
+
+  .image pic/29/7.png
+
+
+* Change hostname (not mandatory)
+
+  .image pic/29/8.png
+
+
+* Step 2: Install Dependencies
+
+  Because WordPress content is written in PHP, in addition to using Apache2 to start the web server, you also need to install PHP-related packages to support the operation of WordPress.
+
+  .image pic/29/9.png
+
+  .image pic/29/10.png
+
+
+* Step 3: Install WordPress
+
+  .image pic/29/11.png
+
+
+* Step 4: Configure Apache2 to serve WordPress
+
+  .image pic/29/12.png
+
+  .image pic/29/13.png
+
+  .image pic/29/14.png
+
+
+* Step 5: Configure the database
+
+** copy commands from document to temp place and edit it
+   .image pic/29/15.png
+
+** use commands one by one
+   .image pic/29/16.png
+
+
+* Step 6: Configure WordPress to connect to the database
+
+** create wp-config.php file & replace placeholders with command 'sed'
+
+   .image pic/29/17.png
+
+** replace salt codes in the wp-config.php by vim editor
+   .image pic/29/18.png
+
+   .image pic/29/19.png
+
+   .image pic/29/20.png
+
+
+* Open Our Website on the browser
+
+  .image pic/29/21.png
+
+  The above is the installation interface of WordPress, indicating that the web server is running normally.

@@ -1,0 +1,56 @@
+@document.meta
+title: 58. Validate
+description: 
+authors: mattc
+categories: [
+  Validate
+]
+created: 2024-03-22T09:47:18+0800
+updated: 2024-03-22T09:47:34+0800
+version: 1.1.1
+@end
+
+* SSH to the web01 VM
+
+.image pic/40/1.png
+
+
+* Validate Nginx & Tomcat
+
+.image pic/40/2.png
+
+
+* Validate MariaDB
+
+.image pic/40/3.png
+
+.image pic/40/4.png
+
+
+* Validate RabbitMQ
+
+.image pic/40/5.png
+
+.image pic/40/6.png
+
+
+* Validate Memcached
+
+.image pic/40/7.png
+
+.image pic/40/8.png
+
+.image pic/40/9.png
+
+.image pic/40/10.png
+
+.image pic/40/11.png
+
+.image pic/40/12.png
+
+
+* Destroy all VMs
+
+.image pic/40/13.png
+
+.image pic/40/14.png

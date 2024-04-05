@@ -1,0 +1,28 @@
+@document.meta
+title: 159. Prefix Search
+description: 
+authors: mattc
+categories: [
+  Prefix
+  Wildcard
+]
+created: 2024-03-29T20:10:52+0800
+updated: 2024-03-29T20:11:16+0800
+version: 1.1.1
+@end
+
+* Prefix search
+
+  .image pic/6.png
+
+
+* rBook practice
+
+** simple prefix search
+   .image pic/7.png
+
+** try to use only one character before *
+   .image pic/8.png
+
+** try to use on tag and prefix characters are complete
+   .image pic/9.png

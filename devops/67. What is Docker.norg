@@ -1,0 +1,22 @@
+@document.meta
+title: 67. What is Docker
+description: 
+authors: mattc
+categories: [
+  Docker
+  Docker daemon
+  Docker host
+  Docker client
+  Docker image
+  Dockerhub
+]
+created: 2024-03-29T13:20:09+0800
+updated: 2024-03-29T13:20:59+0800
+version: 1.1.1
+@end
+
+* What is Docker?
+
+.image pic/47.png
+
+  Docker host is real computer to run the Docker daemon.

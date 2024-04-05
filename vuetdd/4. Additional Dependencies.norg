@@ -1,0 +1,52 @@
+@document.meta
+title: 4. Additional Dependencies
+description: 
+authors: mattc
+categories: [
+  Libraries
+  Install
+]
+created: 2024-03-22T21:36:36+0800
+updated: 2024-03-22T21:37:08+0800
+version: 1.1.1
+@end
+
+* Axios
+
+  .image pic/6.png
+
+
+* I18n
+
+  After a certain version, I18n will break our test, so we need to install a specific version.
+
+  .image pic/7.png
+
+
+* Libraries for testing
+
+** testing library for vue
+   .image pic/8.png
+
+** user-event for user interaction
+   .image pic/10.png
+
+** jest-dom for matches
+   .image pic/9.png
+
+** install as dev-dependencies
+   .image pic/11.png
+
+
+* Libraries for mocking backend response
+
+  .image pic/12.png
+
+  .image pic/13.png
+
+
+* Libraries for styling
+
+  .image pic/14.png
+
+  .image pic/15.png

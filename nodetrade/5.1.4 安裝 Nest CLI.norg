@@ -1,0 +1,24 @@
+@document.meta
+title: 5.1.4 安裝 Nest CLI
+description: 
+authors: mattc
+categories: 
+created: 2024-04-04T11:34:00+0800
+updated: 2024-04-04T11:34:15+0800
+version: 1.1.1
+@end
+
+* Nest.js
+
+  基於 Node.js 和 TypeScript 開發的框架，提供多種實用功能，支援常用的伺服端技術
+
+
+* Next CLI
+
+  Next.js 的命令列工具，用來輕鬆建立、執行、管理 Nest 的各種操作
+
+** 安裝 Next CLI
+
+   只要安裝好 Node.js 就可以直接安裝 Next CLI
+
+   .image pic/2.png

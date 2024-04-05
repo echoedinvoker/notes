@@ -1,0 +1,56 @@
+@document.meta
+title: 155. Numeric Queries
+description: 
+authors: mattc
+categories: [
+  Query arguments
+  Redis Search
+]
+created: 2024-03-18T19:02:21+0800
+updated: 2024-03-18T19:02:44+0800
+version: 1.1.1
+@end
+
+* Query arguments
+
+  .image pic/155/1.png
+
+
+* FT.SEARCH documentation
+
+  .image pic/155/2.png
+
+  .image pic/155/3.png
+
+  .image pic/155/4.png
+
+  Above, you can see a very detailed method of writing query arguments. Below, we summarize some key points.
+
+
+* Query brackets for different types
+
+  Different types require different parentheses in query arguments.
+
+  .image pic/155/5.png
+
+
+* Mutiple @ symbols
+
+  We can use multiple @ to query multiple fields.
+
+  .image pic/155/6.png
+
+
+* Wrap all query arguments in a block of single quotes
+
+  Even though we can use many @ symbols, we still need to use single quotes to wrap all query parameters.
+
+  .image pic/155/7.png
+
+  .image pic/155/8.png
+
+
+* Numeric queries (for NUMBER type)
+
+  .image pic/155/9.png
+

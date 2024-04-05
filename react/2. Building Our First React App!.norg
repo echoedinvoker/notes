@@ -1,0 +1,40 @@
+@document.meta
+title: 2. Building Our First React App!
+description: 
+authors: mattc
+categories: [
+  Fist
+]
+created: 2024-03-28T05:04:45+0800
+updated: 2024-03-28T05:05:11+0800
+version: 1.1.1
+@end
+
+* 1st component App
+
+.image pic/1.png
+
+
+* Fectch advince by button onClick
+
+.image pic/2.png
+
+
+* Make advice reactive by useState
+
+.image pic/3.png
+
+
+* Add counter as state
+
+.image pic/4.png
+
+
+* useEffect
+
+.image pic/5.png
+
+
+* Refactor as component
+
+.image pic/6.png

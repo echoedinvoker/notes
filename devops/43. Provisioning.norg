@@ -1,0 +1,49 @@
+@document.meta
+title: 43. Provisioning
+description: 
+authors: mattc
+categories: [
+  Vagrant
+  Provisioning
+  Shell script
+]
+created: 2024-03-18T12:47:08+0800
+updated: 2024-03-18T12:47:46+0800
+version: 1.1.1
+@end
+
+* Provision to a new VM
+
+** make sure current vm does not exist
+  .image pic/27/1.png
+
+** enable provision in Vagrantfile and write a shell script inline
+  .image pic/27/2.png
+
+** vagrant up: create a new vm
+  .image pic/27/3.png
+
+  .image pic/27/4.png
+
+  .image pic/27/5.png
+
+** try to reload the vm, provision will not be run again
+  .image pic/27/6.png
+
+
+* Provision to existing VM
+
+  .image pic/27/7.png
+
+  .image pic/27/8.png
+
+  .image pic/27/9.png
+
+
+* Prepare for next lecture
+
+** destroy all vm instances
+   .image pic/27/10.png
+
+** enable bridge networking and set a static ip to centos
+   .image pic/27/11.png

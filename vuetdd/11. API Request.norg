@@ -1,0 +1,42 @@
+@document.meta
+title: 11. API Request
+description: 
+authors: mattc
+categories: [
+  Mocking
+  Axios
+  API request
+  Submit
+]
+created: 2024-03-23T16:01:08+0800
+updated: 2024-03-23T16:30:39+0800
+version: 1.1.1
+@end
+
+* Requirement
+
+  .image pic/64.png
+
+
+* Create the test (red)
+
+** description, render component and get all needed elements
+   .image pic/65.png
+
+   Teacher use the "describe" function again to break down the long description, but putting it in the second layer of describe makes it the third layer. I'm not sure what the significance of doing this is.
+
+** add user session to fill input fields
+   .image pic/66.png
+
+** click submit button
+   .image pic/67.png
+
+** assertion with mocked axios
+We cannot directly use the real backend for testing, as there are too many uncertain factors. Therefore, we need to mock axios to prevent the Http request from actually being sent out.
+
+   .image pic/68.png
+
+
+* Complete the requrement in the component (green)
+
+  .image pic/69.png

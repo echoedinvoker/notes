@@ -1,0 +1,69 @@
+@document.meta
+title: 35. Processes
+description: 
+authors: mattc
+categories: [
+  Processes
+  Kill
+  ps
+  awk
+  OS resource
+  PID
+  PPID
+  Kernel threads
+]
+created: 2024-03-17T15:26:51+0800
+updated: 2024-03-17T15:27:44+0800
+version: 1.1.1
+@end
+
+* top command
+
+** OS resource usage status
+.image pic/22/1.png
+
+.image pic/22/2.png
+
+CPU waiting time is not the same as CPU utilization, but they are related. When CPU utilization approaches full load, CPU waiting time will start to increase.
+
+.image pic/22/3.png
+
+.image pic/22/4.png
+
+** process status list
+.image pic/22/5.png
+
+
+* ps command
+
+** aux: mainly to check CPU and memory consumption
+.image pic/22/6.png
+
+`init` is the name used by older versions, while newer versions will use the names `systemd` or `upstart`.
+
+** -ef: mainly to check parent/child process relationship
+.image pic/22/7.png
+
+.image pic/22/8.png
+
+.image pic/22/9.png
+
+
+* Kill process
+
+** asking
+.image pic/22/10.png
+
+** forcely
+.image pic/22/11.png
+
+Orphan processes will be adopted by the init process (PID=1), but they will still consume resources. Sometimes using `kill -9` can generate these types of processes.
+
+** forcely kill multiple process by pipeline
+.image pic/22/12.png
+
+
+* Zombie process
+Different from the orphan process, it does not occupy resources, but may cause other problems.
+
+.image pic/22/13.png

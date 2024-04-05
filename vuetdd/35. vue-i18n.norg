@@ -1,0 +1,59 @@
+@document.meta
+title: 35. vue-i18n
+description: 
+authors: mattc
+categories: [
+  i18n
+  Translation
+  Legacy
+]
+created: 2024-03-27T15:09:42+0800
+updated: 2024-03-27T15:09:57+0800
+version: 1.1.1
+@end
+
+* I18n install and setup
+
+** documentation
+.image pic/222.png
+
+.image pic/223.png
+
+The section above details the specifics of setting up i18n in the getting started section.
+
+** install
+.image pic/224.png
+
+** setup
+.image pic/225.png
+
+
+* Use I18n translations in template
+
+.image pic/226.png
+
+.image pic/227.png
+
+.image pic/228.png
+
+
+* Use I18n translations in Composition API
+
+** useI18n to get t
+.image pic/229.png
+
+** fix legacy issue
+.image pic/230.png
+
+** check results
+.image pic/231.png
+
+.image pic/232.png
+
+
+* Refactor i18n setup & translations
+
+.image pic/233.png
+
+.image pic/234.png
+

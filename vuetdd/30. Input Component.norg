@@ -1,0 +1,50 @@
+@document.meta
+title: 30. Input Component
+description: 
+authors: mattc
+categories: [
+  Input
+  Naming
+  V-Model
+  Named Export/Import
+]
+created: 2024-03-26T20:06:55+0800
+updated: 2024-03-26T20:09:56+0800
+version: 1.1.1
+@end
+
+* Refactor input block to component
+
+.image pic/192.png
+
+Refactor the above codes into a component, where we will first handle only the parts that can be solved using props.
+
+
+* Two ways to solve v-model issue
+
+The v-model part cannot be directly solved using props. There are two ways to solve this:
+
+** by custom event
+.image pic/193.png
+
+** by modelValue props and update:modelValue event
+.image pic/194.png
+
+
+* Prevent named conflict
+
+When naming components, avoid using single syllables because they may easily conflict with built-in elements such as `input`, `button`, etc., causing unnecessary confusion.
+
+.image pic/195.png
+
+
+* Change to named export/import
+
+Because after forder 'components', many more components will be added, it is more appropriate to use named export/import to manage them.
+
+.image pic/196.png
+
+
+* Do we need to mock the component 'TheInput' in the unit test of SignUp.vue?
+
+Currently it is acceptable, but in some cases unit testing cannot accept the presence of other components in the component. We will encounter this later.

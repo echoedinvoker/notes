@@ -1,0 +1,43 @@
+@document.meta
+title: 34. Hide Errors
+description: 
+authors: mattc
+categories: [
+  Error
+  Update
+  Input
+]
+created: 2024-03-27T13:47:37+0800
+updated: 2024-03-27T13:48:09+0800
+version: 1.1.1
+@end
+
+* Requirement
+
+  .image pic/215.png
+
+
+* Test and implement to username input
+
+** red
+*** description
+    .image pic/216.png
+*** contents
+    .image pic/217.png
+
+** green
+   .image pic/218.png
+
+
+* Same red/green to email and password inputs
+
+** red
+   .image pic/219.png
+
+** green
+   .image pic/220.png
+
+
+* To unit test
+
+  .image pic/221.png

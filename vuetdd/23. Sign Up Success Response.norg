@@ -1,0 +1,32 @@
+@document.meta
+title: 23. Sign Up Success Response
+description: 
+authors: mattc
+categories: [
+  getByText
+  Mock Resolved Data
+]
+created: 2024-03-24T21:44:52+0800
+updated: 2024-03-24T21:50:00+0800
+version: 1.1.1
+@end
+
+* Try to use .getByText if only require text
+
+  .image pic/139.png
+
+  .getByText itself is asynchronous, so there is no need to use waitFor even if the response takes time.
+
+
+* Even the required element is conditionally rendered, we don't need to test all scenarios
+
+  .image pic/140.png
+
+  Because it is not possible to guess the content of the response data message from the mock server in the implementation of the component, initializing existing tests is actually not necessary.
+
+
+* Mock client in each test should be set resovle response data
+
+  Even if the resolved data is not used, as long as axios or fetch is used in the test function, their response data should be mocked in order to ensure the stability of the test.
+
+  .image pic/141.png

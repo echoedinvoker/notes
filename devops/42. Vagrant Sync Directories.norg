@@ -1,0 +1,44 @@
+@document.meta
+title: 42. Vagrant Sync Directories
+description: 
+authors: mattc
+categories: [
+  Sync Directories
+]
+created: 2024-03-18T11:37:12+0800
+updated: 2024-03-18T11:39:18+0800
+version: 1.1.1
+@end
+
+* Default sync directory and simple test
+
+  .image pic/26/1.png
+
+  .image pic/26/2.png
+
+
+* Create new sync directory
+
+** Vagrantfile
+   .image pic/26/3.png
+
+** load it up to create sync directory
+   .image pic/26/4.png
+
+
+* Test sync 
+
+** from guest to host
+   .image pic/26/5.png
+
+** from host to guest
+   .image pic/26/6.png
+
+   Therefore, synchronization is bidirectional.
+
+
+* Purposes of sync directory
+
+1. Ensure the permanent preservation of data, as VMs are easily damaged or deleted.
+
+2. Use the desired editor to edit files in the VM.

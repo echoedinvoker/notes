@@ -1,0 +1,30 @@
+@document.meta
+title: 9. Why Do Front-End Frameworks Exist?
+description: 
+authors: mattc
+categories: [
+  SPA
+  Front-End Frameworks
+]
+created: 2024-03-28T05:14:36+0800
+updated: 2024-03-28T05:15:15+0800
+version: 1.1.1
+@end
+
+* The rise of single-page applications
+
+.image pic/7.png
+
+
+* Single-page applications with vanilla JavaScript?
+
+.image pic/8.png
+
+.image pic/9.png
+
+.image pic/10.png
+
+
+* Why do front-end frameworks exist?
+
+.image pic/11.png

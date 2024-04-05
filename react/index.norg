@@ -1,0 +1,33 @@
+* (x) Section 1: Welcome, Welcome, Welcome!
+** (x) [2. Building Our First React App! (19/40)]{:2. Building Our First React App!:}
+* ( ) Section 2: PART 1: REACT FUNDAMENTALS \[4 PROJECTS\]
+* (x) Section 3: A First look at React
+** (x) [9. Why Do Front-End Frameworks Exist? (10/10)]{:9. Why Do Front-End Frameworks Exist?:}
+** (x) [10. React vs. Vanilla JavaScript (7/10)]{:10. React vs. Vanilla JavaScript:}
+** (x) [11. What is React? (9/10)]{:11. What is React?:}
+** (x) [13. Pure React (15/20)]{:13. Pure React:}
+** (x) [14. A Quick Look at React's Official Documentation (3/8)]{:14. A Quick Look at React's Official Documentation:}
+** (x) [15. Setting Up a New React Project: The Options (8/5)]{:15. Setting Up a New React Project- The Options:}
+** (x) [16. Setting Up a Project With Create-React-App (13/12)]{:16. Setting Up a Project With Create-React-App:}
+* ( ) Section 5: Working With Components, Props, and JSX
+** (x) [33. Rendering the Root Component and Strict Mode (7/18)]{:33. Rendering the Root Component and Strict Mode:}
+** (x) [35. Components as Building Blocks (5/8)]{:35. Components as Building Blocks:}
+** (x) [36. Creating And Reusing a Component (10/30)]{:36. Creating And Reusing a Component:}
+** (x) [37. What is JSX? (6/12)]{:37. What is JSX?:}
+** (x) [38. Creating More Components (8/29)]{:38. Creating More Components:}
+** (x) [39. JavaScript Logic in Components (4/8)]{:39. JavaScript Logic in Components:}
+** (x) [40. Separation of Concerns (6/9)]{:40. Separation of Concerns:}
+** (x) [41. Styling React Applications (12/36)]{:41. Styling React Applications:}
+** (x) [42. Passing and Receiving Props (9/21)]{:42. Passing and Receiving Props:}
+** (x) [43. Props, Immutability, and One-Way Data Flow (7/14)]{:43. Props, Immutability, and One-Way Data Flow:}
+** (x) [45. The Rules of JSX (4/13)]{:45. The Rules of JSX:}
+** (x) [46. Rendering Lists (11/29)]{:46. Rendering Lists:}
+** (x) [47. Conditional Rendering With && (9/54)]{:47. Conditional Rendering With:}
+** (x) [48. Conditional Rendering With Ternaries (5/17)]{:48. Conditional Rendering With Ternaries:}
+** ( ) [49. Conditional Rendering With Multiple Returns (5/)]{:49. Conditional Rendering With Multiple Returns:}
+** ( ) [50. Extracting JSX Into a New Component (5/)]{:50. Extracting JSX Into a New Component:}
+** ( ) [51. Destructuring Props (5/)]{:51. Destructuring Props:}
+** ( ) [52. React Fragments (6/)]{:52. React Fragments:}
+** ( ) 53. Setting Classes and Text Conditionally (8/)]{:53. Setting Classes and Text Conditionally:}
+** ( ) [54. Section Summary (6/)]{:54. Section Summary:}
+** ( ) [55. CHALLENGE #2: Profile Card (v2) (8/)]{:55. CHALLENGE #2- Profile Card (v2):}

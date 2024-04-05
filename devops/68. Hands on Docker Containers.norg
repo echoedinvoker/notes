@@ -1,0 +1,80 @@
+@document.meta
+title: 68. Hands on Docker Containers
+description: 
+authors: mattc
+categories: [
+  Docker
+  Dockerfile
+  Container
+  Nginx
+]
+created: 2024-03-31T22:59:01+0800
+updated: 2024-03-31T22:59:40+0800
+version: 1.1.1
+@end
+
+* Create a VM with docker installed by provisioner
+
+** docker documentation
+   .image pic/48.png
+
+** Vagrantfile
+   We refer to the above document and write each installation instruction as a provisioner.
+
+   .image pic/49.png
+
+** check if docker engine work
+   .image pic/50.png
+
+
+* run a container from image 'hello-world'
+
+** run
+   .image pic/51.png
+
+** check container status
+   .image pic/52.png
+
+
+* run a container from image 'nginx'
+
+** run a nginx container
+   .image pic/53.png
+
+** check IP address of container
+   .image pic/54.png
+
+   .image pic/55.png
+
+** check website internal
+   .image pic/56.png
+
+** check website external
+   .image pic/57.png
+
+
+* Create custom image by Dockerfile and build it
+
+  Above, we all used images pulled from Dockerhub to directly create containers. This time, we are going to write our own Dockerfile to create an image, and then create a container from it.
+
+** Dockerfile
+   .image pic/58.png
+
+   .image pic/59.png
+
+** build image and run it as container
+   .image pic/61.png
+
+   .image pic/62.png
+
+
+* Remove all things
+
+** stop running containers
+   .image pic/63.png
+
+** remove containers
+   .image pic/64.png
+
+** remove images
+   .image pic/65.png

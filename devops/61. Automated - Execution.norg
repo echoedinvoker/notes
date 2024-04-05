@@ -1,0 +1,23 @@
+@document.meta
+title: 61. Automated - Execution
+description: 
+authors: mattc
+categories: [
+  Provisioning
+  Validation
+]
+created: 2024-03-22T11:13:53+0800
+updated: 2024-03-22T11:15:34+0800
+version: 1.1.1
+@end
+
+* Run the provisioning 
+
+  .image pic/42/1.png
+
+  It will take about 20 minutes to complete. Some places may have slower download speeds, please be patient and do not interrupt randomly.
+
+
+* After the provisioning is done, check VMs status and go through the validations
+
+  .image pic/42/2.png

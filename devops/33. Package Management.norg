@@ -1,0 +1,77 @@
+@document.meta
+title: 33. Package Management
+description: 
+authors: mattc
+categories: [
+  RPM
+  YUM
+  repository
+  Install
+  Curl
+  Wget
+]
+created: 2024-03-17T13:28:49+0800
+updated: 2024-03-17T13:29:25+0800
+version: 1.1.1
+@end
+
+* rpm package manager
+
+** search rpm file on the internet
+   .image pic/20/1.png
+
+   .image pic/20/2.png
+
+** download the rpm file by curl
+   .image pic/20/3.png
+
+** install the rpm file by rpm
+   .image pic/20/4.png
+
+** other options of rpm
+   .image pic/20/5.png
+
+   .image pic/20/6.png
+
+** rpm is not convenient to use because it does not automatically install dependencies
+   .image pic/20/7.png
+
+   Although we can install dependencies one by one, it will be troublesome if there are many dependencies or multiple layers.
+
+
+* yum pakcage manager
+
+** repository
+   .image pic/20/8.png
+
+   .image pic/20/9.png
+
+** yum installing will automatically install dependencies
+   .image pic/20/10.png
+
+** if you want to install a package which is not available in the repository
+   .image pic/20/11.png
+
+*** search for installation method on Google
+    In this situation, we usually search for its installation method on Google. If there is an official website, that is the preferred option.
+
+    .image pic/20/12.png
+
+    .image pic/20/13.png
+
+*** add the repository
+    .image pic/20/14.png
+
+    wget is a download tool similar to curl, the difference between the two is that curl by default prints out the downloaded content (but you can use -o to insert output to file), while wget saves the downloaded content as a file.
+
+*** import the key (if required)
+    .image pic/20/15.png
+
+    You can still see that the operation of importing the key is done using rpm, because yum also uses rpm to install packages.
+
+*** install the packages
+    .image pic/20/16.png
+
+** other options of yum
+   .image pic/20/17.png
+

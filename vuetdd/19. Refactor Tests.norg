@@ -1,0 +1,57 @@
+@document.meta
+title: 19. Refactor Tests
+description: 
+authors: mattc
+categories: [
+  Refactor
+  Hook
+]
+created: 2024-03-24T15:43:25+0800
+updated: 2024-03-24T15:49:40+0800
+version: 1.1.1
+@end
+
+* Refactor the duplicated codes
+
+** find duplicated codes
+   .image pic/115.png
+
+** refactor by regular function
+   .image pic/116.png
+
+   .image pic/117.png
+
+
+* Refactor 1st test that use server
+
+  For the duplicated codes related to server, we use hook for refactoring, as it allows us to save certain values as state and separate them from the original test file.
+
+  In two different tests that use mock server, there are different logics present in each mock server. We can solve them one by one test to simplify the problem.
+
+  .image pic/118.png
+
+
+* Refactor 2nd test that use server
+
+** .only to 2nd test with server
+   .image pic/119.png
+
+** merge logic to useServer
+
+   .image pic/121.png
+
+   .image pic/122.png
+
+
+* Remove .only, do all tests
+
+  .image pic/123.png
+
+  .image pic/124.png
+
+
+* Refactor unit tests by setup()
+
+  Utilize the setup function prepared above to simplify the unit test codes as well.
+
+  .image pic/125.png

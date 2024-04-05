@@ -1,0 +1,27 @@
+@document.meta
+title: 33. Rendering the Root Component and Strict Mode
+description: 
+authors: mattc
+categories: [
+  Root
+  StrictMode
+  Scratch
+]
+created: 2024-03-30T15:21:33+0800
+updated: 2024-03-30T15:23:46+0800
+version: 1.1.1
+@end
+
+* Clear all files insdie `src`, we will start from scratch
+
+.image pic/38.png
+
+
+* First script and first(root) component
+
+.image pic/39.png
+
+
+* Strict mode
+
+.image pic/40.png

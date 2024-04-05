@@ -1,0 +1,37 @@
+@document.meta
+title: 64. Derived Traits and Marker Traits
+description: 
+authors: mattc
+categories: [
+  Derived Traits
+  Debug trait
+  PartialEq trait
+  Mark trait
+]
+created: 2024-03-19T17:09:52+0800
+updated: 2024-03-19T17:10:20+0800
+version: 1.1.1
+@end
+
+* Derived trait
+
+  There are some default traits in Rust that we can use the `derive` attribute to use, such as the `Debug` trait.
+
+** Debug trait
+   .image pic/36/1.png
+
+   .image pic/36/2.png
+
+** PartialEq trait
+   .image pic/36/3.png
+
+   .image pic/36/4.png
+
+
+* Mark trait
+
+  A trait without body contents is called a Mark trait, usually used in conjunction with subtraits.
+
+  .image pic/36/5.png
+
+  .image pic/36/6.png

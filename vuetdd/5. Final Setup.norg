@@ -1,0 +1,72 @@
+@document.meta
+title: 5. Final Setup
+description: 
+authors: mattc
+categories: [
+  Vitest
+  Render
+  Screen
+  Vitest global
+  setupTest
+]
+created: 2024-03-23T00:44:10+0800
+updated: 2024-03-23T00:44:46+0800
+version: 1.1.1
+@end
+
+* Start from built-in test example
+
+  There is a built-in component HelloWorld.vue that displays the title text using props msg. The built-in test example is to test whether this props can correctly render the text.
+
+  .image pic/16.png
+
+
+** vitest methods: describe, it, expect
+   .image pic/17.png
+
+   We will continue to use these three methods of vitest, but @vue/test-utils will be replaced by @testing-library/vue.
+
+** two steps of test function
+   .image pic/18.png
+
+   .image pic/19.png
+
+** test script
+   .image pic/20.png
+
+
+* Use @testing-library to replace vue-test-utils
+
+** render, screen of @testing-library/vue
+   .image pic/21.png
+
+** expand the matchers of expect by library @testing-library/jest-dom
+   .image pic/22.png
+
+
+* To prevent codes repeating on different test files
+
+** global vitest
+   .image pic/23.png
+
+   .image pic/24.png
+
+** setupTest
+   .image pic/25.png
+
+
+* Create a component and test it
+
+  .image pic/26.png
+
+  .image pic/27.png
+
+  Note that the test codes above were written first, so it is test driven development.
+
+
+* Clean out useless files and temporary comment out pinia and vue-router
+
+  .image pic/28.png
+
+  .image pic/29.png
+

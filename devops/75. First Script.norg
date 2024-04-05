@@ -1,0 +1,44 @@
+@document.meta
+title: 75. First Script
+description: 
+authors: mattc
+categories: [
+  Script
+  Sync folder
+]
+created: 2024-04-01T13:05:32+0800
+updated: 2024-04-01T13:05:49+0800
+version: 1.1.1
+@end
+
+* Sync \/opt\/script\/ to outside
+
+  Because I want to use an external editor to compile the script inside the VM, I need to make some settings in the Vagrantfile.
+
+  .image pic/97.png
+
+  .image pic/98.png
+
+
+* Make sure sync is working
+
+  .image pic/99.png
+
+
+* Write bash script
+
+** Shebang character
+   .image pic/100.png
+
+** add readibility to output
+   .image pic/101.png
+
+** add readibility to developer
+   .image pic/102.png
+
+
+* Add x permission to script file and execute it
+
+  .image pic/103.png
+
+  .image pic/104.png

@@ -1,0 +1,60 @@
+@document.meta
+title: 41. Extract API Function
+description: 
+authors: mattc
+categories: [
+  Coverage rate
+  Refactor
+  Mock module
+]
+created: 2024-04-04T19:49:03+0800
+updated: 2024-04-04T19:52:16+0800
+version: 1.1.1
+@end
+
+* Refactor axios call in SignUp component
+
+  We want to refactor the axios call in the SignUp component into a separate function so that we can reuse this function elsewhere.
+
+  .image pic/288.png
+
+  After we refactored, there were changes in the modules imported in the SignUp component, which caused tests to break (mainly unit tests).
+
+  .image pic/289.png
+
+** different from course video
+   Again, difference between `i18n.global.locale.value` and `i18n.global.locale`, not sure why there is such a difference in course videos and my own implementation.
+
+   .image pic/290.png
+
+   .image pic/291.png
+
+
+* Fix unit test 
+
+  .image pic/292.png
+
+  .image pic/293.png
+
+  .image pic/294.png
+
+
+* Integration test already implicitly covered signUp
+
+  .image pic/295.png
+
+
+* Unit test for ./api
+
+  .image pic/296.png
+
+  .image pic/297.png
+
+  .image pic/298.png
+
+
+* Coverage rate
+
+  The example above encountered an issue with coverage rate. When refactoring causes changes to a module, in addition to fixing unit tests, it is also important to pay attention to whether the coverage rate has changed. This is usually quite obvious, whereas integration tests may inadvertently already be testing the removed function.
+
+  However, in TDD, coverage rate is not the most important thing. The most important thing is to write good tests. Coverage rate is just a reference data, it cannot tell us whether the test really improves the code value, it can only show us which parts we missed testing.

@@ -8,7 +8,7 @@ categories: [
   ProjectItem
 ]
 created: 2024-01-02T16:56:57+0800
-updated: 2024-01-02T16:57:18+0800
+updated: 2024-03-20T22:50:20+0800
 version: 1.1.1
 @end
 
@@ -36,7 +36,7 @@ version: 1.1.1
   .image pic/128/3.png
 
 
-* ISSUE: li is out of ul element
+* Issue: li is out of ul element
 
   When we observe the actual result of the li element, we will find that it is outside the ul element because when we instantiate the ProjectItem, the first parameter we give is the id of the template element, not the ul element.
 

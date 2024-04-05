@@ -1,0 +1,35 @@
+@document.meta
+title: 154. Index Field Types
+description: 
+authors: mattc
+categories: [
+  Types
+  Redis Search
+  Schema
+]
+created: 2024-03-18T18:41:03+0800
+updated: 2024-03-18T18:41:30+0800
+version: 1.1.1
+@end
+
+* Types of Schema fields have different purposes
+
+  .image pic/154/1.png
+
+
+* Instructions of types
+
+  .image pic/154/2.png
+
+  .image pic/154/3.png
+
+  Therefore, TAG belongs to the type used for querying, while TEXT belongs to the type used for searching.
+
+
+* TAG and TEXT usage examples
+
+** fields examples
+   .image pic/154/4.png
+
+** website example
+   .image pic/154/5.png

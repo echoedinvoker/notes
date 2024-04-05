@@ -1,0 +1,30 @@
+@document.meta
+title: 158. Fuzzy Search
+description: 
+authors: mattc
+categories: [
+  Fuzzy
+  Mismatch
+]
+created: 2024-03-29T20:02:21+0800
+updated: 2024-03-29T20:02:38+0800
+version: 1.1.1
+@end
+
+* % for fuzzy search
+
+.image pic/1.png
+
+Using a single layer of wrapping strings allows for one character mismatch in the string, two layers allow for two character mismatches, and so on.
+
+
+* Practice in rbook
+
+.image pic/2.png
+
+.image pic/3.png
+
+.image pic/4.png
+
+.image pic/5.png
+

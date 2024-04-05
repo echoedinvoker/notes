@@ -10,11 +10,11 @@ categories: [
   animation
 ]
 created: 2024-01-29T22:53:31+0800
-updated: 2024-01-29T22:54:14+0800
+updated: 2024-03-20T22:50:52+0800
 version: 1.1.1
 @end
 
-* ISSUE: hidden focus
+* Issue: hidden focus
 
 ** issue explanation
    .image pic/163/1.png
@@ -27,7 +27,7 @@ version: 1.1.1
    .image pic/163/3.png
 
 
-* Test and 2nd ISSUE: broken animation
+* Test and 2nd Issue: broken animation
 
 ** issue explanation
    When the menu is open, clicking the close button will immediately trigger visibility:hidden, so the animation cannot be seen.

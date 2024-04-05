@@ -1,0 +1,34 @@
+* Problem & Solution
+
+** problem
+.image pic/35/1.png
+
+Simply put, we do not have the confidence to directly change the settings of the real server, but setting up various services locally is time-consuming and not repeatable (meaning it has to be done manually each time).
+
+** solution
+.image pic/35/2.png
+
+** objective
+.image pic/35/4.png
+
+
+* VProfile project
+
+** Architecture of VProfile project
+.image pic/35/5.png
+
+.image pic/35/7.png
+
+When you have cluster servers and need to establish a centralized storage, you can use NFS to achieve this goal.
+
+   As a DevOps engineer, implementation is more important than understanding the functionality of each service (but understanding the functionality of the service is also important...).
+
+
+** Architecture of Automation setup
+.image pic/35/6.png
+
+.image pic/35/8.png
+
+
+** Flow of execution
+.image pic/35/9.png

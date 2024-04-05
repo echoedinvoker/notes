@@ -1,0 +1,48 @@
+@document.meta
+title: 67. Choosing Associated vs Generic Type
+description: 
+authors: mattc
+categories: [
+  Relations
+  Assiciated Type
+  Trait
+  Struct
+  Generic
+  Confict
+]
+created: 2024-03-29T05:12:19+0800
+updated: 2024-03-29T05:13:09+0800
+version: 1.1.1
+@end
+
+* When left side associated type has multiple to one relation
+
+It means that when the same trait is implemented for the same struct, there can only be one possible associated type. If there are multiple possibilities, a generic type must be used to represent it.
+
+** confict
+.image pic/1.png
+
+.image pic/2.png
+
+** replace conflict associated type with generic type
+.image pic/3.png
+
+** use in main and assertions
+.image pic/4.png
+
+
+* When right side associated type has multiple to one relation
+
+** confict
+.image pic/5.png
+
+** replace conflict associated type with generic type
+.image pic/6.png
+
+** When there are multiple possible types on the right side, the left side variable needs to declare the type explicitly
+.image pic/7.png
+
+.image pic/8.png
+
+** use in main and assertions
+.image pic/9.png

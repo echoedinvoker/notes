@@ -1,0 +1,48 @@
+@document.meta
+title: 21. Task- Sign Up Success Response
+description: 
+authors: mattc
+categories: [
+  Mock Server Response
+  Alert
+  Conditional Test
+]
+created: 2024-03-24T19:26:59+0800
+updated: 2024-03-24T19:27:33+0800
+version: 1.1.1
+@end
+
+* Demand: alert message when the server response is successful
+
+  .image pic/132.png
+
+
+* Bootstrap alert documentation
+
+  .image pic/133.png
+
+
+* Multiple tests to check alert existence conditionally
+
+  .image pic/134.png
+
+  The above assertion can simultaneously check if the alert exists and if its content text is correct, but this writing style may result in lower readability in test codes and test reports.
+
+
+* Mock the server response data
+
+  .image pic/135.png
+
+  .image pic/136.png
+
+
+* Implement alert in the component
+
+  .image pic/137.png
+
+  Because our alert will determine whether to display and what to display based on the response message from the mock server, I think it is reasonable that there is no need to additionally check if the response status is successful in the test codes.
+
+
+* Check in the browser
+
+  .image pic/138.png

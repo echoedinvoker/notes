@@ -1,0 +1,26 @@
+@document.meta
+title: 16. Setting Up a Project With Create-React-App
+description: 
+authors: mattc
+categories: [
+]
+created: 2024-03-30T14:58:12+0800
+updated: 2024-03-30T14:58:38+0800
+version: 1.1.1
+@end
+
+* Create new React project by create-react-app
+
+.image pic/35.png
+
+
+* Check the codes that are created by create-react-app
+
+React only cares if the methods we use in Pure React are running correctly, and does not care about the file structure. The file structure is designed by the developers of create-react-app or Vite according to what they believe is most suitable for development purposes.
+
+.image pic/36.png
+
+
+* Launch the React app
+
+.image pic/37.png

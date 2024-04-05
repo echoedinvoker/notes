@@ -1,0 +1,83 @@
+@document.meta
+title: 44. Website Setup
+description: 
+authors: mattc
+categories: [
+  Web server
+  httpd
+]
+created: 2024-03-18T14:10:47+0800
+updated: 2024-03-18T14:11:02+0800
+version: 1.1.1
+@end
+
+* The following course schedule
+
+.image pic/28/1.png
+
+  Our upcoming lectures will focus on building websites using Linux.
+
+  The first step is to build a website using CentOS with a built-up template.
+
+  The second step is to build a website using Ubuntu with a LAMP architecture and a WordPress template.
+
+  Finally, we will automate the previous steps using provisioning.
+
+
+* Create new vm and basic setup
+
+** init vm
+   .image pic/28/2.png
+
+** network setup
+   .image pic/28/3.png
+
+** create new vm instance
+   .image pic/28/4.png
+
+** set hostname (not mandatory)
+   .image pic/28/5.png
+
+
+* Create a website by with a dummy html
+
+** Install httpd and other required packages
+   .image pic/28/6.png
+
+** start/enable httpd service
+   .image pic/28/7.png
+
+** check if httpd service works
+   .image pic/28/8.png
+
+** create index.html to /var/www/html
+   .image pic/28/9.png
+
+
+* Create a website by built-up website template
+
+** get download link
+   .image pic/28/10.png
+
+   .image pic/28/11.png
+
+** download and unzip
+   .image pic/28/12.png
+
+** make sure there is 'index.html'
+   .image pic/28/13.png
+
+** move to /var/www/html
+   .image pic/28/14.png
+
+
+* Stop/Disable the firewall
+
+  .image pic/28/15.png
+
+  Turning off the firewall may allow the web server to function properly, but this is not a good practice. We will teach about firewalls specifically later.
+
+
+* Test website
+
+  .image pic/28/16.png

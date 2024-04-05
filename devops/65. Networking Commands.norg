@@ -1,0 +1,87 @@
+@document.meta
+title: 65. Networking Commands
+description: 
+authors: mattc
+categories: [
+  Networking
+  Commands
+]
+created: 2024-03-29T12:27:51+0800
+updated: 2024-03-29T12:28:10+0800
+version: 1.1.1
+@end
+
+* Prepare
+
+.image pic/22.png
+
+.image pic/23.png
+
+.image pic/24.png
+
+
+* ip addr show: to check the network interface
+
+.image pic/25.png
+
+
+* ping: to check the network connection
+
+.image pic/26.png
+
+
+* /etc/hosts: to edit the ip address and its mapping
+
+.image pic/27.png
+
+
+* tracert or traceroute: to check the network path
+
+.image pic/28.png
+
+
+* mtr: to check the network path LIVE
+
+.image pic/39.png
+
+.image pic/40.png
+
+
+* netstat and ss -tuln: to check the open ports
+
+.image pic/29.png
+
+.image pic/30.png
+
+.image pic/31.png
+
+
+* nmap: to check the open ports (not limit to localhost)
+
+.image pic/32.png
+
+.image pic/33.png
+
+.image pic/34.png
+
+
+* telnet: to check specific port is open or not
+
+.image pic/41.png
+
+
+* dig and nslookup: to check the DNS
+
+.image pic/35.png
+
+.image pic/36.png
+
+
+* route -n: to check the gateway
+
+.image pic/37.png
+
+
+* arp: to check the mac address of the device
+
+.image pic/38.png

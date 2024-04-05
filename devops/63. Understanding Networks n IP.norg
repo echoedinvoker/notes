@@ -1,0 +1,73 @@
+@document.meta
+title: 63. Understanding Networks n IP
+description: 
+authors: mattc
+categories: [
+  Networks
+  Switch
+  Router
+  IPv4
+]
+created: 2024-03-29T06:03:13+0800
+updated: 2024-03-29T06:03:41+0800
+version: 1.1.1
+@end
+
+* Classifications by Geography
+
+  .image pic/1.png
+
+
+* Network equipments
+
+** Switch
+   .image pic/2.png
+
+** Router
+   .image pic/3.png
+
+
+* Network
+
+** home
+   .image pic/4.png
+
+   .image pic/5.png
+
+** corporate
+   .image pic/6.png
+
+   .image pic/7.png
+
+
+* IPv4
+
+** address
+   .image pic/8.png
+
+** range
+   .image pic/9.png
+
+
+* Public and Private IP
+
+  .image pic/10.png
+
+
+* Private IP
+
+  As long as the service does not need to connect to the Internet, Private IP can be used, so there will be no security issues.
+
+** range
+   .image pic/11.png
+
+   Once we understand the range of the IP addresses, we can immediately tell if it is a private IP.
+
+** implementations in different scopes
+   .image pic/12.png
+
+   .image pic/13.png
+
+   .image pic/14.png
+
+   As mentioned above, both personal homes and company internal communication use private IP addresses, so there will be no security issues and no shortage of available IP addresses.

@@ -1,0 +1,42 @@
+@document.meta
+title: 47. Automate Wordpress Setup
+description: 
+authors: mattc
+categories: [
+  Provisioning
+  Vagrantfile
+  Wordpress
+]
+created: 2024-03-20T01:42:28+0800
+updated: 2024-03-20T01:42:44+0800
+version: 1.1.1
+@end
+
+* Copy Vagrantfile
+
+  .image pic/31/1.png
+
+* Set static IP in Vagrantfile
+
+  .image pic/31/2.png
+
+
+* Copy all commands from documents to Vagrantfile provision block
+
+  .image pic/31/3.png
+
+  .image pic/31/4.png
+
+
+* Edit provision script
+
+  .image pic/31/5.png
+
+  .image pic/31/6.png
+
+
+* Open wordpress website
+
+  .image pic/31/7.png
+
+  Even using the templates provided in the course is the same situation.

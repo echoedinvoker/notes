@@ -1,0 +1,39 @@
+@document.meta
+title: 57. Nginx Setup
+description: 
+authors: mattc
+categories: [
+  nginx
+  Ubuntu
+]
+created: 2024-03-22T09:21:31+0800
+updated: 2024-03-22T09:21:50+0800
+version: 1.1.1
+@end
+
+* Update/Upgrade the packages/List and install nginx
+
+  .image pic/39/1.png
+
+  .image pic/39/2.png
+
+  .image pic/39/3.png
+
+
+* Create a new configuration file to redirect the request to Tomcat service
+
+  .image pic/39/4.png
+
+
+* Remove default link and create our own link to the config file
+
+  The link placed under `/etc/nginx/sites-enabled` in nginx represents the currently running web configuration. We need to remove the original link and create our own link, linking to the config file we just created.
+
+  .image pic/39/5.png
+
+  .image pic/39/6.png
+
+
+* restart service and final check
+
+  .image pic/39/7.png

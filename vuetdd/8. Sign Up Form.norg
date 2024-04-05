@@ -1,0 +1,103 @@
+@document.meta
+title: 8. Sign Up Form
+description: 
+authors: mattc
+categories: [
+  Input
+  Element exist
+  Button
+  QueryByPlaceholder
+  QueryByLabel
+]
+created: 2024-03-23T12:14:35+0800
+updated: 2024-03-23T12:15:18+0800
+version: 1.1.1
+@end
+
+* Username
+
+** by container
+*** red
+    .image pic/37.png
+*** green
+    .image pic/38.png
+
+
+* Email
+
+** by container
+*** red
+    .image pic/39.png
+
+    red step should not be passed, we should change test way.
+
+** query by placeholder of input
+*** red
+    .image pic/40.png
+*** green
+    .image pic/41.png
+
+** query by label linked to input (better)
+*** red
+    .image pic/42.png
+*** green
+    .image pic/43.png
+
+
+* Styling - use div to create block
+
+  .image pic/44.png
+
+  .image pic/45.png
+
+
+* About queries category
+
+  .image pic/46.png
+
+  .image pic/47.png
+
+
+* Password
+
+** input exist
+*** red
+    .image pic/48.png
+*** green
+    .image pic/49.png
+
+** has type password
+*** red
+    .image pic/50.png
+    .image pic/51.png
+*** green
+    .image pic/52.png
+
+
+* Password repeat
+
+*** red
+    .image pic/53.png
+*** green
+    .image pic/54.png
+
+
+* Sign up button
+
+** button exist
+*** red
+    .image pic/55.png
+*** green
+    .image pic/56.png
+
+** button disabled
+*** red
+    .image pic/57.png
+*** green
+    .image pic/58.png
+
+* Conclusion
+
+Actually, the test above does not add any value to our app because there is no logic in it. However, we will test the interaction between the user and this form later. If these elements are not present, the test will definitely fail.
+
+So although the test above has no value, it implies helping to ensure that elements exist for future tests.

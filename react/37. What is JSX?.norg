@@ -1,0 +1,26 @@
+@document.meta
+title: 37. What is JSX?
+description: 
+authors: mattc
+categories: [
+  JSX
+  Babel
+]
+created: 2024-04-02T14:29:52+0800
+updated: 2024-04-02T14:30:12+0800
+version: 1.1.1
+@end
+
+* What is JSX?
+
+** JSX is extention of JavaScript
+.image pic/49.png
+
+** Babel
+.image pic/50.png
+
+
+* JSX is declarative
+
+.image pic/51.png
+

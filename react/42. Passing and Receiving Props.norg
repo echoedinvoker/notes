@@ -1,0 +1,30 @@
+@document.meta
+title: 42. Passing and Receiving Props
+description: 
+authors: mattc
+categories: [
+  Props
+  Reuse
+]
+created: 2024-04-02T20:14:50+0800
+updated: 2024-04-02T20:15:14+0800
+version: 1.1.1
+@end
+
+* Props
+
+Props are the way components communicate with each other, especially for communication from parent component to child component.
+
+** send data to child component
+.image pic/65.png
+
+** receive data in child component
+.image pic/66.png
+
+
+* Reuse the same component with different data
+
+With props, we can easily reuse the same component to render different data.
+
+.image pic/67.png
+

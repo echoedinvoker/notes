@@ -1,0 +1,23 @@
+@document.meta
+title: 156. Tag Queries
+description: 
+authors: mattc
+categories: [
+  Tag
+  Stop words
+]
+created: 2024-03-22T13:15:24+0800
+updated: 2024-03-22T13:15:39+0800
+version: 1.1.1
+@end
+
+* Tag query
+
+.image pic/156/1.png
+
+
+* Stop words
+
+.image pic/156/2.png
+
+Stop words are not only effective for tags, but also for text.

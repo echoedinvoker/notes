@@ -1,0 +1,17 @@
+@document.meta
+title: 10. React vs. Vanilla JavaScript
+description: 
+authors: mattc
+categories: [
+  Vanilla JavaScript
+]
+created: 2024-03-28T05:27:27+0800
+updated: 2024-03-28T05:27:57+0800
+version: 1.1.1
+@end
+
+* Compare modern front-end frameworks with vanilla JS in html
+
+.image pic/12.png
+
+Front-end frameworks are mainly based on JS, while vanilla JS in html is mainly based on html, the latter easily leads to spaghetti code and thus generates bugs.

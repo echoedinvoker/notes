@@ -1,0 +1,51 @@
+@document.meta
+title: 76. Sample Script
+description: 
+authors: mattc
+categories: [
+  Tooplate
+]
+created: 2024-04-03T10:26:06+0800
+updated: 2024-04-03T10:26:41+0800
+version: 1.1.1
+@end
+
+* Purpose
+
+  We need to write a script that can automatically deploy templates from the Tooplate website to a virtual machine.
+
+  .image pic/105.png
+
+
+* Write the script 
+
+** raw commands
+   .image pic/106.png
+
+** increase readability
+   .image pic/107.png
+
+** remove useless output
+   .image pic/108.png
+
+** print some useful information at end
+   .image pic/109.png
+
+
+* Check if script exist in VM and set permission
+
+  .image pic/110.png
+
+
+* Execute script and check its output then do some fix
+
+  .image pic/111.png
+
+  .image pic/112.png
+
+  .image pic/113.png
+
+
+* Check if website work
+
+  .image pic/114.png

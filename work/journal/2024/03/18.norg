@@ -1,0 +1,28 @@
+
+- 08:29 決定合適的分配工作量到每一天，工作時間不超過11:00，如有超過可能要回報Sophie，每一天的工作量在合理的切割成小單位，每單位抓約20分完成，完成後就要去走動休息再回來工作
+- (-) 08:36 重設使用者資料 ~ 22日
+-- (-) 18日
+--- (x) 評估使用者設定視窗是否可以用在此task
+---- (x) 設定視窗為 src/components/features/account/AccountDialog.vue 在 src/views/Account.vue 中引入, 並 bind 到 ref 使用內部 open() 開啟
+----- (x) 位置應該要移動到更上層, 然後可能要做一個 store 去管理它的狀態，讓account頁面的edit跟右上settings都可以透過這個store去控制accountDialog的狀態
+----- (x) 如果要建立專屬 store 的, userStore 中的 details 相關狀態應該要移動到新的 store 比較合理
+---- (x) 使用 userStore 雙向綁訂 AccountDialog 內容, distach 有 update-details update-details-init(初始值，用來還原) edit-user (更改 userStore edit user id) 
+----- (x) 其中 update-details 中 password 的部份是從 users 中搜尋id得到使用者密碼, 但是 users 是分頁機制這種作法僅在 account 頁面合理, 必須另外想辦法取得密碼
+--- (-) 建立新store負責專門管理AccountDialog的狀態與內容
+---- (x) 實做狀態切換的部份
+-- ( ) 19日
+--- ( ) 將 userStore 相關狀態轉移
+-- ( ) 20日
+--- ( ) 資料設定按鈕
+--- ( ) 叫出設定視窗 (評估是否可以用使用者頁面的視窗)
+-- ( ) 21日
+--- ( ) 根據目前使用者，自動帶入資料到設定視窗
+--- ( ) 修改設定視窗到符合需求 (狀態、永久登入需隱藏)
+--- ( ) API 串接 (如果使用原有的設定視窗，此步驟工作可以減少)
+-- ( ) 22日
+--- ( ) 測試、細節微調
+- 09:29 評估結束，調整工作量分配，走動休息
+- 10:24 建立 userAccount directory 並將 AccountDialog.vue 轉移過來, 建立專屬 store 完成狀態切換部份
+- 10:27 評估今天工作量已經足夠，userStore 相關狀態轉移應該移至明日並且是專屬一日，因為是比較重要的部份，如果做得好的話後續工作會很簡單，散步休息，回來開始 study
+- 11:48 Study Devops 一個lecture 並散步回來，決定上班時間不進食，下午如果去OK的話可以買氣泡水或無糖飲料，繼續 Study devops，中午如果進入休息時間可以選擇補眠 (時間無限制)
+

@@ -1,0 +1,47 @@
+@document.meta
+title: 13. Mock Service Worker (MSW)
+description: 
+authors: mattc
+categories: [
+  MSW
+  Mock server
+  Unit test
+  HTTP client
+]
+created: 2024-03-23T21:38:09+0800
+updated: 2024-03-23T21:48:39+0800
+version: 1.1.1
+@end
+
+
+* Replace axios with fetch in component
+
+  .image pic/72.png
+
+
+* Migrate the axios part of test codes to a unit test file
+
+  Later, we will use MSW to mock the server, so that the choice of HTTP client is not limited. However, this testing method is no longer considered a unit test, so we will first move the mock axios part to a file dedicated to unit tests.
+
+  .image pic/73.png
+
+
+* Mock global fn - fetch
+
+  .image pic/74.png
+
+  .image pic/75.png
+
+
+* Mock server by MSW
+
+** remove mock client codes
+   .image pic/76.png
+
+** mock server and assertion to its response
+   .image pic/77.png
+
+   In fact, directly extract the request data in the MSW document is not recommended. The official recommendation from MSW is to write a set of logic in the server to allow it to respond as expected. However, the teacher think that test codes are used to test logic, and adding logic to them will make the test codes more fragile, potentially leading to false positive results.
+
+** prove the client is not restricted now
+   .image pic/78.png

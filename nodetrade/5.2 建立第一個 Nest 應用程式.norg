@@ -1,0 +1,49 @@
+@document.meta
+title: 5.2 建立第一個 Nest 應用程式
+description: 
+authors: mattc
+categories: 
+created: 2024-04-04T11:55:56+0800
+updated: 2024-04-04T11:56:12+0800
+version: 1.1.1
+@end
+
+* 建立一個新的 Nest 專案
+
+  .image pic/3.png
+
+
+* 範例檔案分析
+
+  當我們建立好一個新的 Nest 專案, 會有一些檔案被建立
+
+** controller
+   .image pic/4.png
+
+** test of controller
+   .image pic/5.png
+
+** module
+   .image pic/6.png
+
+** service
+   .image pic/7.png
+
+** main
+   .image pic/8.png
+
+
+* Nest 是模組化設計
+
+  我們嘗試建立一個新的 module 架構
+
+  .image pic/9.png
+
+  上面就是一個 module 的最基本架構 (沒有 main.ts 與 test)
+
+
+* Script to launch server
+
+  .image pic/10.png
+
+  .image pic/11.png

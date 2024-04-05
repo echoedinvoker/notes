@@ -1,0 +1,44 @@
+@document.meta
+title: 46. Rendering Lists
+description: 
+authors: mattc
+categories: [
+  Iterate
+  JSX in JS
+  Key
+]
+created: 2024-04-03T17:04:19+0800
+updated: 2024-04-03T17:04:59+0800
+version: 1.1.1
+@end
+
+* Prepare data
+
+.image pic/74.png
+
+
+* Iterate data elements with the same component 'Pizza'
+
+.image pic/75.png
+
+Note that above, we need to use curly braces before using `data.map()` and then return JSX. Therefore, JSX can still be used within the curly braces, and within this JSX, we can also use curly braces to write JS codes.
+
+.image pic/76.png
+
+
+
+* Merge <li> into Pizza
+
+Codes will become more concise like this.
+
+.image pic/77.png
+
+
+* Key attribute
+
+.image pic/78.png
+
+
+* We can directly iterate regular tags, not necessarily components.
+
+.image pic/79.png

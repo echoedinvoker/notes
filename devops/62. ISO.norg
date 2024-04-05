@@ -1,0 +1,72 @@
+@document.meta
+title: 62. ISO
+description: 
+authors: mattc
+categories: [
+  Network
+  OSI
+  Layer
+]
+created: 2024-03-22T12:06:01+0800
+updated: 2024-03-22T12:10:11+0800
+version: 1.1.1
+@end
+
+* Content of this section
+
+  .image pic/43/1.png
+
+
+* What is a Computer Network?
+
+  .image pic/43/2.png
+
+
+* Components of Computer Network
+
+  .image pic/43/3.png
+
+
+* OSI Model
+
+  The OSI Model is a standard specification that allows network devices from different vendors to communicate with each other. It divides the process of network communication into seven layers, each with specific functions, and only communicates with the two adjacent layers. This design makes the design of network devices simpler and easier to expand.
+
+  .image pic/43/4.png
+
+  .image pic/43/5.png
+
+  .image pic/43/6.png
+
+
+* Sending and receiving
+
+  Here we use sending letters as an analogy for data transmission.
+
+** letter
+   .image pic/43/7.png
+
+** data
+   .image pic/43/8.png
+
+
+* Laysers
+
+  We need to know the general functions of each layer, the units of data transmission, and the devices used in each layer.
+
+** data unit
+   .image pic/43/9.png
+
+   The 'data link' layer uses the physical address, also known as the MAC address.
+
+   The layer 'network' uses the IP address, sender and receiver's IP address are stored in the header of each packet.
+
+   The 'transport' layer is related to reliability. If errors are detected in the transmission content, it will be retransmitted.
+
+** devices
+   .image pic/43/10.png
+
+
+* Summary of layers
+
+  .image pic/43/11.png
+

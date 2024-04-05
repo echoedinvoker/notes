@@ -1,0 +1,37 @@
+@document.meta
+title: 64. Mouseover Events
+description: 
+authors: mattc
+categories: [
+  Event
+  Mouseover
+  Mouseout
+  Handler
+  Hover
+]
+created: 2024-03-19T14:10:10+0800
+updated: 2024-03-20T22:51:19+0800
+version: 1.1.1
+@end
+
+* Demand
+
+  .image pic/38/1.png
+
+* Register handlers to events
+
+** Selection.on & Check params of handler
+   .image pic/38/2.png
+
+** set up mouseover event
+   .image pic/38/3.png
+
+** set up mouseout event
+   .image pic/38/4.png
+
+
+* Still Issue: inserted transition will break ongoing transition
+
+  .image pic/38/5.png
+
+  We will solve this issue in next lecture.

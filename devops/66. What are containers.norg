@@ -1,0 +1,47 @@
+@document.meta
+title: 66. What are containers
+description: 
+authors: mattc
+categories: [
+  Containers
+  Isolation
+  Filesystems
+  Docker
+]
+created: 2024-03-29T13:06:27+0800
+updated: 2024-03-29T13:07:02+0800
+version: 1.1.1
+@end
+
+* Traditional processes share the OS filesystem and process tree.
+
+.image pic/42.png
+
+This disadvantage is that whenever the operating system updates binaries or libraries, all processes are affected.
+
+
+* Isolation by different computers
+
+.image pic/43.png
+
+The cost of this method is expensive.
+
+
+* Isolation by containers
+
+We give each process its own OS filesystem, their respective filesystems are independent and only store the files they need, so that processes do not affect or interfere with each other.
+
+.image pic/44.png
+
+* Archive container to image
+
+Because containers only contain isolated filesystems and the files needed for a single process, they are very lightweight. We can archive a container and convert it into an image for use in other locations.
+
+.image pic/45.png
+
+
+* How the container works
+
+Containers require a container engine to operate, and Docker is one of the most popular container engines.
+
+.image pic/46.png

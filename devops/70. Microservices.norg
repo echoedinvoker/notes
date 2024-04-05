@@ -1,0 +1,42 @@
+@document.meta
+title: 70. Microservices
+description: 
+authors: mattc
+categories: [
+  Monolithic
+  Microservices
+  Architecture
+  Containerization
+]
+created: 2024-04-01T09:44:18+0800
+updated: 2024-04-01T09:45:01+0800
+version: 1.1.1
+@end
+
+* Monolithic vs. Microservices
+
+** Monolithic
+   .image pic/78.png
+
+   The downside is that there is only one artifact (ex. vprofile_v2.war), so only one technology can be used, and if one of the sub-services is modified, the entire artifact must be rebuilt, deployed, tested, scaled, etc.
+
+** Microservices
+   .image pic/79.png
+
+   Each sub-service has its own server, artifact, technology, database, etc. They communicate with each other using a well-defined API. The benefit of this is that each sub-service can be modified, deployed, tested, scaled, etc. independently.
+
+
+* Downside of Microservices and how to solve it
+
+  .image pic/80.png
+
+  We use containerization to solve the problem of cost being too high.
+
+  .image pic/81.png
+
+
+* What is Microservices by AWS documentation
+
+  .image pic/82.png
+
+  Therefore, Microservices is actually a software architecture. It does not discuss whether to implement it using machines, virtual machines, or containers, but in modern software development, we usually use containers to implement Microservices.

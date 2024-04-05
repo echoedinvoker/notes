@@ -1,0 +1,45 @@
+@document.meta
+title: 27. 7 - Texturing With Shaders
+description: 
+authors: mattc
+categories: [
+  Texturing
+  Fragment
+  Shader
+  Color
+  Reverse
+]
+created: 2024-03-30T09:56:29+0800
+updated: 2024-03-30T09:57:09+0800
+version: 1.1.1
+@end
+
+* Load texture and uniform it to fragment shader
+
+.image pic/1.png
+
+
+* Render texture with fragment
+
+** vec4
+.image pic/2.png
+
+** vec3
+Instead of packaging texture and uv as a vec4 value, we can use vec3 instead, which will separate opacity and leave only color. This way, we have more control over the texture.
+
+.image pic/3.png
+
+
+* Benefits of using fragment to render texture
+
+We can directly add texture in a simple way using methods in the script, but using the fragment method allows us to have more flexible control over the way the texture is displayed, such as transparency, color, rotation, scaling, etc.
+
+** color
+.image pic/4.png
+
+.image pic/5.png
+
+** reverse
+.image pic/6.png
+
+.image pic/7.png

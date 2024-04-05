@@ -8,7 +8,7 @@ categories: [
   SEO
 ]
 created: 2024-01-30T15:23:30+0800
-updated: 2024-01-30T15:24:07+0800
+updated: 2024-03-20T22:51:07+0800
 version: 1.1.1
 @end
 
@@ -46,7 +46,7 @@ version: 1.1.1
    .image pic/166/10.png
 
 
-* SEO ISSUE: double nav
+* SEO Issue: double nav
 
 ** explaination
    Because we load two navs (menu and sidebar), this is not good for SEO.
@@ -59,7 +59,7 @@ version: 1.1.1
    .image pic/166/12.png
 
 
-* ISSUE: topbar not opacity=0 at start
+* Issue: topbar not opacity=0 at start
 
 ** explaination
    .image pic/166/13.png

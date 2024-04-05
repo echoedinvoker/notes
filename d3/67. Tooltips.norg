@@ -1,0 +1,41 @@
+@document.meta
+title: 67. Tooltips
+description: 
+authors: mattc
+categories: [
+  createPopper
+  Tooltip
+]
+created: 2024-03-28T18:37:23+0800
+updated: 2024-03-28T18:40:07+0800
+version: 1.1.1
+@end
+
+> The course used d3-tip, but it is no longer compatible after v6, so I switched to using createPopper to make tooltips.
+
+* Init tooltip as a hidden element
+
+  .image pic/2.png
+
+
+* Update tooltip to display
+
+  .image pic/3.png
+
+  .image pic/4.png
+
+  createPopper is to add the tooltip element after the current slice. This method has its pros and cons. It may not present naturally at the mouse cursor position, especially when the graphic of a single block is very large.
+
+** after checking ChatGPT
+   There is indeed a way to use createPopper to display the tooltip position following the cursor, but it is much more complex, so we will not discuss it here for now.
+
+
+* Edit contents by data
+
+  .image pic/6.png
+
+
+* Styling
+
+  .image pic/7.png
+  .

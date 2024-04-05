@@ -1,0 +1,48 @@
+@document.meta
+title: 31. Input Error Style
+description: 
+authors: mattc
+categories: [
+  Conditionally
+  Error styling
+  Input
+]
+created: 2024-03-26T21:51:59+0800
+updated: 2024-03-26T21:52:25+0800
+version: 1.1.1
+@end
+
+* Prepare: fix the prop name
+
+  .image pic/201.png
+
+  Simply because the name is too long, we will change to a simple prop name.
+
+
+* Error styling for input
+
+** bootstrap documentation
+   .image pic/197.png
+
+** help is set
+*** red
+    .image pic/198.png
+*** green
+    .image pic/199.png
+
+** help is not set
+*** red
+    .image pic/200.png
+*** green
+    .image pic/202.png
+
+
+* Error styling for feedback message
+
+** red
+   .image pic/203.png
+
+   In the situation where 'help is not set', the element `p` will be removed because of `v-if`, so checking for the presence of the class `invalid-feedback` here make no sense.
+
+** green
+   .image pic/204.png

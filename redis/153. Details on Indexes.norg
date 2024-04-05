@@ -1,0 +1,45 @@
+@document.meta
+title: 153. Details on Indexes
+description: 
+authors: mattc
+categories: [
+  Redis Search
+  Query and Search
+  FT.CREATE
+]
+created: 2024-03-18T18:28:11+0800
+updated: 2024-03-18T18:28:37+0800
+version: 1.1.1
+@end
+
+* Query and Search
+
+  Redis Search actually has two types of search: query and search.
+
+  .image pic/153/1.png
+
+  We illustrate the difference between query and search with real examples as below:
+
+  .image pic/153/2.png
+
+
+* FT.CREATE syntax
+
+** name of index
+   .image pic/153/3.png
+
+   idx:<thing> is conventionally used as the name of the index.
+
+   Can be considered as the key of the index
+
+** data structure of records
+   .image pic/153/4.png
+
+** prefix
+   .image pic/153/5.png
+
+   The prefix here refers to the prefix used for the hash table key, which is used to collect the corresponding hash tables.
+
+** Schema
+   .image pic/153/6.png
+

@@ -1,0 +1,72 @@
+@document.meta
+title: 28. Unit Tests
+description: 
+authors: mattc
+categories: [
+  Mock client
+  Mock Implementation
+  Mock Resolved Value
+  Mock Rejected Value
+]
+created: 2024-03-25T14:55:18+0800
+updated: 2024-03-25T14:55:52+0800
+version: 1.1.1
+@end
+
+* Copy paste lacked tests from integration test file to unit test file
+
+  .image pic/168.png
+
+  .image pic/169.png
+
+
+* Modify test fn one by one
+
+** 'display spinner': mockImplementation
+
+   This case requires simulating the delay of a response, so we use mockImplementation with new Promise and setTimeout to achieve this.
+
+   .image pic/170.png
+
+
+** 'display success message': mockResolve
+
+   In this example, response delay is not necessary, so we can directly use mockResolve.
+
+   .image pic/171.png
+
+   .image pic/172.png
+
+
+** 'hide sign up form': mockResovle
+
+   .image pic/173.png
+
+
+** Refactor the duplicated codes by beforeEach under describe block
+
+   .image pic/174.png
+
+
+** 'display generic message': mockRejectedValue
+
+   Using mockResolve is to simulate a successful situation, while using mockRejectedValue is to simulate a failure situation.
+
+   .image pic/175.png
+
+
+** 'hide the spinner' and refacor duplicated codes by beforeEach
+
+   .image pic/176.png
+
+
+** 'the error message is removed': mockImplementationOnce
+
+   We need to simulate multiple different responses for this case, so we need to use the Once version of mockImplementation.
+
+   .image pic/177.png
+
+
+* Remove .only to do the all tests
+
+  .image pic/178.png

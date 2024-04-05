@@ -1,0 +1,62 @@
+@document.meta
+title: 26. 6 - Noises
+description: 
+authors: mattc
+categories: [
+  Noise
+  Complex
+  Shadertoy
+]
+created: 2024-03-22T17:05:30+0800
+updated: 2024-03-22T17:05:55+0800
+version: 1.1.1
+@end
+
+* Why noise?
+
+  The things we draw with shaders don't look real enough because real-world objects always have random scratches and fine lines. We can use noise to simulate these random scratches and fine lines to make our drawings look more real.
+
+* Write a custom noise function
+
+  .image pic/28/1.png
+
+  .image pic/28/2.png
+
+
+* Get noise function from github
+
+  .image pic/28/3.png
+
+  .image pic/28/4.png
+
+  .image pic/28/5.png
+
+  .image pic/28/6.png
+
+
+* Comlex level of the noise
+
+  .image pic/28/7.png
+
+  .image pic/28/8.png
+
+  .image pic/28/9.png
+
+
+* Add other effect to the noise
+
+** animation
+   .image pic/28/10.png
+
+** blur
+   .image pic/28/11.png
+
+** mask
+   .image pic/28/12.png
+
+
+* Shadertoy
+
+  .image pic/28/13.png
+
+  .image pic/28/14.png

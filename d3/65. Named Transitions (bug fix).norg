@@ -1,0 +1,19 @@
+@document.meta
+title: 65. Named Transitions (bug fix)
+description: 
+authors: mattc
+categories: [
+  Named Transitions
+]
+created: 2024-03-19T14:18:02+0800
+updated: 2024-03-19T14:18:22+0800
+version: 1.1.1
+@end
+
+* Solve ISSUE from last lecture by named transition
+
+.image pic/38/6.png
+
+  As above, we have named the two new transitions (mouseover and mouseout) added in the previous lecture. If both transitions have the same name, it means they will cancel each other out. This is reasonable.
+
+  The other existing transitions do not need to be named and will not be affected by these two transitions. This solves the problem from the previous lecture.

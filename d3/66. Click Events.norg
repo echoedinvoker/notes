@@ -1,0 +1,19 @@
+@document.meta
+title: 66. Click Events
+description: 
+authors: mattc
+categories: [
+  Delete
+  Handler
+  Click
+]
+created: 2024-03-19T15:27:40+0800
+updated: 2024-03-19T15:27:56+0800
+version: 1.1.1
+@end
+
+* Click to remove document
+
+.image pic/39/1.png
+
+  In the handler above, there is no any operation on the graphic itself, but instead to delete document in Firestore, and then onSnapshot is triggered to update the graphic.

@@ -1,0 +1,39 @@
+@document.meta
+title: 20. Spinner
+description: 
+authors: mattc
+categories: [
+  Bootstrap
+  Conditional Display
+  QueryBy
+  Spinner
+]
+created: 2024-03-24T18:23:35+0800
+updated: 2024-03-24T18:24:06+0800
+version: 1.1.1
+@end
+
+* Add a spinner to the submit button
+
+** bootstrap documentation
+   .image pic/126.png
+
+** red
+   .image pic/127.png
+
+** green
+   .image pic/128.png
+
+
+* Spinner should be dipslayed CONDITIONALLY
+
+** demand
+   .image pic/129.png
+
+** red
+   .image pic/130.png
+
+   Therefore, we will test this conditional display in multiple test functions to verify its presence or absence under each condition.
+
+** green
+   .image pic/131.png

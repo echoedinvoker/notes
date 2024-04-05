@@ -1,0 +1,51 @@
+@document.meta
+title: 54. VM Setup
+description: 
+authors: mattc
+categories: [
+  Hostmanager
+  IP
+  Hostname
+  Multi-VM
+]
+created: 2024-03-21T17:12:47+0800
+updated: 2024-03-21T17:13:35+0800
+version: 1.1.1
+@end
+
+* Copy paste Vagrantfile from github
+
+  .image pic/36/1.png
+
+  .image pic/36/2.png
+
+  .image pic/36/3.png
+
+  We have only written the VMs needed for each service here, but have not yet started to implement these services.
+
+  .image pic/36/4.png
+
+** plugin: hostmanager
+   This is a global configuration that allows us to connect to other VMs using hostnames instead of IP addresses, which helps avoid issues with dynamic IPs.
+
+   .image pic/36/5.png
+
+
+* Create VMs
+
+** remember install plugin hostmanager
+   .image pic/36/6.png
+
+** check global status
+   .image pic/36/7.png
+
+
+* Communicate other VMs with hostname
+
+** mapping file created by hostmanager
+   .image pic/36/8.png
+
+   The automatically generated file by hostmanager as above, it resolves the hostname to an IP based on this.
+
+** ping test
+   .image pic/36/9.png

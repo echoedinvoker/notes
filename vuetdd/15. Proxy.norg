@@ -1,0 +1,42 @@
+@document.meta
+title: 15. Proxy
+description: 
+authors: mattc
+categories: [
+  Proxy
+  Backend
+  Path
+  Vite
+  Configuration
+]
+created: 2024-03-23T23:12:49+0800
+updated: 2024-03-23T23:13:19+0800
+version: 1.1.1
+@end
+
+* Prepare the backend server
+
+  In this lecture, we need to submit a form to send a request to a real backend server, so we will first start up the backend server provided by the course.
+
+  .image pic/80.png
+
+
+* Change related path to absolute path, but many issues
+
+  .image pic/81.png
+
+  .image pic/82.png
+
+
+* How to fix above issues
+
+  .image pic/83.png
+
+  .image pic/84.png
+
+  .image pic/85.png
+
+
+* Set proxy in vite and keep the relative path
+
+  .image pic/86.png

@@ -7,7 +7,7 @@ categories: [
   Status
 ]
 created: 2024-01-05T17:04:35+0800
-updated: 2024-01-05T17:05:08+0800
+updated: 2024-03-20T22:50:10+0800
 version: 1.1.1
 @end
 
@@ -39,7 +39,7 @@ version: 1.1.1
   .image pic/136/8.png
 
 
-* ISSUE: When drop on the same list, it still re-render
+* Issue: When drop on the same list, it still re-render
 
 ** explanation the issue
    .image pic/136/9.png

@@ -1,0 +1,26 @@
+@document.meta
+title: 38. Creating More Components
+description: 
+authors: mattc
+categories: [
+]
+created: 2024-04-02T14:47:32+0800
+updated: 2024-04-02T14:47:43+0800
+version: 1.1.1
+@end
+
+* Destructure App to more components
+
+The advantage of this is that it can increase readability and maintainability.
+
+.image pic/52.png
+
+
+* Insert datetime in footer: write JS in JSX
+
+.image pic/53.png
+
+
+* Menu: Build from very simple component to more complex component
+
+.image pic/54.png

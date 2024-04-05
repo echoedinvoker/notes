@@ -1,0 +1,40 @@
+@document.meta
+title: 60. Automated - Code
+description: 
+authors: mattc
+categories: [
+  Shell script
+  Provisioning
+]
+created: 2024-03-22T10:37:16+0800
+updated: 2024-03-22T10:37:34+0800
+version: 1.1.1
+@end
+
+* Add provisions and connect it to the shell script paths
+
+  Before, we used inline scripts for provisioning. This time, we changed to using paths to connect external shell script files. This way, you can keep your Vagrantfile clean and allow your shell scripts to be reused.
+
+  .image pic/41/1.png
+
+
+* Shell scripts
+
+  At the current stage, we do not have knowledge of Shell script and firewall, so we directly use the shell script provided by the lecturer. However, we can roughly see how to convert manual commands into shell scripts.
+
+** mysql shell script
+   .image pic/41/2.png
+
+** memcached shell script
+   .image pic/41/3.png
+
+** rabbitmq shell script
+   .image pic/41/4.png
+
+** tomcat shell script
+   .image pic/41/5.png
+
+   .image pic/41/6.png
+
+** nginx shell script
+   .image pic/41/7.png

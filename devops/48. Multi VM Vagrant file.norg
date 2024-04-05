@@ -1,0 +1,59 @@
+@document.meta
+title: 48. Multi VM Vagrant file
+description: 
+authors: mattc
+categories: [
+  Multi VMs
+  Vagrantfile
+]
+created: 2024-03-20T19:29:37+0800
+updated: 2024-03-20T19:29:56+0800
+version: 1.1.1
+@end
+
+* Why multi VMs
+
+  Some apps require multiple VMs to operate, such as web server and database server. These two servers must be separated, so multiple VMs are necessary.
+
+  Multiple VMs are set up in the same Vagrantfile, but it is not arbitrary to write multiple VMs in the same Vagrantfile. Instead, multiple VMs should be set up as a whole, a project, an app.
+
+
+* Get Vagrantfile sample for multi VMs 
+
+** from Vagrant official document
+   .image pic/32/1.png
+
+   It can be observed that the key point of multi VMs is in setting the names of the VMs. For example, the names of the VMs above are 'web' and 'db'. In the case of only one VM, we just use use default VM name, but in the case of multi VMs, we use VM names to differentiate between different VMs, so the VM names must be named individually.
+
+** from ChatGPT
+   .image pic/32/2.png
+
+   .image pic/32/3.png
+
+   .image pic/32/4.png
+
+   .image pic/32/5.png
+
+   Although using ChatGPT is very convenient and customizable, we must know how to ask questions, double check, and correct, so ChatGPT cannot replace us, but serves as our assistant.
+
+
+* Add new VM into multi VMs
+
+** Vagrantfile
+   .image pic/32/6.png
+
+** vagrant up to only specific VM
+   .image pic/32/7.png
+
+** check status
+   .image pic/32/8.png
+
+
+* Command 'vagrant' to specific VM or all VMs
+
+** to specific VM
+   .image pic/32/9.png
+
+** to all VMs
+   .image pic/32/10.png
+

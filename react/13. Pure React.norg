@@ -1,0 +1,47 @@
+@document.meta
+title: 13. Pure React
+description: 
+authors: mattc
+categories: [
+  HTML
+  ReactDOM
+]
+created: 2024-03-28T08:39:59+0800
+updated: 2024-03-28T08:40:16+0800
+version: 1.1.1
+@end
+
+* Install React in HTML
+
+.image pic/23.png
+
+.image pic/24.png
+
+.image pic/25.png
+
+
+* React core: create components
+
+.image pic/26.png
+
+
+* ReactDOM: render elements to the DOM
+
+.image pic/27.png
+
+
+* Write contents of elements
+
+.image pic/28.png
+
+
+* native JS in component
+
+.image pic/29.png
+
+
+* useEffect
+
+.image pic/30.png
+
+.

@@ -1,0 +1,30 @@
+@document.meta
+title: 48. Conditional Rendering With Ternaries
+description: 
+authors: mattc
+categories: [
+  Ternary Operator
+  Truthy/Falsy
+]
+created: 2024-04-03T20:47:17+0800
+updated: 2024-04-03T20:47:46+0800
+version: 1.1.1
+@end
+
+* Replace short circuit with ternary operator in Menu
+
+.image pic/85.png
+
+
+* Ternary operator can do more than just replacing short circuit
+
+** render different thing when falcy
+.image pic/86.png
+
+** condition can be truthy or falcy
+.image pic/87.png
+
+
+* Replace short circuit with ternary operator in Footer also
+
+.image pic/88.png

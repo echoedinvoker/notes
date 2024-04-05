@@ -1,0 +1,44 @@
+@document.meta
+title: 65. Associated Types in Traits
+description: 
+authors: mattc
+categories: [
+  Associated Types
+  Traits return
+]
+created: 2024-03-19T17:49:03+0800
+updated: 2024-03-19T17:49:18+0800
+version: 1.1.1
+@end
+
+* Meaning to wrap single value with struct?
+
+  Assuming we want to calculate the distance that can be covered in 3 hours, this will generate many values of type u32, each with a different meaning. To avoid confusion, it is recommended to create separate structs for each.
+
+  .image pic/37/1.png
+
+
+* Implement fn
+
+  Then we implement the function to calculate the distance of three hours.
+
+  .image pic/37/2.png
+
+  From the above, it is found that the two functions are very similar, and they should be able to be refactored using traits.
+
+
+* Refactor by associated type
+
+  However, during the process of refactoring into a trait, it was discovered that the return type would change as follows:
+
+  .image pic/37/3.png
+
+  We can use associated type to solve this situation.
+
+  .image pic/37/4.png
+
+
+* Associated type !== Generics
+
+  It is important to note that associated types are different from generics, as they serve different purposes. Generics are used in places like struct, enum, and fn, while associated types are used within traits.
+

@@ -1,0 +1,51 @@
+@document.meta
+title: 34. Services
+description: 
+authors: mattc
+categories: [
+  Services
+]
+created: 2024-03-17T14:17:52+0800
+updated: 2024-03-17T14:18:10+0800
+version: 1.1.1
+@end
+
+* Check the status of the service
+
+  .image pic/21/1.png
+
+
+* Change active status of service
+
+** start
+   .image pic/21/2.png
+
+** restart, reload
+   .image pic/21/3.png
+
+** stop
+   .image pic/21/4.png
+
+
+* Enable the service
+
+  .image pic/21/5.png
+
+  .image pic/21/6.png
+
+  So after rebooting, whether the service is active is only related to whether it is enabled, not whether it was active before the reboot.
+
+
+* is-active & is-enabled
+
+  .image pic/21/7.png
+
+
+* Service configuration file
+
+  .image pic/21/8.png
+
+
+* One important service 'sshd'
+
+  .image pic/21/9.png

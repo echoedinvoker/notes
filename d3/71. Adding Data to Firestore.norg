@@ -1,0 +1,39 @@
+@document.meta
+title: 71. Adding Data to Firestore
+description: 
+authors: mattc
+categories: [
+  Submit
+  Form
+]
+created: 2024-04-04T14:13:00+0800
+updated: 2024-04-04T14:13:29+0800
+version: 1.1.1
+@end
+
+* Setup Firestore DB
+
+.image pic/22.png
+
+.image pic/23.png
+
+
+* Add data to Firestore by form
+
+.image pic/24.png
+
+
+* 1st Test: init status not set
+
+** issues
+.image pic/25.png
+
+** fix
+.image pic/26.png
+
+
+* Test
+
+.image pic/27.png
+
+.image pic/28.png

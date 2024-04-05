@@ -1,0 +1,43 @@
+@document.meta
+title: 51. JSON n YAML
+description: 
+authors: mattc
+categories: [
+  Data transmission
+  YAML
+  JSON
+  Dictionary
+  Conversion
+]
+created: 2024-03-20T23:47:43+0800
+updated: 2024-03-20T23:48:14+0800
+version: 1.1.1
+@end
+
+* Prepare a dictionary data
+
+.image pic/34/1.png
+
+We will then convert the above dict into JSON and YAML formats. In the field of DevOps, these two formats are commonly used for data transmission, so it is important to be familiar with them.
+
+
+* Convert dict to JSON
+
+.image pic/34/2.png
+
+.image pic/34/3.png
+
+  JSON is basically very similar to a dictionary, except that the last item (of dict or list) cannot end with a comma. No more modifications are needed.
+
+
+* Convert dict to YAML
+
+.image pic/34/4.png
+
+.image pic/34/5.png
+
+.image pic/34/6.png
+
+.image pic/34/7.png
+
+Although the conversion process of YAML is more complicated, its format is much simpler than JSON and is also easier to read. Therefore, in the DevOps field, the frequency of using YAML is quite high. We need to have the ability to directly write YAML configurations (there will be a high demand in Ansible and Docker).

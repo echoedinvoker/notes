@@ -1,0 +1,48 @@
+@document.meta
+title: 12. Setting Up Our Development Environment
+description: 
+authors: mattc
+categories: [
+  Pure React
+]
+created: 2024-03-28T06:17:42+0800
+updated: 2024-03-28T06:17:53+0800
+version: 1.1.1
+@end
+
+* Install React and ReactDOM in html
+
+.image pic/23.png
+
+.image pic/24.png
+
+.image pic/25.png
+
+
+* React core provides a method to create a component
+
+.image pic/26.png
+
+We cannot use JSX syntax inside the return statement because we do not have any tools to compile JSX into JavaScript in this environment. Therefore, we must use the React.createElement method to create components.
+
+
+* ReactDOM to render the component to the DOM
+
+.image pic/27.png
+
+
+* Other parameters of React.createElement
+
+.image pic/28.png
+
+Because we do not have the JSX tool, we need to pass text contents in as parameters.
+
+
+* We can write any JS inside component fn
+
+.image pic/29.png
+
+
+* Refresh time every seconds by React method useEffect
+
+.image pic/30.png

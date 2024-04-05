@@ -1,0 +1,49 @@
+@document.meta
+title: 64. Protocols, ports etc
+description: 
+authors: mattc
+categories: [
+  Protocol
+  TCP/IP
+  UDP
+]
+created: 2024-03-29T10:27:06+0800
+updated: 2024-03-29T10:27:35+0800
+version: 1.1.1
+@end
+
+* Protocal
+
+.image pic/15.png
+
+
+* TCP vs UDP
+
+TCP and UDP are two protocols of the TCP/IP transport layer.
+
+.image pic/16.png
+
+UDP is fast but unreliable. Sometimes this is necessary, for example when our browser needs to quickly obtain the IP address of a domain.
+
+
+* Protocal has default port number
+
+.image pic/18.png
+
+DNS and HTTP belong to the protocol of the TCP/IP application layer, while TCP and UDP belong to the protocol of the TCP/IP transport layer. Both protocols are specifications, but they differ in their targets.
+
+
+* OSI 7 layer vs TCP/IP 4 layer
+
+.image pic/19.png
+
+
+* Communications
+
+The following mainly explains that in addition to having an IP address, devices also need a port number to communicate. This is because if only an IP address is available, it is not possible to know which application program on the other side to communicate with.
+
+** simple example
+.image pic/20.png
+
+** our project
+.image pic/21.png

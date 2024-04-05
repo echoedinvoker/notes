@@ -1,0 +1,33 @@
+@document.meta
+title: 9. Form Interactions
+description: 
+authors: mattc
+categories: [
+  User session
+  UserEvent
+  Interaction
+]
+created: 2024-03-23T15:15:23+0800
+updated: 2024-03-23T15:15:58+0800
+version: 1.1.1
+@end
+
+* Red
+
+** requirement
+   .image pic/59.png
+
+** create test
+   If the description is very long and complicated, we can use the describe method to help break it down into segments, so that describe can also be used within describe.
+
+*** render component, get elements and assertion
+    .image pic/60.png
+*** add user session and action
+    .image pic/61.png
+*** use better matcher in assertion
+    .image pic/62.png
+
+
+* Green
+
+  .image pic/63.png

@@ -1,0 +1,35 @@
+@document.meta
+title: 62. Trait Objects
+description: 
+authors: mattc
+categories: [
+  Dynamic Dispatch
+  Static Dispatch
+  Trait Objects
+  Trait Bound
+  Smart Pointer
+]
+created: 2024-03-17T10:58:33+0800
+updated: 2024-03-17T10:59:07+0800
+version: 1.1.1
+@end
+
+* Static Dispatch and Dynamic Dispatch
+
+** Static Dispatch
+   .image pic/35/1.png
+
+** dynamic dispatch
+   .image pic/35/2.png
+
+
+* Issue of return trait bound
+
+** explanation of the issue
+   .image pic/35/3.png
+
+** create issue situation
+   .image pic/35/4.png
+
+** solve issue by pointer with dynamic trait bound
+   .image pic/35/5.png

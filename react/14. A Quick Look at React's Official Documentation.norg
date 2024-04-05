@@ -1,0 +1,27 @@
+@document.meta
+title: 14. A Quick Look at React's Official Documentation
+description: 
+authors: mattc
+categories: [
+  Documentation
+  Learn
+  Reference
+]
+created: 2024-03-30T14:37:57+0800
+updated: 2024-03-30T14:38:24+0800
+version: 1.1.1
+@end
+
+* React documentation
+
+In the official website of `react.dev`, there are only two important sections for us, one is `Learn` and the other is `Reference`.
+
+** Learn
+Here are two topics that are very helpful for deepening your understanding of React, I recommend checking them out.
+
+.image pic/31.png
+
+** Reference
+Here you can find the most accurate ways to use various React methods and hooks. You can keep this section open at all times to refer to when working on a React project.
+
+.image pic/32.png

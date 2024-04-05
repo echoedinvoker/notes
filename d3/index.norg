@@ -50,10 +50,27 @@
 ** (x) [58. Arc Enter/Exit Tween (10/30)]{:58. Arc Enter Tween:}
 ** (x) [60. Arc Update Tween (14/80)]{:60. Arc Update Tween:}
 ** (x) [61. Legends (7/46)]{:61. Legends:}
-* ( ) Section 9: Project Two - Line Chart (Crypto Dashboard)
+* (-) Section 9: Project Two - Line Chart (Crypto Dashboard)
 ** ( ) [62. Interactive D3 Visuals (2/)]{:62. Interactive D3 Visuals:}
 ** ( ) [63. Event Listeners (2/)]{:63. Event Listeners:}
-** ( ) [64. Mouseover Events (7/)]{:64. Mouseover Events:}
-** ( ) [65. Named Transitions (bug fix) (2/)]{:65. Named Transitions (bug fix):}
-** ( ) [66. Click Events (5/)]{:66. Click Events:}
-** ( ) [67. Tooltips (11/)]{:67. Tooltips:}
+** (x) [64. Mouseover Events (7/37)]{:64. Mouseover Events:}
+** (x) [65. Named Transitions (bug fix) (2/6)]{:65. Named Transitions (bug fix):}
+** (x) [66. Click Events (5/60)]{:66. Click Events:}
+** (x) [67. Tooltips (11/143)]{:67. Tooltips:}
+* ( ) Section 10: Project Two - Fitness Tracker (Line Graphs)
+** (x) [69. HTML Template Setup (10/85)]{:69. HTML Template Setup:}
+** (x) [70. Adding DOM Events (9/42)]{:70. Adding DOM Events:}
+** (x) [71. Adding Data to Firestore (8/35)]{:71. Adding Data to Firestore:}
+** (x) [72. Realtime Data Setup (9/32)]{:72. Realtime Data Setup:}
+** ( ) [73. Graph Setup & Margins (6/)]{:73. Graph Setup n Margins:}
+** ( ) [74. Time Scales & Axes Groups (8/)]{:74. Time Scales n Axes Groups:}
+** ( ) [75. Domains & Axes (6/)]{:75. Domains n Axes:}
+** ( ) [76. Formatting Times & Axes (7/)]{:76. Formatting Times n Axes:}
+** ( ) [77. Enter & Exit Selections (7/)]{:77. Enter n Exit Selections:}
+** ( ) [78. Adding Dummy Data (3/)]{:78. Adding Dummy Data:}
+** ( ) [79. Filtering Data (5/)]{:79. Filtering Data:}
+** ( ) [80. Line Path Generator (9/)]{:80. Line Path Generator:}
+** ( ) [81. Data Point Hover Effect (4/)]{:81. Data Point Hover Effect:}
+** ( ) [82. Project Challenge (SVG Lines) (3/)]{:82. Project Challenge (SVG Lines):}
+** ( ) [83. Challenge Solution (7/)]{:83. Challenge Solution:}
+** ( ) [84. Project Summary (1/)]{:84. Project Summary:}

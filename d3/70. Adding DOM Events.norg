@@ -1,0 +1,38 @@
+@document.meta
+title: 70. Adding DOM Events
+description: 
+authors: mattc
+categories: 
+created: 2024-04-04T13:26:07+0800
+updated: 2024-04-04T13:28:11+0800
+version: 1.1.1
+@end
+
+* Requirement
+
+  We hope that clicking the button will switch activities, and make some adjustments to the relevant parts of the page based on the activity.
+
+  .image pic/17.png
+
+The reason for also switching the id of the input is so that when submitting the form, it is known which document (or property) in the firebase collection it should correspond to.
+
+
+* Write index.ts for change activity by buttons
+
+** get elements
+   .image pic/18.png
+
+** DOM manipulation
+   .image pic/19.png
+
+
+* Wrap index.ts codes as a function
+
+  Because import seems to have a pre-emptive effect, the above method does not work, so change the codes in index.ts to a function output to main.ts and call it at the end.
+
+  .image pic/20.png
+
+
+* Test
+
+  .image pic/21.png

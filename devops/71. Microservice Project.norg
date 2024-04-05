@@ -1,0 +1,41 @@
+* Plan and create VM with docker engine and docker compose
+
+** microservices architecture
+   .image pic/83.png
+
+** create VM
+   .image pic/84.png
+
+
+* Clone github codes and use docker compose to build all images and containers
+
+  Because this time docker compose directly specifies local Dockerfiles to build images, we need to clone all codes from github.
+
+** clone github codes
+   .image pic/85.png
+
+** check docker-compose.yml content
+   .image pic/86.png
+
+   .image pic/87.png
+
+** docker compose up
+   .image pic/88.png
+
+
+* Check all containers status and check web app on browser
+
+  .image pic/89.png
+
+  .image pic/90.png
+
+  .image pic/91.png
+
+  This web app is built with microservices and you can try it out yourself.
+
+
+* Remove all containers and images
+
+  .image pic/92.png
+
+  .image pic/93.png

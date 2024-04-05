@@ -1,0 +1,45 @@
+@document.meta
+title: 11. What is React?
+description: 
+authors: mattc
+categories: [
+  Features
+]
+created: 2024-03-28T05:34:04+0800
+updated: 2024-03-28T05:34:22+0800
+version: 1.1.1
+@end
+
+* What is React?
+
+  .image pic/13.png
+
+  .image pic/14.png
+
+
+* Destruct the features
+
+** based on components
+   .image pic/15.png
+
+   .image pic/16.png
+
+** declarative
+   .image pic/17.png
+
+** state-driven
+   .image pic/18.png
+
+** javascript library
+   .image pic/19.png
+
+** extremely popular
+   .image pic/20.png
+
+** created by Facebook
+   .image pic/21.png
+
+
+* Summary
+
+  .image pic/22.png

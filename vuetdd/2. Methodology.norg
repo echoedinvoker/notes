@@ -1,0 +1,29 @@
+@document.meta
+title: 2. Methodology
+description: 
+authors: mattc
+categories: [
+  TDD
+  Steps
+]
+created: 2024-03-22T20:21:23+0800
+updated: 2024-03-22T20:21:41+0800
+version: 1.1.1
+@end
+
+* What is TDD?
+
+  TDD has three stages as follows.
+
+  .image pic/1.png
+
+  TDD allows us to refactor easily without breaking the application, and if we need to add new features or have new requirements, we will go back to the red phase, thus becoming a circle.
+
+  The first phase of red stage test codes are written based on requirements before the app codes are written, the test codes are written before the app codes, so it is called Test Driven Development (TDD).
+
+
+* Why TDD?
+
+  1. It is helpful to documenting the expected behavior of the application.
+
+  2. When we work on application written by someone else, we can use the test code to understand the details of the application.

@@ -1,0 +1,80 @@
+@document.meta
+title: 56. App setup
+description: 
+authors: mattc
+categories: [
+  Tomcat
+  Service
+  Artifact
+  WAR
+  Maven
+  JDK
+]
+created: 2024-03-22T01:36:09+0800
+updated: 2024-03-22T01:36:57+0800
+version: 1.1.1
+@end
+
+* ssh in and udpate the package list
+
+.image pic/38/1.png
+
+* install dependencies
+
+.image pic/38/2.png
+
+.image pic/38/20.png
+
+.image pic/38/3.png
+
+
+* Setup Tomcat as a service
+
+** download tomcat and unzip the Tarball
+.image pic/38/4.png
+
+Some people use Tomcat after decompression, but we choose to turn it into a service, so we need to perform the following operations.
+
+** create tomcat user and its home directory
+.image pic/38/5.png
+
+** change ownership of all tomcat files to tomcat user and group
+.image pic/38/6.png
+
+.image pic/38/7.png
+
+** create service configuration of Tomcat
+.image pic/38/8.png
+
+.image pic/38/9.png
+
+** reload service daemon, then start & enable service
+.image pic/38/10.png
+
+
+* Tomcat is different from other packages which setup by yum, dnf or apt
+
+When installing with yum, dnf, or apt, the files in the packages will be extracted and placed in the standard directories of Linux, such as /etc, /usr, /var, etc. However, some products like Tomcat cannot be installed using yum, dnf, or apt, so they need to be installed manually. Additionally, usually all files are kept together.
+
+.image pic/38/11.png
+
+.image pic/38/12.png
+
+
+* Setup App on Tomcat
+
+** download app source codes and build artifact
+.image pic/38/13.png
+
+.image pic/38/14.png
+
+** setup artifact on the tomcat
+.image pic/38/15.png
+
+.image pic/38/16.png
+
+.image pic/38/17.png
+
+.image pic/38/18.png
+
+.image pic/38/19.png

@@ -7,11 +7,11 @@ categories: [
   Responsive
 ]
 created: 2024-01-05T11:02:50+0800
-updated: 2024-01-05T11:03:47+0800
+updated: 2024-03-20T22:49:42+0800
 version: 1.1.1
 @end
 
-* ISSUE: no respones to screen dimension changes
+* Issue: no respones to screen dimension changes
 
   When we change the screen dimension, the camera and renderer do not respond to the changes as bellows:
 

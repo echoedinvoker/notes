@@ -1,0 +1,75 @@
+@document.meta
+title: 39. Store Language in LocalStorage
+description: 
+authors: mattc
+categories: [
+  Language
+  I18n
+  Mock hook
+  Mock localStorage
+  Test i18n initialization
+]
+created: 2024-04-01T17:19:20+0800
+updated: 2024-04-01T17:20:19+0800
+version: 1.1.1
+@end
+
+* When select language, store the language in localStorage
+
+** requirements
+   .image pic/261.png
+
+** describe the requirements
+   .image pic/262.png
+
+** red
+   .image pic/263.png
+
+** green but unit test failed
+   .image pic/264.png
+
+** skip failed unit test temporarily
+   .image pic/265.png
+
+
+* Init i18n
+
+** requirements
+   .image pic/266.png
+
+** refactor i18n init codes for testing
+   .image pic/267.png
+
+** describe the requirements
+   .image pic/268.png
+
+** three conditions:
+*** Condition 1: localStorage is not set and browser language is not set
+    .image pic/269.png
+
+*** Condition 2: localStorage is not set and browser language is set
+    .image pic/270.png
+
+    .image pic/271.png
+
+    .image pic/272.png
+
+*** Condition 3: localStorage is set
+    .image pic/273.png
+
+    .image pic/274.png
+
+    .image pic/275.png
+
+    .image pic/276.png
+
+
+* Unit test
+
+** copy paste from integration test and modify (mock localStorage, i18n, and use original user setup)
+   .image pic/277.png
+
+** mock i18n hook (useI18n) for composition API testing
+   .image pic/278.png
+
+   .image pic/279.png

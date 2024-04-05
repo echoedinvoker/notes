@@ -1,0 +1,61 @@
+@document.meta
+title: 18. Disable Button
+description: 
+authors: mattc
+categories: [
+  Waterfall
+  Mock Server
+  Mock Client
+  Server Delay
+  BeforeEach
+  Reset Mock
+]
+created: 2024-03-24T13:16:54+0800
+updated: 2024-03-24T13:17:38+0800
+version: 1.1.1
+@end
+
+* Demand: prevent the API call waterfall caused by continuous submissions.
+
+  .image pic/103.png
+
+
+* Integration test
+
+** first, write the description from the requirement
+   .image pic/104.png
+
+** try to build the contents of the test
+   .image pic/105.png
+
+** mock server should be closed after the test
+   .image pic/106.png
+
+   .image pic/107.png
+
+
+* Implementation of the compoenent
+
+  .image pic/108.png
+
+
+* Back to the test codes, add delay to the server
+
+  .image pic/109.png
+
+
+* Unit test
+
+** copy codes from integration test and remove mock server
+   .image pic/110.png
+
+** better matcher for mock client
+   .image pic/111.png
+
+** previos test, the call will be counted
+   .image pic/112.png
+
+   .image pic/113.png
+
+** simulate server delay by mock client setting
+   .image pic/114.png

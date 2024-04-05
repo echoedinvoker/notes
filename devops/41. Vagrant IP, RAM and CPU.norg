@@ -1,0 +1,57 @@
+@document.meta
+title: 41. Vagrant IP, RAM and CPU
+description: 
+authors: mattc
+categories: [
+  Vagrantfile
+  VM settings
+  Static IP
+  Bridge network
+]
+created: 2024-03-17T19:01:17+0800
+updated: 2024-03-17T19:01:46+0800
+version: 1.1.1
+@end
+
+* Destroy all the VMs & reserved files of Vagrant
+
+  .image pic/25/1.png
+
+* Edit Vagrantfile
+
+** main block
+   .image pic/25/2.png
+
+** sub-block
+   .image pic/25/3.png
+
+   .image pic/25/4.png
+
+** set memory allocation and CPU cores number
+   .image pic/25/5.png
+
+** set bridge network
+   .image pic/25/6.png
+
+** set static IP
+   .image pic/25/7.png
+
+
+* Create new VM with edited Vagrantfile settings
+
+  .image pic/25/8.png
+
+
+* SSH into the VM and check if Vagrantfile settings work
+
+** login
+   .image pic/25/9.png
+
+** check memory
+   .image pic/25/10.png
+
+** check CPU cores number
+   .image pic/25/11.png
+
+** check static IP
+   .image pic/25/12.png

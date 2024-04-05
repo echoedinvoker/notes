@@ -1,0 +1,55 @@
+@document.meta
+title: 37. Language Selector
+description: 
+authors: mattc
+categories: [
+  Mock
+  Language
+  Selector
+]
+created: 2024-03-30T12:08:13+0800
+updated: 2024-03-30T12:08:43+0800
+version: 1.1.1
+@end
+
+* Red and Green for new requirement
+
+** red
+.image pic/245.png
+
+** green
+.image pic/246.png
+
+
+* Two ways to solve above issue
+
+** direct expect i18n value
+.image pic/247.png
+
+** create a temp component by option API for render()
+.image pic/248.png
+
+
+* Fillfull other options of describe.each()
+
+.image pic/249.png
+
+
+* Unit test
+
+In unit tests, we directly create a very simple object (only the property to be tested is needed) to mock $i18n.
+
+.image pic/250.png
+
+
+
+* Implement to App.vue and styling
+
+  ** implement to App.vue
+.image pic/251.png
+
+** flagcdn
+.image pic/252.png
+
+** replace span to img and add space between
+.image pic/253.png

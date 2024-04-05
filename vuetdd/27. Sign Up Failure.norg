@@ -1,0 +1,58 @@
+@document.meta
+title: 27. Sign Up Failure
+description: 
+authors: mattc
+categories: [
+  Request twice
+  Error alert
+  Connection failed
+  Error response
+]
+created: 2024-03-25T13:47:58+0800
+updated: 2024-03-25T13:48:59+0800
+version: 1.1.1
+@end
+
+* Requirement: show error alert when request got connection failed
+
+** demand
+   .image pic/156.png
+
+** red
+*** description
+    .image pic/158.png
+*** test environment
+    .image pic/159.png
+*** test assertion
+    .image pic/160.png
+
+** green
+   .image pic/161.png
+
+
+* Requirement: hide spinner when connection failed
+
+  Because the lecturer's codes in the component will make the spinner always present, so this test is needed, but my codes will not, this test is not needed.
+
+  For learning purposes, I will still write out the test codes below.
+
+** description
+   .image pic/162.png
+
+** test contents
+   .image pic/163.png
+
+
+* Requirement: removed error alert when user submit again
+
+** demand
+   .image pic/164.png
+
+** red
+*** describe requirement and test environment
+    .image pic/165.png
+*** assertion
+    .image pic/166.png
+
+** green
+   .image pic/167.png

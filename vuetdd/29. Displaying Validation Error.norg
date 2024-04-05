@@ -1,0 +1,58 @@
+@document.meta
+title: 29. Displaying Validation Error
+description: 
+authors: mattc
+categories: [
+  Failed
+  Error
+  Response
+  HttpResponse
+  Validation
+]
+created: 2024-03-25T20:59:51+0800
+updated: 2024-03-25T21:00:39+0800
+version: 1.1.1
+@end
+
+* Require: display validation error from the server
+
+** demain
+   .image pic/179.png
+
+   .image pic/180.png
+
+** integrated test
+*** red
+**** describe the requirement
+     .image pic/181.png
+**** build test environment
+     .image pic/182.png
+**** test assertion
+     .image pic/183.png
+
+*** green
+    .image pic/184.png
+
+    .image pic/185.png
+
+*** check results
+    .image pic/186.png
+
+    .image pic/187.png
+
+    The test function failed but the actual operation is normal, the reason is unclear.
+
+
+** unit test
+
+*** copy paste from integrated test
+    .image pic/188.png
+
+*** modify: replace mocked server by mocked client
+    .image pic/189.png
+
+
+* Fix the issue
+
+  .image pic/190.png
+

@@ -1,0 +1,44 @@
+@document.meta
+title: 38. Potential Issues n Refactor
+description: 
+authors: mattc
+categories: [
+  i18n
+  ISSUE
+  Locale
+]
+created: 2024-04-01T14:47:49+0800
+updated: 2024-04-01T14:48:16+0800
+version: 1.1.1
+@end
+
+* i18n switch test issue
+
+  Switching i18n during testing can have a hidden danger, because all other tests are assuming 'en' lang for testing. If a test switches the i18n locale to a language other than 'en', errors will occur in subsequent tests.
+
+** create demo codes to show the issue
+   We temporarily copy paste the tests from LangSelector.spec.js to the beginning of the SignUp.spec.js tests to expose this issue.
+
+   .image pic/254.png
+
+   .image pic/255.png
+
+** solve it to set i18n locale back to 'en' after each test
+   .image pic/256.png
+
+** refactor it to setupTest.js
+   .image pic/257.png
+
+
+* Remove demo codes
+
+  .image pic/258.png
+
+
+* Merge user setup to customRender fn in helper.js
+
+  This refactor can reduce one function call, making the testing codes more concise.
+
+  .image pic/259.png
+
+  .image pic/260.png

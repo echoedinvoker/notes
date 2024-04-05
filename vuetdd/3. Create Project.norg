@@ -1,0 +1,33 @@
+@document.meta
+title: 3. Create Project
+description: 
+authors: mattc
+categories: [
+  ESLinter
+  Prettier
+  Configuration
+  Vite
+]
+created: 2024-03-22T21:06:01+0800
+updated: 2024-03-22T21:06:25+0800
+version: 1.1.1
+@end
+
+* Creat a new Vue project
+
+.image pic/2.png
+
+
+* Vite configuration
+
+.image pic/3.png
+
+
+* package.json -- lint, format, type-check commands
+
+.image pic/4.png
+
+
+* test configuration
+
+.image pic/5.png

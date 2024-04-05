@@ -1,0 +1,22 @@
+@document.meta
+title: 15. Setting Up a New React Project- The Options
+description: 
+authors: mattc
+categories: [
+  Setup
+  Tool
+  Framework
+]
+created: 2024-03-30T14:44:51+0800
+updated: 2024-03-30T14:45:19+0800
+version: 1.1.1
+@end
+
+* The two options for setting up a React project
+
+.image pic/33.png
+
+
+* What about React framework?
+
+.image pic/34.png

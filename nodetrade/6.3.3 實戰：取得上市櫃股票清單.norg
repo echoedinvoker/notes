@@ -1,0 +1,64 @@
+@document.meta
+title: 6.3.3 實戰：取得上市櫃股票清單
+description: 
+authors: mattc
+categories: [
+
+]
+created: 2024-04-04T23:26:16+0800
+updated: 2024-04-04T23:26:40+0800
+version: 1.1.1
+@end
+
+* Create a new project by Next CLI and remove useless files and codes
+
+** Create a new project by Next CLI
+   .image pic/18.png
+
+** remove useless things
+   .image pic/19.png
+
+
+* Create a new module scraper by Next CLI
+
+  .image pic/20.png
+
+
+* Install some packages
+
+  .image pic/21.png
+
+  - @nestjs/axios: for handling HTTP requests and responses
+  - cheerio: for parsing HTML and XML documents
+  - iconv-lite: for encoding and decoding between different character sets
+
+
+* import HttpModule to module scraper
+
+  .image pic/22.png
+
+
+* Service
+
+** create a new service by Next CLI
+   .image pic/23.png
+
+   - --flat: create service without creating a directory
+   - --no-spec: don't create a test file
+
+** write contents of the service
+   .image pic/24.png
+
+
+* Controller
+
+** create a new controller by Next CLI
+   .image pic/25.png
+
+   .image pic/26.png
+
+** write contents of the controller
+   .image pic/27.png
+
+** send request to the server
+   .image pic/28.png

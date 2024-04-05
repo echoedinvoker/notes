@@ -1,0 +1,31 @@
+@document.meta
+title: 47. Conditional Rendering With
+description: 
+authors: mattc
+categories: [
+  Short Circuit
+]
+created: 2024-04-03T20:23:41+0800
+updated: 2024-04-03T20:24:28+0800
+version: 1.1.1
+@end
+
+* JSX won't render boolean, undefined, null
+
+  .image pic/80.png
+
+  Because of this feature, we can use short circuit to render conditionally.
+
+
+* User short circuit to render conditionally
+
+  .image pic/81.png
+
+  .image pic/82.png
+
+
+* before && MUST be boolean (not include truthy or falsy value)
+
+  .image pic/83.png
+
+  .image pic/84.png

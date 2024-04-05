@@ -145,15 +145,15 @@
 ** (x) [150. Using Modules in Production (6/19)]{:150. Using Modules in Production:}
 ** (x) [151. Overview on Search (4/17)]{:151. Overview on Search:}
 ** (x) [152. Creating and Using an Index (7/32)]{:152. Creating and Using an Index:}
-** ( ) [153. Details on Indexes (8/)]{:153. Details on Indexes:}
-** ( ) [154. Index Field Types (6/)]{:154. Index Field Types:}
-** ( ) [155. Numeric Queries (6/)]{:155. Numeric Queries:}
-** ( ) [156. Tag Queries (3/)]{:156. Tag Queries:}
-** ( ) [157. Text Queries (5/)]{:157. Text Queries:}
-** ( ) [158. Fuzzy Search (3/)]{:158. Fuzzy Search:}
-** ( ) [159. Prefix Search (2/)]{:159. Prefix Search:}
-** ( ) [160. Pre-Processing Search Criteria (5/)]{:160. Pre-Processing Search Criteria:}
-** ( ) [161. Search Implementation (5/)]{:161. Search Implementation:}
+** (x) [153. Details on Indexes (8/23)]{:153. Details on Indexes:}
+** (x) [154. Index Field Types (6/11)]{:154. Index Field Types:}
+** (x) [155. Numeric Queries (6/18)]{:155. Numeric Queries:}
+** (x) [156. Tag Queries (3/8)]{:156. Tag Queries:}
+** (x) [157. Text Queries (5/10)]{:157. Text Queries:}
+** (x) [158. Fuzzy Search (3/13)]{:158. Fuzzy Search:}
+** (x) [159. Prefix Search (2/8)]{:159. Prefix Search:}
+** (x) [160. Pre-Processing Search Criteria (5/17)]{:160. Pre-Processing Search Criteria:}
+** (x) [161. Search Implementation (5/23)]{:161. Search Implementation:}
 ** ( ) [162. The Create Index Function (4/)]{:162. The Create Index Function:}
 ** ( ) [163. When to Create the Index? (5/)]{:163. When to Create the Index?:}
 ** ( ) [164. Parsing the Search Term (6/)]{:164. Parsing the Search Term:}

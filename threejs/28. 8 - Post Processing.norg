@@ -1,0 +1,101 @@
+@document.meta
+title: 28. 8 - Post Processing
+description: 
+authors: mattc
+categories: [
+  Post Processing
+  EffectComposer
+  RenderPass
+  ShaderPass
+]
+created: 2024-04-01T21:59:53+0800
+updated: 2024-04-01T22:00:22+0800
+version: 1.1.1
+@end
+
+* How to post-process in three.js
+
+  .image pic/8.png
+
+
+* First render and second render
+
+** First render
+   .image pic/9.png
+
+** Second render
+
+*** import EffectComposer and RenderPass
+    .image pic/10.png
+
+*** EffectsComposer
+    .image pic/11.png
+
+*** First Pass: Render Pass
+    This pass is used to render the original scene and camera.
+
+    .image pic/12.png
+
+    .image pic/13.png
+
+    The current rendering on the screen is the same as before, but the renderer has been replaced by effectsComposer. In the future, other passes can be added to effectsComposer to achieve different effects.
+
+    .image pic/14.png
+
+
+* Pass for effect: UnrealBloomPass
+
+** import
+   .image pic/15.png
+
+** create and add to effectsComposer
+   .image pic/16.png
+
+** properties of UnrealBloomPass
+   .image pic/17.png
+
+   .image pic/18.png
+
+** GUI
+   .image pic/19.png
+
+
+* Multiple Passes
+
+  effectsComposer can add multiple layers of passes.
+
+  .image pic/21.png
+
+  .image pic/22.png
+
+  .image pic/23.png
+
+
+* Shader Pass
+
+** there is another type of pass: Shader Pass
+   .image pic/24.png
+
+** import ShaderPass(loader) and shader pass
+   .image pic/26.png
+
+** create a shader pass and load it
+   .image pic/27.png
+
+
+* Write our own shader pass
+
+** observe the shader pass codes
+   .image pic/28.png
+
+** import vertex and fragment shader
+   .image pic/29.png
+
+** define our own shader pass and load it as a shader pass
+   .image pic/30.png
+
+** shaderPass use ShaderMaterial
+   .image pic/31.png
+
+** tDiffuse is the texture that we want to apply the shader to
+   .image pic/32.png

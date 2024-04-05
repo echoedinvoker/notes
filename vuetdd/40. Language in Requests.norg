@@ -1,0 +1,32 @@
+* Requirement: pass user's language to the server by request header
+
+.image pic/280.png
+
+
+* Integrated test cycle
+
+** red
+
+*** describe the requirement
+.image pic/281.png
+
+*** add acceptLang to useServer for extract header 'Accept-Language' of request
+.image pic/282.png
+
+*** before user clicking, change i18n locale value
+.image pic/283.png
+
+*** there is some issue that we can't change locale value successfully... no idea why
+.image pic/284.png
+
+** green
+.image pic/285.png
+
+
+* Fix unit test
+
+Because in the previous green step, SignUp used i18n's locale more, causing the unit test to fail, so we need to correct the unit test here.
+
+.image pic/286.png
+
+.image pic/287.png

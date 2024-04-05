@@ -1,0 +1,40 @@
+@document.meta
+title: 160. Pre-Processing Search Criteria
+description: 
+authors: mattc
+categories: [
+  Pre-Processing
+  Search
+  Prefix Search
+  Fuzzy Search
+]
+created: 2024-04-02T18:55:14+0800
+updated: 2024-04-02T18:55:54+0800
+version: 1.1.1
+@end
+
+* Split user input search to two stpes
+
+.image pic/10.png
+
+We will divide the user search into two steps: auto-completion and search results.
+
+** step 1: prefix search for auto-completion
+.image pic/11.png
+
+** step 2: fuzzy search for search results
+.image pic/12.png
+
+
+* Pre-processing
+
+** issue: when user input multiple words
+.image pic/13.png
+
+** prefix search pre-processing
+.image pic/14.png
+
+** fuzzy search pre-processing
+.image pic/15.png
+
+There are many choices that must be made to find the combination that best suits the app's needs.

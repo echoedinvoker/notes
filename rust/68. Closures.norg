@@ -1,0 +1,54 @@
+@document.meta
+title: 68. Closures
+description: 
+authors: mattc
+categories: [
+  Closure
+  Move
+  Ownership
+  Capture
+]
+created: 2024-03-31T21:07:20+0800
+updated: 2024-03-31T21:07:51+0800
+version: 1.1.1
+@end
+
+* Closure
+
+.image pic/10.png
+
+.image pic/11.png
+
+Benefits of using closure:
+1. Simplify the code (no need to explicitly define parameter and return value types)
+2. Can directly access external variables
+3. Can be assigned to variables or used as parameters for other functions
+
+
+* Use closure as input parameter -> need to use trait bound
+
+Because the closure has a type, and this type implements the Fn trait, so if this closure is used as an input parameter for a function, trait bound needs to be used.
+
+.image pic/12.png
+
+
+* Capture variables from the environment
+
+One characteristic of Closure is that it can directly capture external variables (variables within the scope).
+
+However, Rust will determine the type of impl trait based on the way it is captured.
+
+** capture by value (ownership transfer)
+.image pic/13.png
+
+** capture by mutant reference
+.image pic/14.png
+
+
+* Keyword 'move'
+
+  .image pic/15.png
+
+'move' is typically used when there are multiple variables that need to be captured by values (ownership transfer) in order to ensure that the closure can correctly capture all variables.
+
+It is important to note that even if the '&' symbol is used in a closure, if 'move' is also used, Rust will still transfer ownership of the variable to the closure. This is because the 'move' keyword forces the closure to take ownership of the variable.

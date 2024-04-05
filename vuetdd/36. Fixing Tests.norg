@@ -1,0 +1,52 @@
+@document.meta
+title: 36. Fixing Tests
+description: 
+authors: mattc
+categories: [
+  i18n
+  Mock module
+  Mock fn
+  Mock hook
+  Override module
+  Path alias
+]
+created: 2024-03-27T16:53:51+0800
+updated: 2024-03-27T16:57:26+0800
+version: 1.1.1
+@end
+
+* Fix integration test
+
+** use i18n in render
+   .image pic/235.png
+
+** override @testing-library/vue
+   Instead of making corrections to each test, we can choose to directly override @testing-library/vue.
+
+   .image pic/236.png
+
+   .image pic/237.png
+
+** do the all integration tests 
+   .image pic/238.png
+
+
+* Fix unit test
+
+** issue: not unit anymore
+   .image pic/239.png
+
+   Because it uses functions and instance hooks defined outside of the component, this kind of test is no longer a unit test.
+
+** mock global fn
+   .image pic/240.png
+
+** mock hook of module
+   .image pic/241.png
+
+
+* Make alias to ./test
+
+  .image pic/242.png
+
+  .image pic/243.png

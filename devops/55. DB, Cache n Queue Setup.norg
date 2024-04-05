@@ -1,0 +1,103 @@
+@document.meta
+title: 55. DB, Cache n Queue Setup
+description: 
+authors: mattc
+categories: [
+  Services
+  Setup
+  Memcached
+  MariaDB
+  RabbitMQ
+]
+created: 2024-03-21T21:48:48+0800
+updated: 2024-03-21T21:50:02+0800
+version: 1.1.1
+@end
+
+* ALl servies we used
+
+.image pic/37/1.png
+
+
+* Services setup order
+
+.image pic/37/2.png
+
+This is not mandatory, but it is a good practice, as it ensures that when we are working on the upper layer of the component, the lower layer of service is ready and validated.
+
+
+* Setup mariadb service
+
+  MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. It is fully compatible with MySQL and is designed to be a drop-in replacement.
+
+** ssh in and update packages list
+.image pic/37/5.png
+
+.image pic/37/6.png
+
+   I am a bit doubted about why CentOS needs to update packages list manually.
+
+** install epel-release for more packages
+.image pic/37/7.png
+
+** install mariadb and start & enable mariadb service
+.image pic/37/8.png
+
+.image pic/37/9.png
+
+** execute mysql_secure_installation to secure mariadb
+.image pic/37/10.png
+
+.image pic/37/11.png
+
+** create db and set user privileges
+.image pic/37/12.png
+
+** create tables by sql file from git clone repo
+.image pic/37/13.png
+
+** restart mariadb service and double check its status
+.image pic/37/14.png
+
+
+* Setup memcached service
+
+** ssh in
+.image pic/37/15.png
+
+** install epel-release repo for more packages
+.image pic/37/16.png
+
+** install memcached
+.image pic/37/17.png
+
+** start & enable memcached service and check its status
+.image pic/37/18.png
+
+.image pic/37/19.png
+
+
+* Setup rabbitmq service
+
+** ssh in and update packages list
+.image pic/37/20.png
+
+.image pic/37/21.png
+
+** install rabbitmq repo and install rabbitmq from it
+.image pic/37/22.png
+
+.image pic/37/23.png
+
+** start & enable rabbitmq service
+.image pic/37/24.png
+
+** create config file for rabbitmq
+.image pic/37/25.png
+
+** set rabbitmq user
+.image pic/37/26.png
+
+** final restart rabbitmq service and double check its status
+.image pic/37/27.png
+

@@ -1,0 +1,52 @@
+@document.meta
+title: 78. Variables
+description: 
+authors: mattc
+categories: [
+  Variables
+]
+created: 2024-04-03T11:26:26+0800
+updated: 2024-04-03T11:26:39+0800
+version: 1.1.1
+@end
+
+* Practice variables in prompt
+
+  .image pic/115.png
+
+  There should be no spaces before or after the `=` symbol, or it will break.
+
+  .image pic/116.png
+
+  If you use `echo SKILL`, `SKILL` will be treated as text instead of a variable, so if you want to call a variable, you must use the `$` symbol.
+
+  .image pic/117.png
+
+  The use of variables in Linux is more like a replacement feeling, using them in commands feels like replacing placeholders.
+
+
+* Refactor websitesetup.sh by variables
+
+** set variables
+   .image pic/118.png
+
+   The standard for setting variables is:
+   1. Parts that may change in different projects, environments, and cases
+   2. Parts that appear repeatedly in commands
+
+** interpolate variables to commands
+   .image pic/119.png
+
+
+* Create dismantle.sh and execute it
+
+  .image pic/120.png
+
+  .image pic/121.png
+
+
+* Re-deployment and Check if website work
+
+  .image pic/122.png
+
+  .image pic/123.png

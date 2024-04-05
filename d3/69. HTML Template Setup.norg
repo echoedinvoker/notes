@@ -1,0 +1,53 @@
+@document.meta
+title: 69. HTML Template Setup
+description: 
+authors: mattc
+categories: [
+  MaterializeCSS
+  Template
+  HTML
+  Style
+]
+created: 2024-03-30T17:15:07+0800
+updated: 2024-03-30T17:35:40+0800
+version: 1.1.1
+@end
+
+* Setup and background color
+
+.image pic/8.png
+
+
+* Title and subtitle
+
+.image pic/9.png
+
+.image pic/10.png
+
+
+* Layout of main content
+
+.image pic/11.png
+
+* Button to switch activities
+
+.image pic/12.png
+
+.image pic/13.png
+
+
+* Form and active
+
+.image pic/14.png
+
+Currently, the static page with default values is being written first, and in the future, the active activities should change according to the user's actions.
+
+
+* Styling active things
+
+.image pic/15.png
+
+
+* Error message
+
+.image pic/16.png

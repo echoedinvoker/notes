@@ -1,0 +1,14 @@
+
+* What is script for?
+
+  As IT engineer, we have to perform many robotic tasks every day, such as security updates, log backups, checks, etc. We write all the commands needed to perform these tasks in a text file and tell the system what to do. This is called a script.
+
+
+* What is 'BASH' script?
+
+'BASH' stands for the commands in the script that are executed in the bash shell. There are also other types of shells in Linux such as csh, ksh, zsh, etc. But bash is the most commonly used.
+
+
+* Why not just use tools like Ansiible, Puppet, Chef, etc.?
+
+Many of the functions of these tools are derived from bash scripts. Being proficient in bash scripting will greatly help in understanding and learning these tools.

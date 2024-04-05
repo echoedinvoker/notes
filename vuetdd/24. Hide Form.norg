@@ -1,0 +1,64 @@
+@document.meta
+title: 24. Hide Form
+description: 
+authors: mattc
+categories: [
+  Fix
+  v-if
+  v-show
+  Custom server
+  Delay
+]
+created: 2024-03-25T01:16:28+0800
+updated: 2024-03-25T01:17:36+0800
+version: 1.1.1
+@end
+
+* New requirement 'hide the form when we got a success response'
+
+** write requirement in test file directly
+   .image pic/142.png
+
+** write contents of the test fn and use attr 'data-testid'
+   .image pic/143.png
+
+** make sure red failed
+   .image pic/144.png
+
+** implement in the component, but green failed (other test fn failed)
+   .image pic/145.png
+
+
+* Fix the test 'display success message'
+
+  .image pic/146.png
+
+
+* Fix the test 'display spinner'
+
+  .image pic/147.png
+
+  .image pic/148.png
+
+  .image pic/149.png
+
+  .image pic/150.png
+
+
+* We can replace the `v-if` with `v-show`, but matcher should be changed also
+
+  .image pic/152.png
+
+
+* Fix the test 'disable to submit when API call is ongoing'
+
+  .image pic/153.png
+
+  .image pic/154.png
+
+
+* v-if or v-show, which is better?
+
+  It depends on the situation. v-show will have an initial render cost, while v-if will have a toggling cost. In this case, the form will not be frequently toggled, so using v-if would be better.
+
+  .image pic/155.png
